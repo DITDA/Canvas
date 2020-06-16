@@ -1,15 +1,11 @@
 /* ----------------------------------------------------------------
-    Canvas: XMAS Demo
-    Version: 1.0
+    Canvas: XMAS
 -----------------------------------------------------------------*/
 
-
-
-/* Countdown
------------------------------------------------------------------*/
-
-
-.xmas-countdown { font-family: 'Roboto', sans-serif; }
+.xmas-countdown {
+	font-family: 'Roboto', sans-serif;
+	margin-top: 7rem;
+}
 
 .xmas-countdown .countdown-section {
 	font-size: 13px;

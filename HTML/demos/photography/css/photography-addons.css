@@ -2,14 +2,6 @@
 
 .grid {
 	position: relative;
-	margin: 0 auto;
-	padding-top: 1px;
-	padding-left: 1px;
-}
-
-.grid-item {
-	width: 280px;
-	padding: 10px;
 }
 
 .description { display: none; }

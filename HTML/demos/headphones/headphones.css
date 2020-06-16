@@ -1,6 +1,5 @@
 /* ----------------------------------------------------------------
-	Canvas: Headphones Demo
-	Version: 1.0
+	Canvas: Headphones
 -----------------------------------------------------------------*/
 
 
@@ -129,7 +128,9 @@
 .showcase-section ul li.headphone-pink { background-color: pink; }
 .showcase-section ul li.headphone-white { background-color: white; }
 
-.sale-flash {
+.showcase-section .badge {
+	position: absolute;
+	top: 0;
 	text-transform: uppercase;
 	font-weight: 400;
 	letter-spacing: 3px;
@@ -214,28 +215,22 @@
 
 .social-icon.si-mini:hover i:first-child { margin-top: -27px; }
 
-.feature-box.media-box .fbox-icon {
-	position: relative;
-	width: 36px;
-	height: 54px;
-}
-
 @media (min-width: 1199px) {
 
-	#primary-menu ul li > a {
+	.menu-link {
 		font-size: 15px;
 		letter-spacing: 0;
 		text-transform: none;
 	}
 
 	/* Hover Effects style-7 */
-	#primary-menu ul li > a div {
+	.menu-link div {
 		position: relative;
 		overflow: hidden;
 	}
 
-	#primary-menu ul li > a div::before,
-	#primary-menu ul li > a div::after {
+	.menu-link div::before,
+	.menu-link div::after {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -249,13 +244,13 @@
 		z-index: -1;
 	}
 
-	#primary-menu ul li.current > a div::before,
-	#primary-menu ul li > a:hover div::before { transform: translate3d(100%,0,0) translate3d(1px,0,0); }
+	.menu-item.current > .menu-link div::before,
+	.menu-link:hover div::before { transform: translate3d(100%,0,0) translate3d(1px,0,0); }
 
-	#primary-menu ul li.current > a div::after,
-	#primary-menu ul li > a:hover div::after { transform: translate3d(0,5px,0); }
+	.menu-item.current > .menu-link div::after,
+	.menu-link:hover div::after { transform: translate3d(0,5px,0); }
 
-	#primary-menu ul li > a div::after {
+	.menu-link div::after {
 		top: calc(50%);
 		height: 4px;
 	}

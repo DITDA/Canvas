@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900|Caveat+Brush" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900|Caveat+Brush&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<link rel="stylesheet" href="css/calendar.css" type="text/css" />
 
 	<!-- NonProfit Demo Specific Stylesheet -->
@@ -42,79 +42,81 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="clearfix static-sticky">
-
+		<header id="header" data-logo-height="70" data-menu-padding="24" data-sticky-shrink="false">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-lg-between">
 
-				<div class="container clearfix">
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="mr-lg-5">
+							<a href="index.html" class="standard-logo" data-dark-logo="demos/business/images/logo-dark.png"><img src="demos/business/images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="demos/business/images/logo-dark@2x.png"><img src="demos/business/images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+						<div class="header-misc">
+							<a href="#" class="button button-rounded button-light"><div>Donate</div></a>
+						</div>
 
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="demos/business/images/logo-dark.png"><img src="demos/business/images/logo.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo" data-dark-logo="demos/business/images/logo-dark@2x.png"><img src="demos/business/images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
 
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu" class="d-lg-flex d-xl-flex justify-content-xl-between justify-content-lg-between fnone with-arrows">
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows mr-lg-auto">
 
+							<ul class="menu-container align-self-start">
+								<li class="menu-item"><span class="menu-bg col-auto align-self-start d-flex"></span></li>
+								<li class="menu-item active"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>About</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="#"><div>Dropdown 1</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Dropdown 2</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Dropdown 3</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Dropdown 4</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Causes</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Events</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+							</ul>
 
-						<ul class="align-self-start">
-							<li><span class="menu-bg col-auto align-self-start d-flex"></span></li>
-							<li class="active"><a href="#"><div>Home</div></a></li>
-							<li><a href="#"><div>About</div></a>
-								<ul>
-									<li><a href="#"><div>Dropdown 1</div></a></li>
-									<li><a href="#"><div>Dropdown 2</div></a></li>
-									<li><a href="#"><div>Dropdown 3</div></a></li>
-									<li><a href="#"><div>Dropdown 4</div></a></li>
-								</ul>
-							</li>
-							<li><a href="#"><div>Causes</div></a></li>
-							<li><a href="#"><div>Events</div></a></li>
-							<li><a href="#"><div>Contact</div></a></li>
-						</ul>
+						</nav><!-- #primary-menu end -->
 
-						<ul class="not-dark align-self-end">
-							<li><a href="#" class="header-button"><div>Donate</div></a></li>
-						</ul>
-
-					</nav><!-- #primary-menu end -->
-
+					</div>
 				</div>
-
 			</div>
-
 		</header><!-- #header end -->
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element dark swiper_wrapper full-screen force-full-screen slider-parallax clearfix">
-
-			<div class="slider-parallax-inner">
+		<section id="slider" class="slider-element dark swiper_wrapper slider-parallax min-vh-75">
+			<div class="slider-inner">
 
 				<div class="swiper-container swiper-parent">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide dark" style="background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url('demos/nonprofit/images/slider/1.jpg') no-repeat center center; background-size: cover;">
-							<div class="container clearfix">
+						<div class="swiper-slide dark">
+							<div class="container">
 								<div class="slider-caption">
-									<h2 class="nott" data-animate="fadeInUp">Help the Homeless & Hungry People.</h2>
-									<p style="font-size: 17px;" data-animate="fadeInUp" data-delay="200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem molestiae, cum ratione at temporibus aperiam repudiandae consectetur, illo nam maiores.</p>
-									<a href="#" data-animate="fadeInUp" data-delay="400" class="button button-rounded button-large button-light text-dark bgcolor shadow nott ls0 ml-0 mt-4">Know More</a>
+									<div>
+										<h2 class="nott" data-animate="fadeInUp">Help the Homeless.</h2>
+										<a href="#" data-animate="fadeInUp" data-delay="400" class="button button-rounded button-large button-light shadow nott ls0 ml-0 mt-4">Know More</a>
+									</div>
 								</div>
 							</div>
+							<div class="swiper-slide-bg" style="background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url('demos/nonprofit/images/slider/1.jpg') no-repeat center center; background-size: cover;"></div>
 						</div>
-						<div class="swiper-slide dark" style="background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.8)), url('demos/nonprofit/images/slider/2.jpg') no-repeat center center; background-size: cover;">
-							<div class="container clearfix">
+						<div class="swiper-slide dark">
+							<div class="container">
 								<div class="slider-caption">
-									<h2 class="nott" data-animate="fadeInUp">Welcome to Canvas</h2>
-									<p style="font-size: 17px;" data-animate="fadeInUp" data-delay="200">Seamlessly transition standardized channels whereas maintainable web services. Competently unleash exceptional portals through timely infomediaries.</p>
-									<a href="#" data-animate="fadeInUp" data-delay="400" class="button button-rounded button-large button-light text-dark bgcolor shadow nott ls0 ml-0 mt-4">Know More</a>
+									<div>
+										<h2 class="nott" data-animate="fadeInUp">Donate with Kindness.</h2>
+										<a href="#" data-animate="fadeInUp" data-delay="400" class="button button-rounded button-large button-light shadow nott ls0 ml-0 mt-4">Know More</a>
+									</div>
 								</div>
 							</div>
+							<div class="swiper-slide-bg" style="background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.8)), url('demos/nonprofit/images/slider/2.jpg') no-repeat center center; background-size: cover;"></div>
 						</div>
 					</div>
 					<div class="swiper-navs">
@@ -128,37 +130,35 @@
 				</div>
 
 			</div>
-
 		</section>
 
 		<!-- Content
 		============================================= -->
-		<section id="content" style="overflow: visible">
-
-			<div class="content-wrap p-0">
+		<section id="content">
+			<div class="content-wrap py-0" style="overflow: visible">
 
 				<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1382 58" width="100%" height="60" preserveAspectRatio="none" style="position: absolute; top: -58px; left:0; z-index: 1"><path style="fill:#FFF;" d="M1.52.62s802.13,127,1380,0v56H.51Z"/></svg>
 
-				<div class="container clearfix">
+				<div class="container">
 
 					<div class="slider-feature w-100">
 						<div class="row justify-content-center">
 							<div class="col-md-3 px-1">
-								<a href="#" class="card center border-left-0 border-right-0 border-top-0 border-bottom border-bottom shadow py-3 noradius t600 uppercase ls1">
+								<a href="#" class="card center border-left-0 border-right-0 border-top-0 border-bottom border-bottom shadow py-3 rounded-0 font-weight-semibold text-uppercase ls1">
 									<div class="card-body">
 										<i class="icon-line-align-center"></i>View Our Mission
 									</div>
 								</a>
 							</div>
 							<div class="col-md-3 px-1">
-								<a href="#" class="card center border-left-0 border-right-0 border-top-0 border-bottom border-bottom shadow py-3 noradius t600 uppercase ls1">
+								<a href="#" class="card center border-left-0 border-right-0 border-top-0 border-bottom border-bottom shadow py-3 rounded-0 font-weight-semibold text-uppercase ls1">
 									<div class="card-body">
 										<i class="icon-line-umbrella"></i>Top Founders
 									</div>
 								</a>
 							</div>
 							<div class="col-md-3 px-1">
-								<a href="#" class="card center border-left-0 border-right-0 border-top-0 border-bottom border-bottom shadow py-3 noradius t600 uppercase ls1">
+								<a href="#" class="card center border-left-0 border-right-0 border-top-0 border-bottom border-bottom shadow py-3 rounded-0 font-weight-semibold text-uppercase ls1">
 									<div class="card-body">
 										<i class="icon-line-mail"></i>Request a Quote
 									</div>
@@ -170,51 +170,55 @@
 				</div>
 
 				<div class="section mt-3" style="background: #FFF url('demos/nonprofit/images/others/1.jpg') no-repeat 100% 50% / auto 100%;">
-					<div class="container clearfix">
+					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-md-7 center">
-								<div class="heading-block nobottomborder mb-4">
+								<div class="heading-block border-bottom-0 mb-4">
 									<h2 class="mb-4 nott">Unconditional Help</h2>
 								</div>
-								<div class="svg-line bottommargin-sm clearfix">
+								<div class="svg-line bottommargin-sm">
 									<img src="demos/nonprofit/images/divider-1.svg" alt="svg divider" height="20">
 								</div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, quasi, dolorum blanditiis eius laboriosam, quidem temporibus, dolor quod voluptatum perferendis ullam. Odio sequi at dolore consequatur ad, odit expedita tenetur.</p>
 							</div>
 						</div>
-						<div class="row mt-5">
-							<div class="col-md-3 mb-5">
-								<div class="feature-box pl-0">
+						<div class="row mt-5 col-mb-50 mb-0">
+							<div class="col-md-3">
+								<div class="feature-box flex-column pl-0">
 									<div class="fbox-media position-relative">
 										<img src="demos/nonprofit/images/icons/donate.svg" alt="Featured Icon" width="60" class="mb-3">
 									</div>
-									<div class="fbox-desc">
+									<div class="fbox-content px-0">
 										<h3 class="nott ls0"><a href="#" class="text-dark">Give Donation.</a></h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dolore, voluptates!</p>
-										<a href="#" class="button button-rounded button-border nott ls0 t400 ml-0 mt-4">Donate Now</a>
+										<a href="#" class="button button-rounded button-border nott ls0 font-weight-normal ml-0 mt-4">Donate Now</a>
 									</div>
 								</div>
 							</div>
 
-							<div class="col-md-3 mb-5">
-								<div class="feature-box pl-0">
+							<div class="col-md-3">
+								<div class="feature-box flex-column pl-0">
 									<div class="fbox-media position-relative">
 										<img src="demos/nonprofit/images/icons/volunteer.svg" alt="Featured Icon" width="60" class="mb-3">
 									</div>
-									<h3 class="nott ls0"><a href="#" class="text-dark">Become a Volunteer.</a></h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, provident.</p>
-									<a href="#" class="button button-rounded button-border nott ls0 t400 ml-0 mt-4">Join Now</a>
+									<div class="fbox-content px-0">
+										<h3 class="nott ls0"><a href="#" class="text-dark">Become a Volunteer.</a></h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, provident.</p>
+										<a href="#" class="button button-rounded button-border nott ls0 font-weight-normal ml-0 mt-4">Join Now</a>
+									</div>
 								</div>
 							</div>
 
-							<div class="col-md-3 mb-5">
-								<div class="feature-box pl-0">
+							<div class="col-md-3">
+								<div class="feature-box flex-column pl-0">
 									<div class="fbox-media position-relative">
 										<img src="demos/nonprofit/images/icons/help-child.svg" alt="Featured Icon" width="60" class="mb-3">
 									</div>
-									<h3 class="nott ls0"><a href="#" class="text-dark">Help the Children.</a></h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, ipsa!</p>
-									<a href="#" class="button button-rounded button-border nott ls0 t400 ml-0 mt-4">Help Now</a>
+									<div class="fbox-content px-0">
+										<h3 class="nott ls0"><a href="#" class="text-dark">Help the Children.</a></h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, ipsa!</p>
+										<a href="#" class="button button-rounded button-border nott ls0 font-weight-normal ml-0 mt-4">Help Now</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -223,24 +227,24 @@
 
 				<div class="container">
 					<div class="w-100 position-relative">
-						<div class="donor-img d-flex align-items-center rounded parallax divcenter shadow-sm" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -50px;" style="max-width: 1100px; width: 100%; height: 500px; background: url('demos/nonprofit/images/others/3.jpg') no-repeat center center / cover"></div>
+						<div class="donor-img d-flex align-items-center rounded parallax mx-auto shadow-sm" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -50px;" style="max-width: 1100px; width: 100%; height: 500px; background: url('demos/nonprofit/images/others/3.jpg') no-repeat center center / cover"></div>
 						<div class="card bg-white border-0 center py-sm-4 px-sm-5 p-2 shadow-sm" style="position: absolute; top: 50%; right: 80px; transform: translateY(-50%);">
 							<div class="card-body">
 								<div class="color h1 mb-3"><i class="icon-heart"></i></div>
-								<small class="uppercase t400 ls2 text-muted mb-3 d-block">Our Top Donor</small>
-								<h3 class="display-3 t700 mb-3 font-secondary">$2.4M</h3>
-								<p class="uppercase t500 text-muted">:Raised</p>
+								<small class="text-uppercase font-weight-normal ls2 text-muted mb-3 d-block">Our Top Donor</small>
+								<h3 class="display-3 font-weight-bold mb-3 font-secondary">$2.4M</h3>
+								<p class="text-uppercase font-weight-medium text-muted">:Raised</p>
 								<a href="#" class="button-svg">View More</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="section nobg mt-0 mb-4">
+				<div class="section bg-transparent mt-0 mb-4">
 					<div class="container clearfix">
 						<div class="row justify-content-center" style="margin-top: 100px">
 							<div class="col-md-7 center">
-								<div class="heading-block nobottomborder mb-4">
+								<div class="heading-block border-bottom-0 mb-4">
 									<h2 class="mb-4 nott">Our Charity Causes</h2>
 								</div>
 								<div class="svg-line bottommargin-sm clearfix">
@@ -253,10 +257,10 @@
 
 					<div class="owl-carousel owl-carousel-full image-carousel carousel-widget topmargin-sm" data-stage-padding="20" data-margin="10" data-center="true" data-loop="true" data-nav="true" data-autoplay="500000" data-speed="400" data-pagi="true" data-items-xs="1" data-items-sm="2" data-items-md="2" data-items-lg="3" data-items-xl="4">
 
-						<div class="oc-item tleft">
+						<div class="oc-item text-left">
 							<img src="demos/nonprofit/images/cause/1.jpg" alt="Image 1" class="rounded">
 							<div class="oc-desc d-flex flex-column justify-content-center shadow-lg">
-								<small class="uppercase t400 ls1 color mb-2 d-block">Homeless</small>
+								<small class="text-uppercase font-weight-normal ls1 color mb-2 d-block">Homeless</small>
 								<h3 class="mb-3"><a href="#">Clean Water for All</a></h3>
 								<ul class="skills mb-3">
 									<li data-percent="57">
@@ -270,14 +274,14 @@
 									</li>
 								</ul>
 								<p class="mb-4 text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut atque quidem consequuntur officiis vitae illo omnis inventore aliquam assumenda iusto mollitia illum similique eum libero rem possimus et, ipsam sapiente..</p>
-								<a href="#" class="button button-rounded button-border nott ls0 t500 m-0 d-flex align-self-start">Donate Now</a>
+								<a href="#" class="button button-rounded button-border nott ls0 font-weight-medium m-0 d-flex align-self-start">Donate Now</a>
 							</div>
 						</div>
 
-						<div class="oc-item tleft">
+						<div class="oc-item text-left">
 							<img src="demos/nonprofit/images/cause/3.jpg" alt="Image 1" class="rounded">
 							<div class="oc-desc d-flex flex-column justify-content-center shadow-lg">
-								<small class="uppercase t400 ls1 color mb-2 d-block">Education</small>
+								<small class="text-uppercase font-weight-normal ls1 color mb-2 d-block">Education</small>
 								<h3 class="mb-3"><a href="#">Education for All</a></h3>
 								<ul class="skills mb-3">
 									<li data-percent="45">
@@ -291,14 +295,14 @@
 									</li>
 								</ul>
 								<p class="mb-4 text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum quaerat, nisi illum rerum consequatur nemo.</p>
-								<a href="#" class="button button-rounded button-border nott ls0 t500 m-0 d-flex align-self-start">Donate Now</a>
+								<a href="#" class="button button-rounded button-border nott ls0 font-weight-medium m-0 d-flex align-self-start">Donate Now</a>
 							</div>
 						</div>
 
-						<div class="oc-item tleft">
+						<div class="oc-item text-left">
 							<img src="demos/nonprofit/images/cause/2.jpg" alt="Image 1" class="rounded">
 							<div class="oc-desc d-flex flex-column justify-content-center shadow-lg">
-								<small class="uppercase t400 ls1 color mb-2 d-block">Food</small>
+								<small class="text-uppercase font-weight-normal ls1 color mb-2 d-block">Food</small>
 								<h3 class="mb-3"><a href="#">Food for Hungry</a></h3>
 								<ul class="skills mb-3">
 									<li data-percent="51">
@@ -312,14 +316,14 @@
 									</li>
 								</ul>
 								<p class="mb-4 text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum quaerat, nisi illum rerum consequatur nemo.</p>
-								<a href="#" class="button button-rounded button-border nott ls0 t500 m-0 d-flex align-self-start">Donate Now</a>
+								<a href="#" class="button button-rounded button-border nott ls0 font-weight-medium m-0 d-flex align-self-start">Donate Now</a>
 							</div>
 						</div>
 
-						<div class="oc-item tleft">
+						<div class="oc-item text-left">
 							<img src="demos/nonprofit/images/cause/4.jpg" alt="Image 1" class="rounded">
 							<div class="oc-desc d-flex flex-column justify-content-center shadow-lg">
-								<small class="uppercase t400 ls1 color mb-2 d-block">Medicine</small>
+								<small class="text-uppercase font-weight-normal ls1 color mb-2 d-block">Medicine</small>
 								<h3 class="mb-3"><a href="#">Help from Injuries</a></h3>
 								<ul class="skills mb-3">
 									<li data-percent="45">
@@ -333,14 +337,14 @@
 									</li>
 								</ul>
 								<p class="mb-4 text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum quaerat, nisi illum rerum consequatur nemo.</p>
-								<a href="#" class="button button-rounded button-border nott ls0 t500 m-0 d-flex align-self-start">Donate Now</a>
+								<a href="#" class="button button-rounded button-border nott ls0 font-weight-medium m-0 d-flex align-self-start">Donate Now</a>
 							</div>
 						</div>
 
-						<div class="oc-item tleft">
+						<div class="oc-item text-left">
 							<img src="demos/nonprofit/images/cause/5.jpg" alt="Image 1" class="rounded">
 							<div class="oc-desc d-flex flex-column justify-content-center shadow-lg">
-								<small class="uppercase t400 ls1 color mb-2 d-block">Education</small>
+								<small class="text-uppercase font-weight-normal ls1 color mb-2 d-block">Education</small>
 								<h3 class="mb-3"><a href="#">Education for All</a></h3>
 								<ul class="skills mb-3">
 									<li data-percent="45">
@@ -354,7 +358,7 @@
 									</li>
 								</ul>
 								<p class="mb-4 text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum quaerat, nisi illum rerum consequatur nemo.</p>
-								<a href="#" class="button button-rounded button-border nott ls0 t500 m-0 d-flex align-self-start">Donate Now</a>
+								<a href="#" class="button button-rounded button-border nott ls0 font-weight-medium m-0 d-flex align-self-start">Donate Now</a>
 							</div>
 						</div>
 
@@ -365,7 +369,7 @@
 
 				<div class="container-fluid my-5 clearfix">
 					<div class="d-flex flex-column align-items-center justify-content-center center counter-section position-relative py-5" style="background: url('demos/nonprofit/images/world-map.png') no-repeat center center/ contain">
-						<div class="divcenter center" style="max-width: 1000px">
+						<div class="mx-auto center" style="max-width: 1000px">
 							<h3>Our mission is to help people by distributing Money and Service globally.</h3>
 						</div>
 
@@ -410,70 +414,70 @@
 									<img src="demos/nonprofit/images/divider-1.svg" alt="svg divider" height="10">
 								</div>
 								<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam deleniti veritatis nostrum, temporibus vero maxime quisquam quaerat doloremque fugit nesciunt.</p>
-								<div class="row missions-gloals">
-									<div class="col-md-6 mb-4">
-										<div class="feature-box fbox-plain d-flex bg-white">
+								<div class="row mission-goals gutter-30 mb-0">
+									<div class="col-md-6">
+										<div class="feature-box fbox-plain bg-white mx-0">
 											<div class="fbox-media position-relative col-auto p-0 mr-4">
 												<img src="demos/nonprofit/images/icons/home.svg" alt="Featured Icon 1" width="50">
 											</div>
-											<div class="fbox-desc">
+											<div class="fbox-content">
 												<h3 class="nott ls0"><a href="#" class="text-dark">Homeless Charities.</a></h3>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6 mb-4">
-										<div class="feature-box fbox-plain d-flex bg-white">
+									<div class="col-md-6">
+										<div class="feature-box fbox-plain bg-white mx-0">
 											<div class="fbox-media position-relative col-auto p-0 mr-4">
 												<img src="demos/nonprofit/images/icons/health.svg" alt="Featured Icon 2" width="50">
 											</div>
-											<div class="fbox-desc">
+											<div class="fbox-content">
 												<h3 class="nott ls0"><a href="#" class="text-dark">Health Charities.</a></h3>
 												<p>Continually restore adaptive paradigms after "outside.</p>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6 mb-4">
-										<div class="feature-box fbox-plain d-flex bg-white">
+									<div class="col-md-6">
+										<div class="feature-box fbox-plain bg-white mx-0">
 											<div class="fbox-media position-relative col-auto p-0 mr-4">
 												<img src="demos/nonprofit/images/icons/education.svg" alt="Featured Icon 3" width="50">
 											</div>
-											<div class="fbox-desc">
+											<div class="fbox-content">
 												<h3 class="nott ls0"><a href="#" class="text-dark">Education Charities.</a></h3>
-												<p>Quickly benchmark client-centered vortals without cutting amet consectetur.</p>
+												<p>Quickly benchmark client-centered vortals without cutting.</p>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6 mb-4">
-										<div class="feature-box fbox-plain d-flex bg-white">
+									<div class="col-md-6">
+										<div class="feature-box fbox-plain bg-white mx-0">
 											<div class="fbox-media position-relative col-auto p-0 mr-4">
 												<img src="demos/nonprofit/images/icons/animal.svg" alt="Featured Icon 4" width="50">
 											</div>
-											<div class="fbox-desc">
+											<div class="fbox-content">
 												<h3 class="nott ls0"><a href="#" class="text-dark">Animal Charities.</a></h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dolore, voluptates!</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 											</div>
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="feature-box fbox-plain d-flex bg-white">
+										<div class="feature-box fbox-plain bg-white mx-0">
 											<div class="fbox-media position-relative col-auto p-0 mr-4">
 												<img src="demos/nonprofit/images/icons/environmental.svg" alt="Featured Icon 5" width="50">
 											</div>
-											<div class="fbox-desc">
-												<h3 class="nott ls0"><a href="#" class="text-dark">EnvironmenT Charities.</a></h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dolore, voluptates!</p>
+											<div class="fbox-content">
+												<h3 class="nott ls0"><a href="#" class="text-dark">Eco Charities.</a></h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 											</div>
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="feature-box fbox-plain d-flex bg-white">
+										<div class="feature-box fbox-plain bg-white mx-0">
 											<div class="fbox-media position-relative col-auto p-0 mr-4">
 												<img src="demos/nonprofit/images/icons/food.svg" alt="Featured Icon 6" width="50">
 											</div>
-											<div class="fbox-desc">
-												<h3 class="nott ls0"><a href="#" class="text-dark">Food Charties.</a></h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, dolore, voluptates!</p>
+											<div class="fbox-content">
+												<h3 class="nott ls0"><a href="#" class="text-dark">Food Charities.</a></h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 											</div>
 										</div>
 									</div>
@@ -502,11 +506,11 @@
 					</div>
 				</div>
 
-				<div class="section nobg">
+				<div class="section bg-transparent">
 					<div class="container clearfix">
 						<div class="row justify-content-center mb-5">
 							<div class="col-md-7 center">
-								<div class="heading-block nobottomborder mb-4">
+								<div class="heading-block border-bottom-0 mb-4">
 									<h2 class="mb-4 nott">Happy Volunteers</h2>
 								</div>
 								<div class="svg-line bottommargin-sm clearfix">
@@ -517,12 +521,12 @@
 						</div>
 						<div class="row justify-content-around">
 							<div class="col-lg-2 col-md-4 col-6">
-								<div class="team ohidden">
+								<div class="team overflow-hidden">
 									<div class="team-image">
 										<img src="demos/nonprofit/images/volunteers/1.jpg" alt="Penny Tool">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Penny Tool<small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Penny Tool<small>Volunteers</small></h4>
 									</div>
 								</div>
 								<div class="team mt-5">
@@ -530,7 +534,7 @@
 										<img src="demos/nonprofit/images/volunteers/6.jpg" alt="Piff Jenkins">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Piff Jenkins<small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Piff Jenkins<small>Volunteers</small></h4>
 									</div>
 								</div>
 							</div>
@@ -540,7 +544,7 @@
 										<img src="demos/nonprofit/images/volunteers/2.jpg" alt="Rodney Artich">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Rodney Artich<small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Rodney Artich<small>Volunteers</small></h4>
 									</div>
 								</div>
 								<div class="team mt-5">
@@ -548,7 +552,7 @@
 										<img src="demos/nonprofit/images/volunteers/7.jpg" alt="Weir Doe">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Weir Doe<small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Weir Doe<small>Volunteers</small></h4>
 									</div>
 								</div>
 							</div>
@@ -558,7 +562,7 @@
 										<img src="demos/nonprofit/images/volunteers/3.jpg" alt="Jackson Pot">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Jackson Pot<small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Jackson Pot<small>Volunteers</small></h4>
 									</div>
 								</div>
 								<div class="team mt-5">
@@ -566,7 +570,7 @@
 										<img src="demos/nonprofit/images/volunteers/8.jpg" alt="Phillip Anthropy ">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Phillip Anthropy <small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Phillip Anthropy <small>Volunteers</small></h4>
 									</div>
 								</div>
 							</div>
@@ -576,7 +580,7 @@
 										<img src="demos/nonprofit/images/volunteers/4.jpg" alt="Eric Widget">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Eric Widget<small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Eric Widget<small>Volunteers</small></h4>
 									</div>
 								</div>
 								<div class="team mt-5">
@@ -584,7 +588,7 @@
 										<img src="demos/nonprofit/images/volunteers/9.jpg" alt="Giles Posture">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Giles Posture<small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Giles Posture<small>Volunteers</small></h4>
 									</div>
 								</div>
 							</div>
@@ -594,12 +598,12 @@
 										<img src="demos/nonprofit/images/volunteers/5.jpg" alt="Gunther Beard">
 									</div>
 									<div class="team-desc">
-										<h4 class="team-title pt-3 mb-0 t500 nott">Gunther Beard<small>Volunteers</small></h4>
+										<h4 class="team-title pt-3 mb-0 font-weight-medium nott">Gunther Beard<small>Volunteers</small></h4>
 									</div>
 								</div>
 								<div class="team full-border imagescalein mt-5">
 									<a href="#" class="team-image">
-										<img src="demos/nonprofit/images/volunteers/10.jpg" alt="Apply Volunteer" class="noradius">
+										<img src="demos/nonprofit/images/volunteers/10.jpg" alt="Apply Volunteer" class="rounded-0">
 									</a>
 								</div>
 							</div>
@@ -607,7 +611,7 @@
 					</div>
 				</div>
 
-				<div class="bgcolor subscribe-section position-relative" style="margin-top: 100px;">
+				<div class="bg-color subscribe-section position-relative" style="margin-top: 100px;">
 					<div class="container" style="z-index: 2;">
 						<div class="center collapsed subscribe-section-target" data-toggle="collapse" data-target="#target-1">
 							<div class="subscribe-icon"><i class="icon-envelope21"></i></div>
@@ -625,7 +629,7 @@
 									<div class="css3-spinner-bounce3"></div>
 								</div>
 								<div id="nonprofit-submitted" class="center">
-									<h4 class="t600 mb-0">Thank You for Contact Us! Our Team will contact you asap on your email Address.</h4>
+									<h4 class="font-weight-semibold mb-0">Thank You for Contact Us! Our Team will contact you asap on your email Address.</h4>
 								</div>
 
 								<form id="nonprofit" class="row mt-2" action="include/form.php" method="post" enctype="multipart/form-data">
@@ -641,7 +645,7 @@
 										<label for="nonprofit-email">Email:</label>
 										<input type="email" name="nonprofit-email" id="nonprofit-email" class="form-control border-form-control required" value="" placeholder="Enter your Email">
 									</div>
-									<div class="col-12 hidden">
+									<div class="col-12 d-none">
 										<input type="text" id="nonprofit-botcheck" name="nonprofit-botcheck" value="" />
 									</div>
 									<button type="submit" name="nonprofit-submit" class="btn button button-rounded button-xlarge button-dark bg-dark shadow nott ls0 m-0 subscribe-button">Subscribe Now</button>
@@ -655,20 +659,20 @@
 
 				<div class="section m-0 p-0 row align-items-stretch clearfix" style="background-color: rgba(198,192,156, 0.15);">
 					<div class="col-lg-4 dark d-flex flex-column align-items-center center justify-content-center" style="background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url('demos/nonprofit/images/others/event.jpg') center center repeat; background-size: cover; min-height: 300px;">
-						<h2 class="display-4 px-4 t700 mb-4 d-block">Events Overview</h2>
+						<h2 class="display-4 px-4 font-weight-bold mb-4 d-block">Events Overview</h2>
 					</div>
 					<div class="col-lg-8 col-padding">
 						<div class="events-calendar">
 							<div class="events-calendar-header clearfix">
-								<div class="calendar-month-year d-flex tleft justify-content-between align-items-center w-100">
+								<div class="calendar-month-year d-flex text-left justify-content-between align-items-center w-100">
 									<div>
 										<span id="calendar-month" class="calendar-month text-dark"></span>
 										<span id="calendar-year" class="calendar-year text-dark"></span>
 									</div>
 									<nav>
-										<span id="calendar-prev" class="calendar-prev bgcolor"><i class="icon-chevron-left text-dark"></i></span>
-										<span id="calendar-next" class="calendar-next bgcolor"><i class="icon-chevron-right text-dark"></i></span>
-										<span id="calendar-current" class="calendar-current bgcolor" title="Got to current date"><i class="icon-reload text-dark"></i></span>
+										<span id="calendar-prev" class="calendar-prev bg-color"><i class="icon-chevron-left text-dark"></i></span>
+										<span id="calendar-next" class="calendar-next bg-color"><i class="icon-chevron-right text-dark"></i></span>
+										<span id="calendar-current" class="calendar-current bg-color" title="Got to current date"><i class="icon-reload text-dark"></i></span>
 									</nav>
 								</div>
 							</div>
@@ -678,11 +682,11 @@
 					</div>
 				</div>
 
-				<div class="section nobg" style="padding: 80px 0">
+				<div class="section bg-transparent" style="padding: 80px 0">
 					<div class="container clearfix">
 						<div class="row justify-content-center">
 							<div class="col-md-7 center">
-								<div class="heading-block nobottomborder mb-4">
+								<div class="heading-block border-bottom-0 mb-4">
 									<h2 class="mb-4 nott">Who Work With Us</h2>
 								</div>
 								<div class="svg-line bottommargin-sm clearfix">
@@ -692,20 +696,20 @@
 							</div>
 							<div class="clear"></div>
 							<div class="col-md-11 my-5">
-								<ul class="clients-grid nobottommargin clearfix">
-									<li><a href="#"><img src="images/clients/1.png" alt="Clients"></a></li>
-									<li><a href="#"><img src="images/clients/2.png" alt="Clients"></a></li>
-									<li><a href="#"><img src="images/clients/3.png" alt="Clients"></a></li>
-									<li><a href="#"><img src="images/clients/4.png" alt="Clients"></a></li>
-									<li><a href="#"><img src="images/clients/5.png" alt="Clients"></a></li>
-									<li><a href="#"><img src="images/clients/6.png" alt="Clients"></a></li>
-									<li><a href="#"><img src="images/clients/7.png" alt="Clients"></a></li>
-									<li><a href="#"><img src="images/clients/8.png" alt="Clients"></a></li>
-									<li><a href="#"><img src="images/clients/9.png" alt="Clients"></a></li>
-									<li class="d-none d-md-block"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></li>
+								<ul class="clients-grid grid-2 grid-sm-3 grid-md-5 mb-0">
+									<li class="grid-item"><a href="#"><img src="images/clients/1.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/2.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/3.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/4.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/5.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/6.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/7.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/8.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/9.png" alt="Clients"></a></li>
+									<li class="grid-item"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></li>
 								</ul>
 							</div>
-							<h5 class="t400 text-black-50 mb-0">If you want to work with for nonprofit? <a href="#"><u>Send your Details</u></a>.</h5>
+							<h5 class="font-weight-normal text-black-50 mb-0">If you want to work with for nonprofit? <a href="#"><u>Send your Details</u></a>.</h5>
 						</div>
 					</div>
 				</div>
@@ -717,28 +721,28 @@
 					<div class="container clearfix">
 						<div class="row">
 							<div class="col-md-4 px-4 mb-5">
-								<h4 class="t500 mb-4">About Canvas</h4>
+								<h4 class="font-weight-medium mb-4">About Canvas</h4>
 								<p class="mb-3">Proactively re-engineer pandemic models rather than cost effective catalysts for change.</p>
 								<abbr title="Location"><strong>Location:</strong></abbr><a href="#"> View the Map</a><br>
-								<abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
+								<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
 								<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
 							</div>
 
 							<div class="col-md-4 px-4 mb-5">
-								<h4 class="t500 mb-4">Our Partners</h4>
+								<h4 class="font-weight-medium mb-4">Our Partners</h4>
 								<p>Conveniently pontificate worldwide services vis-a-vis e-business portals. Phosfluorescently re-engineer global methodologies vis-a-vis standards compliant platforms.</p>
 							</div>
 
 							<div class="col-md-4 px-4 mb-5">
-								<h4 class="t500 mb-4">Mission</h4>
+								<h4 class="font-weight-medium mb-4">Mission</h4>
 								<p>Collaboratively reintermediate enterprise e-commerce with turnkey architectures. Conveniently actualize <a href="#">testing</a> procedures before superior meta-services. Formulate cross-unit <a href="#">Energistically</a> with pandemic markets.</p>
 							</div>
 
 							<div class="col-md-4 px-4 mb-5 mb-md-0">
-								<h4 class="t500 mb-4">Support</h4>
+								<h4 class="font-weight-medium mb-4">Support</h4>
 								<p class="mb-3">Compellingly enable premium alignments rather than sustainable content.</p>
 								<a href="#" class="mb-1 d-block"><i class="icon-envelope21 position-relative" style="top: 1px;"></i> no.reply@canvas.com</a>
-								<div class="t500 mb-2 d-block">Monday - Friday 10:30 -18:00</div>
+								<div class="font-weight-medium mb-2 d-block">Monday - Friday 10:30 -18:00</div>
 								<a href="#" class="social-icon si-dark si-small si-facebook" title="Facebook">
 									<i class="icon-facebook"></i>
 									<i class="icon-facebook"></i>
@@ -771,11 +775,11 @@
 							</div>
 
 							<div class="col-md-4 px-4 mb-5 mb-md-0">
-								<h4 class="t500 mb-4">Testimonials</h4>
+								<h4 class="font-weight-medium mb-4">Testimonials</h4>
 								<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget" data-margin="0" data-nav="false" data-pagi="false" data-items="1" data-autoplay="6000" data-loop="true" data-animate-in="fadeIn" data-animate-out="fadeOut">
 
 									<div class="oc-item">
-										<div class="testimonial nobg noshadow noborder p-0">
+										<div class="testimonial bg-transparent shadow-none border-0 p-0">
 											<div class="testi-content">
 												<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!</p>
 												<div class="testi-meta ls1"> Fig Nelson</div>
@@ -783,7 +787,7 @@
 										</div>
 									</div>
 									<div class="oc-item">
-										<div class="testimonial nobg noshadow noborder p-0">
+										<div class="testimonial bg-transparent shadow-none border-0 p-0">
 											<div class="testi-content">
 												<p>Completely e-enable premier infomediaries and long-term high-impact process improvements. Completely provide access to B2C.</p>
 												<div class="testi-meta ls1"> Bailey Wonger</div>
@@ -796,9 +800,7 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
@@ -810,8 +812,8 @@
 				<!-- Footer Widgets
 				============================================= -->
 				<div class="footer-widgets-wrap dark clearfix" style="background: radial-gradient(rgba(0,45,64,.5), rgba(0,45,64,.1), rgba(0,45,64,.5)), url('demos/nonprofit/images/others/footer.jpg') repeat center center / cover;  padding: 150px 0">
-					<div class="divcenter center" style="max-width: 700px;">
-						<h2 class="display-2 t700 text-white mb-0 ls1 font-secondary mb-4"><i class="icon-heart d-block mb-3"></i>Help the Homeless &amp; Hungry People.</h2>
+					<div class="mx-auto center" style="max-width: 700px;">
+						<h2 class="display-2 font-weight-bold text-white mb-0 ls1 font-secondary mb-4"><i class="icon-heart d-block mb-3"></i>Help the Homeless &amp; Hungry People.</h2>
 						<a href="#" class="button button-rounded button-xlarge button-white bg-white button-light text-dark shadow nott ls0 ml-0 mt-5">Donate Now</a>
 					</div>
 				</div>
@@ -820,13 +822,13 @@
 
 			<!-- Copyrights
 			============================================= -->
-			<div id="copyrights" class="bgcolor">
+			<div id="copyrights" class="bg-color">
 
 				<div class="container clearfix">
 
 					<div class="row justify-content-between align-items-center">
 						<div class="col-md-6">
-							Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.<br>
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
 							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 						</div>
 
@@ -852,7 +854,7 @@
 			</div>
 			<div class="floating-contact-box">
 				<div id="q-contact" class="widget quick-contact-widget clearfix">
-					<div class="floating-contact-heading bgcolor p-4 rounded-top">
+					<div class="floating-contact-heading bg-color p-4 rounded-top">
 						<h3 class="mb-0 font-secondary h2 ls0">Quick Contact 👋</h3>
 						<p class="mb-0">Get in Touch with Us</p>
 					</div>
@@ -865,24 +867,24 @@
 						</div>
 						<div id="floating-contact-submitted" class="p-5 center">
 							<i class="icon-line-mail h1 color"></i>
-							<h4 class="t400 mb-0 font-body">Thank You for Contact Us! Our Team will contact you asap on your email Address.</h4>
+							<h4 class="font-weight-normal mb-0 font-body">Thank You for Contact Us! Our Team will contact you asap on your email Address.</h4>
 						</div>
 						<form class="mb-0" id="floating-contact" action="include/form.php" method="post" enctype="multipart/form-data">
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text nobg"><i class="icon-user-alt"></i></span>
+									<span class="input-group-text bg-transparent"><i class="icon-user-alt"></i></span>
 								</div>
 								<input type="text" name="floating-contact-name" id="floating-contact-name" class="form-control required" value="" placeholder="Enter your Full Name">
 							</div>
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text nobg"><i class="icon-at"></i></span>
+									<span class="input-group-text bg-transparent"><i class="icon-at"></i></span>
 								</div>
 								<input type="email" name="floating-contact-email" id="floating-contact-email" class="form-control required" value="" placeholder="Enter your Email Address">
 							</div>
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text nobg"><i class="icon-comment21"></i></span>
+									<span class="input-group-text bg-transparent"><i class="icon-comment21"></i></span>
 								</div>
 								<textarea name="floating-contact-message" id="floating-contact-message" class="form-control required" cols="30" rows="4"></textarea>
 							</div>
@@ -906,7 +908,6 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 	<script src="js/jquery.calendario.js"></script>
 	<script src="demos/nonprofit/js/events.js"></script>
 

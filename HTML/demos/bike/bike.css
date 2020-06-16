@@ -1,9 +1,5 @@
 /* ----------------------------------------------------------------
-	CSS Specific to the Bike Demo
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Styling of this Demo
-
+	Canvas: Bike
 -----------------------------------------------------------------*/
 
 :root{
@@ -13,7 +9,7 @@
 
 .bg1,
 #header,
-#header.sticky-header #header-wrap { background-color: var(--theme1); }
+#header #header-wrap { background-color: var(--theme1); }
 
 #content p:not(.lead) {
 	font-size: 15px;
@@ -25,7 +21,7 @@
 	transform: translateY(-1px);
 }
 
-.section-curve:after {
+.section-curve::after {
 	height: 50px;
 	background-image: url('images/curve.svg');
 	background-size: 100% 100%;
@@ -127,7 +123,7 @@
 	color: #777;
 }
 
-.showcase-section ul li h3:before {
+.showcase-section ul li h3::before {
 	opacity: 0;
 	content: "\e77d";
 	font-family: 'font-icons';
@@ -140,7 +136,7 @@
 	transition: margin-left .3s ease, opacity .3s ease;
 }
 
-.showcase-section ul li.showcase-feature-active h3:before {
+.showcase-section ul li.showcase-feature-active h3::before {
 	opacity: 1;
 	margin-left: -15px;
 }
@@ -178,17 +174,17 @@
 .heading-block p { font-size: 17px; }
 
 
-.progress.skills-animated:after {
+.progress.skills-animated::after {
 	content: "\e095";
 	font-family: 'lined-icons';
 	color: var(--themecolor);
 	position: absolute;
 	right: -5px;
-	top: -26px;
+	top: 1px;
 	font-size: 36px;
 }
 
-.progress:before {
+.progress::before {
 	width: 20px;
 	height: 20px;
 	content: '';
@@ -200,8 +196,8 @@
 	border-radius: 50%;
 }
 
-.progress-percent:before { display: none; }
-.progress-percent:after {
+.progress-percent::before { display: none; }
+.progress-percent::after {
 	background-color: #fff;
 	border: none;
     position: absolute;
@@ -240,8 +236,6 @@
 .irs-line-left,
 .irs-line-right { background-color: rgba(232, 60, 60, 0.3); }
 
-.pricing-price:after { display: none; }
-
 .portfolio-desc h3 {
 	font-size: 14px;
 	text-transform: uppercase;
@@ -258,61 +252,16 @@
 
 @media (min-width: 992px) {
 
-	#slider + #header.transparent-header {
-		top: -60px;
-		margin-bottom: -60px;
-	}
-
-	#header.transparent-header.floating-header + #slider {
-		top: -120px;
-		margin-bottom: -120px;
-	}
-
-	#primary-menu ul li > a {
-		padding-top: 19px;
-		padding-bottom: 19px;
+	.menu-link {
 		font-weight: 600;
-		text-transform: ;
 		font-size: 14px;
 	}
 
-	#top-search,
-	#top-cart,
-	#side-panel-trigger {
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-
-	#top-cart .top-cart-content { top: 40px; }
-
-	#header,
-	#header-wrap,
-	#logo img { height: 60px; }
-
-	#header.sticky-header:not(.static-sticky),
-	#header.sticky-header:not(.static-sticky) #header-wrap,
-	#header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img { height: 60px; }
-
-	#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
-		padding-top: 19px;
-		padding-bottom: 19px;
-	}
-
-	#header.sticky-header:not(.static-sticky) #top-search,
-	#header.sticky-header:not(.static-sticky) #top-cart,
-	#header.sticky-header:not(.static-sticky) #side-panel-trigger {
-		margin-top: 20px !important;
-		margin-bottom: 20px !important;
-	}
-
-	#header.sticky-header:not(.static-sticky) #top-cart .top-cart-content,
-	#header.sticky-header:not(.static-sticky) #primary-menu.sub-title.style-2 > div #top-cart .top-cart-content { top: 40px; }
-
 	.ytb-card { max-width: 820px; }
 
-	.iportfolio { transition: transform .3s ease; }
+	.portfolio-item { transition: transform .3s ease; }
 
-	.iportfolio:hover {
+	.portfolio-item:hover {
 		transform: translateY(-5px);
 	}
 

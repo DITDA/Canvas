@@ -1,85 +1,7 @@
 /* ----------------------------------------------------------------
-	Canvas: eCommerce Demo
-	Version: 1.0
+	Canvas: eCommerce
 -----------------------------------------------------------------*/
 
-
-body.top-search-open #top-search a i.icon-line2-magnifier,
-#top-search a i.icon-line-cross { opacity: 0; }
-
-.banner-section { position: relative; }
-
-.banner-section .text-overlay {
-	top: 0;
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	background: transparent;
-	-webkit-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
-}
-
-.banner-section .text-overlay h4 {
-	position: absolute;
-	top: auto;
-	left: 30px;
-	bottom: 30px;
-	font-size: 16px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: #555;
-	text-shadow: none;
-	-webkit-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
-}
-
-.banner-section .text-overlay span {
-	position: absolute;
-	top: auto;
-	left: 30px;
-	bottom: 6px;
-	color: #555;
-	text-shadow: none;
-	font-style: italic;
-	font-family: 'Droid Serif', serif;
-	font-size: 13px;
-	font-weight: 400;
-	opacity: 0;
-	line-height: 24px;
-	-webkit-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
-}
-
-.banner-section .text-overlay span i { margin-left: 3px; }
-
-.banner-section .text-overlay:hover h4,
-.banner-section .text-overlay:hover span {
-	-webkit-transform: translateY(-7px);
-	-ms-transform: translateY(-7px);
-	-o-transform: translateY(-7px);
-	transform: translateY(-7px);
-}
-
-.banner-section .text-overlay:hover span {
-	opacity: 1;
-	-webkit-transition: all .3s .15s ease;
-	-o-transition: all .3s .15s ease;
-	transition: all .3s .15s ease;
-}
-
-.banner-section .text-overlay .price {
-	position: absolute;
-	right: 30px;
-	bottom: 20px;
-	text-shadow: none;
-	font-size: 22px;
-	color: #444;
-	font-family: 'Merriweather', serif;
-}
 
 .slider-caption .emphasis-title h2,
 .slider-caption .emphasis-title p  {
@@ -116,6 +38,7 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 .swiper-slide .slide-number {
 	opacity: 0;
 	position: absolute;
+	z-index: 0;
 	top: 0;
 	left: 0;
 	margin-top: -30px;
@@ -166,9 +89,9 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 
 	body.stretched #header.full-header .container { padding-right: 0; }
 
-	#header.full-header #primary-menu.style-ecommerce > ul { border-right: none; }
+	#header.full-header .primary-menu.style-ecommerce .menu-container { border-right: none; }
 
-	#primary-menu > ul > li > a {
+	.menu-container > .menu-item > .menu-link {
 		position: relative;
 		margin: 30px 15px;
 		padding: 0 3px;
@@ -179,13 +102,7 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 		color: #aab7bd;
 	}
 
-	#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
-		padding-top: 0;
-		padding-bottom: 7px;
-		margin: 16px 15px;
-	}
-
-	#primary-menu.style-ecommerce > ul > li > a:after {
+	.primary-menu.style-ecommerce .menu-container > .menu-item > .menu-link::after {
 		position: absolute;
 		content: '';
 		top: auto;
@@ -199,123 +116,51 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 		transition: all .3s ease;
 	}
 
-	#primary-menu.style-ecommerce > ul > li:hover > a,
-	#primary-menu.style-ecommerce > ul > li.current > a { color: #000; }
+	.primary-menu.style-ecommerce .menu-container > .menu-item:hover > .menu-link,
+	.primary-menu.style-ecommerce .menu-container > .menu-item.current > .menu-link { color: #000; }
 
-	#primary-menu.style-ecommerce > ul > li:hover > a:after,
-	#primary-menu.style-ecommerce > ul > li.current > a:after {
+	.primary-menu.style-ecommerce .menu-container > .menu-item:hover > .menu-link::after,
+	.primary-menu.style-ecommerce .menu-container > .menu-item.current > .menu-link::after {
 		width: 100%;
 		left: 0;
 	}
 
-	#primary-menu.style-ecommerce ul ul:not(.mega-menu-column),
-	#primary-menu.style-ecommerce ul li .mega-menu-content {
-		width: 250px;
-		border: 1px solid #EEE;
-		padding: 15px;
-		margin-top: -1px;
+	.sub-menu-container .menu-item > .menu-link {
+		font-size: 0.875rem;
 	}
 
+	.sub-menu-container .menu-item:hover > .menu-link { background-color: transparent; }
 
-	#primary-menu ul ul li:hover > a { background-color: transparent; }
-
-
-	#primary-menu.style-ecommerce ul li .mega-menu-content,
-	#primary-menu.style-ecommerce ul li.mega-menu-small .mega-menu-content {
-		width: 720px;
-		max-width: 400px;
-		padding: 0;
-	}
-
-	#primary-menu.style-ecommerce ul li.mega-menu .mega-menu-content {
-		margin: 0 15px;
-		width: 1140px;
-		max-width: none;
-	}
-
-	body.stretched #header.full-header #primary-menu.style-ecommerce ul li.mega-menu .mega-menu-content { margin-top: -1px; }
-
-	#primary-menu.style-ecommerce ul li .mega-menu-content ul {
-		display: block;
-		position: relative;
-		top: 0;
-		min-width: inherit;
-		border: 0;
-		padding: 0;
-		box-shadow: none;
-		background-color: transparent;
-	}
-
-
-	#primary-menu.style-ecommerce #top-search,
-	#primary-menu.style-ecommerce #top-cart,
-	#primary-menu.style-ecommerce #side-panel-trigger,
-	#primary-menu.style-ecommerce #top-account {
-		margin: 0;
+	.header-misc-icon {
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
 		border-left: 1px solid #EEE;
-		padding: 30px 30px;
 		transition: all .3s ease;
+		padding: 0 1.75rem;
+		margin: 0;
 	}
 
-	#primary-menu ul ul li > a {
+	.header-misc-icon > a {
+		width: 24px;
+		height: 24px;
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.primary-menu ul ul li > a {
 	    font-weight: 600;
 	    text-transform: none;
 	    font-size: 14px;
 	}
 
-	#primary-menu.style-ecommerce #top-search:hover,
-	body.top-search-open #top-search,
-	#primary-menu.style-ecommerce #top-cart:hover,
-	#primary-menu.style-ecommerce #top-cart.top-cart-open,
-	#primary-menu.style-ecommerce #side-panel-trigger:hover,
-	#primary-menu.style-ecommerce #top-account:hover { background-color: #F8F8F8; }
-
-	#primary-menu.style-ecommerce #top-search > a,
-	#primary-menu.style-ecommerce #top-cart > a,
-	#primary-menu.style-ecommerce #side-panel-trigger > a,
-	#primary-menu.style-ecommerce #top-account > a {
-		width: 20px;
-		height: 40px;
-		font-size: 20px;
-		line-height: 40px;
-	}
-
-	#top-cart a:hover { color: #333; }
-
-	#primary-menu.style-ecommerce #top-cart > a > span {
-		top: 2px;
-		left: auto;
-		right: -13px;
-		font-size: 11px;
-		font-weight: 400;
-		font-family: 'Montserrat', sans-serif;
-		color: #FFF;
-		font-weight: 300;
-		text-shadow: none;
-		background-color: #333;
-		border-radius: 50%;
-	}
-
-	#primary-menu.style-ecommerce #top-cart .top-cart-content { right: 0; }
-
-	#top-cart .top-cart-content { top: 100px; }
-
-	#header.sticky-header:not(.static-sticky) #top-search,
-	#header.sticky-header:not(.static-sticky) #top-cart,
-	#header.sticky-header:not(.static-sticky) #side-panel-trigger,
-	#header.sticky-header:not(.static-sticky) #top-account {
-		margin-top: 0 !important;
-		margin-bottom: 0 !important;
-		padding: 10px 30px;
-	}
-
-	#header.sticky-header:not(.static-sticky) #top-cart .top-cart-content { top: 60px; }
+	.header-misc-icon:hover { background-color: #F8F8F8; }
 
 	.grid-item {
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: center;
-	  align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.swiper-caption-wrapper {
@@ -324,7 +169,7 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 		background-color: rgba(0, 0, 0, 0.85);
 	}
 
-	.swiper-caption-wrapper:after {
+	.swiper-caption-wrapper::after {
 		content: '';
 		position: absolute;
 		bottom: -180px;
@@ -353,14 +198,14 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 .device-sm #top-account,
 .device-xs #top-account { margin: 39px 0 32px !important; }
 
-.device-lg #primary-menu > ul > li > a {
+.device-lg .primary-menu > ul > li > a {
 	margin: 30px 10px;
 	padding: 9px 0px;
 	font-size: 12px;
 	letter-spacing: 0px;
 }
 
-#primary-menu.style-ecommerce #top-cart > a > span { background-color: #333 }
+.primary-menu.style-ecommerce #top-cart > a > span { background-color: #333 }
 
 #top-bar p {
 	font-size: 13px;
@@ -438,8 +283,8 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 }
 
 
-.iportfolio .portfolio-image .flex-prev,
-.iportfolio .portfolio-image .flex-next,
+.portfolio-item .portfolio-image .flex-prev,
+.portfolio-item .portfolio-image .flex-next,
 .product-cart,
 .product-quickview {
 	opacity: 0;
@@ -473,22 +318,22 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 
 .product-quickview { right: 40px; }
 
-.iportfolio .portfolio-image .flex-next {
+.portfolio-item .portfolio-image .flex-next {
 	-webkit-transform: translateX(3px);
 	transform: translateX(3px);
 }
 
-.iportfolio:hover .portfolio-image .flex-prev,
-.iportfolio:hover .portfolio-image .flex-next,
-.iportfolio:hover .product-cart,
-.iportfolio:hover .product-quickview {
+.portfolio-item:hover .portfolio-image .flex-prev,
+.portfolio-item:hover .portfolio-image .flex-next,
+.portfolio-item:hover .product-cart,
+.portfolio-item:hover .product-quickview {
 	opacity: 1;
 	-webkit-transform: none;
 	transform: none;
 }
 
-.iportfolio .portfolio-image .flex-prev i,
-.iportfolio .portfolio-image .flex-next i,
+.portfolio-item .portfolio-image .flex-prev i,
+.portfolio-item .portfolio-image .flex-next i,
 .product-cart i,
 .product-quickview i {
 	color: #444;
@@ -510,10 +355,10 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 	margin-left: 1px;
 }
 
-.iportfolio .portfolio-image .flex-next i { margin-left: 2px; }
+.portfolio-item .portfolio-image .flex-next i { margin-left: 2px; }
 
-.iportfolio .portfolio-image .flex-prev:hover,
-.iportfolio .portfolio-image .flex-next:hover { background-color: #FFF !important; }
+.portfolio-item .portfolio-image .flex-prev:hover,
+.portfolio-item .portfolio-image .flex-next:hover { background-color: #FFF !important; }
 
 .sale-flash {
 	background-color: #454545;
@@ -547,14 +392,6 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 	font-weight: 300;
 	letter-spacing: 0;
 	margin-top: 0;
-}
-
-.portfolio-desc .item-price {
-	position: absolute;
-	bottom: 0;
-	right: 5px;
-	float: right;
-	text-align: right;
 }
 
 .portfolio-desc .item-price span {
@@ -601,7 +438,7 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 
 .ecommerce-categories [class^=col-] img { display: block; }
 
-.ecommerce-categories [class^=col-] > a:before {
+.ecommerce-categories [class^=col-] > a::before {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -614,7 +451,7 @@ body.top-search-open #top-search a i.icon-line2-magnifier,
 	transition: all .7s ease;
 }
 
-.ecommerce-categories [class^=col-] > a:hover:before { opacity: 1; }
+.ecommerce-categories [class^=col-] > a:hover::before { opacity: 1; }
 
 .before-heading {
 	text-transform: uppercase;

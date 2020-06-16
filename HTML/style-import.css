@@ -1,24 +1,26 @@
 /*-----------------------------------------------------------------------------------
 
-	Theme Name: Canvas
-	Theme URI: http://themes.semicolonweb.com/html/canvas
-	Description: The Multi-Purpose Template
-	Author: SemiColonWeb
-	Author URI: http://themeforest.net/user/semicolonweb
-	Version: 5.9.1
+    Theme Name: Canvas
+    Theme URI: http://themes.semicolonweb.com/html/canvas
+    Description: The Multi-Purpose Template
+    Author: SemiColonWeb
+    Author URI: http://themeforest.net/user/semicolonweb
+    Version: 6.0.1
 
-	CSS Stylesheet
+    SASS Stylesheet
 
 -----------------------------------------------------------------------------------*/
 
+/* Bootstrap */
+@import url("css/imports/bootstrap.css");
 
-/*  Core CSS */
-@import url("css/imports/typography.css");
-@import url("css/imports/helpers.css");
+/* Core CSS */
 @import url("css/imports/layouts.css");
+@import url("css/imports/typography.css");
+@import url("css/imports/utilities.css");
 
 
-/*  Content Blocks */
+/* Content Blocks */
 @import url("css/imports/topbar.css");
 @import url("css/imports/header.css");
 @import url("css/imports/sliders.css");
@@ -30,17 +32,24 @@
 @import url("css/imports/events.css");
 
 
-/*  Shortcodes */
+/* Shortcodes */
 @import url("css/imports/shortcodes.css");
 
+/* Forms */
+@import url("css/imports/forms.css");
 
-/*  Footer */
+/* Footer */
 @import url("css/imports/footer.css");
 
 
-/*  Widgets */
+/* Widgets */
 @import url("css/imports/widgets.css");
 
+/* Paginations */
+@import url("css/imports/paginations.css");
 
-/*  Extras */
+/* Extras */
 @import url("css/imports/extras.css");
+
+/* Page Loaders */
+@import url("css/imports/page-loaders.css");

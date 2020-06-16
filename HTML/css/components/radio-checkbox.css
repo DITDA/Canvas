@@ -39,10 +39,7 @@
 .radio-style-2-label:before,
 .radio-style-3-label:before { border-radius: 50%; }
 
-.checkbox-style:checked + .checkbox-style-1-label:before {
-	background: #1ABC9C;
-	background: var(--themecolor);
-}
+.checkbox-style:checked + .checkbox-style-1-label:before { background: #1ABC9C; }
 .radio-style:checked + .radio-style-1-label:before { background: #CCC; }
 
 /* Checkbox-small + Radio-small */
@@ -61,7 +58,6 @@
 /* Style-2 */
 .checkbox-style:checked + .checkbox-style-2-label:before {
 	background: #1ABC9C;
-	background: var(--themecolor);
 	box-shadow: inset 0px 0px 0px 4px #fff;
 }
 
@@ -79,7 +75,6 @@
 	content: "\e116";
 	font-family: 'lined-icons';
 	background: #1ABC9C;
-	background: var(--themecolor);
 	color: #FFF;
 }
 .radio-style:checked + .radio-style-3-label:before {

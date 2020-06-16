@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Istok+Web:400,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Istok+Web:400,700&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -20,7 +20,7 @@
 
 	<link rel="stylesheet" href="css/components/ion.rangeslider.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link rel="stylesheet" href="css/colors.php?color=e83c3c" type="text/css" />
@@ -44,17 +44,17 @@
 
 		<!-- Modal -->
 		<div class="modal1 mfp-hide" id="modal-register">
-			<div class="card divcenter" style="max-width: 540px;">
-				<div class="card-header py-3 nobg center">
-					<h3 class="mb-0 t400">Hello, Welcome Back</h3>
+			<div class="card mx-auto" style="max-width: 540px;">
+				<div class="card-header py-3 bg-transparent center">
+					<h3 class="mb-0 font-weight-normal">Hello, Welcome Back</h3>
 				</div>
-				<div class="card-body divcenter py-5" style="max-width: 70%;">
+				<div class="card-body mx-auto py-5" style="max-width: 70%;">
 
-					<a href="#" class="button button-large button-rounded btn-block si-colored si-facebook nott t400 ls0 center nomargin"><i class="icon-facebook-sign"></i> Log in with Facebook</a>
+					<a href="#" class="button button-large button-rounded btn-block si-colored si-facebook nott font-weight-normal ls0 center m-0"><i class="icon-facebook-sign"></i> Log in with Facebook</a>
 
 					<div class="divider divider-center"><span class="position-relative" style="top: -2px">OR</span></div>
 
-					<form id="login-form" name="login-form" class="nobottommargin row" action="#" method="post">
+					<form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
 
 						<div class="col-12">
 							<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username" />
@@ -65,11 +65,11 @@
 						</div>
 
 						<div class="col-12">
-							<a href="#" class="fright text-dark t300 mt-2">Forgot Password?</a>
+							<a href="#" class="float-right text-dark font-weight-light mt-2">Forgot Password?</a>
 						</div>
 
 						<div class="col-12 mt-4">
-							<button class="button button-rounded btn-block nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+							<button class="button button-rounded btn-block m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
 						</div>
 					</form>
 				</div>
@@ -81,55 +81,55 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="clearfix static-sticky border-bottom">
-
+		<header id="header" class="border-bottom" data-sticky-shrink="false" data-logo-height="70" data-menu-padding="24">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-lg-between">
 
-				<div class="container clearfix">
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="mr-lg-0">
+							<a href="index.html" class="standard-logo" data-dark-logo="demos/business/images/logo-dark.png"><img src="demos/business/images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="demos/business/images/logo-dark@2x.png"><img src="demos/business/images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
 
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="demos/business/images/logo-dark.png"><img src="demos/business/images/logo.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo" data-dark-logo="demos/business/images/logo-dark@2x.png"><img src="demos/business/images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
+						<nav class="primary-menu">
 
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu" class="d-lg-flex d-xl-flex justify-content-xl-between justify-content-lg-between fnone">
+							<ul class="menu-container not-dark one-page-menu">
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-price"><div>Price</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>About</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+							</ul>
 
-						<ul class="not-dark align-self-start"></ul>
-						<ul class="not-dark align-self-center one-page-menu">
-							<li><a href="#" data-href="#section-price"><div>Price</div></a></li>
-							<li><a href="#"><div>About</div></a></li>
-							<li><a href="#"><div>Contact</div></a></li>
-						</ul>
+						</nav><!-- #primary-menu end -->
 
-						<ul class="not-dark align-self-end">
-							<li><a href="#modal-register" data-lightbox="inline" class="color"><div><i class="icon-line2-login"></i>Login</div></a></li>
-						</ul>
+						<nav class="primary-menu">
 
-					</nav><!-- #primary-menu end -->
+							<ul class="menu-container not-dark">
+								<li class="menu-item"><a class="menu-link color" href="#modal-register" data-lightbox="inline"><div><i class="icon-line2-login"></i>Login</div></a></li>
+							</ul>
 
+						</nav>
+
+					</div>
 				</div>
-
 			</div>
-
 		</header><!-- #header end -->
 
 		<!-- Content
 		============================================= -->
 		<section id="content">
+			<div class="content-wrap py-0">
 
-			<div class="content-wrap nopadding">
-
-				<div class="section section-curve notopmargin" style="background: var(--theme1) url('demos/bike/images/hero-bike.png') right 70% / cover; height: 750px;">
+				<div class="section section-curve mt-0" style="background: var(--theme1) url('demos/bike/images/hero-bike.png') right 70% / cover; height: 750px;">
 
 					<div class="container center">
-						<div class="heading-block mt-4 nobottomborder">
-							<h1 class="nott t600" style="font-size: 44px; letter-spacing: -1px">Rent Your Bike Now</h1>
+						<div class="heading-block mt-4 border-bottom-0">
+							<h1 class="nott font-weight-semibold" style="font-size: 44px; letter-spacing: -1px">Rent Your Bike Now</h1>
 							<small class="mb-5 h6 lead">Revolutionizing your Commute Everyday in an Eco-Friendly Way.</small>
 						</div>
 
@@ -140,31 +140,31 @@
 				</div>
 
 				<div class="container">
-					<div class="card border-0 divcenter rounded ytb-card" style="box-shadow: 0 32px 46px 2px rgba(0,0,0,0.12);">
-						<div id="ytb-video" class="yt-bg-player card-img-top rounded-top" data-quality="hd1080" data-volume="80" data-autoplay="false" data-video="https://youtu.be/SF0DLn3hEnc">
+					<div class="card border-0 mx-auto rounded ytb-card" style="box-shadow: 0 32px 46px 2px rgba(0,0,0,0.12);">
+						<div id="ytb-video" class="yt-bg-player card-img-top rounded-top" data-quality="hd1080" data-volume="80" data-autoplay="false" data-container="self" data-video="https://youtu.be/SF0DLn3hEnc">
 							<div class="ytb-poster rounded-top" style="background: url('demos/bike/images/video-poster.jpg') center center / cover; position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
 							</div>
 							<a href="#" id="ytb-video-button" class="play-icon"><i class="icon-play"></i><i class="icon-pause"></i></a>
-							</div>
+						</div>
 						<div class="card-body p-5">
 							<div class="row justify-content-between align-items-center">
 								<div class="col-md-6">
-									<div class="heading-block nobottomborder mb-0">
-										<small class="text-black-50 uppercase ls3 t600">Electric Bike</small>
-										<h2 class="nott t600 ls0 mb-2">Free Test Drive</h2>
+									<div class="heading-block border-bottom-0 mb-0">
+										<small class="text-black-50 text-uppercase ls3 font-weight-semibold">Electric Bike</small>
+										<h2 class="nott font-weight-semibold ls0 mb-2">Free Test Drive</h2>
 										<p class="mb-1">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
 									</div>
 								</div>
 								<div class="col-md-5 mt-3 mt-md-0">
 									<div class="subscribe-widget" data-loader="button">
 										<div class="widget-subscribe-form-result"></div>
-										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="nobottommargin">
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
 											<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control not-dark required email" placeholder="Enter your Email Address..">
 											<div class="form-check py-3">
 												<input type="checkbox" class="form-check-input" id="subscribe-news">
-												<label class="form-check-label nott ls0 t400" for="subscribe-news">Get New Updates &amp; Announcements</label>
+												<label class="form-check-label nott ls0 font-weight-normal" for="subscribe-news">Get New Updates &amp; Announcements</label>
 											</div>
-											<button class="button button-shadow button-rounded nomargin nott ls0 btn-block" type="submit">Subscribe</button>
+											<button class="button button-shadow button-rounded m-0 nott ls0 btn-block" type="submit">Subscribe</button>
 										</form>
 									</div>
 								</div>
@@ -172,7 +172,7 @@
 						</div>
 					</div>
 
-					<div class="row topmargin align-items-center divcenter bottommargin-lg" style="max-width: 840px">
+					<div class="row topmargin align-items-center mx-auto bottommargin-lg" style="max-width: 840px">
 						<div class="col-md-3 mb-2 mb-md-0">
 							<h3 class="mb-0">Partners:</h3>
 						</div>
@@ -188,17 +188,17 @@
 					</div>
 				</div>
 
-				<div class="section nobg topmargin-lg mb-0">
+				<div class="section bg-transparent topmargin-lg mb-0">
 					<div class="container">
-						<div class="heading-block divcenter center" style="max-width: 600px">
-							<small class="text-black-50 uppercase ls3 t600">Our Service</small>
-							<h2 class="capitalize t600 ls0 mb-1" style="font-size: 36px">How do you Get Bike</h2>
+						<div class="heading-block mx-auto center" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls3 font-weight-semibold">Our Service</small>
+							<h2 class="text-capitalize font-weight-semibold ls0 mb-1" style="font-size: 36px">How do you Get Bike</h2>
 							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
 						</div>
 						<div class="clear"></div>
 						<div class="row showcase-section align-items-center justify-content-between clearfix">
 							<div class="col-lg-3 col-md-5">
-								<ul class="nobottommargin">
+								<ul class="mb-0">
 									<li class="showcase-feature showcase-feature-active" data-target="#target-1">
 										<h3>Choose Your Location.</h3>
 	  									<p>Credibly conceptualize backward-compatible interna visionary.</p>
@@ -212,7 +212,7 @@
 	  									<p>Holisticly customize fully synergistic e-business continually.</p>
 									</li>
 									<li class="showcase-feature" data-target="#target-4">
-										<h3 class="uppercase">Start Riding.</h3>
+										<h3 class="text-uppercase">Start Riding.</h3>
 	  									<p>Interactively without backward-compatible enable.</p>
 									</li>
 								</ul>
@@ -221,22 +221,22 @@
 							<div class="col-lg-8 col-md-7" >
 								<div id="target-1" class="showcase-target showcase-target-active">
 									<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8401081858365!2d144.95373095091972!3d-37.81721397965242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1526558559407" data-lightbox="iframe">
-										<img src="demos/bike/images/mockups/1.jpg" alt="">
+										<img src="demos/bike/images/mockups/1.jpg" alt="Image">
 									</a>
 								</div>
 								<div id="target-2" class="showcase-target">
-									<img class="rounded" src="demos/bike/images/mockups/2.jpg" alt="">
+									<img class="rounded" src="demos/bike/images/mockups/2.jpg" alt="Image">
 								</div>
 								<div id="target-3" class="showcase-target">
-									<img class="rounded" src="demos/bike/images/mockups/3.jpg" alt="">
+									<img class="rounded" src="demos/bike/images/mockups/3.jpg" alt="Image">
 								</div>
 								<div id="target-4" class="showcase-target">
 									<div class="rounded" style="background: url('demos/bike/images/mockups/4.jpg') bottom center / 100% auto; min-height: 500px;">
-										<div class="row dark nomargin">
+										<div class="row dark m-0">
 											<div class="col-lg-5 rounded py-5 px-4" style="background-color: rgba(0,0,0,0.5);">
 												<h2 class="display-5 mb-0">Ride Away.</h2>
 												<hr>
-												<p class="lead d-none d-md-block nobottommargin">In Style. With Confidence. Eco-Friendly Way.</p>
+												<p class="lead d-none d-md-block mb-0">In Style. With Confidence. Eco-Friendly Way.</p>
 											</div>
 										</div>
 									</div>
@@ -248,9 +248,9 @@
 
 				<div class="section bg1 mt-4" style="padding: 120px 0;">
 					<div class="container">
-						<div class="heading-block divcenter center" style="max-width: 600px">
-							<small class="text-black-50 uppercase ls3 t600">Available Bikes</small>
-							<h2 class="capitalize t600 mb-2" style="font-size: 36px; letter-spacing: -1px">Check Out Our Bikes</h2>
+						<div class="heading-block mx-auto center" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls3 font-weight-semibold">Available Bikes</small>
+							<h2 class="text-capitalize font-weight-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Check Out Our Bikes</h2>
 							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
 						</div>
 						<div class="row justify-content-between">
@@ -260,7 +260,7 @@
 								  <div class="col-sm-7 media-body">
 								  	<h3 class="mb-3">Trek Bike</h3>
 								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-								    <a href="#" class="button button-shadow button-rounded t400 ls0 nomargin nott">View More</a>
+								    <a href="#" class="button button-shadow button-rounded font-weight-normal ls0 m-0 nott">View More</a>
 								  </div>
 								</div>
 							</div>
@@ -271,7 +271,7 @@
 								  <div class="col-sm-7 media-body">
 								    <h3 class="mb-3">Islabikes Luath Pro Series</h3>
 								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-								    <a href="#" class="button button-shadow button-rounded t400 ls0 nomargin nott">View More</a>
+								    <a href="#" class="button button-shadow button-rounded font-weight-normal ls0 m-0 nott">View More</a>
 								  </div>
 								</div>
 							</div>
@@ -282,7 +282,7 @@
 								  <div class="col-sm-7 media-body">
 								    <h3 class="mb-3">Syracuse Bicycle</h3>
 								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-								    <a href="#" class="button button-shadow button-rounded t400 ls0 nomargin nott">View More</a>
+								    <a href="#" class="button button-shadow button-rounded font-weight-normal ls0 m-0 nott">View More</a>
 								  </div>
 								</div>
 							</div>
@@ -293,7 +293,7 @@
 								  <div class="col-sm-7 media-body">
 								    <h3 class="mb-3">Wi-Bike Range</h3>
 								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-								    <a href="#" class="button button-shadow button-rounded t400 ls0 nomargin nott">View More</a>
+								    <a href="#" class="button button-shadow button-rounded font-weight-normal ls0 m-0 nott">View More</a>
 								  </div>
 								</div>
 							</div>
@@ -301,15 +301,15 @@
 					</div>
 				</div>
 
-				<div class="section nobg" style="padding: 80px 0">
+				<div class="section bg-transparent" style="padding: 80px 0">
 					<div class="container">
-						<div class="heading-block divcenter nobottomborder center" style="max-width: 600px">
+						<div class="heading-block mx-auto border-bottom-0 center" style="max-width: 600px">
 							<i class="icon-et-bike d-block h1 mb-4 text-black"></i>
-							<small class="text-black-50 uppercase ls3 t600">What We Have Done</small>
-							<h2 class="nott t600 mb-2" style="font-size: 36px; letter-spacing: -1px"><span class="counter counter-inherit text-dark inline-block">More than <code class="color"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100"></span></code>+</span> Bikes are already Rented in <span>11</span> Countries.</h2>
+							<small class="text-black-50 text-uppercase ls3 font-weight-semibold">What We Have Done</small>
+							<h2 class="nott font-weight-semibold mb-2" style="font-size: 36px; letter-spacing: -1px"><span class="counter counter-inherit text-dark inline-block">More than <code class="color"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100"></span></code>+</span> Bikes are already Rented in <span>11</span> Countries.</h2>
 							<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
 						</div>
-						<ul class="skills divcenter" style="max-width: 600px">
+						<ul class="skills mx-auto" style="max-width: 600px">
 							<li data-percent="80">
 								<div class="progress">
 									<div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100"></span></div></div>
@@ -323,9 +323,9 @@
 					<div class="container">
 						<div class="row justify-content-between">
 							<div class="col-md-7">
-								<div class="heading-block nobottomborder">
-									<small class="text-black-50 uppercase ls3 t600">Pricing Table</small>
-									<h2 class="capitalize t600 mb-2" style="font-size: 36px; letter-spacing: -1px">Bike Rental Prices</h2>
+								<div class="heading-block border-bottom-0">
+									<small class="text-black-50 text-uppercase ls3 font-weight-semibold">Pricing Table</small>
+									<h2 class="text-capitalize font-weight-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Bike Rental Prices</h2>
 									<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate vero esse ea hic quod veniam quam accusamus laboriosam ipsam provident voluptatibus iste earum facilis voluptatum, ducimus quis quae blanditiis temporibus minima libero! Doloribus sapiente voluptatibus cupiditate autem debitis id.</p>
 								</div>
@@ -343,7 +343,7 @@
 								</div>
 								<div class="row mt-4 mt-md-5 clearfix">
 									<div class="col-sm-6">
-										<h4 class="t600 mb-3">Free Plan:</h4>
+										<h4 class="font-weight-semibold mb-3">Free Plan:</h4>
 										<ul class="ml-3 mb-2">
 											<li class="mb-2">1Hr Free Trail.</li>
 											<li class="mb-2">Used Bikes.</li>
@@ -352,7 +352,7 @@
 										</ul>
 									</div>
 									<div class="col-sm-6 mt-4 mt-sm-0">
-										<h4 class="t600 mb-3">Pro Plans:</h4>
+										<h4 class="font-weight-semibold mb-3">Pro Plans:</h4>
 										<ul class="ml-3 mb-2">
 											<li class="mb-2">Door - Door Service.</li>
 											<li class="mb-2">Choose any Bike.</li>
@@ -364,11 +364,11 @@
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-5 mt-4 mt-md-0 sticky-sidebar-wrap">
-								<div class="card text-center noborder shadow sticky-sidebar">
+								<div class="card text-center border-0 shadow sticky-sidebar py-4">
 									<div class="card-body py-4">
-										<h3 class="card-title t400 mb-0">Your Plan</h3>
+										<h3 class="card-title font-weight-normal mb-0">Your Plan</h3>
 										<!-- Price Value -->
-										<div class="pricing-price t700 py-3"></div>
+										<div class="pricing-price font-weight-bold py-3"></div>
 										<p class="card-text pricing-sub text-muted">$2/Days Per Bikes</p>
 									</div>
 									<div class="line my-1"></div>
@@ -379,7 +379,7 @@
 											<li class="mb-2">Provide One Helmet/Bike</li>
 											<li>Credit Cards Accepted</li>
 										</ul>
-										<a href="#" class="button button-rounded button-large ls0 t400 ml-0 mb-2 nott">Rent Now</a>
+										<a href="#" class="button button-rounded button-large ls0 font-weight-normal ml-0 mb-2 nott">Rent Now</a>
 									</div>
 								</div>
 							</div>
@@ -387,21 +387,21 @@
 					</div>
 				</div>
 
-				<div class="section nobg clearfix">
+				<div class="section bg-transparent clearfix">
 					<div class="container clearfix">
 
-						<div class="heading-block divcenter nobottomborder center clearfix" style="max-width: 600px">
-							<small class="text-black-50 uppercase ls3 t600">Accessories</small>
-							<h2 class="capitalize t600 mb-2" style="font-size: 36px; letter-spacing: -1px">Looking for more Addons?</h2>
+						<div class="heading-block mx-auto border-bottom-0 center clearfix" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls3 font-weight-semibold">Accessories</small>
+							<h2 class="text-capitalize font-weight-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Looking for more Addons?</h2>
 							<p class="mb-3">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
-							<div class="center"><div class="button ls0 button-rounded button-border nott t400 ">View More</div></div>
+							<div class="center"><div class="button ls0 button-rounded button-border nott font-weight-normal ">View More</div></div>
 						</div>
 
 						<div class="row clearfix">
 
 							<div class="col-lg-3 col-sm-6">
-								<a href="#" class="iportfolio border d-block bg1 clearfix">
-									<div class="portfolio-image clearfix">
+								<a href="#" class="portfolio-item border d-block bg1">
+									<div class="portfolio-image">
 										<img src="demos/bike/images/items/1.png" alt="Image">
 									</div>
 									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
@@ -412,8 +412,8 @@
 							</div>
 
 							<div class="col-lg-3 col-sm-6 mt-4 mt-sm-0">
-								<a href="#" class="iportfolio border d-block clearfix">
-									<div class="portfolio-image clearfix">
+								<a href="#" class="portfolio-item border d-block">
+									<div class="portfolio-image">
 										<img src="demos/bike/images/items/2.png" alt="Image">
 									</div>
 									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
@@ -424,8 +424,8 @@
 							</div>
 
 							<div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
-								<a href="#" class="iportfolio border d-block bg1 clearfix">
-									<div class="portfolio-image clearfix">
+								<a href="#" class="portfolio-item border d-block bg1">
+									<div class="portfolio-image">
 										<img src="demos/bike/images/items/3.png" alt="Image">
 									</div>
 									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
@@ -436,8 +436,8 @@
 							</div>
 
 							<div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
-								<a href="#" class="iportfolio border d-block clearfix">
-									<div class="portfolio-image clearfix">
+								<a href="#" class="portfolio-item border d-block">
+									<div class="portfolio-image">
 										<img src="demos/bike/images/items/4.png" alt="Image">
 									</div>
 									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
@@ -451,51 +451,48 @@
 					</div>
 				</div>
 
-				<div class="section nobg clearfix">
+				<div class="section bg-transparent clearfix">
 					<div class="container">
 						<div class="row align-items-center justify-content-between">
 							<div class="col-lg-6">
-								<div class="heading-block nobottomborder mb-0">
-									<small class="text-black-50 uppercase ls3 t600">Contact Us</small>
-									<h2 class="capitalize t600 mb-2" style="font-size: 44px; letter-spacing: -1px">Still Can't Decide?!</h2>
+								<div class="heading-block border-bottom-0 mb-0">
+									<small class="text-black-50 text-uppercase ls3 font-weight-semibold">Contact Us</small>
+									<h2 class="text-capitalize font-weight-semibold mb-2" style="font-size: 44px; letter-spacing: -1px">Still Can't Decide?!</h2>
 									<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
 								</div>
 							</div>
 
 							<div class="col-lg-6 d-inline-block d-sm-inline-flex justify-content-start justify-content-lg-end">
-								<div class="button button-xlarge ls0 button-rounded button-border nott t400 ">Start Renting</div>
-								<div class="button button-xlarge ls0 button-rounded button-shadow nott t400 ">Contact Us</div>
+								<div class="button button-xlarge ls0 button-rounded button-border nott font-weight-normal ">Start Renting</div>
+								<div class="button button-xlarge ls0 button-rounded button-shadow nott font-weight-normal ">Contact Us</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
 		<footer id="footer" class="dark">
-
 			<div class="container">
 
 				<!-- Footer Widgets
 				============================================= -->
-				<div class="footer-widgets-wrap clearfix">
+				<div class="footer-widgets-wrap">
 
 					<div class="row">
 						<div class="col-6 col-lg-4">
-							<img class="mb-2" src="demos/bike/images/logo-foo.png" alt="" width="123">
-							<small class="d-block mb-4 text-muted">&copy; 2017-2018</small>
+							<img class="mb-2" src="demos/bike/images/logo-foo.png" alt="Image" width="123">
+							<small class="d-block mb-4 text-muted">&copy; 2020-2021</small>
 							<div class="row my-4">
 								<div class="col-md-6">
-									<div class="counter counter-small text-light t400"><span class="h4" data-from="50" data-to="8465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<div class="counter counter-small text-light font-weight-normal"><span class="h4" data-from="50" data-to="8465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
 									<h5 class="m-0 text-muted">Total Rented</h5>
 								</div>
 
 								<div class="col-md-6">
-									<div class="counter counter-small text-light t400"><span class="h4" data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<div class="counter counter-small text-light font-weight-normal"><span class="h4" data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
 									<h5 class="m-0 text-muted">Clients Served</h5>
 								</div>
 							</div>
@@ -521,7 +518,7 @@
 						</div>
 						<div class="col-6 col-lg-3">
 							<h4>Features</h4>
-							<ul class="list-unstyled nobottommargin text-small">
+							<ul class="list-unstyled mb-0 text-small">
 								<li class="mb-2"><a class="text-muted" href="#">Cool stuff</a></li>
 								<li class="mb-2"><a class="text-muted" href="#">Random feature</a></li>
 								<li class="mb-2"><a class="text-muted" href="#">Team feature</a></li>
@@ -532,7 +529,7 @@
 						</div>
 						<div class="col-6 col-lg-3 mt-5 mt-lg-0">
 							<h4>Resources</h4>
-							<ul class="list-unstyled nobottommargin text-small">
+							<ul class="list-unstyled mb-0 text-small">
 								<li class="mb-2"><a class="text-muted" href="#">Resource</a></li>
 								<li class="mb-2"><a class="text-muted" href="#">Resource name</a></li>
 								<li class="mb-2"><a class="text-muted" href="#">Another resource</a></li>
@@ -541,7 +538,7 @@
 						</div>
 						<div class="col-6 col-lg-2 mt-5 mt-lg-0">
 							<h4>About</h4>
-							<ul class="list-unstyled nobottommargin text-small">
+							<ul class="list-unstyled mb-0 text-small">
 								<li class="mb-2"><a class="text-muted" href="#">Team</a></li>
 								<li class="mb-2"><a class="text-muted" href="#">Locations</a></li>
 								<li class="mb-2"><a class="text-muted" href="#">Privacy</a></li>
@@ -561,7 +558,7 @@
 
 					<div class="row align-items-center justify-content-between">
 						<div class="col-md-6">
-							Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.<br>
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
 							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 						</div>
 
@@ -587,7 +584,6 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<script src="js/components/rangeslider.min.js"></script>
 

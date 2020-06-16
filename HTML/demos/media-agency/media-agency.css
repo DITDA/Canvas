@@ -1,6 +1,5 @@
 /* ----------------------------------------------------------------
-    Canvas: Media Agency Demo
-    Version: 1.0.1
+    Canvas: Media Agency
 -----------------------------------------------------------------*/
 
 
@@ -55,37 +54,10 @@
 /* Header
 ---------------------------------------------------------------------------- */
 
-#primary-menu ul li a {
+.menu-link {
 	font-size: 11px;
 	color: #888;
 }
-
-.header-social-set {
-	float: right;
-	margin: 34px 0;
-}
-
-@media (max-width: 991px) {
-
-	#primary-menu-trigger { left: 106px !important; }
-
-	.header-social-set {
-		position: absolute;
-		top: 0;
-		left: auto;
-		right: 120px;
-	}
-
-}
-
-@media (max-width: 767px) {
-
-	#primary-menu-trigger { left: 26px !important; }
-
-	.header-social-set { right: 40px; }
-
-}
-
 
 /* Headings
 ---------------------------------------------------------------------------- */
@@ -128,26 +100,6 @@
 		max-width: 100%;
 	}
 
-}
-
-
-/* Portfolio Items
----------------------------------------------------------------------------- */
-
-.portfolio-full.portfolio-3 { margin: 0 -20px -20px 0 !important; }
-
-.portfolio-full.portfolio-3 .portfolio-item { padding: 0 20px 20px 0 !important; }
-
-.device-xs .portfolio-full.portfolio-3 { margin: 0 0 -20px 0 !important; }
-
-.device-xs .portfolio-full.portfolio-3 .portfolio-item { padding: 0 0 20px 0 !important; }
-
-
-.i-overlay { background: rgba(255,255,255,0.8); }
-
-.i-overlay i {
-	color: #777666;
-	text-shadow: none;
 }
 
 

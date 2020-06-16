@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title
@@ -33,127 +33,468 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header">
-
+		<header id="header" class="full-header">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
 
-				<div class="container clearfix">
-
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
-
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu">
-
-						<ul>
-							<li><a href="index.html"><div>Home</div></a></li>
-							<li class="current"><a href="#"><div>Features</div></a></li>
-							<li><a href="#"><div>Pages</div></a></li>
-							<li><a href="#"><div>Portfolio</div></a></li>
-							<li><a href="#"><div>Blog</div></a></li>
-							<li><a href="shop.html"><div>Shop</div></a></li>
-							<li><a href="#"><div>Shortcodes</div></a></li>
-						</ul>
-
-						<!-- Top Cart
+						<!-- Logo
 						============================================= -->
-						<div id="top-cart">
-							<a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
-							<div class="top-cart-content">
-								<div class="top-cart-title">
-									<h4>Shopping Cart</h4>
-								</div>
-								<div class="top-cart-items">
-									<div class="top-cart-item clearfix">
-										<div class="top-cart-item-image">
-											<a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+						<div id="logo">
+							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+							</div><!-- #top-search end -->
+
+							<!-- Top Cart
+							============================================= -->
+							<div id="top-cart" class="header-misc-icon d-none d-sm-block">
+								<a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span class="top-cart-number">5</span></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4>Shopping Cart</h4>
+									</div>
+									<div class="top-cart-items">
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Blue Round-Neck Tshirt with a Button</a>
+													<span class="top-cart-item-price d-block">$19.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 2</div>
+											</div>
 										</div>
-										<div class="top-cart-item-desc">
-											<a href="#">Blue Round-Neck Tshirt</a>
-											<span class="top-cart-item-price">$19.99</span>
-											<span class="top-cart-item-quantity">x 2</span>
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Light Blue Denim Dress</a>
+													<span class="top-cart-item-price d-block">$24.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 3</div>
+											</div>
 										</div>
 									</div>
-									<div class="top-cart-item clearfix">
-										<div class="top-cart-item-image">
-											<a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
-										</div>
-										<div class="top-cart-item-desc">
-											<a href="#">Light Blue Denim Dress</a>
-											<span class="top-cart-item-price">$24.99</span>
-											<span class="top-cart-item-quantity">x 3</span>
-										</div>
+									<div class="top-cart-action">
+										<span class="top-checkout-price">$114.95</span>
+										<a href="#" class="button button-3d button-small m-0">View Cart</a>
 									</div>
 								</div>
-								<div class="top-cart-action clearfix">
-									<span class="fleft top-checkout-price">$114.95</span>
-									<button class="button button-3d button-small nomargin fright">View Cart</button>
+							</div><!-- #top-cart end -->
+
+						</div>
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+							<div class="container">
+								<div class="row align-items-center mx-auto" style="max-width: 600px;">
+
+									<div class="col-lg-6">
+										<ul class="menu-container text-left text-lg-center">
+											<li class="menu-item">
+												<a class="menu-link" href="index.html"><div>Home</div></a>
+												<ul class="sub-menu-container">
+													<li class="menu-item">
+														<a class="menu-link" href="intro.html#section-niche"><div>Niche Demos</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="index-corporate.html"><div>Home - Corporate</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="index-portfolio.html"><div>Home - Portfolio</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="index-blog.html"><div>Home - Blog</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="index-shop.html"><div>Home - Shop</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="index-magazine.html"><div>Home - Magazine</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="landing.html"><div>Home - Landing Page</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="index-fullscreen-image.html"><div>Home - Full Screen</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item">
+																<a class="menu-link" href="index-fullscreen-image.html"><div>Full Screen - Image</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="index-fullscreen-slider.html"><div>Full Screen - Slider</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="index-fullscreen-video.html"><div>Full Screen - Video</div></a>
+															</li>
+														</ul>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="index-onepage.html"><div>Home - One Page</div></a>
+													</li>
+												</ul>
+											</li>
+											<li class="menu-item">
+												<a class="menu-link" href="#"><div>Features</div></a>
+											</li>
+											<li class="menu-item mega-menu">
+												<a class="menu-link" href="#"><div>Pages</div></a>
+											</li>
+											<li class="menu-item mega-menu">
+												<a class="menu-link" href="portfolio.html"><div>Portfolio</div></a>
+											</li>
+											<li class="menu-item mega-menu">
+												<a class="menu-link" href="blog.html"><div>Blog</div></a>
+											</li>
+											<li class="menu-item">
+												<a class="menu-link" href="shop.html"><div>Shop</div></a>
+												<ul class="sub-menu-container">
+													<li class="menu-item">
+														<a class="menu-link" href="shop.html"><div>4 Columns</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="shop-3.html"><div>3 Columns</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item">
+																<a class="menu-link" href="shop-3.html"><div>Full Width</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-3-right-sidebar.html"><div>Right Sidebar</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-3-left-sidebar.html"><div>Left Sidebar</div></a>
+															</li>
+														</ul>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="shop-2.html"><div>2 Columns</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item">
+																<a class="menu-link" href="shop-2-right-sidebar.html"><div>Right Sidebar</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-2-left-sidebar.html"><div>Left Sidebar</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-2-both-sidebar.html"><div>Both Sidebar</div></a>
+															</li>
+														</ul>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="shop-1.html"><div>1 Columns</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item">
+																<a class="menu-link" href="shop-1.html"><div>Full Width</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-1-right-sidebar.html"><div>Right Sidebar</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-1-left-sidebar.html"><div>Left Sidebar</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-1-both-sidebar.html"><div>Both Sidebar</div></a>
+															</li>
+														</ul>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="shop-category-parallax.html"><div>Categories - Parallax</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="shop-combination-filter.html"><div>Combination Filter</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="shop-single.html"><div>Single Product</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item">
+																<a class="menu-link" href="shop-single.html"><div>Full Width</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-single-right-sidebar.html"><div>Right Sidebar</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-single-left-sidebar.html"><div>Left Sidebar</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="shop-single-both-sidebar.html"><div>Both Sidebar</div></a>
+															</li>
+														</ul>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="cart.html"><div>Cart</div></a>
+													</li>
+													<li class="menu-item">
+														<a class="menu-link" href="checkout.html"><div>Checkout</div></a>
+													</li>
+												</ul>
+											</li>
+											<li class="menu-item mega-menu">
+												<a class="menu-link" href="#"><div>Shortcodes</div></a>
+												<div class="mega-menu-content">
+													<div class="container">
+														<div class="row">
+															<ul class="sub-menu-container mega-menu-column col">
+																<li class="menu-item">
+																	<a class="menu-link" href="animations.html"><div><i class="icon-magic"></i>Animations</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="buttons.html"><div><i class="icon-link"></i>Buttons</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="carousel.html"><div><i class="icon-heart3"></i>Carousel</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="charts.html"><div><i class="icon-bar-chart"></i>Charts</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="clients.html"><div><i class="icon-apple"></i>Clients</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="columns-grids.html"><div><i class="icon-th-large"></i>Columns</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="counters.html"><div><i class="icon-time"></i>Counters</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="read-more.html"><div><i class="icon-ellipsis-h"></i>Read More</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="component-datatable.html"><div><i class="icon-table"></i>Data Tables</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="component-datepicker.html"><div><i class="icon-calendar3"></i>Date &amp; Time Pickers</div></a>
+																</li>
+															</ul>
+															<ul class="sub-menu-container mega-menu-column col">
+																<li class="menu-item">
+																	<a class="menu-link" href="dividers.html"><div><i class="icon-indent-right"></i>Dividers</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="featured-boxes.html"><div><i class="icon-lightbulb"></i>Icon Boxes</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="gallery.html"><div><i class="icon-picture"></i>Galleries</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="headings-dropcaps.html"><div><i class="icon-pencil2"></i>Heading Styles</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="icon-lists.html"><div><i class="icon-list-alt"></i>Icon Lists</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="gradients.html"><div><i class="icon-tint"></i>Gradients</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="lightbox.html"><div><i class="icon-resize-full"></i>Lightbox</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="item-overlays.html"><div><i class="icon-line-marquee-plus"></i>Item Overlays</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="form-elements.html"><div><i class="icon-edit"></i>Form Elements</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="component-uploads.html"><div><i class="icon-line-upload"></i>File Uploads</div></a>
+																</li>
+															</ul>
+															<ul class="sub-menu-container mega-menu-column col">
+																<li class="menu-item">
+																	<a class="menu-link" href="lists-cards.html"><div><i class="icon-th-list"></i>Lists &amp; Cards</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="maps.html"><div><i class="icon-map-marker2"></i>Maps</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="media-embeds.html"><div><i class="icon-play"></i>Media Embeds</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="modal-popovers.html"><div><i class="icon-move"></i>Modal Boxes</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="navigation.html"><div><i class="icon-align-justify2"></i>Navigations</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="pagination-progress.html"><div><i class="icon-cogs"></i>Pagination</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="pie-skills.html"><div><i class="icon-tasks"></i>Pies &amp; Skills</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="shape-dividers.html"><div><i class="icon-shapes"></i>Shape Dividers</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="component-range-slider.html"><div><i class="icon-line-move"></i>Range Slider</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="component-ratings.html"><div><i class="icon-star3"></i>Star Ratings</div></a>
+																</li>
+															</ul>
+															<ul class="sub-menu-container mega-menu-column col">
+																<li class="menu-item">
+																	<a class="menu-link" href="pricing.html"><div><i class="icon-dollar"></i>Pricing Boxes</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="process-steps.html"><div><i class="icon-thumbs-up"></i>Process Steps</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="promo-boxes.html"><div><i class="icon-rocket"></i>Promo Boxes</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="quotes-blockquotes.html"><div><i class="icon-quote-left"></i>Blockquotes</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="responsive.html"><div><i class="icon-laptop2"></i>Responsive</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="sections.html"><div><i class="icon-folder-open"></i>Sections</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="social-icons.html"><div><i class="icon-facebook2"></i>Social Icons</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="hover-animations.html"><div><i class="icon-hand-pointer"></i>Hover Animations</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="component-select-picker.html"><div><i class="icon-select"></i>Select Picker</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="component-select-box.html"><div><i class="icon-line-columns"></i>Select Boxes</div></a>
+																</li>
+															</ul>
+															<ul class="sub-menu-container mega-menu-column col">
+																<li class="menu-item">
+																	<a class="menu-link" href="style-boxes.html"><div><i class="icon-exclamation-sign"></i>Alert Boxes</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="styled-icons.html"><div><i class="icon-flag2"></i>Styled Icons</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="tables.html"><div><i class="icon-table"></i>Tables</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="tabs.html"><div><i class="icon-star3"></i>Tabs</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="testimonials-twitter.html"><div><i class="icon-user4"></i>Testimonials</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="thumbnails-slider.html"><div><i class="icon-camera3"></i>Thumbnails</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="toggles-accordions.html"><div><i class="icon-ok-circle"></i>Toggles</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="lazy-loading.html"><div><i class="icon-line-loader"></i>Lazy Loading</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="component-radios-switches.html"><div><i class="icon-line-square-check"></i>Radios &amp; Switches</div></a>
+																</li>
+																<li class="menu-item">
+																	<a class="menu-link" href="flip-cards.html"><div><i class="icon-refresh"></i>Flip Cards</div></a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+
+									<div class="col-lg-6 d-none d-lg-block">
+										<form action="#">
+											<input type="search" class="form-control" placeholder="Search">
+										</form>
+
+										<div class="d-flex justify-content-center">
+											<a href="#" class="social-icon mb-0 si-small si-borderless si-facebook">
+												<i class="icon-facebook"></i>
+												<i class="icon-facebook"></i>
+											</a>
+
+											<a href="#" class="social-icon mb-0 si-small si-borderless si-twitter">
+												<i class="icon-twitter"></i>
+												<i class="icon-twitter"></i>
+											</a>
+
+											<a href="#" class="social-icon mb-0 si-small si-borderless si-gplus">
+												<i class="icon-gplus"></i>
+												<i class="icon-gplus"></i>
+											</a>
+
+											<a href="#" class="social-icon mb-0 si-small si-borderless si-pinterest">
+												<i class="icon-pinterest"></i>
+												<i class="icon-pinterest"></i>
+											</a>
+										</div>
+									</div>
+
 								</div>
 							</div>
-						</div><!-- #top-cart end -->
+						</nav><!-- #primary-menu end -->
 
-						<!-- Top Search
-						============================================= -->
-						<div id="top-search">
-							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-							<form action="search.html" method="get">
-								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-							</form>
-						</div><!-- #top-search end -->
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
 
-						<a href="#" id="overlay-menu-close" class="d-none d-lg-block"><i class="icon-line-cross"></i></a>
-
-					</nav><!-- #primary-menu end -->
-
+					</div>
 				</div>
-
 			</div>
-
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen clearfix">
-
-			<div class="slider-parallax-inner">
+		<section id="slider" class="slider-element slider-parallax swiper_wrapper min-vh-60 min-vh-md-100 include-header">
+			<div class="slider-inner">
 
 				<div class="swiper-container swiper-parent">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide dark" style="background-image: url('images/slider/swiper/1.jpg');">
-							<div class="container clearfix">
+						<div class="swiper-slide dark">
+							<div class="container">
 								<div class="slider-caption slider-caption-center">
 									<h2 data-animate="fadeInUp">Welcome to Canvas</h2>
 									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
 								</div>
 							</div>
+							<div class="swiper-slide-bg" style="background-image: url('images/slider/swiper/1.jpg');"></div>
 						</div>
 						<div class="swiper-slide dark">
-							<div class="container clearfix">
+							<div class="container">
 								<div class="slider-caption slider-caption-center">
 									<h2 data-animate="fadeInUp">Beautifully Flexible</h2>
 									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
 								</div>
 							</div>
 							<div class="video-wrap">
-								<video poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
+								<video poster="images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
 									<source src='images/videos/explore.mp4' type='video/mp4' />
 									<source src='images/videos/explore.webm' type='video/webm' />
 								</video>
 								<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
 							</div>
 						</div>
-						<div class="swiper-slide" style="background-image: url('images/slider/swiper/3.jpg'); background-position: center top;">
-							<div class="container clearfix">
+						<div class="swiper-slide">
+							<div class="container">
 								<div class="slider-caption">
 									<h2 data-animate="fadeInUp">Great Performance</h2>
 									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
 								</div>
 							</div>
+							<div class="swiper-slide-bg" style="background-image: url('images/slider/swiper/3.jpg'); background-position: center top;"></div>
 						</div>
 					</div>
 					<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
@@ -162,15 +503,12 @@
 				</div>
 
 			</div>
-
 		</section>
 
 		<!-- Content
 		============================================= -->
 		<section id="content">
-
 			<div class="content-wrap">
-
 				<div class="container clearfix">
 
 					<p><span class="dropcap">F</span>oster best practices effectiveness inspire breakthroughs solve immunize turmoil. Policy dialogue peaceful The Elders rural global support. Process inclusive innovate readiness, public sector complexity. Lifting people up cornerstone partner, technology working families civic engagement activist recognize potential global network. Countries tackling solution respond change-makers tackle. Assistance, giving; fight against malnutrition experience in the field lasting change scalable. Empowerment long-term, fairness policy community progress social responsibility; Cesar Chavez recognition. Expanding community ownership visionary indicator pursue these aspirations accessibility. Achieve; worldwide, life-saving initiative facilitate. New approaches, John Lennon humanitarian relief fundraise vaccine Jane Jacobs community health workers Oxfam. Our ambitions informal economies.</p>
@@ -179,183 +517,199 @@
 						<p>Human rights healthcare immunize; advancement grantees. Medical supplies; meaningful, truth technology catalytic effect. Promising development capacity building international enable poverty.</p>
 					</blockquote>
 
-					<div class="col_half nobottommargin">
+					<div class="row">
+						<div class="col-md-6">
+							<p>Provide, Aga Khan, interconnectivity governance fairness replicable, new approaches visionary implementation. End hunger evolution, future promising development youth. Public sector, small-scale farmers; harness facilitate gender. Contribution dedicated global change movements, prosperity accelerate progress citizens of change. Elevate; accelerate reduce child mortality; billionaire philanthropy fluctuation, plumpy'nut care opportunity catalyze. Partner deep.</p>
+						</div>
 
-						<p>Provide, Aga Khan, interconnectivity governance fairness replicable, new approaches visionary implementation. End hunger evolution, future promising development youth. Public sector, small-scale farmers; harness facilitate gender. Contribution dedicated global change movements, prosperity accelerate progress citizens of change. Elevate; accelerate reduce child mortality; billionaire philanthropy fluctuation, plumpy'nut care opportunity catalyze. Partner deep.</p>
-
-					</div>
-
-					<div class="col_half nobottommargin col_last">
-
-						<p>Frontline harness criteria governance freedom contribution. Campaign Angelina Jolie natural resources, Rockefeller peaceful philanthropy human potential. Justice; outcomes reduce carbon emissions nonviolent resistance human being. Solve innovate aid communities; benefit truth rural development UNICEF meaningful work. Generosity Action Against Hunger relief; many voices impact crisis situation poverty pride. Vaccine carbon.</p>
-
+						<div class="col-md-6">
+							<p>Frontline harness criteria governance freedom contribution. Campaign Angelina Jolie natural resources, Rockefeller peaceful philanthropy human potential. Justice; outcomes reduce carbon emissions nonviolent resistance human being. Solve innovate aid communities; benefit truth rural development UNICEF meaningful work. Generosity Action Against Hunger relief; many voices impact crisis situation poverty pride. Vaccine carbon.</p>
+						</div>
 					</div>
 
 				</div>
-
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
 		<footer id="footer" class="dark">
-
 			<div class="container">
 
 				<!-- Footer Widgets
 				============================================= -->
-				<div class="footer-widgets-wrap clearfix">
+				<div class="footer-widgets-wrap">
 
-					<div class="col_two_third">
+					<div class="row col-mb-50">
+						<div class="col-lg-8">
 
-						<div class="col_one_third">
+							<div class="row col-mb-50">
+								<div class="col-md-4">
 
-							<div class="widget clearfix">
+									<div class="widget clearfix">
 
-								<img src="images/footer-widget-logo.png" alt="" class="footer-logo">
+										<img src="images/footer-widget-logo.png" alt="Image" class="footer-logo">
 
-								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+										<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
 
-								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
-									<address>
-										<strong>Headquarters:</strong><br>
-										795 Folsom Ave, Suite 600<br>
-										San Francisco, CA 94107<br>
-									</address>
-									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
-									<abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>
-									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+										<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+											<address>
+												<strong>Headquarters:</strong><br>
+												795 Folsom Ave, Suite 600<br>
+												San Francisco, CA 94107<br>
+											</address>
+											<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+											<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
+											<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+										</div>
+
+									</div>
+
 								</div>
 
-							</div>
+								<div class="col-md-4">
 
-						</div>
+									<div class="widget widget_links clearfix">
 
-						<div class="col_one_third">
+										<h4>Blogroll</h4>
 
-							<div class="widget widget_links clearfix">
+										<ul>
+											<li><a href="https://codex.wordpress.org/">Documentation</a></li>
+											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+											<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
+											<li><a href="https://wordpress.org/support/">Support Forums</a></li>
+											<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
+											<li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
+											<li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
+										</ul>
 
-								<h4>Blogroll</h4>
+									</div>
 
-								<ul>
-									<li><a href="https://codex.wordpress.org/">Documentation</a></li>
-									<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
-									<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
-									<li><a href="https://wordpress.org/support/">Support Forums</a></li>
-									<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
-									<li><a href="https://wordpress.org/news/">WordPress Blog</a></li>
-									<li><a href="https://planet.wordpress.org/">WordPress Planet</a></li>
-								</ul>
+								</div>
 
-							</div>
+								<div class="col-md-4">
 
-						</div>
+									<div class="widget clearfix">
+										<h4>Recent Posts</h4>
 
-						<div class="col_one_third col_last">
-
-							<div class="widget clearfix">
-								<h4>Recent Posts</h4>
-
-								<div id="post-list-footer">
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+										<div class="posts-sm row col-mb-30" id="post-list-footer">
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
 											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4 col-lg-12">
+									<div class="widget clearfix" style="margin-bottom: -20px;">
+
+										<div class="row">
+											<div class="col-lg-6 bottommargin-sm">
+												<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+												<h5 class="mb-0">Total Downloads</h5>
 											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
-										</div>
-									</div>
 
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+											<div class="col-lg-6 bottommargin-sm">
+												<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+												<h5 class="mb-0">Clients</h5>
 											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
 										</div>
+
 									</div>
 								</div>
-							</div>
 
-						</div>
-
-					</div>
-
-					<div class="col_one_third col_last">
-
-						<div class="widget clearfix" style="margin-bottom: -20px;">
-
-							<div class="row">
-
-								<div class="col-lg-6 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
-									<h5 class="nobottommargin">Total Downloads</h5>
-								</div>
-
-								<div class="col-lg-6 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
-									<h5 class="nobottommargin">Clients</h5>
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="widget subscribe-widget clearfix">
-							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div class="widget-subscribe-form-result"></div>
-							<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="nobottommargin">
-								<div class="input-group divcenter">
-									<div class="input-group-prepend">
-										<div class="input-group-text"><i class="icon-email2"></i></div>
-									</div>
-									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-									<div class="input-group-append">
-										<button class="btn btn-success" type="submit">Subscribe</button>
+								<div class="col-md-5 col-lg-12">
+									<div class="widget subscribe-widget clearfix">
+										<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<div class="input-group mx-auto">
+												<div class="input-group-prepend">
+													<div class="input-group-text"><i class="icon-email2"></i></div>
+												</div>
+												<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+												<div class="input-group-append">
+													<button class="btn btn-success" type="submit">Subscribe</button>
+												</div>
+											</div>
+										</form>
 									</div>
 								</div>
-							</form>
-						</div>
 
-						<div class="widget clearfix" style="margin-bottom: -20px;">
+								<div class="col-md-3 col-lg-12">
+									<div class="widget clearfix" style="margin-bottom: -20px;">
 
-							<div class="row">
+										<div class="row">
+											<div class="col-6 col-md-12 col-lg-6 clearfix bottommargin-sm">
+												<a href="#" class="social-icon si-dark si-colored si-facebook mb-0" style="margin-right: 10px;">
+													<i class="icon-facebook"></i>
+													<i class="icon-facebook"></i>
+												</a>
+												<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+											</div>
+											<div class="col-6 col-md-12 col-lg-6 clearfix">
+												<a href="#" class="social-icon si-dark si-colored si-rss mb-0" style="margin-right: 10px;">
+													<i class="icon-rss"></i>
+													<i class="icon-rss"></i>
+												</a>
+												<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+											</div>
+										</div>
 
-								<div class="col-lg-6 clearfix bottommargin-sm">
-									<a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
-								</div>
-								<div class="col-lg-6 clearfix">
-									<a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
-										<i class="icon-rss"></i>
-										<i class="icon-rss"></i>
-									</a>
-									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+									</div>
 								</div>
 
 							</div>
 
 						</div>
-
 					</div>
 
 				</div><!-- .footer-widgets-wrap end -->
@@ -365,66 +719,67 @@
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights">
+				<div class="container">
 
-				<div class="container clearfix">
+					<div class="row col-mb-30">
 
-					<div class="col_half">
-						Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.<br>
-						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
-					</div>
-
-					<div class="col_half col_last tright">
-						<div class="fright clearfix">
-							<a href="#" class="social-icon si-small si-borderless si-facebook">
-								<i class="icon-facebook"></i>
-								<i class="icon-facebook"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-gplus">
-								<i class="icon-gplus"></i>
-								<i class="icon-gplus"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-pinterest">
-								<i class="icon-pinterest"></i>
-								<i class="icon-pinterest"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-vimeo">
-								<i class="icon-vimeo"></i>
-								<i class="icon-vimeo"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-github">
-								<i class="icon-github"></i>
-								<i class="icon-github"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-yahoo">
-								<i class="icon-yahoo"></i>
-								<i class="icon-yahoo"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-linkedin">
-								<i class="icon-linkedin"></i>
-								<i class="icon-linkedin"></i>
-							</a>
+						<div class="col-md-6 text-center text-md-left">
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 						</div>
 
-						<div class="clear"></div>
+						<div class="col-md-6 text-center text-md-right">
+							<div class="d-flex justify-content-center justify-content-md-end">
+								<a href="#" class="social-icon si-small si-borderless si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
 
-						<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+								<a href="#" class="social-icon si-small si-borderless si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-gplus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-pinterest">
+									<i class="icon-pinterest"></i>
+									<i class="icon-pinterest"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-vimeo">
+									<i class="icon-vimeo"></i>
+									<i class="icon-vimeo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-github">
+									<i class="icon-github"></i>
+									<i class="icon-github"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-yahoo">
+									<i class="icon-yahoo"></i>
+									<i class="icon-yahoo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+							</div>
+
+							<div class="clear"></div>
+
+							<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+						</div>
+
 					</div>
 
 				</div>
-
 			</div><!-- #copyrights end -->
-
 		</footer><!-- #footer end -->
 
 	</div><!-- #wrapper end -->
@@ -436,7 +791,6 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

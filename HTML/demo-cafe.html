@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i|Playfair+Display:400,400i,700|Lato:300,400,700|Nothing+You+Could+Do" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i|Playfair+Display:400,400i,700|Lato:300,400,700|Nothing+You+Could+Do&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
@@ -22,7 +22,7 @@
 
 	<link rel="stylesheet" href="demos/cafe/css/fonts.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link rel="stylesheet" href="css/colors.php?color=c0bb62" type="text/css" />
@@ -46,46 +46,44 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="no-sticky transparent-header dark">
-
+		<header id="header" class="transparent-header dark no-sticky">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
 
-				<div class="container clearfix">
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html" class="standard-logo"><img src="demos/cafe/images/logo1.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo"><img src="demos/cafe/images/logo1@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
 
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="index.html" class="standard-logo"><img src="demos/cafe/images/logo1.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo"><img src="demos/cafe/images/logo1@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu dark">
 
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu" class="dark">
+							<ul class="menu-container text-lg-center">
+								<li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+								<li class="menu-item current"><a class="menu-link" href="#"><div>Features</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Pages</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Portfolio</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Blog</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="shop.html"><div>Shop</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Shortcodes</div></a></li>
+							</ul>
 
-						<ul>
-							<li><a href="index.html"><div>Home</div></a></li>
-							<li class="current"><a href="#"><div>Features</div></a></li>
-							<li><a href="#"><div>Pages</div></a></li>
-							<li><a href="#"><div>Portfolio</div></a></li>
-							<li><a href="#"><div>Blog</div></a></li>
-							<li><a href="shop.html"><div>Shop</div></a></li>
-							<li><a href="#"><div>Shortcodes</div></a></li>
-						</ul>
+						</nav>
 
-						<a href="#" id="overlay-menu-close" class="d-none d-lg-block"><i class="icon-line-cross"></i></a>
-
-					</nav>
-
+					</div>
 				</div>
-
 			</div>
-
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-element clearfix">
+		<section id="slider" class="slider-element include-header">
 
 			<div id="rev_slider_206_1_wrapper" class="rev_slider_wrapper" data-alias="creative-freedom" style="background-color:#1f1d24;padding:0px;">
 				<!-- START REVOLUTION SLIDER 5.1.1RC fullscreen mode -->
@@ -94,7 +92,7 @@
 						<!-- SLIDE  -->
 						<li data-index="rs-689" data-transition="fadethroughdark" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="2000" data-thumb="include/rs-plugin/demos/assets/images/creative_bg1-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Quality" data-param1="01" data-description="">
 							<!-- MAIN IMAGE -->
-							<img src="demos/cafe/images/sections/slider.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<img src="demos/cafe/images/sections/slider.jpg" alt="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -139,72 +137,69 @@
 
 		<!-- Page Sub Menu
 		============================================= -->
-		<div id="page-menu" class="dots-menu">
-
+		<div id="page-menu" class="dots-menu dots-menu-border">
 			<div id="page-menu-wrap">
+				<div class="container">
+					<div class="page-menu-row">
 
-				<div class="container clearfix">
+						<div class="page-menu-title">Explore <span>CANVAS</span></div>
 
-					<div class="menu-title">Explore <span>CANVAS</span></div>
+						<nav class="page-menu-nav">
+							<ul class="page-menu-container one-page-menu" data-offset="0">
+								<li class="page-menu-item"><a href="#" data-href="#wrapper"><div>Home</div></a></li>
+								<li class="page-menu-item"><a href="#" data-href="#section-about"><div>About</div></a></li>
+								<li class="page-menu-item"><a href="#" data-href="#section-services"><div>Work</div></a></li>
+								<li class="page-menu-item"><a href="#" data-href="#section-testimonials"><div>Services</div></a></li>
+								<li class="page-menu-item"><a href="#" data-href="#section-menu"><div>Video</div></a></li>
+								<li class="page-menu-item"><a href="#" data-href="#section-contact"><div>Contact</div></a></li>
+							</ul>
+						</nav>
 
-					<nav class="one-page-menu no-offset">
-						<ul>
-							<li><a href="#" data-href="#wrapper"><div>Home</div></a></li>
-							<li><a href="#" data-href="#section-about"><div>About</div></a></li>
-							<li><a href="#" data-href="#section-services"><div>Work</div></a></li>
-							<li><a href="#" data-href="#section-testimonials"><div>Services</div></a></li>
-							<li><a href="#" data-href="#section-menu"><div>Video</div></a></li>
-							<li><a href="#" data-href="#section-contact"><div>Contact</div></a></li>
-						</ul>
-					</nav>
+						<div id="page-menu-trigger"><i class="icon-reorder"></i></div>
 
-					<div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
-
+					</div>
 				</div>
-
 			</div>
-
 		</div><!-- #page-menu end -->
 
 		<!-- Content
 		============================================= -->
 		<section id="content">
-
 			<div class="content-wrap">
 
 				<div class="modal-on-load" data-target="#myModal1"></div>
 
 				<!-- Modal -->
 				<div class="modal1 mfp-hide subscribe-widget" id="myModal1">
-					<div class="block dark divcenter" style="background: url('demos/cafe/images/others/modal.jpg') no-repeat; background-size: cover; max-width: 700px; box-shadow: 0px 0px 20px #000" data-height-xl="400">
+					<div class="block dark mx-auto" style="background: url('demos/cafe/images/others/modal.jpg') no-repeat; background-size: cover; max-width: 700px; box-shadow: 0px 0px 20px #000" data-height-xl="400">
 						<div style="padding: 40px;">
 							<div class="widget-subscribe-form-result"></div>
 							<form class="widget-subscribe-form2" action="include/subscribe.php" method="post" style="max-width: 400px; margin-top: 130px;">
 								<input type="email" id="widget-subscribe-form2-email" name="widget-subscribe-form-email" class="form-control form-control-lg not-dark required email" placeholder="Enter your Email">
-								<button class="button button-rounded button-border button-light noleftmargin inlin" type="submit" style="margin-top:20px;">Subscribe</button>
+								<button class="button button-rounded button-border button-light ml-0 inlin" type="submit" style="margin-top:20px;">Subscribe</button>
 							</form>
 						</div>
 					</div>
 				</div>
 
 				<!-- 1 : #section-about -->
-				<section id="section-about" class="page-section section center nobottommargin dark" style="background: url('demos/cafe/images/sections/1.jpg') no-repeat center center; background-size: cover">
+				<section id="section-about" class="page-section section center mb-0 dark" style="background: url('demos/cafe/images/sections/1.jpg') no-repeat center center; background-size: cover">
 
 					<div class="container clearfix">
 						<div class="row">
 							<div class="col-lg-6 offset-lg-5">
 
-								<div class="heading-block nobottomborder">
-									<span class="before-heading color">ESTD. 2016</span>
+								<div class="heading-block border-bottom-0">
+									<span class="before-heading color">ESTD. 2021</span>
 									<h3>The History</h3>
 								</div>
 
-								<div class="divcenter center row">
+								<div class="mx-auto center row">
 									<div class="col-lg-6">
-										<p class="tleft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolor nam repudiandae perspiciatis unde, reprehenderit culpa maxime laborum, deleniti error repellendus doloribus delectus hic, voluptate incidunt inventore velit accusantium! Adipisci sunt dicta maxime laborum placeat optio quidem totam impedit ipsum! Id dignissimos iste doloribus sequi excepturi reiciendis saepe quaerat, tenetur distinctio minima nostrum sit. Placeat doloribus accusantium eius, eveniet quia sequi. Et aliquamiste, vitae, accusantium, maiores sint eaque velit omnis iure vero saepe voluptatibus? Quisquam repellendus quam voluptate dolorum, quibusdam cum ex ad non sint, quod cumque assumenda.</p>
+										<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolor nam repudiandae perspiciatis unde, reprehenderit culpa maxime laborum, deleniti error repellendus doloribus delectus hic, voluptate incidunt inventore velit accusantium! Adipisci sunt dicta maxime laborum placeat optio quidem totam impedit ipsum! Id dignissimos iste doloribus sequi excepturi reiciendis saepe quaerat, tenetur distinctio minima nostrum sit. Placeat doloribus accusantium eius, eveniet quia sequi. Et aliquamiste, vitae, accusantium, maiores sint eaque velit omnis iure vero saepe voluptatibus? Quisquam repellendus quam voluptate dolorum, quibusdam cum ex ad non sint, quod cumque assumenda.</p>
 									</div>
 									<div class="col-lg-6">
-										<p class="tleft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolor nam repudiandae perspiciatis unde, reprehenderit culpa maxime laborum, deleniti error repellendus doloribus delectus hic, voluptate incidunt sunt dicta maxime laborum placeat optio quidem totam impedit ipsum! Id dignissimos iste doloribus sequi excepturi reiciendis saepe quaerat, tenetur distinctio minima nostrum sit. Placeat doloribus accusantium eius, eveniet quia sequi.<br><br><img src="demos/cafe/images/others/signature.png" alt="Signature"></p>
+										<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolor nam repudiandae perspiciatis unde, reprehenderit culpa maxime laborum, deleniti error repellendus doloribus delectus hic, voluptate incidunt sunt dicta maxime laborum placeat optio quidem totam impedit ipsum! Id dignissimos iste doloribus sequi excepturi reiciendis saepe quaerat, tenetur distinctio minima nostrum sit. Placeat doloribus accusantium eius, eveniet quia sequi.<br><br><img src="demos/cafe/images/others/signature.png" alt="Signature"></p>
 									</div>
 								</div>
 							</div>
@@ -217,7 +212,7 @@
 				<section id="section-services" class="page-section section dark" style="background: url('demos/cafe/images/sections/2.jpg') no-repeat center center; background-size: cover">
 
 					<div class="container clearfix">
-						<div class="heading-block center nobottomborder">
+						<div class="heading-block text-center border-bottom-0">
 							<span class="before-heading color">Best of the Best</span>
 							<h3>Our Services</h3>
 							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et possimus iste eius eos repellendus id officiis itaque ipsum, fuga aut.</span>
@@ -226,11 +221,11 @@
 						<div class="row topmargin-lg clearfix">
 
 							<div class="col-md-4">
-								<div class="feature-box center media-box">
+								<div class="feature-box text-center media-box">
 									<div class="fbox-media">
-										<img src="demos/cafe/images/icons/1.png" class="divcenter" alt="Image 1" style="width: auto;">
+										<img src="demos/cafe/images/icons/1.png" class="mx-auto" alt="Image 1" style="width: auto;">
 									</div>
-									<div class="fbox-desc clearfix">
+									<div class="fbox-content">
 										<h3 class="color body-font">Why choose Us.<span class="subtitle body-font">Because we are Reliable.</span></h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
 									</div>
@@ -238,11 +233,11 @@
 							</div>
 
 							<div class="col-md-4">
-								<div class="feature-box center media-box">
+								<div class="feature-box text-center media-box">
 									<div class="fbox-media">
-										<img src="demos/cafe/images/icons/2.png" class="divcenter" alt="Image 2" style="width: auto;">
+										<img src="demos/cafe/images/icons/2.png" class="mx-auto" alt="Image 2" style="width: auto;">
 									</div>
-									<div class="fbox-desc clearfix">
+									<div class="fbox-content">
 										<h3 class="color body-font">Our Mission.<span class="subtitle body-font">To Redefine your Brand.</span></h3>
 										<p>Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae, atque tempora ullam. Vitae delectus quia, consequuntur rerum molestias quo.</p>
 									</div>
@@ -250,11 +245,11 @@
 							</div>
 
 							<div class="col-md-4">
-								<div class="feature-box center media-box">
+								<div class="feature-box text-center media-box">
 									<div class="fbox-media">
-										<img src="demos/cafe/images/icons/3.png" class="divcenter" alt="Image 3" style="width: auto;">
+										<img src="demos/cafe/images/icons/3.png" class="mx-auto" alt="Image 3" style="width: auto;">
 									</div>
-									<div class="fbox-desc clearfix">
+									<div class="fbox-content">
 										<h3 class="color body-font">What we Do.<span class="subtitle body-font">Make our Customers Happy.</span></h3>
 										<p>Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur, labore totam. Accusamus perspiciatis asperiores labore esse ab accusantium.</p>
 									</div>
@@ -275,7 +270,7 @@
 					<div class="container clearfix">
 						<div class="row clearfix">
 							<div class="col-lg-5">
-								<div class="heading-block nobottomborder topmargin-lg">
+								<div class="heading-block border-bottom-0 topmargin-lg">
 									<span class="before-heading color">Happy Customers</span>
 									<h3><i class="icon-line2-star"></i> Reviews</h3>
 								</div>
@@ -284,17 +279,17 @@
 										<div class="slider-wrap">
 											<div class="slide">
 												<p class="lead">"Globalization fairness non-partisan visionary, institutions Aga Khan resolve. Results public-private partnerships, international development elevate scalable."</p>
-												<span class="uppercase ls1"><strong>John Doe</strong>,<br> New York Magazine</span><br>
+												<span class="text-uppercase ls1"><strong>John Doe</strong>,<br> New York Magazine</span><br>
 												<i class="color icon-star3"></i> <i class="color icon-star3"></i> <i class="color icon-star3"></i> <i class="color icon-star3"></i> <i class="color icon-star-half-full"></i>
 											</div>
 											<div class="slide">
 												<p class="lead">"Medicine; experience in the field climate change achieve voice public-private partnerships process our ambitions. Sanitation."</p>
-												<span class="uppercase ls1"><strong>Mary Jane</strong>,<br> Chicago News</span><br>
+												<span class="text-uppercase ls1"><strong>Mary Jane</strong>,<br> Chicago News</span><br>
 												<i class="color icon-star3"></i> <i class="color icon-star3"></i> <i class="color icon-star3"></i> <i class="color icon-star-half-full"></i> <i class="color icon-star-empty"></i>
 											</div>
 											<div class="slide">
 												<p class="lead">"Healthcare forward-thinking public service, social innovation making progress. Arab Spring social analysis, equality treatment, diversification."</p>
-												<span class="uppercase ls1"><strong>Luis Frank</strong>,<br> France</span><br>
+												<span class="text-uppercase ls1"><strong>Luis Frank</strong>,<br> France</span><br>
 												<i class="color icon-star3"></i> <i class="color icon-star3"></i> <i class="color icon-star3"></i> <i class="color icon-star3"></i> <i class="color icon-star-empty"></i>
 											</div>
 										</div>
@@ -302,20 +297,20 @@
 								</div>
 							</div>
 							<div class="col-lg-7">
-								<div class="heading-block nobottomborder topmargin-lg">
+								<div class="heading-block border-bottom-0 topmargin-lg">
 									<span class="before-heading color">Experience</span>
 									<h3>Gallery</h3>
 								</div>
-								<div class="masonry-thumbs grid-5" data-big="4,5" data-lightbox="gallery">
-									<a href="demos/cafe/images/gallery/1.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/1.jpg" alt="Gallery Thumb 1"></a>
-									<a href="demos/cafe/images/gallery/2.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/2.jpg" alt="Gallery Thumb 2"></a>
-									<a href="demos/cafe/images/gallery/3.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/3.jpg" alt="Gallery Thumb 3"></a>
-									<a href="demos/cafe/images/gallery/4.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/4.jpg" alt="Gallery Thumb 4"></a>
-									<a href="demos/cafe/images/gallery/5.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/5.jpg" alt="Gallery Thumb 5"></a>
-									<a href="demos/cafe/images/gallery/6.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/6.jpg" alt="Gallery Thumb 6"></a>
-									<a href="demos/cafe/images/gallery/7.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/7.jpg" alt="Gallery Thumb 7"></a>
-									<a href="demos/cafe/images/gallery/9.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/9.jpg" alt="Gallery Thumb 9"></a>
-									<a href="demos/cafe/images/gallery/10.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/cafe/images/gallery/10.jpg" alt="Gallery Thumb 10"></a>
+								<div class="masonry-thumbs grid-container grid-5" data-big="4,5" data-lightbox="gallery">
+									<a class="grid-item" href="demos/cafe/images/gallery/1.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/1.jpg" alt="Gallery Thumb 1"></a>
+									<a class="grid-item" href="demos/cafe/images/gallery/2.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/2.jpg" alt="Gallery Thumb 2"></a>
+									<a class="grid-item" href="demos/cafe/images/gallery/3.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/3.jpg" alt="Gallery Thumb 3"></a>
+									<a class="grid-item" href="demos/cafe/images/gallery/4.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/4.jpg" alt="Gallery Thumb 4"></a>
+									<a class="grid-item" href="demos/cafe/images/gallery/5.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/5.jpg" alt="Gallery Thumb 5"></a>
+									<a class="grid-item" href="demos/cafe/images/gallery/6.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/6.jpg" alt="Gallery Thumb 6"></a>
+									<a class="grid-item" href="demos/cafe/images/gallery/7.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/7.jpg" alt="Gallery Thumb 7"></a>
+									<a class="grid-item" href="demos/cafe/images/gallery/9.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/9.jpg" alt="Gallery Thumb 9"></a>
+									<a class="grid-item" href="demos/cafe/images/gallery/10.jpg" data-lightbox="gallery-item"><img src="demos/cafe/images/gallery/10.jpg" alt="Gallery Thumb 10"></a>
 								</div>
 							</div>
 						</div>
@@ -328,7 +323,7 @@
 
 					<div class="container clearfix">
 
-						<div class="heading-block nobottomborder">
+						<div class="heading-block border-bottom-0">
 							<span class="before-heading color">Indulgence</span>
 							<h3><i class="icon-food2"></i> Menu</h3>
 						</div>
@@ -406,7 +401,7 @@
 								</div>
 								<div data-lightbox="gallery">
 									<a href="demos/cafe/images/menu/1.jpg" class="button button-border button-rounded button-large button-light" style="margin-top: 15px" data-lightbox="gallery-item"><i class="icon-picture"></i> View Full Menu</a>
-									<a href="demos/cafe/images/menu/2.jpg" class="hidden" data-lightbox="gallery-item"></a>
+									<a href="demos/cafe/images/menu/2.jpg" class="d-none" data-lightbox="gallery-item"></a>
 								</div>
 
 								</a>
@@ -418,23 +413,23 @@
 				</section> <!-- .section end -->
 
 				<!-- 5 : #section-contact -->
-				<section id="section-contact" class="page-section section dark nomargin" style="background: url('demos/cafe/images/sections/7.jpg') no-repeat center center; background-size: cover;">
+				<section id="section-contact" class="page-section section dark m-0" style="background: url('demos/cafe/images/sections/7.jpg') no-repeat center center; background-size: cover;">
 
 					<div class="container clearfix">
 
 						<div class="row">
 							<div class="col-lg-6 offset-lg-6">
-								<div class="heading-block nobottomborder">
+								<div class="heading-block border-bottom-0">
 									<span class="before-heading color">Connect with Us</span>
 									<h3>Get In Touch</h3>
 								</div>
 
 								<div class="row">
 									<div class="col-lg-6 center">
-										<p class="tleft text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolor nam repudiandae perspiciatis.</p>
+										<p class="text-left text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolor nam repudiandae perspiciatis.</p>
 									</div>
 									<div class="col-lg-6 center">
-										<p class="tleft text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolor nam.</p>
+										<p class="text-left text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolor nam.</p>
 									</div>
 									<div class="col-lg-12">
 
@@ -442,9 +437,13 @@
 
 											<div class="form-result"></div>
 
-											<form class="nobottommargin row" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+											<form class="mb-0 row" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
 
-												<div class="form-process"></div>
+												<div class="form-process">
+													<div class="css3-spinner">
+														<div class="css3-spinner-scaler"></div>
+													</div>
+												</div>
 
 												<div class="col-lg-12">
 													<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" placeholder="Full Name*" />
@@ -458,12 +457,12 @@
 													<textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"placeholder="Message*" ></textarea>
 												</div>
 
-												<div class="col-lg-12 hidden">
+												<div class="col-lg-12 d-none">
 													<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
 												</div>
 
 												<div class="col-lg-12">
-													<button class="button button-border button-rounded button-black fright" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
+													<button class="button button-border button-rounded button-black float-right" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
 												</div>
 
 												<input type="hidden" name="prefix" value="template-contactform-">
@@ -481,23 +480,22 @@
 				</section> <!-- .section end -->
 
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="noborder dark">
+		<footer id="footer" class="border-0 dark">
 
 			<!-- Copyrights
 			============================================= -->
-			<div id="copyrights" class="center notoppadding" style="background: url('demos/cafe/images/sections/6.jpg') no-repeat center center; background-size: cover;">
+			<div id="copyrights" class="center pt-0" style="background: url('demos/cafe/images/sections/6.jpg') no-repeat center center; background-size: cover;">
 				<div class="container clearfix">
 					<div class="row">
 						<div class="col-lg-12 center">
 							<div class="heading-block clearfix bottommargin-sm">
 								<a href="index.html"><img src="demos/cafe/images/logo1@2x.png" alt="Canvas Logo"></a>
 							</div>
-							Copyrights &copy; 2016 All Rights Reserved by Canvas Inc.
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.
 						</div>
 					</div>
 				</div>
@@ -514,7 +512,6 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -535,6 +532,7 @@
 		var tpj = jQuery;
 
 		var revapi206;
+		var $ = jQuery.noConflict();
 		tpj(document).ready(function() {
 			if (tpj("#rev_slider_206_1").revolution == undefined) {
 				revslider_showDoubleJqueryError("#rev_slider_206_1");

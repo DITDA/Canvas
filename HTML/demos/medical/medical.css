@@ -1,20 +1,18 @@
 /* ----------------------------------------------------------------
-	CSS Specific to the Medical Demo
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Styling of this Demo
-
-	Version: 4.2
+	Canvas: Medical
 -----------------------------------------------------------------*/
 
 
-.section.dark .bgcolor h2 { color: #FFF; }
+.section.dark .bg-color h2 { color: #FFF; }
 
-.section.dark .bgcolor label {
+.section.dark .bg-color label {
 	color: rgba(255,255,255,0.9);
 	font-weight: 400;
 	text-transform: capitalize;
 }
+
+
+.form-control.error { border: 2px solid red; }
 
 
 .footer-big-contacts {
@@ -127,25 +125,22 @@
 
 .form-control.error { border: 2px solid red; }
 
-ul.price-table{
-	list-style: none;
-}
+ul.price-table { list-style: none; }
+
 ul.price-table li {
-	padding: 18px 0;
+	padding: 10px 0;
 	border-bottom: 1px solid #E0E0E0;
 	background-position: left center;
 	background-repeat: no-repeat;
-	line-height: 0;
 }
-ul.price-table li span {
-	float: left;
-	font-weight: bold;
-}
+
+ul.price-table li span { font-weight: bold; }
 
 ul.price-table li .value {
 	float: right;
 	color: #666;
 }
+
 .more-link { margin-top: 20px; }
 
 

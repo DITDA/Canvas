@@ -1,6 +1,5 @@
 /* ----------------------------------------------------------------
-	Canvas: News Demo
-	Version: 1.0
+	Canvas: News
 -----------------------------------------------------------------*/
 
 /* change your menu color here */
@@ -35,52 +34,52 @@
 .bg-market { background-color:  var(--market) !important; }
 
 /* menu Colors */
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-home:hover > a,
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-home.active > a,
-#primary-menu ul li.menu-color-home ul li:hover > a,
-#primary-menu ul li.menu-color-home ul li:hover > a { color: var(--home) !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-home:hover > .menu-link,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-home.active > .menu-link,
+.menu-item.menu-color-home .sub-menu-container .menu-item:hover > .menu-link,
+.menu-item.menu-color-home .sub-menu-container .menu-item.active > .menu-link { color: var(--home) !important; }
 
 
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-travel:hover > a,
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-travel.active > a,
-#primary-menu ul li.menu-color-travel ul li:hover > a,
-#primary-menu ul li.menu-color-travel ul li:hover > a { color: var(--travel) !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-travel:hover > .menu-link,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-travel.active > .menu-link,
+.menu-item.menu-color-travel .sub-menu-container .menu-item:hover > .menu-link,
+.menu-item.menu-color-travel .sub-menu-container .menu-item.active > .menu-link { color: var(--travel) !important; }
 
 
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-tech:hover > a,
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-tech.active > a,
-#primary-menu ul li.menu-color-tech ul li:hover > a,
-#primary-menu ul li.menu-color-tech ul li:hover > a { color: var(--tech) !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-tech:hover > .menu-link,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-tech.active > .menu-link,
+.menu-item.menu-color-tech .sub-menu-container .menu-item:hover > .menu-link,
+.menu-item.menu-color-tech .sub-menu-container .menu-item.active > .menu-link { color: var(--tech) !important; }
 
 
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-fashion:hover > a,
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-fashion.active > a,
-#primary-menu ul li.menu-color-fashion ul li:hover > a,
-#primary-menu ul li.menu-color-fashion ul li:hover > a { color: var(--fashion) !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-fashion:hover > .menu-link,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-fashion.active > .menu-link,
+.menu-item.menu-color-fashion .sub-menu-container .menu-item:hover > .menu-link,
+.menu-item.menu-color-fashion .sub-menu-container .menu-item.active > .menu-link { color: var(--fashion) !important; }
 
 
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-sports:hover > a,
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-sports.active > a,
-#primary-menu ul li.menu-color-sports ul li:hover > a,
-#primary-menu ul li.menu-color-sports ul li:hover > a { color: var(--sports) !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-sports:hover > .menu-link,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-sports.active > .menu-link,
+.menu-item.menu-color-sports .sub-menu-container .menu-item:hover > .menu-link,
+.menu-item.menu-color-sports .sub-menu-container .menu-item.active > .menu-link { color: var(--sports) !important; }
 
 
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-lifestyle:hover > a,
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-lifestyle.active > a,
-#primary-menu ul li.menu-color-lifestyle ul li:hover > a,
-#primary-menu ul li.menu-color-lifestyle ul li:hover > a { color: var(--lifestyle) !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-lifestyle:hover > .menu-link,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-lifestyle.active > .menu-link,
+.menu-item.menu-color-lifestyle .sub-menu-container .menu-item:hover > .menu-link,
+.menu-item.menu-color-lifestyle .sub-menu-container .menu-item.active > .menu-link { color: var(--lifestyle) !important; }
 
 
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-food:hover > a,
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-food.active > a,
-#primary-menu ul li.menu-color-food ul li:hover > a,
-#primary-menu ul li.menu-color-food ul li:hover > a { color: var(--food) !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-food:hover > .menu-link,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-food.active > .menu-link,
+.menu-item.menu-color-food .sub-menu-container .menu-item:hover > .menu-link,
+.menu-item.menu-color-food .sub-menu-container .menu-item.active > .menu-link { color: var(--food) !important; }
 
 
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-market:hover > a,
-body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.menu-color-market.active > a,
-#primary-menu ul li.menu-color-market ul li:hover > a,
-#primary-menu ul li.menu-color-market ul li:hover > a { color: var(--market) !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-market:hover > .menu-link,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) .menu-container > .menu-item.menu-color-market.active > .menu-link,
+.menu-item.menu-color-market .sub-menu-container .menu-item:hover > .menu-link,
+.menu-item.menu-color-market .sub-menu-container .menu-item.active > .menu-link { color: var(--market) !important; }
 
 
 .navbar-nav.nav-sm .nav-link:hover,
@@ -151,24 +150,12 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
 }
 
 
-#primary-menu .container > ul > li > a {
+.menu-container > .menu-item > .menu-link {
 	letter-spacing: 0;
 	font-weight: 500 !important;
 	-webkit-transition: color .4s ease;
 	-o-transition: color .4s ease;
 	transition: color .4s ease;
-}
-
-@media (min-width: 992px) {
-	#primary-menu .container ul ul li > a {
-		font-size: 15px;
-		text-transform: none;
-		font-weight: 400;
-		padding: 12px 20px;
-	}
-
-	#primary-menu .container ul ul li:hover > a { padding-left: 25px; }
-
 }
 
 .entry-title h3 {
@@ -191,9 +178,7 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
 	text-transform: capitalize;
 }
 
-.text-overlay { opacity: 1; }
-
-.text-overlay .entry-categories {
+.bg-overlay .entry-categories {
 	position: relative;
 	left: auto;
 	bottom: auto;
@@ -212,30 +197,22 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
 	font-family: 'roboto', sans-serif;
 }
 
-.entry-meta { margin-bottom: 0px; }
-
-.entry-meta li {
-	letter-spacing: 0;
-	font-style: normal;
+.entry-meta {
+	margin-top: 5px;
 }
 
-.ipost .entry-content p { line-height: 1.6 !important; }
+.entry-meta li {
+	font-size: 0.875rem;
+}
 
-.entry-meta li a { color: #AAA; }
-
-.entry-meta li:before {
-	content: '';
-	margin-bottom: 3px;
-	width: 4px;
-	height: 4px;
-	border-radius: 2px;
-	background-color: #CCC;
+.entry-meta li a:not(:hover) {
+	color: #AAA;
 }
 
 .entry-icons {
 	position: absolute;
-	right: 0px;
-	bottom: 13px;
+	right: 0;
+	bottom: 0;
 	margin: 0;
 	padding: 0;
 }
@@ -295,7 +272,7 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
 	border-bottom: 3px solid #EEE;
 }
 
-.line-xs:after {
+.line-xs::after {
 	top: 100%;
 	left: 30px;
 	border: solid transparent;
@@ -323,16 +300,16 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
 .line-xs.line-light { border-bottom-color:  var(--light) !important; }
 .line-xs.line-dark { border-bottom-color:  var(--dark) !important; }
 
-.line-xs.line-home:after { border-top-color:  var(--home) !important; }
-.line-xs.line-travel:after { border-top-color:  var(--travel) !important; }
-.line-xs.line-tech:after { border-top-color:  var(--tech) !important; }
-.line-xs.line-fashion:after { border-top-color:  var(--fashion) !important; }
-.line-xs.line-sports:after { border-top-color:  var(--sports) !important; }
-.line-xs.line-lifestyle:after { border-top-color:  var(--lifestyle) !important; }
-.line-xs.line-food:after { border-top-color:  var(--food) !important; }
-.line-xs.line-market:after { border-top-color:  var(--market) !important; }
-.line-xs.line-light:after { border-top-color:  var(--light) !important; }
-.line-xs.line-dark:after { border-top-color:  var(--dark) !important; }
+.line-xs.line-home::after { border-top-color:  var(--home) !important; }
+.line-xs.line-travel::after { border-top-color:  var(--travel) !important; }
+.line-xs.line-tech::after { border-top-color:  var(--tech) !important; }
+.line-xs.line-fashion::after { border-top-color:  var(--fashion) !important; }
+.line-xs.line-sports::after { border-top-color:  var(--sports) !important; }
+.line-xs.line-lifestyle::after { border-top-color:  var(--lifestyle) !important; }
+.line-xs.line-food::after { border-top-color:  var(--food) !important; }
+.line-xs.line-market::after { border-top-color:  var(--market) !important; }
+.line-xs.line-light::after { border-top-color:  var(--light) !important; }
+.line-xs.line-dark::after { border-top-color:  var(--dark) !important; }
 
 
 .form-signin {
@@ -383,7 +360,7 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
   color: #BBB;
 }
 
-#primary-menu div ul li > a::before {
+.menu-link::before {
 	content: '';
 	position: absolute;
 	top: 0px;
@@ -398,8 +375,8 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
 	transition-timing-function: cubic-bezier(1, 0.68, 0.16, 0.9);
 }
 
-#primary-menu div ul li:hover > a::before,
-#primary-menu div ul li.active > a::before {
+.menu-item:hover > .menu-link::before,
+.menu-item.active > .menu-link::before {
 	-webkit-transform: scale3d(1, 3, 1);
 	transform: scale3d(1, 3, 1);
 	-webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -409,13 +386,6 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
 }
 
 .slide .slider-caption-bg { opacity: 1; }
-
-.widget_links li { padding: 6px 4px; }
-.widget_links .badge {
-	color: #FFF;
-	border-radius: 3px;
-	padding: 5px;
-}
 
 .owl-carousel.fixed-nav:hover .owl-nav [class*=owl-],
 .owl-carousel.fixed-nav .owl-nav [class*=owl-] {
@@ -460,6 +430,7 @@ body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div >
 .scroll-wrap {
 	width: 100%;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 }
 

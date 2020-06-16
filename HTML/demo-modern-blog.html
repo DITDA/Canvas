@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Modern Blog Demo Specific Stylesheet -->
@@ -44,63 +44,62 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="transparent-header clearfix static-sticky">
-
+		<header id="header" class="transparent-header" data-sticky-shrink="false" data-logo-height="80">
 			<div id="header-wrap">
+				<div class="container-fluid">
+					<div class="header-row">
 
-				<div class="container-fluid clearfix">
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html" class="standard-logo" data-mobile-logo="images/logo.png"><img src="images/logo-dark.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-mobile-logo="images/logo@2x.png"><img src="images/logo-dark@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
 
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="index.html" class="standard-logo" data-mobile-logo="images/logo.png"><img src="images/logo-dark.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo" data-mobile-logo="images/logo@2x.png"><img src="images/logo-dark@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu text-lg-center">
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Articles</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Events</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Videos</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+							</ul>
+						</nav><!-- #primary-menu end -->
 
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu" class="clearfix">
-						<ul>
-							<li class="current"><a href="#"><div>Home</div></a></li>
-							<li><a href="#"><div>Articles</div></a></li>
-							<li><a href="#"><div>Events</div></a></li>
-							<li><a href="#"><div>Videos</div></a></li>
-							<li><a href="#"><div>Contact</div></a></li>
-						</ul>
-
-						<a href="#" id="overlay-menu-close" class="d-none d-lg-block"><i class="icon-line-cross"></i></a>
-
-					</nav><!-- #primary-menu end -->
+					</div>
 				</div>
 			</div>
-
 		</header><!-- #header end -->
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element clearfix" style="height: 100% !important;">
-			<div class="fslider full-screen force-full-screen" data-speed="1800" data-pause="5000" data-animation="fade" data-arrows="true" data-pagi="false">
-				<div class="flexslider full-screen force-full-screen">
-					<div class="slider-wrap force-full-screen">
+		<section id="slider" class="slider-element min-vh-60 min-vh-md-100">
+			<div class="fslider h-100 position-absolute" data-speed="1800" data-pause="5000" data-animation="fade" data-arrows="true" data-pagi="false">
+				<div class="flexslider">
+					<div class="slider-wrap">
 						<!-- Slide 1 -->
-						<div class="slide center full-screen force-full-screen" style="background: url('demos/modern-blog/images/slider/1.jpg') center center; background-size: cover;">
-							<div class="flex-caption dark d-block">
+						<div class="slide text-center" style="background: url('demos/modern-blog/images/slider/1.jpg') center center; background-size: cover;">
+							<div class="flex-caption px-4 justify-content-end pb-5 dark">
 								<h3 class="mb-2 h1"><a href="#" class="text-white">Thing That Make You Love</a></h3>
 								<p class="h5">Credibly synthesize seamless</p>
 							</div>
 						</div>
 						<!-- Slide 2 -->
-						<div class="slide center full-screen force-full-screen" style="background: url('demos/modern-blog/images/slider/2.jpg') center center; background-size: cover;">
-							<div class="flex-caption dark d-block">
+						<div class="slide text-center" style="background: url('demos/modern-blog/images/slider/2.jpg') center center; background-size: cover;">
+							<div class="flex-caption px-4 justify-content-end pb-5 dark">
 								<h3 class="mb-2 h1"><a href="#" class="text-white">The Ultimate Guide To Fashion</a></h3>
 								<p class="h5">Monotonectally foster cross</p>
 							</div>
 						</div>
 						<!-- Slide 3 -->
-						<div class="slide center full-screen force-full-screen" style="background: url('demos/modern-blog/images/slider/3.jpg') center center; background-size: cover;">
-							<div class="flex-caption dark d-block">
+						<div class="slide text-center" style="background: url('demos/modern-blog/images/slider/3.jpg') center center; background-size: cover;">
+							<div class="flex-caption px-4 justify-content-end pb-5 dark">
 								<h3 class="mb-2 h1"><a href="#" class="text-white">Learn How We Made Fashion</a></h3>
 								<p class="h5">Intrinsicly embrace scalable</p>
 							</div>
@@ -119,7 +118,7 @@
 
 				<div class="container clearfix">
 
-					<div class="heading-block nobottomborder center pt-4 mb-3">
+					<div class="heading-block border-bottom-0 center pt-4 mb-3">
 						<h3>Articles</h3>
 					</div>
 
@@ -139,13 +138,17 @@
 								<div class="entry-content">
 									<p>Distinctively unleash e-business testing procedures vis-a-vis future-proof leadership. Energistically synthesize leveraged e-business whereas proactive.</p>
 								</div>
-								<ul class="entry-meta nohover clearfix">
-									<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-									<li class="fright">MockUp</li>
-								</ul>
-								<ul class="entry-meta hover clearfix">
-									<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-								</ul>
+								<div class="entry-meta no-separator nohover">
+									<ul class="justify-content-between mx-0">
+										<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+										<li>MockUp</li>
+									</ul>
+								</div>
+								<div class="entry-meta no-separator hover">
+									<ul class="mx-0">
+										<li><a href="#">View More &rarr;</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
@@ -153,7 +156,7 @@
 						<div class="col-md-6 p-3">
 							<div class="entry mb-1 clearfix">
 								<div class="entry-user">
-									<img src="demos/modern-blog/images/user/semicolonweb-logo.png" alt="">
+									<img src="demos/modern-blog/images/user/semicolonweb-logo.png" alt="Image">
 									<h4>SemiColoWeb Tech.<span>Themeforest.net</span></h4>
 								</div>
 								<div class="entry-image mb-3">
@@ -166,13 +169,17 @@
 								<div class="entry-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim.</p>
 								</div>
-								<ul class="entry-meta nohover clearfix">
-									<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-									<li class="fright">Article</li>
-								</ul>
-								<ul class="entry-meta hover clearfix">
-									<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-								</ul>
+								<div class="entry-meta no-separator nohover">
+									<ul class="justify-content-between mx-0">
+										<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+										<li>Article</li>
+									</ul>
+								</div>
+								<div class="entry-meta no-separator hover">
+									<ul class="mx-0">
+										<li><a href="#">View More &rarr;</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
@@ -188,13 +195,17 @@
 								<div class="entry-content">
 									<p>Distinctively unleash e-business testing procedures vis-a-vis future-proof leadership. Energistically synthesize leveraged e-business whereas proactive. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur!</p>
 								</div>
-								<ul class="entry-meta nohover clearfix">
-									<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-									<li class="fright">Vimeo</li>
-								</ul>
-								<ul class="entry-meta hover clearfix">
-									<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-								</ul>
+								<div class="entry-meta no-separator nohover">
+									<ul class="justify-content-between mx-0">
+										<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+										<li>Vimeo</li>
+									</ul>
+								</div>
+								<div class="entry-meta no-separator hover">
+									<ul class="mx-0">
+										<li><a href="#">View More &rarr;</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
@@ -214,13 +225,17 @@
 								<div class="entry-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur.</p>
 								</div>
-								<ul class="entry-meta nohover clearfix">
-									<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-									<li class="fright">Vimeo</li>
-								</ul>
-								<ul class="entry-meta hover clearfix">
-									<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-								</ul>
+								<div class="entry-meta no-separator nohover">
+									<ul class="justify-content-between mx-0">
+										<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+										<li>Vimeo</li>
+									</ul>
+								</div>
+								<div class="entry-meta no-separator hover">
+									<ul class="mx-0">
+										<li><a href="#">View More &rarr;</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
@@ -228,7 +243,7 @@
 						<div class="col-md-6 p-3">
 							<div class="entry mb-1 clearfix">
 								<div class="entry-user pb-2 border-bottom">
-									<img src="demos/modern-blog/images/user/semicolonweb-logo.png" alt="">
+									<img src="demos/modern-blog/images/user/semicolonweb-logo.png" alt="Image">
 									<h4>SemiColoWeb Tech.<span>Themeforest.net</span></h4>
 								</div>
 								<div class="entry-title pt-2">
@@ -241,13 +256,17 @@
 								<div class="entry-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit ratione, voluptatem.</p>
 								</div>
-								<ul class="entry-meta nohover clearfix">
-									<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-									<li class="fright">Nature</li>
-								</ul>
-								<ul class="entry-meta hover clearfix">
-									<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-								</ul>
+								<div class="entry-meta no-separator nohover">
+									<ul class="justify-content-between mx-0">
+										<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+										<li>Nature</li>
+									</ul>
+								</div>
+								<div class="entry-meta no-separator hover">
+									<ul class="mx-0">
+										<li><a href="#">View More &rarr;</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
@@ -271,13 +290,17 @@
 								<div class="entry-content">
 									<p>Magni velit facilis donec quasi quidem error animi, rutrum sequi mi officia possimus fames, corporis culpa minim mollis tempora fuga, sed ipsam fugiat dictumst, nascetur aptent inceptos taciti. Natoque. Praesentium.</p>
 								</div>
-								<ul class="entry-meta nohover clearfix">
-									<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-									<li class="fright">Travel</li>
-								</ul>
-								<ul class="entry-meta hover clearfix">
-									<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-								</ul>
+								<div class="entry-meta no-separator nohover">
+									<ul class="justify-content-between mx-0">
+										<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+										<li>Travel</li>
+									</ul>
+								</div>
+								<div class="entry-meta no-separator hover">
+									<ul class="mx-0">
+										<li><a href="#">View More &rarr;</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
@@ -288,16 +311,20 @@
 									<h3><a href="#" class="text-light">Standard Full Image</a></h3>
 								</div>
 								<div class="entry-content">
-									<p class="t300">Magni velit facilis donec quasi quidem error animi, rutrum sequi mi officia.</p>
+									<p class="font-weight-light">Magni velit facilis donec quasi quidem error animi, rutrum sequi mi officia.</p>
 								</div>
 								<div style="position: absolute; left: 0; bottom: 0; width: 100%;">
-									<ul class="entry-meta nohover clearfix">
-										<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-										<li class="fright">Tools</li>
-									</ul>
-									<ul class="entry-meta hover clearfix">
-										<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-									</ul>
+									<div class="entry-meta no-separator nohover">
+										<ul class="justify-content-between mx-0">
+											<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+											<li>Tools</li>
+										</ul>
+									</div>
+									<div class="entry-meta no-separator hover">
+										<ul>
+											<li><a href="#">View More &rarr;</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -306,7 +333,7 @@
 						<div class="col-md-6 p-3">
 							<div class="entry mb-1 clearfix">
 								<div class="entry-user">
-									<img src="demos/modern-blog/images/user/3.jpg" alt="">
+									<img src="demos/modern-blog/images/user/3.jpg" alt="Image">
 									<h4>Annie Spratt.<span>Apple Inc.</span></h4>
 								</div>
 								<div class="entry-title">
@@ -316,13 +343,17 @@
 									<a href="demos/modern-blog/images/items/lightbox/8.jpg" data-lightbox="image" style="background: url('demos/modern-blog/images/items/8.jpg') no-repeat center bottom; background-size: cover; height: 160px;">
 									</a>
 								</div>
-								<ul class="entry-meta nohover clearfix">
-									<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-									<li class="fright">Food</li>
-								</ul>
-								<ul class="entry-meta hover clearfix">
-									<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-								</ul>
+								<div class="entry-meta no-separator nohover">
+									<ul class="justify-content-between mx-0">
+										<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+										<li>Food</li>
+									</ul>
+								</div>
+								<div class="entry-meta no-separator hover">
+									<ul class="mx-0">
+										<li><a href="#">View More &rarr;</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
@@ -332,27 +363,33 @@
 								<div class="entry-title pt-3">
 									<h3><a href="#">This is a Standard post with Gallery Thumbs</a></h3>
 								</div>
-								<div class="entry-image masonry-thumbs" data-big="2" data-lightbox="gallery">
-									<a href="demos/modern-blog/images/items/lightbox/9-1.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-1.jpg" alt="Gallery Thumb 1"></a>
-									<a href="demos/modern-blog/images/items/lightbox/9-2.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-2.jpg" alt="Gallery Thumb 2"></a>
-									<a href="demos/modern-blog/images/items/lightbox/9-3.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-3.jpg" alt="Gallery Thumb 3"></a>
-									<a href="demos/modern-blog/images/items/lightbox/9-4.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-4.jpg" alt="Gallery Thumb 4"></a>
-									<a href="demos/modern-blog/images/items/lightbox/9-5.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-5.jpg" alt="Gallery Thumb 5"></a>
-									<a href="demos/modern-blog/images/items/lightbox/9-6.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-6.jpg" alt="Gallery Thumb 6"></a>
-									<a href="demos/modern-blog/images/items/lightbox/9-7.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-7.jpg" alt="Gallery Thumb 7"></a>
-									<a href="demos/modern-blog/images/items/lightbox/9-8.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-8.jpg" alt="Gallery Thumb 9"></a>
-									<a href="demos/modern-blog/images/items/lightbox/9-9.jpg" data-lightbox="gallery-item"><img class="image_fade" src="demos/modern-blog/images/items/9-9.jpg" alt="Gallery Thumb 10"></a>
+								<div class="entry-image">
+									<div class="masonry-thumbs grid-container" data-big="2" data-lightbox="gallery">
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-1.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-1.jpg" alt="Gallery Thumb 1"></a>
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-2.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-2.jpg" alt="Gallery Thumb 2"></a>
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-3.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-3.jpg" alt="Gallery Thumb 3"></a>
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-4.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-4.jpg" alt="Gallery Thumb 4"></a>
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-5.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-5.jpg" alt="Gallery Thumb 5"></a>
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-6.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-6.jpg" alt="Gallery Thumb 6"></a>
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-7.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-7.jpg" alt="Gallery Thumb 7"></a>
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-8.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-8.jpg" alt="Gallery Thumb 9"></a>
+										<a class="grid-item" href="demos/modern-blog/images/items/lightbox/9-9.jpg" data-lightbox="gallery-item"><img src="demos/modern-blog/images/items/9-9.jpg" alt="Gallery Thumb 10"></a>
+									</div>
 								</div>
 								<div class="entry-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit ratione, voluptatem. Luctus montes. Voluptatem dolorem parturient, egestas lacus nemo tempus reiciendis! Nihil provident. Nibh placeat</p>
 								</div>
-								<ul class="entry-meta nohover clearfix">
-									<li class="fleft"><i class="icon-calendar2"></i> 10th Feb 2014</li>
-									<li class="fright">Food</li>
-								</ul>
-								<ul class="entry-meta hover clearfix">
-									<li class="fleft ls1"><a href="#">View More &rarr;</a></li>
-								</ul>
+								<div class="entry-meta no-separator nohover">
+									<ul class="justify-content-between mx-0">
+										<li><i class="icon-calendar2"></i> 10th Feb 2021</li>
+										<li>Food</li>
+									</ul>
+								</div>
+								<div class="entry-meta no-separator hover">
+									<ul class="mx-0">
+										<li><a href="#">View More &rarr;</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -373,63 +410,63 @@
 						</div>
 					</div>
 					<div class="center d-none">
-						<a href="demos/modern-blog/demo-modern-blog-2.html" class="load-next-posts"></a>
+						<a href="demo-modern-blog-2.html" class="load-next-posts"></a>
 					</div>
 
 				</div>
 
-				<div class="section bg-white pt-4 pb-0 topmargin-sm nobottommargin">
+				<div class="section bg-white pt-4 pb-0 topmargin-sm mb-0">
 					<div class="container">
-						<div class="heading-block d-flex justify-content-center center nobottomborder mb-4">
-							<img src="demos/modern-blog/images/instagram.png" class="align-self-center" alt="" height="28"><h3 class="ml-2 capitalize ls0 align-self-center">Instagram Feed</h3>
+						<div class="heading-block d-flex justify-content-center center border-bottom-0 mb-4">
+							<img src="demos/modern-blog/images/instagram.png" class="align-self-center" alt="Image" height="28"><h3 class="ml-2 text-capitalize ls0 align-self-center">Instagram Feed</h3>
 						</div>
 					</div>
 					<div class="instagram-button position-relative">
-						<div id="instagram-photos" class="instagram-photos masonry-thumbs grid-6" data-user="5834720953" data-count="12" data-type="user"></div>
-						<a href="#" class="button bg-white button-light button-rounded text-dark nomargin clearfix">Follow us on Instagram</a>
+						<div id="instagram-photos" class="instagram-photos masonry-thumbs grid-container grid-6" data-user="blog.canvastemplate"></div>
+						<a href="#" class="button bg-white button-light button-rounded text-dark m-0 clearfix">Follow us on Instagram</a>
 					</div>
 				</div>
 
 			</div>
 
+		<footer>
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights" class="bg-dark dark">
-
 				<div class="container clearfix">
 
-					<div class="col_half text-muted">
-						Copyrights &copy; 2018 All Rights Reserved by Canvas Inc.<br>
-					</div>
+					<div class="row col-mb-30">
+						<div class="col-12 text-center text-muted">
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
+						</div>
 
-					<div class="col_half col_last">
-						<div class="fright clearfix">
-							<a href="#" class="social-icon si-small si-rounded si-colored si-facebook">
+						<div class="col-12 text-center">
+							<a href="#" class="social-icon inline-block si-small si-rounded si-colored si-facebook">
 								<i class="icon-facebook"></i>
 								<i class="icon-facebook"></i>
 							</a>
 
-							<a href="#" class="social-icon si-small si-rounded si-colored si-twitter">
+							<a href="#" class="social-icon inline-block si-small si-rounded si-colored si-twitter">
 								<i class="icon-twitter"></i>
 								<i class="icon-twitter"></i>
 							</a>
 
-							<a href="#" class="social-icon si-small si-rounded si-colored si-gplus">
+							<a href="#" class="social-icon inline-block si-small si-rounded si-colored si-gplus">
 								<i class="icon-gplus"></i>
 								<i class="icon-gplus"></i>
 							</a>
 
-							<a href="#" class="social-icon si-small si-rounded si-colored si-pinterest">
+							<a href="#" class="social-icon inline-block si-small si-rounded si-colored si-pinterest">
 								<i class="icon-pinterest"></i>
 								<i class="icon-pinterest"></i>
 							</a>
 
-							<a href="#" class="social-icon si-small si-rounded si-colored si-vimeo">
+							<a href="#" class="social-icon inline-block si-small si-rounded si-colored si-vimeo">
 								<i class="icon-vimeo"></i>
 								<i class="icon-vimeo"></i>
 							</a>
 
-							<a href="#" class="social-icon si-small si-rounded si-colored si-instagram">
+							<a href="#" class="social-icon inline-block si-small si-rounded si-colored si-instagram">
 								<i class="icon-instagram"></i>
 								<i class="icon-instagram"></i>
 							</a>
@@ -437,8 +474,8 @@
 					</div>
 
 				</div>
-
 			</div><!-- #copyrights end -->
+		</footer>
 
 		</section><!-- #content end -->
 
@@ -446,12 +483,12 @@
 
 	<!-- Go To Top
 	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
+	<div id="gotoTop" class="icon-angle-up rounded-circle"></div>
 
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+	<script src="js/plugins.infinitescroll.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

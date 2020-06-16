@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
@@ -17,7 +17,9 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="demos/photographer/css/menu.css" />
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Photographer Specific Stylesheet -->
@@ -37,7 +39,7 @@
 
 <!-- Overlay Menu, Dark, Page Loader, Stretched (body)
 ============================================= -->
-<body class="stretched overlay-menu dark" data-loader-html="<div><img src='demos/photographer/images/icons/loader-white.svg' alt='Loader'></div>">
+<body class="stretched dark" data-loader-html="<div><img src='demos/photographer/images/icons/loader-white.svg' alt='Loader'></div>">
 
 	<!-- Document Wrapper
 	============================================= -->
@@ -45,96 +47,100 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="transparent-header dark">
-
+		<header id="header" class="transparent-header no-sticky" data-sticky-shrink="false">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+						<a href="demo-photography.html"><img src="demos/photography/images/logo-dark@2x.png" alt="Canvas Logo" height="100"></a>
 
-				<div class="container clearfix">
-
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-					<!-- Logo
-						============================================= -->
-					<div id="logo" class="d-block d-lg-none d-xl-block">
-						<a href="demo-photographer.html" class="standard-logo" data-dark-logo="demos/photographer/images/logo-dark.png"><img src="demos/photographer/images/logo.png" alt="Canvas Logo"></a>
-						<a href="demo-photographer.html" class="retina-logo" data-dark-logo="demos/photographer/images/logo-dark@2x.png"><img src="demos/photographer/images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
-
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu" class="nobottommargin clearfix">
-						<ul>
-							<li><a href="#"><div>Home</div></a></li>
-							<li><a href="#"><div>Photography</div></a></li>
-							<li><a href="#"><div>Contact</div></a></li>
-							<li><a href="https://facebook.com/semicolonweb" target="_blank" class="inline-block rounded p-3 si-small mt-4 si-facebook"><i class="icon-facebook m-0 text-white"></i></a><a href="https://twitter.com/__semicolon" target="_blank" class="inline-block rounded p-3 ml-2 si-small mt-4 si-twitter"><i class="icon-twitter m-0 text-white"></i></a><a href="https://instagram.com/semicolonweb" target="_blank" class="inline-block rounded p-3 ml-2 si-small mt-4 si-instagram"><i class="icon-instagram m-0 text-white"></i></a></li>
-						</ul>
-						<a href="#" id="overlay-menu-close" class="d-none d-lg-block"><i class="icon-line-cross"></i></a>
-					</nav><!-- #primary-menu end -->
-				</div>
-
-			</div>
-
-		</header><!-- #header end -->
-
-
-		<!-- Slider
-		============================================= -->
-		<section id="slider" class="slider-element full-screen clearfix" style="background: #050505 url('demos/photographer/images/dots-white.png') 100% 0 no-repeat; background-size: 60%">
-
-			<div class="container">
-				<div class="vertical-middle">
-
-					<div class="row align-items-center">
-						<div class="col-md-6 dark">
-							<small class="text-muted uppercase t300 ls4 mb-1 d-block">Photographer</small>
-							<h2>Shooting Your Memory.</h2>
-							<h5 class="t300 ls1" style="opacity: .7">We’re Pedro and Aistė, a passionate digital designer and a skillful WordPress developer focused in delivering a high quality service.</h5>
-							<div class="d-flex align-items-center">
-								<a href="#" class="button button-change nott button-large dark t300 gradient-border ml-0 mt-4 mb-0">
-									<span><i class="icon-line2-envelope"></i> Email Me Here</span>
-									<span>myemailid@canvas.com</span>
-								</a>
-								<a href="https://facebook.com/semicolonweb" target="_blank" class="d-none d-sm-inline-block mt-4 mb-0 ml-3 social-icon si-small si-borderless si-facebook">
-									<i class="icon-facebook"></i>
-									<i class="icon-facebook"></i>
-								</a>
-								<a href="https://facebook.com/semicolonweb" target="_blank" class="d-none d-sm-inline-block mt-4 mb-0 ml-2 social-icon si-small si-borderless si-twitter">
-									<i class="icon-twitter"></i>
-									<i class="icon-twitter"></i>
-								</a>
+						<div>
+							<div class="primary-menu-trigger hamburger">
+								<i class="icon-line-menu"></i>
+								<i class="icon-line-cross"></i>
 							</div>
-						</div>
-
-						<div class="col-md-6 mt-4 mt-md-0">
-							<div class="row common-height">
-								<div class="col-lg-6 col-md-12 rounded col-6" style="background: url('demos/photographer/images/1.jpg') center center no-repeat; background-size: cover">
-								</div>
-								<div class="col-6 d-none d-lg-flex"></div>
-								<div class="col-6 d-none d-lg-flex"></div>
-								<div class="col-lg-6 col-md-12 rounded col-6 d-flex max-height" style="background-color: #252525">
-									<div class="feature-box not-dark px-3 py-4 fbox-small">
-										<div class="fbox-media align-self-start">
-											<img src="demos/photographer/images/icons/instagram.svg" class="noradius nobg tleft" alt="Image" style="height: 48px;">
-										</div>
-										<div class="d-block" style="margin: 90px auto"></div>
-										<p class="mb-0 t400">View Our Instram Stories</p>
-										<h3 class="t500 mt-1 mb-0 capitalize d-flex align-self-end"><a href="https://instagram.com/semicolonweb" target="_blank" class="text-light">instagram <i class="icon-line-arrow-right t600 position-relative" style="top: 2px"></i></a></h3>
-									</div>
+							<div class="global-menu">
+								<div class="global-menu__wrap">
+									<a class="global-menu__item" href="#">Home</a>
+									<a class="global-menu__item" href="#">Photography</a>
+									<a class="global-menu__item" href="#">About</a>
+									<a class="global-menu__item" href="#">Contact</a>
 								</div>
 							</div>
+							<svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+								<path class="shape-overlays__path" d=""></path>
+								<path class="shape-overlays__path" d=""></path>
+								<path class="shape-overlays__path" d=""></path>
+								<path class="shape-overlays__path" d=""></path>
+							</svg>
 						</div>
-
 					</div>
 				</div>
 			</div>
+		</header><!-- #header end -->
 
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element min-vh-60 min-vh-md-100 include-header" style="background: #050505 url('demos/photographer/images/dots-white.png') 100% 0 no-repeat; background-size: 60%">
+			<div class="slider-inner">
+
+				<div class="vertical-middle">
+					<div class="container py-5">
+
+						<div class="row align-items-center col-mb-50">
+							<div class="col-md-6 dark">
+
+								<div class="py-5 py-md-0">
+									<small class="text-muted text-uppercase font-weight-light ls4 mb-1 d-block">Photographer</small>
+									<h2>Shooting Your Memory.</h2>
+									<h5 class="font-weight-light ls1" style="opacity: .7">We’re Pedro and Aistė, a passionate digital designer and a skillful Canvas developer focused in delivering a high quality service.</h5>
+									<div class="d-flex align-items-center mt-5">
+										<a href="#" class="button button-change button-rounded overflow-hidden nott button-large font-weight-normal mx-0 px-5">
+											<span><i class="icon-line2-envelope font-weight-semibold"></i> Email Me Here</span>
+										</a>
+										<a href="https://facebook.com/semicolonweb" target="_blank" class="d-none d-sm-inline-block my-0 mr-0 ml-4 social-icon si-small si-borderless si-facebook">
+											<i class="icon-facebook"></i>
+											<i class="icon-facebook"></i>
+										</a>
+										<a href="https://facebook.com/semicolonweb" target="_blank" class="d-none d-sm-inline-block my-0 mr-0 ml-3 social-icon si-small si-borderless si-twitter">
+											<i class="icon-twitter"></i>
+											<i class="icon-twitter"></i>
+										</a>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-md-6 pl-md-5 pl-lg-0">
+								<div class="row align-items-stretch">
+									<div class="col-lg-6 col-md-12 rounded col-6" style="background: url('demos/photographer/images/1.jpg') center center no-repeat; background-size: cover">
+									</div>
+									<div class="col-6 d-none d-lg-flex"></div>
+									<div class="col-6 d-none d-lg-flex"></div>
+									<div class="col-lg-6 col-md-12 rounded col-6" style="background-color: #252525">
+										<div class="feature-box flex-column not-dark px-3 py-4 fbox-sm">
+											<div class="fbox-media">
+												<img src="demos/photographer/images/icons/instagram.svg" class="rounded-0 bg-transparent text-left" alt="Image" style="height: 48px;">
+											</div>
+											<div class="fbox-content">
+												<div class="d-block" style="margin: 90px auto"></div>
+												<p class="mb-0 font-weight-normal">View My Stories</p>
+												<h3 class="font-weight-medium mt-1 mb-0 d-flex align-self-end"><a href="https://instagram.com/semicolonweb" target="_blank" class="text-light">Instagram <i class="icon-line-arrow-right font-weight-semibold position-relative" style="top: 2px"></i></a></h3>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
 		</section><!-- #Slider End -->
 
 		<!-- Content
 		============================================= -->
-		<section id="content" class="clearfix" style="background-color: #050505; border-top: 1px solid rgba(255,255,255,0.1)">
-
+		<section id="content" style="background-color: #050505; border-top: 1px solid rgba(255,255,255,0.1)">
 			<div class="content-wrap">
 
 				<!-- Flip Card Section
@@ -145,8 +151,8 @@
 						<div class="row align-items-center justify-content-between">
 
 							<div class="col-lg-4 parallax" data-bottom-top="margin-top:-50px" data-top-bottom="margin-top:50px">
-								<small class="text-muted uppercase t300 ls4 mb-1 d-block">Experience</small>
-								<h2 class="t700 ls0 mb-4" style="font-size: 38px;">I have been taking photographs for last 7 years.</h2>
+								<small class="text-muted text-uppercase font-weight-light ls4 mb-1 d-block">Experience</small>
+								<h2 class="font-weight-bold ls0 mb-4" style="font-size: 38px;">I have been taking photographs for last 7 years.</h2>
 								<p class="text-muted" style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora nihil praesentium dolorum unde, earum, nostrum odit?</p>
 							</div>
 
@@ -157,26 +163,25 @@
 										<!-- Flip Card
 										============================================= -->
 										<div class="flip-card dark">
-											<div class="front no-after" style="background-color: #050505">
-												<div class="inner">
-													<div class="feature-box media-box">
-														<div class="fbox-icon position-relative mb-4" style="width: 38px;height: 38px">
+											<div class="flip-card-front no-after" style="background-color: #050505">
+												<div class="flip-card-inner">
+													<div class="feature-box media-box fbox-sm">
+														<div class="fbox-icon position-relative mb-4">
 															<a href="#">
-																<img src="demos/photographer/images/icons/camera1.svg" class="noradius nobg tleft" alt="Image">
+																<img src="demos/photographer/images/icons/camera1.svg" class="rounded-0 bg-transparent text-left" alt="Image">
 															</a>
 														</div>
-														<div class="fbox-desc">
-															<h3 class="t400 nott text-white">Wild Photography</h3>
-															<p class="text-muted t500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
+														<div class="fbox-content">
+															<h3 class="font-weight-normal nott text-white">Wild Photography</h3>
+															<p class="text-muted font-weight-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="back" style="background-image: url('demos/photographer/images/features/1-1.jpg')">
-												<div class="inner mt-3">
+											<div class="flip-card-back" style="background-image: url('demos/photographer/images/features/1-1.jpg')">
+												<div class="flip-card-inner mt-3">
 													<h4 class="mb-4 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit.</h4>
-													<a href="#" class="button button-change ohidden rounded nott t300 m-0">
-														<span>View Photos</span>
+													<a href="#" class="button button-change overflow-hidden rounded nott font-weight-light m-0">
 														<span>View Photos</span>
 													</a>
 												</div>
@@ -188,26 +193,25 @@
 										<!-- Flip Card
 										============================================= -->
 										<div class="flip-card dark">
-											<div class="front no-after" style="background-color: #050505">
-												<div class="inner">
-													<div class="feature-box media-box">
-														<div class="fbox-icon position-relative mb-4" style="width: 38px;height: 38px">
+											<div class="flip-card-front no-after" style="background-color: #050505">
+												<div class="flip-card-inner">
+													<div class="feature-box media-box fbox-sm">
+														<div class="fbox-icon position-relative mb-4">
 															<a href="#">
-																<img src="demos/photographer/images/icons/travel.svg" class="noradius nobg tleft" alt="Image">
+																<img src="demos/photographer/images/icons/travel.svg" class="rounded-0 bg-transparent text-left" alt="Image">
 															</a>
 														</div>
-														<div class="fbox-desc">
-															<h3 class="t400 nott text-white">Travel Blog</h3>
-															<p class="text-muted t500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
+														<div class="fbox-content">
+															<h3 class="font-weight-normal nott text-white">Travel Blog</h3>
+															<p class="text-muted font-weight-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="back" style="background-image: url('demos/photographer/images/features/2.jpg')">
-												<div class="inner mt-3">
+											<div class="flip-card-back" style="background-image: url('demos/photographer/images/features/2.jpg')">
+												<div class="flip-card-inner mt-3">
 													<h4 class="mb-4 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit.</h4>
-													<a href="#" class="button button-change ohidden rounded nott t300 m-0">
-														<span>View Photos</span>
+													<a href="#" class="button button-change overflow-hidden rounded nott font-weight-light m-0">
 														<span>View Photos</span>
 													</a>
 												</div>
@@ -219,26 +223,25 @@
 										<!-- Flip Card
 										============================================= -->
 										<div class="flip-card dark">
-											<div class="front no-after" style="background-color: #050505">
-												<div class="inner">
-													<div class="feature-box media-box">
-														<div class="fbox-icon position-relative mb-4" style="width: 38px;height: 38px">
+											<div class="flip-card-front no-after" style="background-color: #050505">
+												<div class="flip-card-inner">
+													<div class="feature-box media-box fbox-sm">
+														<div class="fbox-icon position-relative mb-4">
 															<a href="#">
-																<img src="demos/photographer/images/icons/wedding.svg" class="noradius nobg tleft" alt="Image">
+																<img src="demos/photographer/images/icons/wedding.svg" class="rounded-0 bg-transparent text-left" alt="Image">
 															</a>
 														</div>
-														<div class="fbox-desc">
-															<h3 class="t400 nott text-white">Wedding Shoots</h3>
-															<p class="text-muted t500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
+														<div class="fbox-content">
+															<h3 class="font-weight-normal nott text-white">Wedding Shoots</h3>
+															<p class="text-muted font-weight-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="back" style="background-image: url('demos/photographer/images/features/3.jpg')">
-												<div class="inner mt-3">
+											<div class="flip-card-back" style="background-image: url('demos/photographer/images/features/3.jpg')">
+												<div class="flip-card-inner mt-3">
 													<h4 class="mb-4 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit.</h4>
-													<a href="#" class="button button-change ohidden rounded nott t300 m-0">
-														<span>View Photos</span>
+													<a href="#" class="button button-change overflow-hidden rounded nott font-weight-light m-0">
 														<span>View Photos</span>
 													</a>
 												</div>
@@ -250,26 +253,25 @@
 										<!-- Flip Card
 										============================================= -->
 										<div class="flip-card dark">
-											<div class="front no-after" style="background-color: #050505">
-												<div class="inner">
-													<div class="feature-box media-box">
-														<div class="fbox-icon position-relative mb-4" style="width: 38px;height: 38px">
+											<div class="flip-card-front no-after" style="background-color: #050505">
+												<div class="flip-card-inner">
+													<div class="feature-box media-box fbox-sm">
+														<div class="fbox-icon position-relative mb-4">
 															<a href="#">
-																<img src="demos/photographer/images/icons/camera2.svg" class="noradius nobg tleft" alt="Image">
+																<img src="demos/photographer/images/icons/camera2.svg" class="rounded-0 bg-transparent text-left" alt="Image">
 															</a>
 														</div>
-														<div class="fbox-desc">
-															<h3 class="t400 nott text-white">Candid Moments</h3>
-															<p class="text-muted t500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
+														<div class="fbox-content">
+															<h3 class="font-weight-normal nott text-white">Candid Moments</h3>
+															<p class="text-muted font-weight-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="back" style="background-image: url('demos/photographer/images/features/4.jpg')">
-												<div class="inner mt-3">
+											<div class="flip-card-back" style="background-image: url('demos/photographer/images/features/4.jpg')">
+												<div class="flip-card-inner mt-3">
 													<h4 class="mb-4 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit.</h4>
-													<a href="#" class="button button-change ohidden rounded nott t300 m-0">
-														<span>View Photos</span>
+													<a href="#" class="button button-change overflow-hidden rounded nott font-weight-light m-0">
 														<span>View Photos</span>
 													</a>
 												</div>
@@ -285,178 +287,178 @@
 
 				<!-- Photographs Section
 				============================================= -->
-				<div class="section nobg">
+				<div class="section bg-transparent">
 
 					<div class="container">
 
 						<!-- Heading Title -->
 						<div class="col-lg-6 offset-lg-1 mb-5">
-							<small class="text-muted uppercase t300 ls3 d-block">Some of Featured Pictures</small>
-							<h2 class="t700 ls0 mb-3" style="font-size: 46px;">See what I Did.</h2>
+							<small class="text-muted text-uppercase font-weight-light ls3 d-block">Some of Featured Pictures</small>
+							<h2 class="font-weight-bold ls0 mb-3" style="font-size: 46px;">See what I Did.</h2>
 							<p class="text-muted" style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora nihil praesentium dolorum unde, earum, nostrum odit?</p>
 						</div>
 
-						<div class="row grid-container clearfix" style="overflow: visible;">
+						<div class="row grid-container gutter-30" style="overflow: visible;">
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/1.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Travel</small>
+										<small class="text-light ls1 font-weight-light">Travel</small>
 										<h3 class="img-hover-title"><a href="#">Ralway Station</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/2.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Travel</small>
+										<small class="text-light ls1 font-weight-light">Travel</small>
 										<h3 class="img-hover-title"><a href="#">Mt. Batur</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/3.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Travel</small>
+										<small class="text-light ls1 font-weight-light">Travel</small>
 										<h3 class="img-hover-title"><a href="#">Bali, Indonesia</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/4.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Wedding</small>
+										<small class="text-light ls1 font-weight-light">Wedding</small>
 										<h3 class="img-hover-title"><a href="#">Ms. Charle's Wedding</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/5.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Wedding</small>
+										<small class="text-light ls1 font-weight-light">Wedding</small>
 										<h3 class="img-hover-title"><a href="#">Romatic Moments</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/6.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Travel</small>
+										<small class="text-light ls1 font-weight-light">Travel</small>
 										<h3 class="img-hover-title"><a href="#">Surfing on Sunset</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/7.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Candid</small>
+										<small class="text-light ls1 font-weight-light">Candid</small>
 										<h3 class="img-hover-title"><a href="#">Black &amp; White</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/8.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Candid</small>
+										<small class="text-light ls1 font-weight-light">Candid</small>
 										<h3 class="img-hover-title"><a href="#">Reading Book</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/9.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Random</small>
+										<small class="text-light ls1 font-weight-light">Random</small>
 										<h3 class="img-hover-title"><a href="#">Littile Flubby</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/10.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Potrait</small>
+										<small class="text-light ls1 font-weight-light">Potrait</small>
 										<h3 class="img-hover-title"><a href="#">Model Shoot</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/11.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Fashion</small>
+										<small class="text-light ls1 font-weight-light">Fashion</small>
 										<h3 class="img-hover-title"><a href="#">Sea Beach Shoot</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/12.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Model</small>
+										<small class="text-light ls1 font-weight-light">Model</small>
 										<h3 class="img-hover-title"><a href="#">Modelling Pics</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/13.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Travel</small>
+										<small class="text-light ls1 font-weight-light">Travel</small>
 										<h3 class="img-hover-title"><a href="#">Street Picture</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/14.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Street</small>
+										<small class="text-light ls1 font-weight-light">Street</small>
 										<h3 class="img-hover-title"><a href="#">Budapest, Hungry</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
 								</div>
 							</div>
 							<!-- Photograph -->
-							<div class="col-lg-4 col-sm-6 mb-4 rounded img-hover-wrap" data-animate="fadeInUp">
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap" data-animate="fadeInUp">
 								<div class="img-hover-card">
 									<a href="#"><img src="demos/photographer/images/album/15.jpg" alt="Image"></a>
 									<div class="img-hover-detail">
-										<small class="text-light ls1 t300">Candid</small>
+										<small class="text-light ls1 font-weight-light">Candid</small>
 										<h3 class="img-hover-title"><a href="#">Street Picture</a></h3>
 										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
 									</div>
@@ -466,7 +468,7 @@
 
 						<div class="row mt-5">
 							<div class="col-sm-6 dark offset-sm-1">
-								<h2 class="t700 ls0 mb-3" style="font-size: 38px;">More Coming Soon..</h2>
+								<h2 class="font-weight-bold ls0 mb-3" style="font-size: 38px;">More Coming Soon..</h2>
 								<p class="text-muted" style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora nihil praesentium dolorum unde, earum, nostrum odit?</p>
 							</div>
 						</div>
@@ -481,7 +483,7 @@
 							<!-- Counter
 							============================================= -->
 							<div class="col-lg-3 col-md-6 mt-4">
-								<div class="counter counter-large t300"><span data-from="1" data-to="7" data-refresh-interval="100" data-speed="2000"></span>+</div>
+								<div class="counter counter-large font-weight-light"><span data-from="1" data-to="7" data-refresh-interval="100" data-speed="2000"></span>+</div>
 								<h5>years of Experience</h5>
 								<p class="text-muted mb-0 pb-5 dark border-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora.</p>
 							</div>
@@ -489,7 +491,7 @@
 							<!-- Counter
 							============================================= -->
 							<div class="col-lg-3 col-md-6 mt-4">
-								<div class="counter counter-large t300"><span data-from="10" data-to="114" data-refresh-interval="50" data-speed="2000" data-comma="true"></span>+</div>
+								<div class="counter counter-large font-weight-light"><span data-from="10" data-to="114" data-refresh-interval="50" data-speed="2000" data-comma="true"></span>+</div>
 								<h5>Posted Travel Blogs</h5>
 								<p class="text-muted mb-0 pb-5 dark border-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora.</p>
 							</div>
@@ -497,7 +499,7 @@
 							<!-- Counter
 							============================================= -->
 							<div class="col-lg-3 col-md-6 mt-4">
-								<div class="counter counter-large t300"><span data-from="100" data-to="1034" data-refresh-interval="50" data-speed="2000" data-comma="true"></span>+</div>
+								<div class="counter counter-large font-weight-light"><span data-from="100" data-to="1034" data-refresh-interval="50" data-speed="2000" data-comma="true"></span>+</div>
 								<h5>Has Photos Published</h5>
 								<p class="text-muted mb-0 pb-5 dark border-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora.</p>
 							</div>
@@ -507,10 +509,10 @@
 
 				<!-- Clients Section
 				============================================= -->
-				<div class="section dark nobg">
+				<div class="section dark bg-transparent">
 					<div class="container center">
-						<small class="text-muted uppercase t300 ls3">Trusted Partners</small>
-						<h2 class="t700 ls0 mb-5" style="font-size: 46px;">Happy Clients</h2>
+						<small class="text-muted text-uppercase font-weight-light ls3">Trusted Partners</small>
+						<h2 class="font-weight-bold ls0 mb-5" style="font-size: 46px;">Happy Clients</h2>
 						<div class="row">
 							<div class="col-md-10 offset-md-1">
 								<div class="row">
@@ -550,9 +552,8 @@
 							</div>
 						</div>
 
-						<a href="#" class="button button-change button-large button-rounded nott t300 mt-4 ml-0">
-							<span>View more Clients <i class="icon-line-arrow-right"></i></span>
-							<span>View more Clients <i class="icon-line-arrow-right"></i></span>
+						<a href="#" class="button button-change button-large button-rounded nott font-weight-light mt-4 ml-0">
+							<span>View More Clients <i class="icon-line-arrow-right"></i></span>
 						</a>
 
 					</div>
@@ -560,12 +561,12 @@
 
 				<!-- Service Section
 				============================================= -->
-				<div class="section nobg">
+				<div class="section bg-transparent">
 
 					<div class="container">
 						<div class="col-sm-6 dark mb-5">
-							<small class="text-muted uppercase t300 ls3 d-block">Steps of Works</small>
-							<h2 class="t700 ls0 mb-3" style="font-size: 46px;">See How I Do.</h2>
+							<small class="text-muted text-uppercase font-weight-light ls3 d-block">Steps of Works</small>
+							<h2 class="font-weight-bold ls0 mb-3" style="font-size: 46px;">See How I Do.</h2>
 							<p class="text-muted" style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora nihil praesentium dolorum unde, earum, nostrum odit?</p>
 						</div>
 
@@ -578,9 +579,9 @@
 									<div class="mt-auto">
 										<div class="card-body">
 											<img src="demos/photographer/images/icons/shutter.svg" width="40" alt="Image" class="mb-4">
-											<h4 class="card-title t400">Updated Lenses:</h4>
-											<p class="card-text mb-0 mt-2 text-white-50 t300">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p><br>
-											<p class="card-text mb-0 text-white-50 t300">Objectively productivate interoperable process improvements.</p>
+											<h4 class="card-title font-weight-normal">Updated Lenses:</h4>
+											<p class="card-text mb-0 mt-2 text-white-50 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p><br>
+											<p class="card-text mb-0 text-white-50 font-weight-light">Objectively productivate interoperable process improvements.</p>
 										</div>
 									</div>
 								</div>
@@ -594,9 +595,9 @@
 										<div class="card-body">
 											<img src="demos/photographer/images/icons/video-camera.svg" width="40" alt="Image" class="mb-4">
 											<!-- Card<h4 class="card-title t -->
-											<h4 class="card-title t400">Film Making:</h4>
-											<p class="card-text mb-0 mt-2 text-white-50 t300">Objectively productivate interoperable process improvements.</p><br>
-											<p class="card-text mb-0 text-white-50 t300">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
+											<h4 class="card-title font-weight-normal">Film Making:</h4>
+											<p class="card-text mb-0 mt-2 text-white-50 font-weight-light">Objectively productivate interoperable process improvements.</p><br>
+											<p class="card-text mb-0 text-white-50 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
 										</div>
 									</div>
 								</div>
@@ -610,12 +611,12 @@
 										<div class="card-body">
 											<div class="d-flex align-items-center mb-4">
 												<span><img src="demos/photographer/images/icons/lr.svg" width="35" alt="Image"></span>
-												<span class="px-3 h6 m-0 t300">&amp;</span>
+												<span class="px-3 h6 m-0 font-weight-light">&amp;</span>
 												<span><img src="demos/photographer/images/icons/psd.svg" width="35" alt="Image"></span>
 											</div>
-											<h4 class="card-title t400">Most Edited Tools:</h4>
-											<p class="card-text mb-0 mt-2 text-white-50 t300">Objectively productivate interoperable process improvements.</p><br>
-											<p class="card-text mb-0 text-white-50 t300">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
+											<h4 class="card-title font-weight-normal">Most Edited Tools:</h4>
+											<p class="card-text mb-0 mt-2 text-white-50 font-weight-light">Objectively productivate interoperable process improvements.</p><br>
+											<p class="card-text mb-0 text-white-50 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
 										</div>
 									</div>
 								</div>
@@ -627,30 +628,27 @@
 
 				<!-- Contact Section
 				============================================= -->
-				<div class="section nobottommargin nobg">
-
+				<div class="section mb-0 bg-transparent">
 					<div class="container">
-
 						<div class="row justify-content-between mt-5">
 
 							<div class="col-md-6 dark">
-								<small class="text-muted uppercase t300 ls3 d-block">Let's Say Hi!</small>
-								<h2 class="t700 ls0 mb-3" style="font-size: 64px; line-height: 1.2">Here You Contact Me.</h2>
+								<small class="text-muted text-uppercase font-weight-light ls3 d-block">Let's Say Hi!</small>
+								<h2 class="font-weight-bold ls0 mb-3" style="font-size: 64px; line-height: 1.2">Here You Contact Me.</h2>
 								<p class="text-muted" style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora nihil praesentium dolorum unde, earum, nostrum odit?</p>
 								<div class="d-flex align-items-center mt-4">
-									<a href="#" class="button button-change button-large button-rounded nott t300 m-0 ohidden">
-										<span><i class="icon-line2-envelope"></i> Contact Us</span>
+									<a href="#" class="button button-change button-large button-rounded nott font-weight-light m-0 overflow-hidden">
 										<span><i class="icon-line2-envelope"></i> Contact Us</span>
 									</a>
-									<a href="https://facebook.com/semicolonweb" target="_blank" class="my-0 ml-2 social-icon inline-block si-small si-borderless si-facebook">
+									<a href="https://facebook.com/semicolonweb" target="_blank" class="my-0 ml-3 social-icon inline-block si-small si-borderless si-facebook">
 										<i class="icon-facebook"></i>
 										<i class="icon-facebook"></i>
 									</a>
-									<a href="https://twitter.com/__semicolon" target="_blank" class="my-0 ml-1 social-icon inline-block si-small si-borderless si-twitter">
+									<a href="https://twitter.com/__semicolon" target="_blank" class="my-0 ml-2 social-icon inline-block si-small si-borderless si-twitter">
 										<i class="icon-twitter"></i>
 										<i class="icon-twitter"></i>
 									</a>
-									<a href="https://instagram.com/semicolonweb" target="_blank" class="my-0 ml-1 social-icon inline-block si-small si-borderless si-instagram">
+									<a href="https://instagram.com/semicolonweb" target="_blank" class="my-0 ml-2 social-icon inline-block si-small si-borderless si-instagram">
 										<i class="icon-instagram"></i>
 										<i class="icon-instagram"></i>
 									</a>
@@ -660,11 +658,11 @@
 							<!-- Testimonial
 							============================================= -->
 							<div class="dark col-md-5 mt-5 mt-md-0">
-								<h5 class="pl-4 t400">What Clients Says:</h5>
+								<h5 class="pl-4 font-weight-normal">What Clients Says:</h5>
 								<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget pl-4" data-margin="0" data-nav="false" data-pagi="false" data-items="1" data-autoplay="6000" data-loop="true" data-animate-in="fadeIn">
 
 									<div class="oc-item">
-										<div class="testimonial noshadow noborder">
+										<div class="testimonial shadow-none border-0">
 											<div class="testi-content">
 												<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!</p>
 												<div class="testi-meta ls1 mt-3 mb-0"> Fig Nelson</div>
@@ -672,7 +670,7 @@
 										</div>
 									</div>
 									<div class="oc-item">
-										<div class="testimonial noshadow noborder">
+										<div class="testimonial shadow-none border-0">
 											<div class="testi-content">
 												<p>Completely e-enable premier infomediaries and long-term high-impact process improvements. Completely provide access to B2C.</p>
 												<div class="testi-meta ls1 mt-3 mb-0"> Bailey Wonger</div>
@@ -681,26 +679,24 @@
 									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
 
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark noborder clearfix">
-
+		<footer id="footer" class="dark border-0 clearfix">
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights" style="background: #222">
-
 				<div class="container clearfix">
 
-					<div class="col_full center nobottommargin topmargin-sm">
-						&copy; Canvas Inc. 2018. All Rights Reserved.<br><br>
+					<div class="w-100 text-center topmargin-sm">
+						<p class="mb-3">&copy; Canvas Inc. 2020. All Rights Reserved.</p>
 						<a href="https://facebook.com/semicolonweb" target="_blank" class="social-icon inline-block si-small si-borderless si-rounded si-facebook">
 							<i class="icon-facebook"></i>
 							<i class="icon-facebook"></i>
@@ -720,16 +716,14 @@
 					</div>
 
 				</div>
-
 			</div><!-- #copyrights end -->
-
 		</footer><!-- #footer end -->
 
 	</div><!-- #wrapper end -->
 
 	<!-- Go To Top
 	============================================= -->
-	<div id="gotoTop" class="icon-angle-up bgcolor"></div>
+	<div id="gotoTop" class="icon-angle-up bg-color"></div>
 
 	<!-- Light Mode Switch
 	============================================= -->
@@ -740,11 +734,14 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<!-- Photograph Hover Plugin
 	============================================= -->
-	<script src="demos/writer/js/hover3d.js" ></script>
+	<script src="demos/writer/js/hover3d.js"></script>
+
+	<!-- Menu Open Plugin
+	============================================= -->
+	<script src="demos/photographer/js/menu-easing.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

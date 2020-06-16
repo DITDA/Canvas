@@ -1,9 +1,5 @@
 /* ----------------------------------------------------------------
-	CSS Specific to the NonProfit Demo
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Styling of this Demo
-
+	Canvas: Movers
 -----------------------------------------------------------------*/
 
 /* Root Settings
@@ -12,9 +8,6 @@
 	--themecolor:  				#0F66DD;
 	--themecolorrgb: 			25,102,221;
 
-	/* Header */
-	--header-height:			100px;
-	--sticky-header-height: 	70px;
 	--headerbg: 				var(--themecolor);
 	--primary-menu-font-size: 	15px;
 }
@@ -86,7 +79,7 @@
 	width: 100%;
 }
 
-.svg-separator svg:before {
+.svg-separator svg::before {
 	content: '';
 	width: 100%;
 	height: 200px;
@@ -177,28 +170,26 @@ a.btn-link:hover i { transform: translateX(4px); }
 	border-bottom: 1px solid #EEE;
 }
 
-.toggle .togglet i.toggle-open {
+.toggle-header {
+	align-items: center;
+}
+
+.toggle-header .toggle-open {
 	display: block !important;
-	width: auto;
-	left: auto;
-	right: 20px;
 	font-size: 20px;
+	line-height: 1;
+	height: 20px;
 	transform: rotate(45deg);
 	transition: transform .3s ease;
 }
 
 .toggle-closed { display: none !important; }
 
-.toggle .togglet.toggleta i.toggle-open {
+.toggle-active .toggle-open {
 	display: block !important;
 	transform: rotate(90deg);
 	color: var(--themecolor, #0F66DD);
 }
-
-.toggle .togglet,
-.toggle .toggleta { padding-left: 15px; }
-
-.toggle .togglec { padding-top: 20px; }
 
 .grid-bg {
 	position: absolute;
@@ -312,29 +303,39 @@ a.btn-link:hover i { transform: translateX(4px); }
 footer .list-unstyled li a,
 .copyright-links a { color: #999; }
 
-#header.dark #primary-menu.style-2 { border-top-color: rgba(255, 255, 255, .1); }
+#header.dark .primary-menu { border-top-color: rgba(255, 255, 255, .1); }
 
-#header:not(:hover),
+#header,
 #header.dark:not(.transparent-header),
-#header:not(:hover) #header-wrap,
+#header #header-wrap,
 #header.dark.sticky-header:not(.transparent-header) #header-wrap:not(.not-dark) {
 	background-color: var(--headerbg, #0F66DD);
+}
+
+#header.dark:not(.transparent-header) {
 	border-bottom-color: rgba(255, 255, 255, .1);
 }
 
+#header.dark:not(.sticky-header) #header-wrap {
+	border-top: 1px solid rgba(255, 255, 255, .1);
+}
 
 #header-wrap .header-buttons {
-	display: inline-block;
-	float: right;
-	margin: 18px 0;
-	border-left: 2px solid rgba(255, 255, 255, 0.4);
+	margin-left: 1rem;
 	padding-left: 1.5rem;
+	border-left: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .header-extras li:not(:first-child) {
 	border-left: 2px solid rgba(255, 255, 255, 0.2);
 	padding-left: 30px;
 	margin-left: 30px;
+}
+
+.header-extras.flex-column li:not(:first-child) {
+	border-left: 0;
+	padding-left: 0;
+	margin-left: 0;
 }
 
 .header-extras li .he-text span { font-size: 15px; }
@@ -344,31 +345,15 @@ footer .list-unstyled li a,
 -----------------------------------------------------------------*/
 @media (min-width: 992px) {
 
-	#header.transparent-header + #slider,
-	#header.transparent-header + #page-title.page-title-parallax,
-	#header.transparent-header + #google-map,
-	#slider + #header.transparent-header {
-		top: -70px;
-		top: calc(-1 * var(--header-height));
-		margin-bottom: -70px;
-		margin-bottom: calc(-1 * var(--header-height));
-	}
-
-	#header.transparent-header + #page-title.page-title-parallax .container { padding-top: var(--header-height, 70px); }
-
-	#primary-menu ul li > a {
-		padding-top: 24px;
-		padding-bottom: 24px;
-		padding-top: calc(( var(--header-height) - 22px ) / 2);
-		padding-bottom: calc(( var(--header-height) - 22px ) / 2);
+	.menu-link {
 		font-weight: 500 !important;
 		text-transform: none;
 		letter-spacing: 0;
-		font-size: var(--primary-menu-font-size, 15px);
+		font-size: var(--primary-menu-font-size, 0.9375rem);
 		transition: color .3s ease;
 	}
 
-	#primary-menu ul > li > a:after {
+	.menu-container > .menu-item > .menu-link::after {
 		opacity: 0;
 		content: '';
 		position: absolute;
@@ -383,47 +368,24 @@ footer .list-unstyled li a,
 		transition: all 0.25s ease;
 	}
 
-	#primary-menu ul > li.active > a:after,
-	#primary-menu ul > li:hover > a:after {
+	.menu-container > .menu-item.active > .menu-link::after,
+	.menu-container > .menu-item:hover > .menu-link::after {
 		opacity: 1;
 		width: 100%;
 	}
 
-	#primary-menu ul ul { border-top: 0 !important; }
-
-	#primary-menu ul ul li > a { font-size: 14px; }
-
-	#primary-menu ul ul > li a:after {display: none;}
-
-	#header,
-	#header #header-wrap,
-	#logo img { height: var(--header-height, 70px); }
-
-	#header.sticky-style-2 {
-		height: 171px;
-		height: calc(( ( var(--header-height) + var(--sticky-header-height)) + 1px ));
+	.sub-menu-container {
+		border-top: 0 !important;
+		width: 280px;
 	}
 
-	#header.sticky-style-2 #header-wrap,
-	#header.sticky-header:not(.static-sticky),
-	#header.sticky-header:not(.static-sticky) #header-wrap,
-	#header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img { height: var(--sticky-header-height, 70px); }
-
-	#header #primary-menu.style-2 > div > ul > li > a,
-	#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
-		padding-top: 19px;
-		padding-top: calc(( var(--sticky-header-height) - 22px ) / 2);
-		padding-bottom: 19px;
-		padding-bottom: calc(( var(--sticky-header-height) - 22px ) / 2);
+	.sub-menu-container .menu-item > .menu-link {
+		font-family: 'Poppins', sans-serif;
+		font-size: 0.875rem;
 	}
 
-	#primary-menu.style-2 > div #top-search,
-	#primary-menu.style-2 > div #top-cart,
-	#primary-menu.style-2 > div #side-panel-trigger {
-		margin-top: 20px;
-		margin-top: calc(( var(--sticky-header-height) - 20px ) / 2);
-		margin-bottom: 20px;
-		margin-bottom: calc(( var(--sticky-header-height) - 20px ) / 2);
+	.sub-menu-container .menu-item > .menu-link::after {
+		display: none;
 	}
 
 	.heading-block h3 { font-size: 36px; }
@@ -434,31 +396,14 @@ footer .list-unstyled li a,
 }
 
 @media (max-width: 991.98px) {
-	#primary-menu ul li,
-	#primary-menu ul ul li { border-top: 1px solid rgba(255, 255, 255, .1); }
+	.toggle-header,
+	.toggle-active .toggle-header,
+	.toggle-content { padding-left: 0; }
 
-	#primary-menu ul ul li > a,
-	#primary-menu ul ul li:hover > a {
-		font-size: 14px;
-		color: #FFF !important;
-		font-weight: 500;
-		text-shadow: none;
-	}
-	.dark #primary-menu > .container > ul > li.sub-menu > a { background-image: url("../../images/icons/submenu-dark.png"); }
-
-	.toggle .togglet,
-	.toggle .toggleta,
-	.toggle .togglec { padding-left: 0; }
-
-	.toggle .togglet i.toggle-open { right: 0; }
+	.toggle-title i.toggle-open { right: 0; }
 
 	#header-wrap .header-buttons {
-		position: absolute;
-	    top: 0;
-	    right: 70px;
-	    margin: 13px auto;
-	    border-left: 0;
-	    border-right: 2px solid rgba(255, 255, 255, 0.5);
+		margin-left: 0.75rem;
 		padding-right: 1.2rem;
 	}
 }

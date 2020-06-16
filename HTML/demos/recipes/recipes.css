@@ -1,6 +1,5 @@
 /* ----------------------------------------------------------------
 	Canvas: Recipes
-	Version: 1.0
 -----------------------------------------------------------------*/
 
 :root {
@@ -47,7 +46,7 @@
 	transition: all 0.5s cubic-bezier(.02, .01, .5, 1);
 }
 
-.categories:after {
+.categories::after {
 	position: absolute;
 	display: block;
 	content: '';
@@ -203,8 +202,12 @@
 .owl-carousel .owl-nav .owl-prev { left: -3px !important; }
 .owl-carousel .owl-nav .owl-next { right: -3px !important; }
 
-#primary-menu ul li > a,
-#primary-menu ul ul li > a {
+.sub-menu-container:not(.mega-menu-column) {
+	padding: 0 !important;
+}
+
+.menu-container > .menu-item > .menu-link,
+.sub-menu-container .menu-item > .menu-link {
 	text-transform: none;
 	font-weight: 400 !important;
 	letter-spacing: 0;
@@ -212,7 +215,7 @@
 	color: #111;
 }
 
-#primary-menu ul ul li > a {
+.sub-menu-container .menu-link {
 	font-size: 14px;
 	letter-spacing: 0;
 }
@@ -312,13 +315,13 @@ ol.list-preparation li:not(:first-child) { padding-top: 18px; }
 -----------------------------------------------------------------*/
 @media (min-width: 992px) {
 
-	#header-wrap:before {
+	#header-wrap::before {
 		content: '';
 		position: absolute;
 		top: 50%;
 		right: 0;
 		height: 60px;
-		width: 42%;
+		width: 51%;
 		transform: translateY(-50%);
 		background-color: rgba(255, 255, 255, 1);
 		box-shadow: 0 0.5rem 1.3rem rgba(0, 0, 0, 0.2);
@@ -327,34 +330,21 @@ ol.list-preparation li:not(:first-child) { padding-top: 18px; }
 		transition: background-color .4s ease;
 	}
 
-	body.device-lg #header-wrap:before { width: 47%; }
-
 	#header.sticky-header #header-wrap {
 		background-color: transparent;
 		box-shadow: none;
 	}
 
-	body:not(.device-md):not(.device-sm):not(.device-xs) #header.transparent-header:not(.full-header):not(.floating-header) #top-search form input {
+	#header.transparent-header:not(.full-header):not(.floating-header) .top-search-form input {
 		border-bottom: 0 !important;
-		margin-left: 62%;
-		width: 41%;
+		margin-left: 53%;
+		width: 51%;
 		letter-spacing: 0;
 		font-size: 20px;
 	}
 
-	body:not(.device-md):not(.device-sm):not(.device-xs).device-lg #header.transparent-header:not(.full-header):not(.floating-header) #top-search form input {
-		width: 47%;
-		margin-left: 56%;
-	}
-
-	#primary-menu ul ul:not(.mega-menu-column), #primary-menu ul li .mega-menu-content { top: 80%; }
-
-	#primary-menu ul li > a i {
-		top: 1px;
-		margin-right: 0;
-	}
-
-	#top-search { margin-top: 39px; }
+	.primary-menu .sub-menu-container:not(.mega-menu-column),
+	.primary-menu .mega-menu-content { top: 80%; }
 
 	body.top-search-open #header-wrap #logo { opacity: 1; }
 
@@ -399,7 +389,7 @@ ol.list-preparation li:not(:first-child) { padding-top: 18px; }
 	.categories:not(:hover) .categories-details .icon { order: 2; }
 	.categories:not(:hover) .categories-details .info { padding: 10px 0 0 0; }
 
-	.categories:after {
+	.categories::after {
 		background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.8)) 100%;
 		background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.8)) 100%;
 		background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.8)) 100%;
@@ -408,3 +398,15 @@ ol.list-preparation li:not(:first-child) { padding-top: 18px; }
 	.section { padding: 80px 0; }
 
 }
+
+@media (min-width: 1200px) {
+
+	#header-wrap::before { width: 45%; }
+
+	#header.transparent-header:not(.full-header):not(.floating-header) .top-search-form input {
+		width: 45%;
+		margin-left: 60%;
+	}
+
+}
+

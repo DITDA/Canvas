@@ -1,114 +1,134 @@
+@import "bootstrap/_functions";
+@import "bootstrap/_variables";
+@import "bootstrap/_mixins";
 
 //-------------------- Base Colors --------------------//
 
-$theme-color:                   #1ABC9C;
-$body-color:                    #555;
+$theme-color:                   		#1ABC9C;
+$body-text-color:               		#555;
 
-$body-bg:						white;
-$body-bg-dark:					#383838; // Dark -  .dark classes
+$white:									#FFF; // White
+$black:									#000; // #000
 
-$white:							white; // #FFF
-$black-color:					black; // #000
+$body-bg:								$white; //White
+$body-bg-dark:							#383838; // Dark -  .dark classes
+$body-bg-darker:						darken($body-bg-dark, 6.27%);
 
-$text-color:					darken($body-bg, 73.33%); // #444
-$text-color-dark:				lighten($body-bg-dark, 71.37%); // #EEE
+$text-color:							#444; // #444
+$text-color-dark:						#EEE; // #EEE
 
-$heading-color:                 $text-color;
+$heading-color:                 		$text-color;
 
-$section-bg:					darken($body-bg, 2.35%); // #f9f9f9
-$section-bg-dark:				darken($body-bg-dark, 6.27%); // #282828 // Dark -  .dark classes
+$section-bg:							darken($body-bg, 2.35%); // #f9f9f9
+$section-bg-dark:						$body-bg-darker;
 
+//-------------------- RTL --------------------//
+
+$RTL-template:							false !default; // if true then CSS will be generated for RTL Direction.
 
 //-------------------- Line Height Variables --------------------//
 
-$line-height-base:              1.5;
-$line-height-content:           1.8;
+$line-height-base:              		1.5;
+$line-height-content:           		1.8;
 
 
-//-------------------- Margins --------------------//
+//-------------------- Utilities --------------------//
 
-$margin-big:                    80px;
-$margin-base:                   50px;
-$margin-small:                  30px;
+$margin-base:                   		3rem;
+$margin-small:                  		2rem;
+$margin-big:                    		5rem;
 
-$content-padding:				80px;
+$content-padding:						80px; // Top and Bottom 80px
+
+// Heper Classes Values
+$pos_align-classes:    					left, right, top, bottom; // Set False for Disabled
+$positions:								static, relative, absolute, fixed, sticky; // Set False for Disabled
+$vh-elements: 							100, 75, 60, 50, 40, 25, 0; // Set False for Disabled
+$letter-spacing:						5; //ls-* value Until
+$op-classes:							9;
+
+// Font weights
+$font-weight-extralight: 				100;
+$font-weight-medium: 					500;
+$font-weight-semibold: 					600;
+$font-normal: 							normal;
+
+// Transitions
+$transitions:							.5s ease;
+
+// Gutters
+$gutter-classes: 						50; //Gutter Classes Until
+$col-mb-classes:						30, 50,80;
 
 // line
-$line-size:						1px;
-$line-color:					darken($body-bg, 6.67%);
-$line-dark:						rgba(white,0.1);
+$line-size:								1px;
+$line-color:							darken($body-bg, 6.67%);
+$line-dark:								rgba(white,0.1);
 
+// Gradients
+$gradients-classes:						true !default;
 
-//-------------------- Grid Break Points --------------------//
+// Bg clips
+$enable-bgclips:						true !default;
+$bgclips-border:						1rem;
+$bgclips-border-sm:						$bgclips-border / 2;
+$bgclips-border-lg:						$bgclips-border * 2;
+
+//-------------------- Bootstrap-Adjustment --------------------//
 
 $grid-gutter-width:          			30px !default;
-$grid-gutter-xs-width:          		80px !default;
+$container-padding-x: 					$grid-gutter-width / 2 !default;
 
 $grid-breakpoints: (
 	xs: 0,
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1200px
-) !default;
+	xl: 1200px,
+	xxl: 1440px
+);
 
 // Container Break Points
 $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px
-) !default;
+	xl: 1140px,
+	xxl: 1320px
+);
+
+$spacers: (
+	6: ($spacer * 5)
+);
 
 //-------------------- Font Families --------------------//
 
 $body-font:                     		'Lato', sans-serif;
-$heading-font:                  		'Raleway', sans-serif;
-$secondary-font:                		'Crete Round', serif;
+$heading-font:                  		'Poppins', sans-serif;
+$secondary-font:                		'PT Serif', serif;
 
 
 //-------------------- Page Loader Spinners --------------------//
 
-$page-loader-spinners:						darken($body-bg, 13.33%);
-$page-loader-spinners-dark:					lighten($body-bg-dark, 27.06%);
-
+$page-loader-spinners:					darken($body-bg, 13.33%);
+$page-loader-spinners-dark:				lighten($body-bg-dark, 27.06%);
 
 
 //-------------------- Font Sizes --------------------//
 
 $font-size-base:                		1rem;
-$font-size-h1:                  		36px;
-$font-size-h2:                  		30px;
-$font-size-h3:                  		24px;
-$font-size-h4:                  		18px;
-$font-size-h5:                  		14px;
-$font-size-h6:                  		12px;
-$font-size-body:						14px;
+$font-size-h1:                  		($font-size-base * 2.25);
+$font-size-h2:                  		($font-size-base * 1.875);
+$font-size-h3:                  		($font-size-base * 1.5);
+$font-size-h4:                  		($font-size-base * 1.125);
+$font-size-h5:                  		($font-size-base * 0.875);
+$font-size-h6:                  		($font-size-base * 0.75);
+$font-size-body:						$font-size-base;
 
-$letter-spacing:						5;
-$font-weight:							700;
-
-
-//-------------------- Bootstrap colors --------------------//
-
-$primary:								#007bff;
-$secondary:								#6c757d;
-$dark:									#343a40;
-$light:									#f8f9fa;
-$success: 								#28a745;
-$info:    								#17a2b8;
-$warning: 								#ffc107;
-$danger:  								#dc3545;
 
 //-------------------- Layouts --------------------//
 
-$postcontent:                   		74%;
-$postcontent-margin:            		4%;
-
-$sidebar:                      			round(100% - ($postcontent + $postcontent-margin));
-$bothsidebar:                  			round(100% - ( ( $sidebar * 2 ) + ( $postcontent-margin * 2 ) ));
-
-$section-margin:						60px;
+$section-margin:						4rem;
 $section-padding:						$section-margin;
 $col-padding:							$section-padding;
 
@@ -117,22 +137,28 @@ $col-padding:							$section-padding;
 $topbar-bg:		                 		$body-bg;
 $topbar-height:                 		45px;
 $topbar-line-height:            		$topbar-height - 1;
-$topbar-font-size: 						12px;
+$topbar-font-size: 						0.75rem;
+$topbar-line-font-l-height:				20px;
+$topbar-text-padding:					12px;
 $topbar-font-weight: 					700;
 $topbar-font-transform: 				uppercase;
 $topbar-font-color: 					lighten($text-color, 13.33%);
-
-$top-social-hidden-sm:					true;
+$topbar-border-size:					1px;
+$topbar-border-color:					$line-color;
 
 
 //-------------------- Header --------------------//
 
-$header-height:                 		100px; //Default
+$header-height:		                 	100px;
+
 $header-bg:		                 		$body-bg;
 $header-bg-dark:		                $body-bg-dark;
 
+$menu-padding-y:                 		round(($header-height - 22) / 2); //Default
+$menu-padding-x:                 		15px; //Default
+
 // Sticky Header
-$sticky-header-height:          		60px; //Default
+$header-sticky-bg:		                $header-bg;
 
 // Floating Header Offset
 $header-floating-top-offset:       		60px; //Default
@@ -144,13 +170,14 @@ $side-header-bg:                		$header-bg;
 
 // From sm
 $one-page-arrow-hidden-down-sm:			true;
-$top-cart-hidden-xs:					true;
 
 // Side Panel
 $side-panel-bg:							darken($header-bg, 3.92%);
 $side-panel-size:						300px;
-$side-panel-padding-gutters:			50px 40px;
-$side-header-overlay:					rgba(black,0.6);
+$side-panel-padding:					50px 70px 50px 40px;
+$side-panel-overlay:					rgba(black,0.6);
+$side-panel-widget-padding-top:			40px;
+$side-panel-close-icon:					'images/icons/close.png';
 
 // Preloader
 $preloader-image-path:					"images";
@@ -159,141 +186,139 @@ $preloader-fallback-extension:			"gif";
 
 //-------------------- Primary Menu --------------------//
 
-$primary-menu-padding:					round($header-height - 22) / 2;
-$sticky-menu-padding:					round($sticky-header-height - 22) / 2;
-
 $primary-menu-font:             		$heading-font;
-$primary-menu-font-weight:      		bold;
-$primary-menu-font-size:        		13px;
+$primary-menu-font-weight:      		700;
+$primary-menu-font-size:        		0.8125rem;
 $primary-menu-font-tt:          		uppercase;
 $primary-menu-font-color:       		$text-color;  // Leave as a "$text-color" for auto bg contrast
 $primary-menu-font-spacing:     		1px;
 
+$primary-menu-icon-size:				0.875rem;
 
 // Primary Menu Sub Menu
 $primary-menu-submenu-width:            220px;
 $primary-menu-submenu-font:             $body-font;
-$primary-menu-submenu-font-size:        12px;
+$primary-menu-submenu-font-size:        0.75rem;
 $primary-menu-submenu-font-weight:      700;
+$primary-menu-submenu-font-color:		lighten($primary-menu-font-color, 13.33);
+$primary-menu-submenu-font-spacing:		0;
+$primary-menu-submenu-border:			1px solid $line-color;
 
 $primary-menu-active-color:		      	$theme-color;
-
 
 // Primary Mega menu
 $mega-menu-title:               		$heading-font;
 
+$mobile-menu-off-canvas-width: 			280px;
+
+$header-misc-icons-size: 				1.125rem;
+$header-misc-icons-color:				darken($text-color, 6.67);
+
 
 //-------------------- Page Title -------------------- //
 
-$page-title-base-color:					$text-color;
-$page-title-padding:					50px;
-$page-title-parallax-padding:			round($page-title-padding * 2);
+$page-title-base-color:					darken($text-color, 6.67%);
+$page-title-padding:					4rem;
+$page-title-parallax-padding:			$page-title-padding * 1.5625;
 $page-title-mini-padding:				20px;
 
 $page-title-bg:							darken($body-bg, 3.92%);
-$page-title-bg-dark:					darken($page-title-base-color, 6.67%);
-$page-title-color:						$page-title-bg-dark;
+$page-title-bg-dark:					$page-title-base-color;
+$page-title-color:						$page-title-base-color;
 
-$page-title-size:						28px;
+$page-title-size:						2rem;
 $page-title-subtitle-size:				18px;
 
-$page-title-parallax-size:				40px;
-$page-title-parallax-subtitle-size:		22px;
+$page-title-parallax-font-size:			40px;
+$page-title-parallax-subtitle-size:		1.25rem;
 
 $page-title-mini-size:					18px;
 
 $page-title-border:						1px solid darken($page-title-bg, 2.75%);
 
-$page-title-breadcumb:					12px;
+$page-title-center-mx-width:			700px;
 
 
 //-------------------- Sliders --------------------//
-
-$slider-height:							500px;
-$slider-md-height:						400px !important;
-$slider-sm-height:						300px !important;
-$slider-xs-height:						180px !important;
-
 // Flex Slider
 $fslider-dots-position:					top 14px right 10px; // Eg:top, right, bottom, left  ;
-$fslider-dots-size:						10px;
+$fslider-dots-size:						0.625rem;
 $fslider-dots-border:					1px solid $body-bg;
 $fslider-dots-border-radius:			50%;
 $fslider-dots-transition:				.3s ease-in-out;
 
-$fslider-thumbs-grids:					12; // $fslider-thumbs-grids Untill 12 Eg: grid-1, grid-2
 $fslider-thumbs-gutters:				2px;
 $fslider-thumbs-width:					100px; // for .flex-thumb-grid
 
 // Canvas Slider
 $canvas-slider-dots-size:				$fslider-dots-size;
-$swiper-dots-position-bottom:			20px !important;
+$swiper-dots-position-bottom:			20px;
 
 $slider-caption-width:					550px;
-$slider-caption-position:				top 0 left 15px;
-$slider-caption-right-position:			top 0 right 15px;
 $slider-caption-font-size:				1.375rem; //h3  (h2*3)
 $slider-caption-font-weight: 			300;
+$slider-caption-font-color:				darken($text-color, 13.33);
 $slider-caption-transition:				top .3s ease;
-$slider-caption-para-size:				24px;
+$slider-caption-para-size:				1.5rem;
 $slider-caption-offset:					50px;
 $slider-caption-bg-light:				rgba($white,0.8);
-$slider-caption-bg-dark:				rgba($black-color,0.6);
+$slider-caption-bg-dark:				rgba($black,0.6);
 $slider-caption-bg-radius:				2px;
-
-// slider-caption-hidden-down-sm --  #slider:not(.swiper_wrapper) .slider-caption, .flex-caption, .slider-caption p, .slider-caption .button, .slider-arrow-top-sm, .slider-arrow-bottom-sm,
-$slider-caption-hidden: 				false; // slider-caption-hidden-down-sm
+$slider-caption-bg-padding:				5px 12px;
 
 // Slider Arrows
 
 $slider-arrows-size:					52px;
-$slider-arrows-position-top:			50%;
-$slider-arrows-position-left:			0;
-$slider-arrows-position-right:			$slider-arrows-position-left;
+$slider-arrows-sm-size:					$slider-arrows-size - 20px;
 
-$slider-arrows-bg-color:				rgba($black-color,0.3);
-$slider-arrows-bg-hover-color:			rgba($black-color,0.6) !important;
+$slider-arrows-bg-color:				rgba($black,0.3);
+$slider-arrows-bg-hover-color:			rgba($black,0.6) !important;
 $slider-arrows-border-radius:			3px;
-$slider-arrow-sm-right:					20px;
-$slider-arrow-sm-bottom:				$slider-arrow-sm-right;
+$slider-arrow-sm-offset:				20px;
 
 $slider-arrow-colors:					$white;
 
-// Owl Dots
+$video-overlay-bg:						'images/grid.png';
 
+// Owl Dots
 $owl-dots-slider-color:					$white;
-$owl-dots-slider-position:				top auto bottom 25px;
+$owl-dots-slider-position:				top auto bottom 15px;
 
 //-------------------- Button --------------------//
 
-$button-color:							$theme-color;
-$button-light:							darken($white, 6.67%);
-$button-dark:							$text-color;
-$button-padding-width:					22px;
-$button-height:							40px;
-$button-font-size:						14px;
+$button-theme-color:					$theme-color;
+$button-light:							darken($white, 6.67);
+$button-dark:							darken($text-color, 6.67);
+$button-padding-x:						22px;
+$button-padding-y:						8px;
+$button-l-height:						24px;
+$button-font-size:						0.875rem;
 $button-icon-margin:					5px;
-$button-text-shadow:					rgba($black-color, 0.2);
+$button-text-shadow:					rgba($black, 0.2);
 
 // Button Mini
-$button-mini-height:					round($button-height - 12);
-$button-mini-padding-width:				round($button-padding-width - 8);
-$button-mini-font-size:					round($button-font-size - 3);
+$button-mini-padding-x:					round($button-padding-x / 1.571);
+$button-mini-padding-y:					round($button-padding-y / 2);
+$button-mini-l-height:					round($button-l-height / 1.2);
+$button-mini-font-size:					11px;
 
 // Button Small
-$button-small-height:					round($button-height - 6);
-$button-small-padding-width:			round($button-padding-width - 5);
-$button-small-font-size:				round($button-font-size - 2);
+$button-sm-padding-x:					round($button-padding-x / 1.294);
+$button-sm-padding-y:					round($button-padding-y / 1.14);
+$button-sm-l-height:					round($button-l-height / 1.2);
+$button-sm-font-size:					12px;
 
 // Button Large
-$button-large-height:					round($button-height + 6);
-$button-large-padding-width:			round($button-padding-width + 4);
-$button-large-font-size:				round($button-font-size + 2);
+$button-lg-padding-x:					round($button-padding-x * 1.18);
+$button-lg-padding-y:					$button-padding-y;
+$button-lg-l-height:					round($button-l-height * 1.25);
+$button-lg-font-size:					16px;
 
 // Button xLarge
-$button-xlarge-height:					round($button-height + 12);
-$button-xlarge-padding-width:			round($button-padding-width + 10);
-$button-xlarge-font-size:				round($button-font-size + 4);
+$button-xl-padding-x:					round($button-padding-x * 1.45);
+$button-xl-padding-y:					round($button-padding-y * 1.14);
+$button-xl-l-height:					round($button-l-height * 1.42);
+$button-xl-font-size:					18px;
 
 // Button Border
 $button-border-width:					2px;
@@ -304,20 +329,20 @@ $button-3d-border:						3px;
 $button-rounded:						3px;
 
 $button-full-padding:					30px;
-$button-full-font-size:					round($button-font-size * 2.14);
+$button-full-font-size:					$button-font-size * 2.14;
 
 // Button Reveal Icon
-$button-reveal-icon:					($button-padding-width + 10);
+$button-reveal-padding-x:				($button-padding-x + 6);
+$button-reveal-icon:					($button-padding-x + 10);
 
 $button-transition-speed:				.2s ease-in-out;
 $button-reveal-transition-speed:		.3s ease;
 $button-fill-transition-speed:			.4s ease;
 
 // Button Desc in Device-sm
-$button-desc-sm: 						$button-mini-padding-width, $button-small-height, ($button-font-size + 1), ($button-font-size + 1), $button-rounded;
 
 $buttons-color:							true; // colors are inside of ( $colors ). eg: button-red;
-$buttons-social-colors:					false; // Find below of this page( $si-colors ). class name eg: button-facebook;
+$buttons-social-colors:					false; // Ex:button-facebook - Find below of this page( $si-colors ). class name eg: button-facebook;
 
 
 // Colors - Button
@@ -335,25 +360,25 @@ $colors: (
 	dirtygreen: 						#1693A5,
 	blue: 								#1265A8,
 	amber: 								#EB9C4D,
-	black: 								lighten($black-color, 6.67%),
+	black: 								lighten($black, 6.67%),
 	white: 								darken($white, 2.35%),
 
 	// Just add variables and color-codes and it will be create a button class of that variables name;
 
-) !default;
+);
 
 //-------------------- Countdown -------------------- //
 
-$countdown-size:						20px;
+$countdown-size:						1.25rem;
 $countdown-section:						11px;
 
-$countdown-md-size:						round($countdown-size * 1.5);
-$countdown-md-section:					round($countdown-section * 1.3);
+$countdown-md-size:						30px;
+$countdown-md-section:					0.875rem;
 
-$countdown-lg-size:						round($countdown-size * 2.2);
-$countdown-lg-section:					round($countdown-section * 1.6);
+$countdown-lg-size:						44px;
+$countdown-lg-section:					18px;
 
-$countdown-border:						1px dotted darken($body-bg, 26.67%);
+$countdown-border:						 g1px dotted darken($body-bg, 26.67%);
 
 $countdown-inline-space:				7px;
 
@@ -362,22 +387,24 @@ $countdown-large:						140px;
 //-------------------- Styled Icons -------------------- //
 
 $styled-icons-bg-color:					#444;
-$styled-icons-color:					$body-bg;
+$styled-icons-color:					$white;
+
+$styled-icons-light-color:				#F5F5F5;
 
 $styled-icons-size:						52px;
 $styled-icons-border-width:				1px;
-$styled-icons-border-color:				lighten($text-color, 6.67%);
+$styled-icons-border-color:				lighten($styled-icons-bg-color, 6.67%);
 
 $styled-icons-plain-size:				36px;
 
-$i-overlay:								rgba($black-color,0.2);
+$i-overlay:								rgba(black,0.2);
 
 
 //-------------------- Social Icons -------------------- //
 
 $social-margins:						5px;
 $social-icon-size:						40px;
-$social-icon-font-size:					20px;
+$social-icon-font-size:					1.25rem;
 
 $social-icon-lg-size:					56px;
 $social-icon-lg-font-size:				30px;
@@ -387,94 +414,89 @@ $social-icon-sm-font-size:				14px;
 
 $social-icon-color:						lighten($text-color, 6.67%);
 $social-icon-border:					1px;
-$social-icon-border-color:				#AAA;
+$social-icon-border-color:				darken($body-bg, 33.33);
 $social-icon-rounded:					3px;
 
 $social-icon-dark-color:				$text-color;
-$social-icon-light-color:				.05;
+$social-icon-light-color:				#EEE;
+
+$social-icon-enable-bg-classes:			true;
+$social-icon-enable-tcolor-classes:		true;
 
 
 //-------------------- Promo Box -------------------- //
 
-$promo-padding-width:					30px;
-$promo-padding-height:					200px;
-$promo-font-size:						$font-size-h3;
-$promo-span-font-size:					16px;
-$promo-span-bg-opacity:					0.9;
-$promo-span-dark-bg-opacity:			0.15;
+$promo-span-font-size:					1.125rem;
 $promo-uppercase:						true;
+$promo-uppercase-font-size:				1.25rem;
+$promo-uppercase-span-font-size:		1rem;
 $promo-border:							1px solid darken($body-bg, 10.2%);
 $promo-light:							darken($body-bg, 4%);
 $promo-light-text-color:				$text-color;
 $promo-dark:							darken($text-color, 6.67%);
 $promo-dark-text-color:					$white;
 
+$promo-rounded:							3px;
+
+$promo-parallax-padding:				80px;
+
 
 //-------------------- Featured Box -------------------- //
 
-$featured-box-icon:						64px;
-$featured-box-font-size:				16px;
+$featured-box-icon:						4rem;
+$featured-box-padding-x: 				0.75rem;
+$featured-box-icon-size:				1.75rem;
+$featured-box-font-size:				$font-size-base;
 $featured-box-font-color:				darken($text-color, 6.67%);
+$featured-box-font-weight:				600;
+$featured-box-font-tt:					uppercase;
 
 $featured-box-outline-border:			1px;
-$featured-box-outline-padding:			3px;
+$featured-box-outline-padding:			0.25rem;
+
+$featured-box-rounded:					3px;
+
+$featured-box-bg-light:					darken($body-bg, 3.92);
+$featured-box-bg-dark:					lighten($body-bg-dark, 1.96);
 
 $featured-box-plain-font-size:			28px;
-
-$featured-box-lg-icon:					96px;
-
-$featured-box-center-icon:				96px;
-$featured-box-center-lg-icon:			128px;
-
+$featured-box-plain-icon-size:			3rem;
 
 
 //-------------------- Toggles - Accordions -------------------- //
 
 $toggle-base-color:						$text-color;
-$toggle-font-size:						16px; // FAQs Toggles
-$toggle-padding-left:					24px;
+$toggle-font-size:						$font-size-base;
 
-$toggle-bg-padding-left:				round($toggle-padding-left * 1.5);
 $toggle-border-size:					1px;
 $toggle-border-color:					darken($body-bg, 20%);
 $toggle-border-radius:					4px; // Same Accordion Radius
-$toggle-lg-padding-left:				round($toggle-padding-left * 1.25); // Toggle Large Padding Left
 
 $toggle-bg-color:						darken($body-bg, 6.67%); // Same Accordion Color
 $toggle-title-color:					$toggle-base-color; // Same Accordion Title Color
-$toggle-icon-color-open:				$toggle-base-color; // Same Accordion Icon Color
-$toggle-icon-color-closed:				$toggle-base-color; // Same Accordion Icon Color
 
-// Accordion
-$accordion-font-size:					14px;
-$accordion-title-color:					$toggle-base-color;
+// // Accordion
 $accordion-border-size:					1px;
 $accordion-border-color:				darken($body-bg, 13.33%);
-$accordion-padding-height:				10px;
-$accordion-padding-left:				20px;
 
-$accordion-bg-padding-left:				36px;
 
-$accordion-lg-font-size:				23px; // Accordion Large
-
-$toggle-accordion-icons-ff:				'font-icons'; //font-icons.css
-$toggle-accordion-icons-open:			"\e713"; //font-icons.css
-$toggle-accordion-icons-closed:			"\e714"; //font-icons.css
-
+$toggle-content-padding:				0.75rem;
+$accordion-content-padding:				1.5rem;
 
 //-------------------- Tabs -------------------- //
 
 $tab-base-color:						$text-color; //Text
 $tab-height:							40px;
-$tab-padding-width:						round($tab-height * .375);
-$tabs-font-size:						14px;
+$tab-padding-width:						15px;
+$tabs-font-size:						$font-size-base; //Rem
 $tabs-border-width:						1px;
 $tabs-border-bottom:					$tabs-border-width;
 $tabs-border-color:						darken($body-bg, 13.33%);
 $tabs-bg-color:							darken($body-bg, 5.10%);
 $tabs-active-bg-color:					$body-bg;
+$tab-container-padding:					20px;
 
-$tabs-tb-border-width:					$tabs-border-width;
+$tabs-tb-border-width:					2px;
 
 $side-tab-width:						200px;
 $side-tab-padding-left:					20px;
@@ -490,27 +512,36 @@ $sidenav-border-color:					darken($body-bg, 10.2%);
 $sidenav-font-color:					lighten($tab-base-color, 13.33%);
 
 
+//-------------------- Alerts -------------------- //
+
+$alert-left-border:						4px;
+$alert-left-border-color:				rgba(0,0,0,0.1);
+$alert-padding:							1rem;
+$alert-title:							0.875rem;
+$alert-title-bg:						rgba(black,0.15);
+
+
 //-------------------- Clients -------------------- //
 
 $clients-grid-padding:					20px;
 $clients-grid-deafult-grid:				5;
 $clients-grid-border-size:				1px;
-$clients-grid-border-style:				dotted;
+$clients-grid-border-style:				dashed;
 $clients-grid-border-color:				lighten($text-color, 60%);
 $clients-img-opacity:					0.6;
 $clients-grid-total-columns:			6; // grid added upto 6
 
-$clients-grid-display-sm:				3; // grid added upto $clients-grid-total-columns
-
 
 //-------------------- Testimonials - Twitter --------------------//
 
+$testimonials-grid-padding:				2rem;
+$testimonials-deafult-grid:				$clients-grid-deafult-grid;
 $testimonials-background:				$body-bg;
 $testimonials-base-color:				$text-color;
-$testimonials-padding:					25px;
-$testimonials-full-padding:				round($testimonials-padding * 1.2); //30px
+$testimonials-padding:					20px;
+$testimonials-full-padding:				round($testimonials-padding * 1.5); //30px
 $testimonials-font-size:				$font-size-body;
-$testimonials-full-font-size:			round($font-size-body * 1.286);
+$testimonials-full-font-size:			$font-size-body * 1.125;
 $testimonials-border:					1px solid rgba(0,0,0,0.1);
 $testimonials-border-radius:			5px;
 $testimonials-box-shadow:				0 1px 1px rgba(0,0,0,0.1);
@@ -518,22 +549,17 @@ $testimonials-avatar-size:				64px;
 $testimonials-full-avatar-size:			round($testimonials-avatar-size * 1.125);
 $testimonials-avatar-rounded:			50%;
 $testimonials-avatar-icon:				28px;
+$testimonials-avatar-margin:			15px;
 $testimonials-icon-color:				lighten($testimonials-base-color, 26.67%);
-$testimonials-font:						$secondary-font !important;
+$testimonials-font:						$secondary-font;
 $testimonials-font-style:				italic;
-$testimonials-meta-size:				13px;
-$testimonials-full-meta-size:			15px;
-$testimonials-columns:					3;
+$testimonials-meta-size:				15px;
 
 $testimonials-quote-content:			' " ';
 
 $testimonials-carousel-dots:			6px;
 $testimonials-carousel-dots-color:		$theme-color;
 $testimonials-carousel-dots-opacity:	.5;
-
-// Responsive - under md, sm
-$testimonials-md-grid:					2;
-$testimonials-sm-grid:					1;
 
 
 //-------------------- Team --------------------//
@@ -542,16 +568,15 @@ $team-base-color:						$text-color;
 $team-decs-align:						center;
 $team-decs-background:					$body-bg;
 $team-decs-padding:						10px 0 30px;
-$team-title-font-size:					19px;
-$team-title-color:						$text-color;
+$team-title-font-size:					1.25rem;
 
-$team-title-designation-font-size:		15px;
+$team-title-designation-font-size:		1rem;
 $team-title-designation-font-color:		$theme-color;
 $team-title-designation-font-family:	$secondary-font;
 $team-title-designation-font-weight:	400;
 $team-title-designation-font-style:		italic;
 
-$team-title-designation-icon-size:		$social-icon-sm-size;
+$team-title-designation-icon-width:		$social-icon-sm-size;
 $team-title-designation-icon-size:		$social-icon-sm-font-size;
 
 $team-overlay-color:					$white;
@@ -569,36 +594,36 @@ $pricing-base-color:					$text-color;
 $pricing-background:					darken($body-bg, 3.92%);
 
 $pricing-border-size:					1px;
-$pricing-border-color:					rgba($black-color,.075);
+$pricing-border-color:					rgba($black,.075);
 $pricing-border-radius:					3px;
-$pricing-box-shadow:					0 1px 1px rgba($black-color,.1);
 
-$pricing-title-padding:					15px;
+$pricing-title-padding:					1rem;
 $pricing-title-bg:						lighten($pricing-background, 1.57%);
-$pricing-title-border:					$pricing-border-size solid rgba($black-color,.05);
-$pricing-title-font-size:				20px;
+$pricing-title-border:					$pricing-border-size solid rgba($black,.05);
+$pricing-title-font-size:				1.5rem;
 $pricing-title-font-weight:				bold;
 $pricing-title-font-spacing:			1px;
 $pricing-title-font-transform:			uppercase;
 $pricing-title-font-color:				lighten($pricing-base-color, 6.67%);
 
-$pricing-price-padding:					round($pricing-title-padding * 1.67);
+$pricing-price-padding:					$pricing-title-padding * 1.5;
 $pricing-price-color:					darken($pricing-base-color, 6.67%);
-$pricing-price-font-size:				64px;
+$pricing-price-font-size:				4rem;
 $pricing-price-bottom-border-width:		100px;
-$pricing-price-bottom-border-size:		$pricing-border-size solid rgba($black-color,0.1);
-$pricing-price-currency-icon:			round($pricing-price-font-size * .435);
-$pricing-price-month:					round($pricing-price-currency-icon * .571);
+$pricing-price-bottom-border-size:		$pricing-border-size solid rgba($black,0.1);
+$pricing-price-currency-icon:			$pricing-price-font-size * .435;
+$pricing-price-month:					$pricing-price-currency-icon * .571;
 
-$pricing-features-font-size:			14px;
-$pricing-features-font-padding:			6px;
+$pricing-features-padding:				$pricing-title-padding * 2;
+$pricing-features-font-padding:			.375rem;
+$pricing-features-font-size:			0.875rem;
 
 $pricing-popular-bg:					$body-bg;
-$pricing-popular-title-padding:			round($pricing-title-padding * 1.33);
+$pricing-popular-title-padding:			$pricing-title-padding * 1.25;
 $pricing-popular-font-color:			$theme-color;
-$pricing-popular-title-font-size:		round($pricing-title-font-size * 1.1);
-$pricing-popular-pricing-font-size:		round($pricing-price-font-size * 1.125);
-$pricing-popular-box-shadow:			0 0 8px rgba($black-color,0.1);
+$pricing-popular-title-font-size:		$pricing-title-font-size;
+$pricing-popular-pricing-font-size:		$pricing-price-font-size * 1.125;
+$pricing-popular-box-shadow:			0 0 8px rgba($black,0.1);
 
 $pricing-minimal-bg:					$body-bg;
 $pricing-5-lg-col:						5; // Default
@@ -606,9 +631,7 @@ $pricing-5-md-col:						$pricing-5-lg-col; //col
 $pricing-5-sm-col:						6; //col
 $pricing-5-xs-col:						12; //col
 
-$pricing-extended-desc-width: 			75%;
-$pricing-extended-padding: 				$pricing-price-padding;
-$pricing-extended-features-col:			6; //col
+$pricing-extended-padding: 				30px;
 
 
 //-------------------- Counter Skills --------------------//
@@ -632,7 +655,7 @@ $counter-lined-width:					15%;
 
 // Rounded Skills
 
-$rounded-skills-font-size:				22px;
+$rounded-skills-font-size:				1.25rem;
 $rounded-skills-font-color:				darken($text-color, 6.67);
 $rounded-skills-icon-size:				42px;
 
@@ -648,7 +671,7 @@ $progress-skills-progress-color: 		$theme-color;
 $progress-skills-transition:			1.2s ease-in-out;
 
 $progress-skills-percent-padding:		5px;
-$progress-skills-percent-bgcolor:		#333;
+$progress-skills-percent-bgcolor:		darken($text-color, 6.67);
 $progress-skills-percent-color:			darken($body-bg, 2.39);
 $progress-skills-percent-size:			11px;
 $progress-skills-counter-font:			$body-font;
@@ -659,7 +682,6 @@ $progress-skills-counter-font-color:	darken($text-color, 13.33);
 
 $carousel-animation-transition:			1000ms; // For animate.css
 
-$owl-loading-preload-img:				$preloader-image;
 $owl-video-play-icon-size:				64px;
 $owl-video-play-icon:					"images/icons/play.png";
 $owl-video-play-icon-hover:				scale(1.3);
@@ -669,20 +691,18 @@ $owl-autoHeight-transition:				500ms ease-in-out;
 // Owl Na
 $owl-nav-hidden:						true;
 $owl-nav-size:							18px;
-$owl-nav-border:						1px solid rgba($black-color,0.2);
-$owl-nav-background:					#FFF;
+$owl-nav-border:						1px solid rgba($black,0.2);
+$owl-nav-background:					$body-bg;
 $owl-nav-color:							#666;
 $owl-nav-border-radius:					50%;
 
 // Owl Full Na
 $owl-full-nav-size:						28px;
 $owl-full-nav-border-radius:			3px;
-$owl-full-nav-bgcolor:					rgba($black-color,0.4);
-$owl-full-nav-color:					#EEE;
+$owl-full-nav-bgcolor:					rgba($black,0.4);
+$owl-full-nav-color:					darken($body-bg, 6.67);
 $owl-full-nav-hover-bgcolor:			$theme-color;
-$owl-full-nav-hover-color:				#FFF;
-
-$owl-nav-disabled:						false; // Enable/Disable Inactive Prev or Next Nav
+$owl-full-nav-hover-color:				$body-bg;
 
 // Owl Dots
 $owl-dots-size:							8px;
@@ -695,38 +715,29 @@ $owl-dots-opacity:						0.5;
 $flipcard-transition:					0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 $flipcard-height:						280px;
 $flipcard-border-radius:				6px;
-$flipcard-color:						#FFF;
+$flipcard-color:						$white;
 $flipcard-font-size:					1.5rem;
-$flipcard-bg-overlay:					rgba($black-color, 0.6);
+$flipcard-bg-overlay:					$black;
+$flipcard-bg-overlay-op:				0.6;
 
 $flipcard-inner-tranform:				translateY(-50%) translateZ(60px) scale(0.94);
 $flipcard-inner-padding:				2rem;
 
 
-//-------------------- Overlay --------------------//
-
-$overlay-bg:							rgba($black-color, 0.6);
-$overlay-icon:							40px;
-$overlay-icon-color:					rgba($white, 0.8);
-
-$overlay-text-opacity:					0.85;
-$overlay-text-padding:					40px 15px 15px;
-$overlay-text-bg-start-color: 			rgba($black-color, 0);
-$overlay-text-bg-end-color: 			rgba($black-color, 0.85);
-
-$overlay-text-title-color: 				darken($white, 3.92%);
-$overlay-text-meta-color: 				darken($white, 20%);
-$overlay-text-font-size: 				28px;
-
-
 //-------------------- Title/Heading Bloks --------------------//
 
+
+// Titular Title Block
+$titular-title-font-size-h1:			3.25rem;
+$titular-title-font-size-h2:			2.75rem;
+$titular-title-font-size-h3:			2rem;
+$titular-title-font-size-subtitle:		1rem;
 
 // Heading Title Block
 $heading-block-font-size-h1:			32px;
 $heading-block-font-size-h2:			30px;
-$heading-block-font-size-h3:			26px;
-$heading-block-font-size-h4:			20px;
+$heading-block-font-size-h3:			1.75rem;
+$heading-block-font-size-h4:			1.25rem;
 $heading-block-font-weight:				700;
 $heading-block-font-spacing:			1px;
 $heading-block-font-color:				darken($text-color, 6.67%);
@@ -734,16 +745,15 @@ $heading-block-font-transform:			uppercase;
 $heading-block-center-container:		700px;
 $title-block-border-size:				40px;
 $heading-block-border:					2px solid $text-color;
+$heading-block-span-color:				darken($text-color, 20%);
 
 
 // Title Block
 $title-block-padding:					20px;
 $title-block-color:						$text-color;
 $title-block-border:					7px;
-$title-block-border-sm:					round($title-block-border/1.4); // 5px Under device-sm
 $title-block-border-color:				$theme-color;
 
-$title-block-highlighted-color:			$title-block-border-color;
 $title-block-subtitle-color:			lighten($title-block-color, 6.67%);
 
 // Emphasis Title Block
@@ -751,10 +761,9 @@ $emphasis-title-font-size:				64px;
 
 // Fancy Title Block
 $fancy-title-bg:						$body-bg;
-$fancy-title-padding:					round($title-block-padding / 1.33);
+$fancy-title-padding:					0.75rem;
 $fancy-title-border-size:				1px;
 $fancy-title-border-color:				darken($fancy-title-bg, 6.67);
-$fancy-title-colored-border:			rgba($title-block-border-color, 0.6);
 $fancy-title-dotted-border:				"images/icons/dotted.png";
 
 $before-heading-font:					normal 400 16px $secondary-font;
@@ -763,17 +772,19 @@ $before-heading-font:					normal 400 16px $secondary-font;
 //-------------------- Dividers --------------------//
 
 $divider-colors:						darken($body-bg, 10.20%);
-$divider-margins:						35px;
+$divider-margins:						3rem;
 $divider-border-size:					1px;
 $divider-border-color:					lighten($divider-colors, 3.53);
 
+$divider-thick-height:					3px;
 
 $divider-icon-size:						18px;
-$divider-icon-gutter:					$divider-icon-size + 12;
-$divider-icon-color:					$divider-colors;
+$divider-icon-gutter:					0.5rem;
+$divider-icon-color:					0.5rem;
 $divider-icon-hover-color:				darken($divider-colors, 36.47%);
 
-$divider-short-width:					30%;
+$divider-short-width-sm:				55%;
+$divider-short-width-xs:				35%;
 
 $divider-rounded-size:					round($divider-icon-size * 2.22);
 $divider-rounded-color:					darken($divider-colors, 16.47%);
@@ -783,170 +794,217 @@ $divider-rounded-background:			lighten($divider-colors, 6.27%);
 //-------------------- SM-Form Control --------------------//
 
 $sm-form-background:					$body-bg;
+$sm-form-min-height:					38px;
 $sm-form-border:						2px;
 $sm-form-border-color:					darken($body-bg, 13.33);
 $sm-form-border-radius:					0;
-$sm-form-color:							darken($text-color, 6.67);
+$sm-form-color:							$body-text-color;
 $sm-form-font-size:						15px;
 $sm-form-padding:						8px 14px;
 $sm-form-focus-color:					darken($body-bg, 33.33);
 $sm-form-placeholder:					darken($body-bg, 40);
 
 $sm-form-label-color:					$sm-form-color;
-$sm-form-label-size:					13px;
+$sm-form-label-size:					$sm-form-font-size - 2px;
 $sm-form-label-font:					$heading-font;
 $sm-form-label-transform:				uppercase;
 $sm-form-label-spacing:					1px;
 $sm-form-label-weight:					700;
 $sm-form-label-mb:						10px;
 
-$sm-form-label-error:					$danger;
+$sm-form-label-error:					#E42C3E;
+$sm-form-disabled:						darken($body-bg, 6.67);
 
 $bs-form-control-radius:				3px;
 
-$form-processor-bg:						rgba($body-bg,0.7);
+$form-processor-bg:						$body-bg;
+$form-processor-bg-op:					0.7;
 
 // Goto Top
 $gotoTop-size:							40px;
-$gotoTop-bg:							rgba($black-color, 0.3);
-$gotoTop-icon-size:						20px;
+$gotoTop-bg:							rgba($black, 0.3);
+$gotoTop-icon-size:						1.25rem;
 $gotoTop-icon-color:					$white;
-$gotoTop-position:		 				right 30px bottom 30px;
 $gotoTop-position-boxed:		 		right 30px bottom 50px;
+$gotoTop-position:		 				right 30px bottom 30px;
 $gotoTop-border-radius:					2px;
 $gotoTop-hover-color:					$theme-color;
 
 $gotoTop-hidden-sm:						true;
 
-// Toastr
-$toastr-position-gutter:				12px;
 
+//-------------------- Toast Notifications --------------------//
+
+$toast-bacground-color:					#030303;
+$toast-color:							$white;
+$toast-hover-color:						#CCC;
+$toast-position-gutter:					12px;
+$toast-close-offset: 					0.3em;
+$toast-close-font-size:					1.25rem;
+
+$toast-container:						300px;
+$toast-container-padding:				20px 25px;
+$toast-container-radius:				3px;
 
 //-------------------- Portfolio --------------------//
 
-$portfolio-filter-grid-sm:				3;
-$portfolio-filter-grid-xs:				2;
-$portfolio-filter-border:				1px;
-$portfolio-filter-border-color:			rgba($black-color,0.07);
+//Grid Filter
+$grid_filter-mb:						3.5rem;
+$grid_filter-border:					1px;
+$grid_filter-border-color:				rgba(black,0.07);
+$grid_filter-border-radius:				4px;
+$grid_filter-item-padding-x:			20px;
+$grid_filter-item-padding-y:			10px;
+$grid_filter-item-font-size:			0.9375rem;
+$grid_filter-col-sm:					3;
+$grid_filter-col-xs:					2;
 
-$portfolio-shuffle-hidden-sm:			true;
+$grid_filter-styles-m:					0.75rem;
+$grid_filter-styles-rdius:				22px;
 
-//Columns Margin
-$portfolio-2-margin:            		20px;
-$portfolio-3-margin:            		15px;
-$portfolio-4-margin:            		12px;
-$portfolio-5-margin:            		10px;
-$portfolio-6-margin:            		6px;
+// grid-shuffle: 	;
+$grid-shuffle-size:						42px;
 
-//Columns Margin for Sidebar
-$portfolio-2-margin-sb:         		20px;
-$portfolio-3-margin-sb:         		15px;
-$portfolio-4-margin-sb:         		12px;
-$portfolio-5-margin-sb:         		0;
+// Portfolio: 	;
+$Portfolio_desc-padding:				20px 5px;
+$Portfolio_desc-title-size:				1.25rem;
 
-//Columns Margin for Both Sidebar
-$portfolio-2-margin-bs:         		20px;
-$portfolio-3-margin-bs:         		11px;
-$portfolio-4-margin-bs:         		0;
+// Masonry Thumbs: 	;
+$masonry_thumbs-gutter:					1px;
+$portfolio-grid-upto:					12;
 
+// Modal. AJAX
+$portfolio-modal-width: 				1000px;
+$portfolio-modal-padding: 				40px;
+$portfolio-ajax-width:					1200px;
 
-$lightbox-width:						800px;
-
-//Responsive Down md
-$portfolio-item-4-md-grid:				3;
-$portfolio-item-4-md-margin:			$portfolio-4-margin;
-
-$portfolio-item-3-md-grid:				3;
-$portfolio-item-3-md-margin:			$portfolio-3-margin;
-
-$portfolio-item-2-md-grid:				2;
-$portfolio-item-2-md-margin:			$portfolio-2-margin;
-
-//Responsive Down sm
-$portfolio-item-4-sm-grid:				2;
-$portfolio-item-4-sm-margin:			round($portfolio-4-margin / 2);
+// Portfolio Meta
+$portfolio-meta-font-size:				0.875rem;
+$portfolio-meta-color:					lighten($text-color, 13.33);
+$portfolio-meta-row-1:					150px;
+$portfolio-meta-row-1-color:			darken($text-color, 6.67);
+$portfolio-meta-icon:					14px;
+$portfolio-meta-border:					1px solid darken($body-bg, 10.20);
 
 
+$portfolio-navigation-size:				24px;
 //-------------------- Shop --------------------//
 
 //Columns Margin
-$shop-3-margin:							30px;
-$shop-4-margin:            				20px;
+$shop-desc-padding:						15px;
+$shop-title-font-size:					1.25rem;
+$shop-title-color:						darken($text-color, 6.67);
 
-//Columns Margin for Sidebar
-$shop-2-margin-sb:         				40px;
-$shop-3-margin-sb:         				25px;
+$shop-product-price:					1.125rem;
+$shop-product-price-color:				$text-color;
+$shop-product-price-font-weight:		700;
 
-//Columns Margin for Both Sidebar
-$shop-2-margin-bs:         				40px;
+$shop-product-price-del:				darken($body-bg, 46.67);
 
+// Shop Single
+$shop-single-title-size:				1.75rem;
+$shop-single-price-size: 				1.5rem;
 
-// Responsive Down md,sm
-$shop-item-4-md-grid:					3;
-$shop-item-4-md-margin:					$shop-4-margin;
-
-$shop-item-4-sm-grid:					2;
-$shop-item-4-sm-margin:					round($shop-4-margin / 1.67);
+$shop-quick-view:						800px; //Same as Shop Ajax
 
 
-$shop-item-3-md-grid:					3;
-$shop-item-3-md-margin:					$shop-3-margin;
+$quantity-box-width:					50px;
+$quantity-box-height:					40px;
+$quantity-box-bg:						darken($body-bg, 6.67);
+$quantity-box-border-color:				darken($quantity-box-bg, 6.67);
+$quantity-box-font-size:				$font-size-base;
 
-$shop-item-3-sm-grid:					$shop-item-4-sm-grid;
-$shop-item-3-sm-margin:					$shop-item-4-sm-margin;
-
+// Cart
+$cart-remove-color:						#FF0000;
+$cart-padding: 							12px 15px;
+$cart-heading-font-size:				0.875rem;
+$cart-heading-font-color: 				lighten($text-color, 6.67);
+$cart-thumbnail-size: 					68px;
+$cart-product-title-size: 				0.8125rem;
 
 //-------------------- Blog --------------------//
 
-//Columns Margin
-$blog-2-margin:            				40px;
-$blog-3-margin:            				30px;
-$blog-4-margin:            				28px;
+$post-item-margin: 						50px;
+
+// Post Image
+$post-image-rounded:					3px;
+$post-image-mb:							30px;
+$post-sm-image:							64px;
+
+// Post Title
+$post-title-font-size:					$font-size-h3;
+$post-title-font-weight:				600;
+$post-title-font-spacing:				1px;
+$post-title-font-uppaercase:			true;
+$post-title-font-color:					darken($text-color, 6.67);
+
+// Post Meta
+$post-meta-seperator:					'\205E';
+$post-meta-margin:						15px;
+$post-meta-color:						lighten($text-color, 33.33);
+
+// Post Content
+$post-content-margin:					30px;
+
+// Post Entry Link
+$post-entry-link-bg: 					darken($body-bg, 3.92);
+$post-entry-link-padding: 				30px 0;
+$post-entry-link-color: 				$text-color;
+$post-entry-link-font-family: 			$heading-font;
+$post-entry-link-text-transform: 		uppercase;
+$post-entry-link-letter-spacing: 		1px;
+$post-entry-link-font-size: 			$font-size-h3;
+$post-entry-link-font-weight: 			700;
+$post-entry-link-border-radius: 		$post-image-rounded;
+
+// Post Grid
+$post-grid-margin:						30px;
+
+// Post Timeline
+$post-timeline-border-size:				1px;
+$post-timeline-border-style:			dashed;
+$post-timeline-border-color:			lighten($body-bg, 20);
+$post-timeline-date-size:				64px;
+$post-timeline-date-border:				3px;
+$post-timeline-date-border-color:		$post-timeline-border-color;
+
+// Post Author
+$author-image:							64px;
+
+//-------------------- Event --------------------//
+
+$event-entry-date:						1.75rem;
+$event-overlay-meta-bg:					rgba(black,0.85);
+$event-overlay-meta-font:				1.25rem;
+$event-overlay-position:				top auto bottom 0 left 0;
+$event-parallax-overlay-width:			368px;
 
 
-//Columns Margin for Sidebar
-$blog-2-margin-sb:         				40px;
-$blog-3-margin-sb:         				25px;
+//-------------------- Widget --------------------//
 
+$widget-border:							1px solid lighten($body-bg, 6.67);
+$widget-margin:							50px;
 
-//Columns Margin for Both Sidebar
-$blog-2-margin-bs:         				40px;
+$widget-title-margin: 					25px;
+$widget-title-font-size: 				15px;
+$widget-title-font-weight: 				600;
+$widget-title-letter-spacing: 			2px;
+$widget-title-text-transform: 			uppercase;
 
-
-// Responsive Down md
-$blog-item-4-md-grid:					3;
-$blog-item-4-md-margin:					round($blog-4-margin/ 1.4);
-
-$blog-item-3-md-grid:					2;
-$blog-item-3-md-margin:					$blog-3-margin;
-
-$blog-item-2-md-grid:					$blog-item-3-md-grid;
-$blog-item-2-md-margin:					$blog-item-3-md-margin;
-
-
-// Responsive Down sm
-$blog-item-4-sm-grid:					1;
-$blog-item-4-sm-margin:					0px;
-
-
-$blog-item-3-sm-grid:					$blog-item-4-sm-grid;
-$blog-item-3-sm-margin:					$blog-item-4-sm-margin;
-
-$blog-item-2-sm-grid:					$blog-item-4-sm-grid;
-$blog-item-2-sm-margin:					$blog-item-4-sm-margin;
-
+$widget-icon:							'\e7a5';
+$widget-comment-icon:					'\e9b8';
+$widget-icon-font-family: 				'font-icons';
 
 //-------------------- Footers --------------------//
 
 $footer-bg:								darken($body-bg, 6.67%);
 $footer-bg-dark:						darken($body-bg-dark, 1.96%);
 
-$widget-border:							1px solid #EEE;
+$copyrights-font-size:					$font-size-h5;
 
-$footer-widgets-path:					"images/icons";
-$footer-widgets-nav-icons:				"widget-link";
-$footer-widgets-comments-icons:			"widget-comment";
-$footer-widgets-img-extension:			"png";
+$footer-top-border:						5px solid rgba(black,0.2);
+
+$footer-sticky-global:					false !default;
 
 //-------------------- Social Icons Colors --------------------//
 
@@ -1027,10 +1085,28 @@ $si-colors: (
 	appstore:                 			#000,
 	pinterest:                			#C8232C,
 	fivehundredpx:            			#111,
-) !default;
-
+);
 $si-text-hover-color:      $white;
 
-@import "bootstrap/_functions";
-@import "bootstrap/_variables";
-@import "bootstrap/_mixins";
+//-------------------- Gradient Colors --------------------//
+
+$gradient-colors: (
+	light-grey: 						linear-gradient(to right, #2c3e50, #bdc3c7),
+	green-dark: 						linear-gradient(to right, #99f2c8, #1f4037),
+	grey-brown: 						linear-gradient(to right, #C06C84, #6C5B7B, #355C7D),
+	light-pink: 						linear-gradient(to right, #ffdde1, #ee9ca7),
+	blue-purple: 						linear-gradient(to right, #4A00E0, #8E2DE2),
+	multiples: 							linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%),
+	blue-green: 						linear-gradient(to right, #2af598 0%, #009efd 100%),
+	light: 								linear-gradient(to top, #DDD 0%, #FFF 100%),
+	grey-orange: 						linear-gradient(to right, #3B4371, #F3904F),
+	sunset: 							linear-gradient(to top, #a8edea 0%, #fed6e3 100%),
+	dark: 								linear-gradient(to right, #535353, #000),
+	lemon: 								linear-gradient(to right, #cac531, #f3f9a7),
+	earth: 								linear-gradient(to right, #649173, #dbd5a4),
+	sky: 								linear-gradient(to right, #2980b9, #6dd5fa, #F5F5F5),
+	ocean: 								linear-gradient(to right, #000046, #1cb5e0),
+	horizon: 							linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%),
+	green-blue: 						linear-gradient(to right, #43cea2, #185a9d),
+	purple-blue: 						linear-gradient(19deg, rgb(33, 212, 253) 0%, rgb(183, 33, 255) 100%),
+);

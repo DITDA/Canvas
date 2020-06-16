@@ -1,16 +1,11 @@
 /* ----------------------------------------------------------------
 	Canvas: Article
-	Version: 1.0
 -----------------------------------------------------------------*/
 
 
 :root {
 	--font-body:			'Nunito', sans-serif;
 	--font-primary:			'Playfair Display', serif;
-	--slider-height-lg:  	auto;
-	--slider-height-md:  	auto;
-	--slider-height-sm:  	auto;
-	--slider-height-xs:  	auto;
 	--themecolor:  			#0C1CCC;
 	--dark: 				#222;
 	--fulldark: 			#111;
@@ -114,7 +109,7 @@ body:not(.dark) .article-price { color:#0C1CCC; color: var(--themecolor) }
 
 .heading-block h2 { font-size: 240%; }
 
-.heading-block:after {
+.heading-block::after {
 	opacity: .8;
 	border-width: 2px;
 	border-style: solid;
@@ -132,7 +127,7 @@ body:not(.dark) .article-price { color:#0C1CCC; color: var(--themecolor) }
 	box-shadow: 0 0 35px rgba(140, 152, 164, 0.2);
 }
 
-.section-features .card:before {
+.section-features .card::before {
 	content: '';
     position: absolute;
     top: auto;
@@ -146,9 +141,9 @@ body:not(.dark) .article-price { color:#0C1CCC; color: var(--themecolor) }
     background: linear-gradient(to right, blue, lightblue);
 }
 
-.section-features .card.border-color-pink:before { background: linear-gradient(to right, red, pink); }
-.section-features .card.border-color-yellow:before { background: linear-gradient(to right, teal, cyan); }
-.section-features .card.border-color-info:before { background: linear-gradient(to right, #111, #DDD); }
+.section-features .card.border-color-pink::before { background: linear-gradient(to right, red, pink); }
+.section-features .card.border-color-yellow::before { background: linear-gradient(to right, teal, cyan); }
+.section-features .card.border-color-info::before { background: linear-gradient(to right, #111, #DDD); }
 
 body:not(.dark) .section-scroller {
 	background-image: linear-gradient(to top, rgba(241,244,248,.5), rgba(241,244,248,.5) 30%, #FFF 30%);
@@ -240,7 +235,7 @@ body:not(.dark) .swiper-scrollbar-drag { opacity: .2; }
 	white-space: nowrap;
 }
 
-.circle-inner:before {
+.circle-inner::before {
 	content: "";
 	display: inline-block;
 	vertical-align: middle;
@@ -354,6 +349,7 @@ body:not(.dark) #copyrights { background-color: #EEE; background-color: var(--li
 	}
 
 	.sale-flash {
+		position: absolute;
 		left: auto;
 		top: -10px;
 		right: -10px;
@@ -383,7 +379,7 @@ body:not(.dark) #copyrights { background-color: #EEE; background-color: var(--li
 	.counter { font-size: 28px; }
 	.counter + h5 { font-size: 13px; }
 
-	.section-about:before {
+	.section-about::before {
 	    content: '';
 	    position: absolute;
 	    bottom: 0;
@@ -400,47 +396,13 @@ body:not(.dark) #copyrights { background-color: #EEE; background-color: var(--li
 	    z-index: 1;
 	}
 
-	.dark .section-about:before {
+	.dark .section-about::before {
 		opacity: 1;
 		background: #222;
 		background: var(--dark);
 	}
 
 }
-
-/* ---------------------------------------------------------------------------
-	Slider Height
----------------------------------------------------------------------------- */
-.swiper_wrapper:not(.full-screen):not(.canvas-slider-grid),
-.swiper_wrapper:not(.full-screen):not(.canvas-slider-grid) .swiper-slide {
-	height: auto !important;
-	height: var(--slider-height-lg) !important;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-	.swiper_wrapper:not(.full-screen):not(.canvas-slider-grid),
-	.swiper_wrapper:not(.full-screen):not(.canvas-slider-grid) .swiper-slide {
-		height: auto !important;
-		height: var(--slider-height-md) !important;
-	}
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-	.swiper_wrapper:not(.force-full-screen),
-	.swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide {
-		height: auto !important;
-		height: var(--slider-height-sm) !important;
-	}
-}
-
-@media (max-width: 575.98px) {
-	.swiper_wrapper:not(.force-full-screen),
-	.swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide {
-		height: auto !important;
-		height: var(--slider-height-xs) !important;
-	}
-}
-
 
 .dark a { color: #EEE; color: var(--light); }
 .dark svg { fill: #EEE; fill:var(--light); }

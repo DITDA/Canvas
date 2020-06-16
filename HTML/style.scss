@@ -5,21 +5,23 @@
     Description: The Multi-Purpose Template
     Author: SemiColonWeb
     Author URI: http://themeforest.net/user/semicolonweb
-    Version: 5.9.1
+    Version: 6.0.1
 
     SASS Stylesheet
 
 -----------------------------------------------------------------------------------*/
 
-
 // Initialize
 @import "sass/variables";
 @import "sass/mixins";
 
+// Bootstrap
+@import "sass/bootstrap/bootstrap";
+
 // Core CSS
-@import "sass/typography";
-@import "sass/helpers";
 @import "sass/layouts";
+@import "sass/typography";
+@import "sass/utilities";
 
 
 // Content Blocks
@@ -37,6 +39,8 @@
 // Shortcodes
 @import "sass/shortcodes";
 
+// Forms
+@import "sass/forms";
 
 // Footer
 @import "sass/footer";
@@ -45,7 +49,17 @@
 // Widgets
 @import "sass/widgets";
 
+// Paginations
+@import "sass/paginations";
 
 // Extras
 @import "sass/extras";
 
+// Page Loaders
+@import "sass/page-loaders";
+
+// Dark
+@import "sass/dark";
+
+// RTL Template
+@import "sass/style-rtl";

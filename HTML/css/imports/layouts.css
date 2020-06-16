@@ -1,109 +1,146 @@
-
 /* ----------------------------------------------------------------
 
-	layouts.css
+	Layouts.scss
 
 -----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Bootstrap Adjustments
+-----------------------------------------------------------------*/
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
 
+/*	Custom Bootstap Columns */
+.col-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5,
+.col-xl-1-5,
+.col-xxl-1-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-1-5 {
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+@media (min-width: 576px) {
+  .col-sm-1-5 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-1-5 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-1-5 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl-1-5 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+@media (min-width: 1440px) {
+  .col-xxl-1-5 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+#wrapper {
+  position: relative;
+  float: none;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1200px) {
+  body:not(.stretched) #wrapper {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
+  body:not(.stretched) #wrapper {
+    max-width: 1440px;
+  }
+}
+.stretched #wrapper {
+  width: 100%;
+  margin: 0;
+  box-shadow: none;
+}
 
 /* ----------------------------------------------------------------
-	5. Sections
+	Sections
 -----------------------------------------------------------------*/
-
-
 .section {
-	position: relative;
-	margin: 60px 0;
-	padding: 60px 0;
-	background-color: #F9F9F9;
-	overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 4rem 0;
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+.section .container {
+  z-index: 2;
+}
+.section .container + .video-wrap {
+  z-index: 1;
 }
 
 .parallax {
-	background-color: transparent;
-	background-attachment: fixed;
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	overflow: hidden;
+  background-color: transparent;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  will-change: transform;
 }
 
 .mobile-parallax,
 .video-placeholder {
-	background-size: cover !important;
-	background-attachment: scroll !important;
-	background-position: center center;
+  background-size: cover !important;
+  background-attachment: scroll !important;
+  background-position: center center !important;
 }
-
-.section .container { z-index: 2; }
-
-.section .container + .video-wrap { z-index: 1; }
 
 .revealer-image {
-	position: relative;
-	bottom: -100px;
-	transition: bottom .3s ease-in-out;
-	-webkit-transition: bottom .3s ease-in-out;
-	-o-transition: bottom .3s ease-in-out;
+  position: relative;
+  bottom: -100px;
+  transition: bottom .3s ease-in-out;
+  -webkit-transition: bottom .3s ease-in-out;
+  -o-transition: bottom .3s ease-in-out;
 }
-
-.section:hover .revealer-image { bottom: -50px; }
-
+.section:hover .revealer-image {
+  bottom: -50px;
+}
 
 /* ----------------------------------------------------------------
-	6. Columns & Grids
+	Columns & Grids
 -----------------------------------------------------------------*/
-
-
-.col_full { width: 100%; }
-.col_half,
-.postcontent.bothsidebar { width: 48%; }
-.col_one_third { width: 30.63%; }
-.col_two_third { width: 65.33%; }
-.col_one_fourth,
-.sidebar { width: 22%; }
-.col_three_fourth,
-.postcontent { width: 74%; }
-.col_one_fifth { width: 16.8%; }
-.col_two_fifth { width: 37.6%; }
-.col_three_fifth { width: 58.4%; }
-.col_four_fifth { width: 79.2%; }
-.col_one_sixth { width: 13.33%; }
-.col_five_sixth { width: 82.67%; }
-body.stretched .container-fullwidth {
-	position: relative;
-	padding: 0 60px;
-	width: 100%;
-}
-
 .postcontent,
-.sidebar,
-.col_full,
-.col_half,
-.col_one_third,
-.col_two_third,
-.col_three_fourth,
-.col_one_fourth,
-.col_one_fifth,
-.col_two_fifth,
-.col_three_fifth,
-.col_four_fifth,
-.col_one_sixth,
-.col_five_sixth {
-	display: block;
-	position: relative;
-	margin-right: 4%;
-	margin-bottom: 50px;
-	float: left;
-}
-
-.col_full {
-	clear: both;
-	float: none;
-	margin-right: 0;
-}
-
-.col_last {
-	margin-right: 0 !important;
-	float: right;
-	clear: right;
+.sidebar {
+  position: relative;
 }

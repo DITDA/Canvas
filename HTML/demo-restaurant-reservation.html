@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/components/datepicker.css" type="text/css" />
+
+	<!-- restaurant Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="demos/restaurant/restaurant.css" type="text/css" />
+	<link rel="stylesheet" href="demos/restaurant/css/fonts.css" type="text/css" />
+	<!-- / -->
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="css/colors.php?color=e7272d" type="text/css" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Reservation | Canvas</title>
+
+</head>
+
+<body class="stretched sticky-footer" data-loader-html="<span class='pizza'> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> </span>">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header" data-sticky-shrink="false">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-lg-between">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="col-auto mr-lg-0 order-lg-2">
+							<a href="demo-restaurant.html" class="standard-logo"><img src="demos/restaurant/images/logo.png" alt="Canvas Logo"></a>
+							<a href="demo-restaurant.html" class="retina-logo"><img src="demos/restaurant/images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu col-lg-4 order-lg-1">
+
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="demo-restaurant.html"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-restaurant-about-us.html"><div>About</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-restaurant-menu.html"><div>Menu</div></a></li>
+							</ul>
+
+						</nav>
+
+						<nav class="primary-menu col-lg-4 order-lg-3">
+
+							<ul class="menu-container justify-content-lg-end">
+								<li class="menu-item"><a class="menu-link" href="demo-restaurant-gallery.html"><div>Gallery</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-restaurant-blog.html"><div>Blog</div></a></li>
+								<li class="menu-item"><a class="menu-link color" href="demo-restaurant-reservation.html"><div>Reservation</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+		</header><!-- #header end -->
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element slider-reservation h-auto include-header">
+
+			<div class="gmap min-vh-60 min-vh-lg-100" data-address="California, USA" data-zoom="4" data-scrollwheel="false" data-markers='[{ address: "San Francisco, USA", icon: { image: "demos/restaurant/images/icons/shop-map.png", iconsize: [32, 39], iconanchor: [16,36] } }]' data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'></div>
+
+			<div class="p-5 reservation-form rounded bg-white">
+				<h3 class="font-secondary h1 color">Our Restaurants</h3>
+				<div class="row mt-4 clearfix" style="font-size: 16px; line-height: 1.7;">
+					<div class="col-sm-6">
+						<address style="line-height: 1.7;">
+							<strong>North America:</strong><br>
+							795 Folsom Ave, Suite 600<br>
+							San Francisco, CA 94107<br>
+						</address>
+					</div>
+					<div class="col-sm-6">
+						<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+						<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
+						<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+					</div>
+				</div>
+
+				<div class="form-widget mt-4 mt-lg-0" data-loader="button">
+
+					<div class="form-result"></div>
+
+					<form class="mb-0 row" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+						<div class="form-process">
+							<div class="css3-spinner">
+								<div class="css3-spinner-scaler"></div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 mb-3">
+							<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Name" />
+						</div>
+						<div class="col-sm-6 mb-3">
+							<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Email Address" />
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-sm-6 mb-3">
+							<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control border-form-control required" placeholder="Phone" />
+						</div>
+
+						<div class="col-sm-6 mb-3 input-daterange travel-date-group">
+							<input type="text" id="template-contactform-subject" name="subject" value="" class="sm-form-control border-form-control text-left required" placeholder="Select Reservation Date">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-6 mb-3">
+							<select class="custom-select sm-form-control border-form-control">
+								<option value="disabled" disabled selected>Select Time</option>
+								<option value="12:00">12:00 - 13:00</option>
+								<option value="13:00">13:00 - 14:00</option>
+								<option value="14:00">14:00 - 15:00</option>
+								<option value="18:00">18:00 - 19:00</option>
+								<option value="19:00">19:00 - 20:00</option>
+								<option value="20:00">20:00 - 21:00</option>
+								<option value="21:00">21:00 - 22:00</option>
+							</select>
+						</div>
+
+						<div class="col-6 mb-3">
+							<select class="custom-select sm-form-control border-form-control">
+								<option value="disabled" disabled selected>Person</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6+</option>
+							</select>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-12 mb-0">
+							<button class="button button-circle button-large text-white ml-0 mt-3" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Reserve Now</button>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-12 d-none">
+							<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+						</div>
+
+						<input type="hidden" name="prefix" value="template-contactform-">
+
+					</form>
+
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark" style="background: url('demos/restaurant/images/footer-bg.jpg')  repeat center center / cover; background-size: auto 100%;; padding: 20px 0 22px">
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" class="bg-transparent pb-4">
+				<div class="container clearfix">
+
+					<div class="row justify-content-between col-mb-30">
+						<div class="col-12 col-md-auto text-center text-md-left">
+							<span class="font-primary">&copy; Canvas Inc. 2021. All Rights Reserved.</span>
+						</div>
+
+						<div class="col-12 col-md-auto text-center text-md-right">
+							<div class="copyrights-menu copyright-links clearfix">
+								<a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Team</a>/<a href="#">Clients</a>/<a href="#">Contact</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-line-arrow-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Travel Demo Specific Script -->
+	<script src="js/components/datepicker.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+	<script>
+
+		$(function() {
+			$('.travel-date-group').datepicker({
+				autoclose: true,
+				startDate: "today",
+				todayHighlight: true
+			});
+		});
+	</script>
+
+</body>
+</html>

@@ -1,10 +1,5 @@
 /* ----------------------------------------------------------------
-	CSS Specific to the Spa Demo
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Styling of this Demo
-
-	Version: 1.0
+	Canvas: Spa
 -----------------------------------------------------------------*/
 
 
@@ -67,7 +62,7 @@ p.service-desc {
 	font-family: 'Cookie';
 }
 
-.heading-block:after {
+.heading-block::after {
 	width: auto;
 	height: 14px;
 	background-image: url('images/others/divider.png');
@@ -76,8 +71,8 @@ p.service-desc {
 	border-top: none;
 }
 
-.heading-block.center:after { background-position: center center; }
-.heading-block.tright:after { background-position: right center; }
+.heading-block.center::after { background-position: center center; }
+.heading-block.tright::after { background-position: right center; }
 
 .button.button-full {
 	font-family: 'Playfair Display';
@@ -114,7 +109,7 @@ form label { margin-bottom: 5px; }
 
 .css3-spinner { background-color: #78c9d1 }
 
-.css3-spinner:after {
+.css3-spinner::after {
 	content: '';
 	position: absolute;
 	background-image: url('images/others/loader.png');

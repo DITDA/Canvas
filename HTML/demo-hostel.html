@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Travel Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="css/components/datepicker.css" type="text/css" />
+	<!-- / -->
+
+	<!--  Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="css/colors.php?color=FD5C63" type="text/css" /> <!-- Theme Color -->
+	<link rel="stylesheet" href="demos/hostel/css/fonts.css" type="text/css" /> <!-- Theme Font -->
+	<link rel="stylesheet" href="demos/hostel/hostel.css" type="text/css" /> <!-- Theme Custom CSS -->
+	<!-- / -->
+
+	<!-- Document Title
+	============================================= -->
+	<title>Hostel | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header border-0" data-sticky-shrink="false" data-logo-height="70" data-sticky-logo-height="70" data-menu-padding="24">
+			<div id="header-wrap">
+				<div class="container-fluid pr-0">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="col col-sm-auto">
+							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<div class="header-misc">
+							<a href="#" class="button font-weight-semibold">Book Now</a>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container border-right-0 mr-0">
+								<li class="menu-item active">
+									<a class="menu-link" href="#"><div>Home</div></a>
+								</li>
+
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>About Us</div></a>
+								</li>
+
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Tour</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Contact Us</div></a>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+		</header><!-- #header end -->
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element" style="background: linear-gradient(to right, rgba(0,0,0, 0.4) 20%, transparent 100%), url('demos/hostel/images/hero1.jpg') no-repeat center center / cover;">
+
+			<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-lg-6 col-md-7 dark mb-5 mb-md-0 py-5">
+						<h2 class="display-4" style="font-weight: 600;">Your Home<br>Away From Home</h2>
+						<p class="mb-5 lead text-white op-07">Objectively matrix exceptional paradigms via strategic testing procedures. Enthusiastically repurpose impactful.</p>
+						<a href="#" class="button button-xlarge bg-color font-weight-normal nott ls0">Book Now</a>
+						<a href="#" class="button button-xlarge button-white button-light font-weight-normal nott ls0">Contact Us</a>
+					</div>
+					<div class="col-md-5 d-flex align-self-end align-items-center align-items-lg-end col-form">
+						<div class="card rounded-top bg-white border-0 w-100 shadow p-3">
+							<div class="card-body">
+								<h3 class="mb-0">Check Availability</h3>
+								<div class="line line-sm"></div>
+								<div class="widget mt-0 form-widget" data-alert-type="inline">
+
+									<div class="form-result"></div>
+									<div class="form-availability-loader css3-spinner" style="position: absolute;">
+										<div class="css3-spinner-double-bounce1"></div>
+										<div class="css3-spinner-double-bounce2"></div>
+									</div>
+									<form id="form-availability" name="form-availability" action="include/form.php" method="post" class="form-availability mb-0">
+										<div class="input-daterange travel-date-group row">
+											<div class="col-6 col-md-12 col-lg-6 form-group">
+												<label for="form-availability-from">Check-In<small class="text-danger">*</small></label>
+												<input type="text" value="" class="form-control rounded text-left required" id="form-availability-from" name="form-availability-from" placeholder="MM/DD/YYYY">
+											</div>
+											<div class="col-6 col-md-12 col-lg-6 form-group">
+												<label for="form-availability-to">Check-Out<small class="text-danger">*</small></label>
+												<input type="text" value="" class="form-control rounded text-left required" id="form-availability-to" name="form-availability-to" placeholder="MM/DD/YYYY">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="form-availability-guests">Number of Guests<small class="text-danger">*</small></label>
+											<input type="number" class="required form-control rounded input-block-level" id="form-availability-guests" name="form-availability-guests" min="1" max="10" value="" placeholder="Enter Guests Number" />
+										</div>
+										<div class="form-group">
+											<label for="form-availability-email">Email Address<small class="text-danger">*</small></label>
+											<input type="email" class="required form-control rounded email input-block-level" id="form-availability-email" name="form-availability-email" value="" placeholder="Email Address" />
+										</div>
+										<input type="text" class="d-none" id="form-availability-botcheck" name="form-availability-botcheck" value="" />
+										<input type="hidden" name="prefix" value="form-availability-">
+										<button type="submit" id="form-availability-submit" name="form-availability-submit" class="button button-large btn-block rounded font-weight-semibold ml-0 mt-2" value="submit">Send Email</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap pb-0">
+
+				<div class="container">
+					<div class="row topmargin">
+						<div class="col-md-5 offset-md-1">
+							<h3 class="text-dark"><i class="icon-line-circle-check color mr-1 position-relative" style="top: 2px"></i> Why do you choose Canvas?</h3>
+							<p>Dramatically re-engineer integrated e-tailers without interoperable growth strategies. Collaboratively create customer directed "outside the box" thinking with world-class e-commerce.</p>
+						</div>
+						<div class="col-md-5 pl-md-5">
+							<h3 class="text-dark"><i class="icon-line-circle-check color mr-1 position-relative" style="top: 2px"></i> How we do</h3>
+							<p>Intrinsicly recaptiualize state of the art information for interactive applications. Dynamically optimize proactive convergence and timely value.</p>
+						</div>
+					</div>
+
+					<div class="clear my-5"></div>
+
+					<div class="row align-items-center">
+						<div class="col-lg-4 col-md-7 offset-lg-1 mb-5 mb-lg-0">
+							<h3 class="text-dark text-n-right mb-0">Bed, Breakfast<br>&amp; Workspace</h3>
+							<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget" data-margin="0" data-items="1" data-pagi="true" data-nav="false">
+
+								<div class="oc-item">
+									<blockquote class="testimonial text-md-right">
+										<div class="testi-content">
+											<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!</p>
+											<div class="testi-meta">
+												John Doe
+												<span>XYZ Inc.</span>
+											</div>
+										</div>
+									</blockquote>
+								</div>
+
+								<div class="oc-item">
+									<blockquote class="testimonial text-md-right">
+										<div class="testi-content">
+											<p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
+											<div class="testi-meta">
+												Collis Ta'eed
+												<span>Envato Inc.</span>
+											</div>
+										</div>
+									</blockquote>
+								</div>
+
+								<div class="oc-item">
+									<blockquote class="testimonial text-md-right">
+										<div class="testi-content">
+											<p>Fugit officia dolor sed harum excepturi ex iusto magnam asperiores molestiae qui natus obcaecati facere sint amet.</p>
+											<div class="testi-meta">
+												Mary Jane
+												<span>Google Inc.</span>
+											</div>
+										</div>
+									</blockquote>
+								</div>
+
+							</div>
+							<div class="row justify-content-end align-items-center mt-4">
+								<div class="col text-right"><img src="demos/conference/images/sponcors/amazon.svg" alt="Image" width="80"></div>
+								<div class="col text-right"><img src="demos/conference/images/sponcors/google.svg" alt="Image" width="80"></div>
+								<div class="col text-right"><img src="demos/conference/images/sponcors/linkedin.svg" alt="Image" width="80"></div>
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-5 pl-lg-4">
+							<img src="demos/hostel/images/section-1.jpg" alt="Image">
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="section center studio-tab mb-0" style="background-color: #D6EBEE">
+					<div class="container mx-auto" style="max-width: 800px">
+						<div class="heading-block">
+							<h3 class="text-dark">Check out your Comforts</h3>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, perspiciatis.</span>
+						</div>
+
+						<div id="studio-tab-nav" class="nav justify-content-center" role="tablist">
+							<a class="nav-link active" id="studio-lobby-tab" data-toggle="tab" href="#studio-lobby" role="tab" aria-controls="studio-lobby" aria-selected="true" data-bg="#D6EBEE">Lobby</a>
+							<a class="nav-link" id="studio-deluxe-twin-room-tab" data-toggle="tab" href="#studio-deluxe-twin-room" role="tab" aria-controls="studio-deluxe-twin-room" aria-selected="false" data-bg="#E4E4E4">Deluxe Twin Rooms</a>
+							<a class="nav-link" id="studio-dormitory-room-tab" data-toggle="tab" href="#studio-dormitory-room" role="tab" aria-controls="studio-dormitory-room" aria-selected="false" data-bg="#EFF1FE">Dormitory Rooms</a>
+							<a class="nav-link" id="studio-4-mixed-bed-tab" data-toggle="tab" href="#studio-4-mixed-bed" role="tab" aria-controls="studio-4-mixed-bed" aria-selected="false" data-bg="#EDF4EA">4 Bed Mixed</a>
+						</div>
+
+						<div class="tab-content mb-5">
+							<div class="tab-pane show active" id="studio-lobby" role="tabpanel" aria-labelledby="studio-lobby-tab">
+								<div class="fslider" data-smooth-height="false" data-pagi="false" data-arrows="false" data-thumbs="true">
+									<div class="flexslider">
+										<div class="slider-wrap">
+											<div class="slide" data-thumb="demos/hostel/images/studios/1/thumbs/1.jpg"><img src="demos/hostel/images/studios/1/1.jpg" alt="Lobby"></div>
+											<div class="slide" data-thumb="demos/hostel/images/studios/1/thumbs/2.jpg"><img src="demos/hostel/images/studios/1/2.jpg" alt="Lobby"></div>
+											<div class="slide" data-thumb="demos/hostel/images/studios/1/thumbs/3.jpg"><img src="demos/hostel/images/studios/1/3.jpg" alt="Lobby"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="studio-deluxe-twin-room" role="tabpanel" aria-labelledby="studio-deluxe-twin-room-tab">
+								<div class="fslider" data-smooth-height="false" data-pagi="false" data-arrows="false" data-thumbs="true">
+									<div class="flexslider">
+										<div class="slider-wrap">
+											<div class="slide" data-thumb="demos/hostel/images/studios/2/thumbs/1.jpg"><img src="demos/hostel/images/studios/2/1.jpg" alt="Deluxe Twin Room"></div>
+											<div class="slide" data-thumb="demos/hostel/images/studios/2/thumbs/2.jpg"><img src="demos/hostel/images/studios/2/2.jpg" alt="Deluxe Twin Room"></div>
+											<div class="slide" data-thumb="demos/hostel/images/studios/2/thumbs/3.jpg"><img src="demos/hostel/images/studios/2/3.jpg" alt="Deluxe Twin Room"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="studio-dormitory-room" role="tabpanel" aria-labelledby="studio-dormitory-room-tab">
+								<div class="fslider" data-smooth-height="false" data-pagi="false" data-arrows="false" data-thumbs="true">
+									<div class="flexslider">
+										<div class="slider-wrap">
+											<div class="slide" data-thumb="demos/hostel/images/studios/3/thumbs/1.jpg"><img src="demos/hostel/images/studios/3/1.jpg" alt="Dormitory Room"></div>
+											<div class="slide" data-thumb="demos/hostel/images/studios/3/thumbs/2.jpg"><img src="demos/hostel/images/studios/3/2.jpg" alt="Dormitory Room"></div>
+											<div class="slide" data-thumb="demos/hostel/images/studios/3/thumbs/3.jpg"><img src="demos/hostel/images/studios/3/3.jpg" alt="Dormitory Room"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="studio-4-mixed-bed" role="tabpanel" aria-labelledby="studio-4-mixed-bed-tab">
+								<div class="fslider" data-smooth-height="false" data-pagi="false" data-arrows="false" data-thumbs="true">
+									<div class="flexslider">
+										<div class="slider-wrap">
+											<div class="slide" data-thumb="demos/hostel/images/studios/4/thumbs/1.jpg"><img src="demos/hostel/images/studios/4/1.jpg" alt="4 Bed Mixed"></div>
+											<div class="slide" data-thumb="demos/hostel/images/studios/4/thumbs/2.jpg"><img src="demos/hostel/images/studios/4/2.jpg" alt="4 Bed Mixed"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<a href="#" class="button button-large bg-color nott font-weight-semibold ls0">View Full Gallery</a>
+						<a href="#" class="button button-large bg-color nott font-weight-semibold ls0">Book Now</a>
+					</div>
+				</div>
+
+				<div class="section my-5 bg-transparent section-counter">
+					<div class="container">
+						<div class="heading-block center mx-auto"  style="max-width: 800px">
+							<h3 class="text-dark">Check out your Comforts</h3>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, perspiciatis.</span>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="row justify-content-between topmargin">
+							<div class="col-md-3 col-sm-6 mb-5 mb-lg-0">
+								<h2 class="display-3">4.8</h2>
+								<div class="product-rating mb-1 color">
+									<i class="icon-star3"></i>
+									<i class="icon-star3"></i>
+									<i class="icon-star3"></i>
+									<i class="icon-star3"></i>
+									<i class="icon-star3"></i>
+								</div>
+								<span class="d-block">2,0321 Ratings</span>
+								<a href="#" class="btn-link">See reviews<i class="icon-line-arrow-right"></i></a>
+							</div>
+
+							<div class="col-md-3 col-sm-6 mb-5 mb-lg-0">
+								<h2 class="counter"><span data-from="1" data-to="3" data-refresh-interval="1" data-speed="600"></span>.<span data-from="0" data-to="75" data-refresh-interval="100" data-speed="2000"></span><small>M</small></h2>
+								<span class="mb-2 d-block">People Liked and Follows our Hostels in Social Media.</span>
+								<a href="#" class="i-rounded i-small mr-1 si-colored h-op-09 si-facebook">
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" class="i-rounded i-small mr-1 si-colored h-op-09 si-instagram">
+									<i class="icon-instagram"></i>
+								</a>
+								<a href="#" class="i-rounded i-small mr-1 si-colored h-op-09 si-pinterest">
+									<i class="icon-pinterest"></i>
+								</a>
+							</div>
+
+							<div class="col-md-3 col-sm-6 mb-5 mb-lg-0">
+								<h2 class="counter"><span data-from="10" data-to="4304" data-comma="true"></span>+</h2>
+								<span class="d-block">New People Comes Every Year.</span>
+								<a href="#" class="btn-link">https://google.com<i class="icon-line-arrow-right"></i></a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section m-0" style="background-color: #fcf5ed">
+					<div class="container">
+						<div class="row justify-content-between">
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-4">
+								<i class="icon-line2-feed color ml-0 mb-4 i-plain d-block float-none"></i>
+								<h4 class="mb-3">WiFi Available</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-4">
+								<i class="icon-line2-cup color ml-0 mb-3 i-plain d-block float-none"></i>
+								<h4 class="mb-3">Cafeteria</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-4">
+								<i class="icon-line2-screen-desktop color ml-0 mb-3 i-plain d-block float-none"></i>
+								<h4 class="mb-3">Workspace Area</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-4">
+								<i class="icon-line2-lock color ml-0 mb-3 i-plain d-block float-none"></i>
+								<h4 class="mb-3">Lockers</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-4">
+								<i class="icon-line2-shield color ml-0 mb-3 i-plain d-block float-none"></i>
+								<h4 class="mb-3">100% Secured</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-4">
+								<i class="icon-line2-printer color ml-0 mb-3 i-plain d-block float-none"></i>
+								<h4 class="mb-3">Printers &amp; Fax</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-2">
+								<i class="icon-line2-drawer color ml-0 mb-3 i-plain d-block float-none"></i>
+								<h4 class="mb-3">Well Furnished</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-2">
+								<i class="icon-line2-clock color ml-0 mb-3 i-plain d-block float-none"></i>
+								<h4 class="mb-3">24x7 Access</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+
+							<!-- Feature Box
+							============================================= -->
+							<div class="col-lg-4 col-md-6 mb-2">
+								<i class="icon-line2-game-controller color ml-0 mb-3 i-plain d-block float-none"></i>
+								<h4 class="mb-3">Other Activities</h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent my-5">
+					<div class="container">
+
+						<div class="row align-items-center flex-md-row-reverse col-mb-50 mb-0">
+							<div class="col-lg-6">
+								<img class="box-img shadow-left" src="demos/hostel/images/box-img/1.jpg" alt="Image">
+							</div>
+							<div class="col-lg-6 pr-0 pr-md-5">
+								<h5 class="color font-weight-normal mb-2"><i class="icon-line2-pointer"></i> Spain</h5>
+								<h3 class="text-dark h1 font-weight-semibold ls0 mb-4">Canvas Penthouse</h3>
+								<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eius explicabo, optio repellat saepe inventore dicta quibusdam minima quia, ratione minus a consectetur dolorum, nulla provident tenetur.</p>
+
+								<h3 class="title-pricing mb-5">$39.99 <span>per week</span></h3>
+
+								<div class="row">
+									<div class="col-6">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item pl-0"><i class="icon-line2-feed mr-2"></i>WiFi Availbale</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-cup mr-2"></i>Breakfast Included</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-clock mr-2"></i>24x7 access</li>
+										</ul>
+									</div>
+
+									<div class="col-6">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item pl-0"><i class="icon-line2-lock mr-2"></i>Lockers Available</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-social-dropbox mr-2"></i>Laundry Available</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-game-controller mr-2"></i>Other Aminities</li>
+										</ul>
+									</div>
+								</div>
+								<a href="#" class="button bg-color nott ls0 mt-4 mx-0">View More Details</a>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="row align-items-center topmargin-lg col-mb-50 mb-lg-5">
+							<div class="col-lg-6">
+								<img class="box-img" src="demos/hostel/images/box-img/2.jpg" alt="Image">
+							</div>
+							<div class="col-lg-6 pl-md-5 mb-5 mb-md-0">
+								<h5 class="color font-weight-normal mb-2"><i class="icon-line2-pointer"></i> Denmark</h5>
+								<h3 class="text-dark h1 font-weight-semibold ls0 mb-4">Canvas Delux Bed</h3>
+								<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eius explicabo, optio repellat dolorum, nulla provident tenetur.</p>
+
+								<h3 class="title-pricing mb-5">$45.99 <span>per week</span></h3>
+
+								<div class="row">
+									<div class="col-6">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item pl-0"><i class="icon-line2-feed mr-2"></i>WiFi Availbale</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-cup mr-2"></i>Breakfast Included</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-clock mr-2"></i>24x7 access</li>
+										</ul>
+									</div>
+
+									<div class="col-6">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item pl-0"><i class="icon-line2-lock mr-2"></i>Lockers Available</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-social-dropbox mr-2"></i>Laundry Available</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-game-controller mr-2"></i>Other Aminities</li>
+										</ul>
+									</div>
+								</div>
+								<a href="#" class="button bg-color nott ls0 mt-4 mx-0">View More Details</a>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="row align-items-center flex-md-row-reverse topmargin-lg col-mb-50">
+							<div class="col-lg-6">
+								<img class="box-img shadow-left" src="demos/hostel/images/box-img/3.jpg" alt="Image">
+							</div>
+
+							<div class="col-lg-6 pr-0 pr-md-5 mb-5 mb-lg-0">
+								<h5 class="color font-weight-normal mb-2"><i class="icon-line2-pointer"></i> Amsterdam</h5>
+								<h3 class="text-dark h1 font-weight-semibold ls0 mb-4">Canvas Mixed Bed</h3>
+								<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eius explicabo, optio repellat saepe inventore ratione minus a consectetur dolorum, nulla provident tenetur.</p>
+
+								<h3 class="title-pricing mb-5">$29.99 <span>per week</span></h3>
+
+								<div class="row">
+									<div class="col-6">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item pl-0"><i class="icon-line2-feed mr-2"></i>WiFi Availbale</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-cup mr-2"></i>Breakfast Included</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-clock mr-2"></i>24x7 access</li>
+										</ul>
+									</div>
+
+									<div class="col-6">
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item pl-0"><i class="icon-line2-lock mr-2"></i>Lockers Available</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-social-dropbox mr-2"></i>Laundry Available</li>
+											<li class="list-group-item pl-0"><i class="icon-line2-game-controller mr-2"></i>Other Aminities</li>
+										</ul>
+									</div>
+								</div>
+								<a href="#" class="button bg-color nott ls0 mt-4 mx-0">View More Details</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section m-0 center dark parallax" style="background: url('demos/hostel/images/hero.jpg') center center / cover; padding: 170px 0;">
+					<div class="container">
+						<h3 class="h1 mb-5">More than 100,000<br>Travellers Visit Our Hostels.</h3>
+						<a href="#" class="button button-xlarge font-weight-semibold bg-color nott ls0 px-5">Book Now</a>
+					</div>
+				</div>
+
+				<div class="section m-0 bg-transparent">
+					<div class="container">
+						<div class="heading-block center border-bottom-0 bottommargin-lg">
+							<h3 class="text-dark">Frequently asked Questions</h3>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-lg-6">
+
+								<div class="toggle">
+									<div class="toggle-header justify-content-between flex-row-reverse">
+										<div class="toggle-icon">
+											<i class="toggle-closed icon-line-plus"></i>
+											<i class="toggle-open icon-line-minus"></i>
+										</div>
+										<div class="toggle-title font-weight-semibold">
+											How do I become an author?
+										</div>
+									</div>
+									<div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+								</div>
+
+								<div class="toggle">
+									<div class="toggle-header justify-content-between flex-row-reverse">
+										<div class="toggle-icon">
+											<i class="toggle-closed icon-line-plus"></i>
+											<i class="toggle-open icon-line-minus"></i>
+										</div>
+										<div class="toggle-title font-weight-semibold">
+											Helpful Resources for Authors
+										</div>
+									</div>
+									<div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+								</div>
+
+								<div class="toggle">
+									<div class="toggle-header justify-content-between flex-row-reverse">
+										<div class="toggle-icon">
+											<i class="toggle-closed icon-line-plus"></i>
+											<i class="toggle-open icon-line-minus"></i>
+										</div>
+										<div class="toggle-title font-weight-semibold">
+											How much money can I make?
+										</div>
+									</div>
+									<div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+								</div>
+
+								<div class="toggle">
+									<div class="toggle-header justify-content-between flex-row-reverse">
+										<div class="toggle-icon">
+											<i class="toggle-closed icon-line-plus"></i>
+											<i class="toggle-open icon-line-minus"></i>
+										</div>
+										<div class="toggle-title font-weight-semibold">
+											Can I offer my items for free on a promotional basis?
+										</div>
+									</div>
+									<div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+								</div>
+
+								<div class="toggle">
+									<div class="toggle-header justify-content-between flex-row-reverse">
+										<div class="toggle-icon">
+											<i class="toggle-closed icon-line-plus"></i>
+											<i class="toggle-open icon-line-minus"></i>
+										</div>
+										<div class="toggle-title font-weight-semibold">
+											An Introduction to the Marketplaces for Authors
+										</div>
+									</div>
+									<div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+								</div>
+
+								<div class="toggle">
+									<div class="toggle-header justify-content-between flex-row-reverse">
+										<div class="toggle-icon">
+											<i class="toggle-closed icon-line-plus"></i>
+											<i class="toggle-open icon-line-minus"></i>
+										</div>
+										<div class="toggle-title font-weight-semibold">
+											How does the Tuts+ Premium affiliate program work?
+										</div>
+									</div>
+									<div class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="bg-transparent">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+					<div class="row">
+
+						<div class="col-lg-2 col-md-2 col-6 mb-5 mb-md-0">
+							<div class="widget widget_links widget-li-noicon">
+
+								<h4 class="ls0 mb-4 nott">Features</h4>
+
+								<ul class="list-unstyled iconlist ml-0">
+									<li><a href="#">Help Center</a></li>
+									<li><a href="#">Paid with Moblie</a></li>
+									<li><a href="#">Status</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-6 mb-5 mb-md-0">
+							<div class="widget widget_links widget-li-noicon">
+
+								<h4 class="ls0 mb-4 nott">Support</h4>
+
+								<ul class="list-unstyled iconlist ml-0">
+									<li><a href="#">Home</a></li>
+									<li><a href="#">About</a></li>
+									<li><a href="#">FAQs</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-6 mb-5 mb-md-0">
+							<div class="widget widget_links widget-li-noicon">
+
+								<h4 class="ls0 mb-4 nott">Trending</h4>
+
+								<ul class="list-unstyled iconlist ml-0">
+									<li><a href="#">Shop</a></li>
+									<li><a href="#">Events</a></li>
+									<li><a href="#">Forums</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-6 mb-5 mb-md-0">
+							<div class="widget widget_links widget-li-noicon">
+
+								<h4 class="ls0 mb-4 nott">Get to Know us</h4>
+
+								<ul class="list-unstyled iconlist ml-0">
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Personal</a></li>
+									<li><a href="#">OnePage</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 text-md-right">
+							<div class="widget">
+								<div>
+									<address>
+										795 Folsom Ave, Suite 600<br>
+										San Francisco, CA 94107<br>
+									</address>
+									<h3 class="mb-3"><a href="tel:111223344" class="text-dark"><i class="icon-line2-earphones-alt mr-1"></i> +00-22-33-44</a></h3>
+									<div class="d-flex justify-content-md-end">
+										<a href="#" class="social-icon si-small si-facebook" title="Facebook">
+											<i class="icon-facebook"></i>
+											<i class="icon-facebook"></i>
+										</a>
+
+										<a href="#" class="social-icon si-small si-instagram" title="instagram">
+											<i class="icon-instagram"></i>
+											<i class="icon-instagram"></i>
+										</a>
+
+										<a href="#" class="social-icon si-small si-pinterest" title="pinterest">
+											<i class="icon-pinterest"></i>
+											<i class="icon-pinterest"></i>
+										</a>
+
+										<a href="#" class="social-icon si-small si-wikipedia" title="Apple Pay">
+											<i class="icon-apple-pay"></i>
+											<i class="icon-apple-pay"></i>
+										</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" class="bg-light">
+				<div class="container">
+
+					<div class="row justify-content-between align-items-center">
+						<div class="col-md-6 text-black-50">
+							Copyrights &copy; 2019 All Rights Reserved by Canvas Inc.
+						</div>
+
+						<div class="col-md-6 d-md-flex flex-md-column align-items-md-end mt-4 mt-md-0">
+							<div class="copyrights-menu copyright-links text-black-50 clearfix">
+								<a href="#">About</a>/<a href="#">Cities</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<!-- Travel Demo Specific Script -->
+	<script src="js/components/datepicker.js"></script>
+	<!-- / -->
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+	<script>
+		$(function() {
+			$('.travel-date-group').datepicker({
+				autoclose: true,
+				startDate: "today"
+			});
+		});
+
+		jQuery(document).ready(function() {
+
+			var studioTab	= $('#studio-tab-nav'),
+				sectionBg	= $('.studio-tab');
+
+			studioTab.on('shown.bs.tab', function (e) {
+				var bgcolor = studioTab.find('.active').attr('data-bg');
+				sectionBg.css({ 'background-color': bgcolor }).fadeIn();
+				e.preventDefault();
+				$('.tab-pane .fslider').resize();
+			});
+		});
+	</script>
+
+</body>
+</html>

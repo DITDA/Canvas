@@ -197,11 +197,6 @@ if ( typeof define === 'function' && define.amd ) {
 		var self = this;
 		// init masonry after all images are loaded
 		imagesLoaded( this.gridEl, function() {
-			// initialize masonry
-			new Masonry(self.gridEl, {
-				itemSelector: '.grid-item',
-				isFitWidth : true
-			});
 			// show grid after all images (thumbs) are loaded
 			classie.add(self.gridEl, 'grid--loaded');
 			// init/bind events

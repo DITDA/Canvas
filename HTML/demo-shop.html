@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700%7CMontserrat:300,400,500,600,700%7CMerriweather:300,400,300i,400i" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Montserrat:300,400,500,600,700|Merriweather:300,400,300i,400i&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link rel="stylesheet" href="css/colors.php?color=000000" type="text/css" />
@@ -42,13 +42,13 @@
 		<div class="modal-on-load" data-target="#myModal1"></div>
 
 		<!-- On LOad Modal -->
-		<div class="modal1 mfp-hide subscribe-widget divcenter" id="myModal1" style="max-width: 750px;">
+		<div class="modal1 mfp-hide subscribe-widget mx-auto" id="myModal1" style="max-width: 750px;">
 			<div class="row justify-content-center bg-white align-items-center" style="min-height: 380px;">
 				<div class="col-md-5 p-0">
 					<div style="background: url('images/modals/modal1.jpg') no-repeat center right; background-size: cover;  min-height: 380px;"></div>
 				</div>
 				<div class="col-md-7 bg-white p-4">
-					<div class="heading-block nobottomborder mb-3">
+					<div class="heading-block border-bottom-0 mb-3">
 						<h3 class="font-secondary nott ">Join Our Newsletter &amp; Get <span class="text-danger">40%</span> Off your First Order</h3>
 						<span>Get Latest Fashion Updates &amp; Offers</span>
 					</div>
@@ -60,24 +60,24 @@
 							<a href="#" class="btn-link" onClick="$.magnificPopup.close();return false;">Don't Show me</a>
 						</div>
 					</form>
-					<small class="nobottommargin font-italic text-black-50">*We also hate Spam &amp; Junk Emails.</small>
+					<small class="mb-0 font-italic text-black-50">*We also hate Spam &amp; Junk Emails.</small>
 				</div>
 			</div>
 		</div>
 
 		<!-- Login Modal -->
 		<div class="modal1 mfp-hide" id="modal-register">
-			<div class="card divcenter" style="max-width: 540px;">
-				<div class="card-header py-3 nobg center">
-					<h3 class="mb-0 t400">Hello, Welcome Back</h3>
+			<div class="card mx-auto" style="max-width: 540px;">
+				<div class="card-header py-3 bg-transparent center">
+					<h3 class="mb-0 font-weight-normal">Hello, Welcome Back</h3>
 				</div>
-				<div class="card-body divcenter py-5" style="max-width: 70%;">
+				<div class="card-body mx-auto py-5" style="max-width: 70%;">
 
-					<a href="#" class="button button-large btn-block si-colored si-facebook nott t400 ls0 center nomargin"><i class="icon-facebook-sign"></i> Log in with Facebook</a>
+					<a href="#" class="button button-large btn-block si-colored si-facebook nott font-weight-normal ls0 center m-0"><i class="icon-facebook-sign"></i> Log in with Facebook</a>
 
 					<div class="divider divider-center"><span class="position-relative" style="top: -2px">OR</span></div>
 
-					<form id="login-form" name="login-form" class="nobottommargin row" action="#" method="post">
+					<form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
 
 						<div class="col-12">
 							<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username" />
@@ -88,11 +88,11 @@
 						</div>
 
 						<div class="col-12">
-							<a href="#" class="fright text-dark t300 mt-2">Forgot Password?</a>
+							<a href="#" class="float-right text-dark font-weight-light mt-2">Forgot Password?</a>
 						</div>
 
 						<div class="col-12 mt-4">
-							<button class="button btn-block nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+							<button class="button btn-block m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
 						</div>
 					</form>
 				</div>
@@ -105,274 +105,293 @@
 		<!-- Top Bar
 		============================================= -->
 		<div id="top-bar" class="dark" style="background-color: #a3a5a7;">
-
-			<div class="container clearfix">
+			<div class="container">
 
 				<div class="row justify-content-between">
 
-					<div class="col-lg-5 nobottommargin">
+					<div class="col-12 col-md-auto">
 
-						<p class="nobottommargin d-flex justify-content-center justify-content-lg-start"><strong>Free U.S. Shipping on Order above $99. Easy Returns.</strong></p>
+						<p class="mb-0 d-flex justify-content-center justify-content-lg-start"><strong>Free U.S. Shipping on Order above $99. Easy Returns.</strong></p>
 
 					</div>
 
-					<div class="col-lg-7 d-none d-lg-flex justify-content-end">
+					<div class="col-12 col-md-auto d-none d-lg-flex">
 
 						<!-- Top Links
 						============================================= -->
 						<div class="top-links">
-							<ul>
-								<li><a href="#">About</a></li>
-								<li><a href="#">FAQS</a></li>
-								<li><a href="#">Blogs</a></li>
-								<li><a href="#">EN</a>
-									<ul>
-										<li><a href="#"><img src="images/icons/flags/french.png" alt="French"> FR</a></li>
-										<li><a href="#"><img src="images/icons/flags/italian.png" alt="Italian"> IT</a></li>
-										<li><a href="#"><img src="images/icons/flags/german.png" alt="German"> DE</a></li>
+							<ul class="top-links-container">
+								<li class="top-links-item"><a href="#">About</a></li>
+								<li class="top-links-item"><a href="#">FAQS</a></li>
+								<li class="top-links-item"><a href="#">Blogs</a></li>
+								<li class="top-links-item"><a href="#">EN</a>
+									<ul class="top-links-sub-menu">
+										<li class="top-links-item"><a href="#"><img src="images/icons/flags/french.png" alt="French"> FR</a></li>
+										<li class="top-links-item"><a href="#"><img src="images/icons/flags/italian.png" alt="Italian"> IT</a></li>
+										<li class="top-links-item"><a href="#"><img src="images/icons/flags/german.png" alt="German"> DE</a></li>
 									</ul>
 								</li>
-								<li></li>
 							</ul>
 						</div><!-- .top-links end -->
 
 						<!-- Top Social
 						============================================= -->
-						<div id="top-social">
-							<ul>
-								<li><a href="#" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
-								<li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
-								<li><a href="tel:+91.11.85412542" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+91.11.85412542</span></a></li>
-								<li><a href="mailto:info@canvas.com" class="si-email3"><span class="ts-icon"><i class="icon-envelope-alt"></i></span><span class="ts-text">info@canvas.com</span></a></li>
-							</ul>
-						</div><!-- #top-social end -->
+						<ul id="top-social">
+							<li><a href="#" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+							<li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
+							<li><a href="tel:+1.11.85412542" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+1.11.85412542</span></a></li>
+							<li><a href="mailto:info@canvas.com" class="si-email3"><span class="ts-icon"><i class="icon-envelope-alt"></i></span><span class="ts-text">info@canvas.com</span></a></li>
+						</ul><!-- #top-social end -->
 
 					</div>
 				</div>
 
 			</div>
-
 		</div>
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header clearfix">
-
+		<header id="header" class="full-header" data-logo-height="80" data-menu-padding="29">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-lg-between">
 
-				<div class="container clearfix">
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="mr-lg-4">
+							<a href="demo-shop.html" class="standard-logo"><img src="demos/shop/images/logo.png" alt="Canvas Logo"></a>
+							<a href="demo-shop.html" class="retina-logo"><img src="demos/shop/images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+						<div class="header-misc">
 
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="index.html" class="standard-logo"><img src="demos/shop/images/logo.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo"><img src="demos/shop/images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
-
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu" class="style-2 with-arrows">
-
-						<ul>
-							<li class="current"><a href="#"><div>Home</div></a></li>
-							<!-- Mega Menu
+							<!-- Top Search
 							============================================= -->
-							<li class="mega-menu"><a href="#"><div>Men</div></a>
-								<div class="mega-menu-content style-2 clearfix">
-									<ul class="mega-menu-column border-left-0 col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Footwear</div></a>
-											<ul>
-												<li><a href="#"><div>Casual Shoes</div></a></li>
-												<li><a href="#"><div>Formal Shoes</div></a></li>
-												<li><a href="#"><div>Sports shoes</div></a></li>
-												<li><a href="#"><div>Flip Flops</div></a></li>
-												<li><a href="#"><div>Slippers</div></a></li>
-												<li><a href="#"><div>Sandals</div></a></li>
-												<li><a href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
-											</ul>
-										</li>
-										<li class="mega-menu-title"><a href="#"><div>Clothing</div></a>
-											<ul>
-												<li><a href="#"><div>Casual Shirts</div></a></li>
-												<li><a href="#"><div>T-Shirts</div></a></li>
-												<li><a href="#"><div>Collared Tees</div></a></li>
-												<li><a href="#"><div>Pants / Trousers</div></a></li>
-												<li><a href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="mega-menu-column border-left-0 col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Sportswear</div></a>
-											<ul>
-												<li><a href="#"><div>Sports Casual Shirts</div></a></li>
-												<li><a href="#"><div>Sports T-Shirts</div></a></li>
-												<li><a href="#"><div>Sports Collared Tees</div></a></li>
-												<li><a href="#"><div>Sports Shoes</div></a></li>
-												<li><a href="#"><div>Jackets</div></a></li>
-												<li><a href="#"><div>Swimwears</div></a></li>
-												<li><a href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
-											</ul>
-										</li>
-										<li class="mega-menu-title"><a href="#"><div>Innerwears</div></a>
-											<ul>
-												<li><a href="#"><div>Boxers</div></a></li>
-												<li><a href="#"><div>Vests</div></a></li>
-												<li><a href="#"><div>Sleepwears</div></a></li>
-												<li><a href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="mega-menu-column border-left-0 col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Innerwears</div></a>
-											<ul>
-												<li><a href="#"><div>Boxers</div></a></li>
-												<li><a href="#"><div>Vests</div></a></li>
-												<li><a href="#"><div>Sleepwears</div></a></li>
-												<li><a href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
-											</ul>
-										</li>
-										<li class="mega-menu-title"><a href="#"><div>Sunglasses</div></a>
-										<li class="mega-menu-title"><a href="#"><div>Watches</div></a>
-										<li class="mega-menu-title"><a href="#"><div>Bags</div></a>
-										<li class="mega-menu-title"><a href="#"><div>Headphones</div></a>
-										<li class="mega-menu-title"><a href="#"><div>Accessories</div></a>
-									</ul>
-									<ul class="mega-menu-column col-lg-3 border-left-0">
-										<li class="card p-0 nobg noborder">
-											<img class="card-img-top" src="demos/shop/images/menu-image.jpg" alt="image cap">
-											<a href="#" class="btn btn-link text-left t500 pl-0 nobg"><u>Editor's Pick</u></a>
-										</li>
-									</ul>
-								</div>
-							</li><!-- .mega-menu end -->
-							<li><a href="#"><div>Women</div></a>
-								<div class="mega-menu-content style-2 clearfix">
-									<ul class="mega-menu-column col-lg-6">
-										<li class="mega-menu-title"><a href="#"><div>Footwear</div></a>
-											<ul>
-												<li><a href="#"><div>Casual Shoes</div></a></li>
-												<li><a href="#"><div>Formal Shoes</div></a></li>
-												<li><a href="#"><div>Sports shoes</div></a></li>
-												<li><a href="#"><div>Flip Flops</div></a></li>
-												<li><a href="#"><div>Slippers</div></a></li>
-												<li><a href="#"><div>Sandals</div></a></li>
-												<li><a href="#"><div>Party Shoes</div></a></li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="mega-menu-column col-lg-6">
-										<li class="mega-menu-title"><a href="#"><div>Clothing</div></a>
-											<ul>
-												<li><a href="#"><div>Casual Shirts</div></a></li>
-												<li><a href="#"><div>T-Shirts</div></a></li>
-												<li><a href="#"><div>Collared Tees</div></a></li>
-												<li><a href="#"><div>Pants / Trousers</div></a></li>
-												<li><a href="#"><div>Ethnic Wear</div></a></li>
-												<li><a href="#"><div>Jeans</div></a></li>
-												<li><a href="#"><div>Swimwear</div></a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</li><!-- .mega-menu end -->
-							<li><a href="#"><div>Accessories</div></a></li>
-							<li><a href="#"><div>Blog</div></a></li>
-							<li><a href="#"><div>Sales</div></a></li>
-						</ul>
+							<div id="top-account">
+								<a href="#modal-register" data-lightbox="inline" ><i class="icon-line2-user mr-1 position-relative" style="top: 1px;"></i><span class="d-none d-sm-inline-block font-primary font-weight-medium">Login</span></a>
+							</div><!-- #top-search end -->
 
-						<!-- Top Search
-						============================================= -->
-						<div id="top-search">
-							<a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
-							<form action="search.html" method="get">
-								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-							</form>
-						</div><!-- #top-search end -->
-
-						<!-- Top Cart
-						============================================= -->
-						<div id="top-cart">
-							<a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span>5</span></a>
-							<div class="top-cart-content">
-								<div class="top-cart-title">
-									<h4>Shopping Cart</h4>
-								</div>
-								<div class="top-cart-items">
-									<div class="top-cart-item clearfix">
-										<div class="top-cart-item-image">
-											<a href="#"><img src="demos/shop/images/items/featured/5.jpg" alt="Blue Shoulder Bag" /></a>
+							<!-- Top Cart
+							============================================= -->
+							<div id="top-cart" class="header-misc-icon d-none d-sm-block">
+								<a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span class="top-cart-number">5</span></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4>Shopping Cart</h4>
+									</div>
+									<div class="top-cart-items">
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Blue Round-Neck Tshirt with a Button</a>
+													<span class="top-cart-item-price d-block">$19.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 2</div>
+											</div>
 										</div>
-										<div class="top-cart-item-desc">
-											<a href="#" class="t400">White athletic shoe</a>
-											<span class="top-cart-item-price">$35.00</span>
-											<span class="top-cart-item-quantity t600">x 1</span>
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Light Blue Denim Dress</a>
+													<span class="top-cart-item-price d-block">$24.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 3</div>
+											</div>
 										</div>
 									</div>
-									<div class="top-cart-item clearfix">
-										<div class="top-cart-item-image">
-											<a href="#" class="t400"><img src="demos/shop/images/items/featured/1.jpg" alt="Leather Bag" /></a>
-										</div>
-										<div class="top-cart-item-desc">
-											<a href="#" class="t400">Round Neck Solid Light Blue Colour T-shirts</a>
-											<span class="top-cart-item-price">$12.49</span>
-											<span class="top-cart-item-quantity t600">x 2</span>
-										</div>
+									<div class="top-cart-action">
+										<span class="top-checkout-price">$114.95</span>
+										<a href="#" class="button button-3d button-small m-0">View Cart</a>
 									</div>
 								</div>
-								<div class="top-cart-action clearfix">
-									<span class="fleft top-checkout-price t600 text-dark">$59.98</span>
-									<button class="button button-dark button-small nomargin fright">View Cart</button>
-								</div>
-							</div>
-						</div><!-- #top-cart end -->
+							</div><!-- #top-cart end -->
 
-						<!-- Top Search
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<!-- Primary Navigation
 						============================================= -->
-						<div id="top-account">
-							<a href="#modal-register" data-lightbox="inline" ><i class="icon-line2-user mr-1 position-relative" style="top: 1px;"></i><span class="d-none d-sm-inline-block font-primary t500">Login</span></a>
-						</div><!-- #top-search end -->
+						<nav class="primary-menu with-arrows mr-lg-auto">
 
-					</nav><!-- #primary-menu end -->
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item mega-menu"><a class="menu-link" href="#"><div>Men</div></a>
+									<div class="mega-menu-content mega-menu-style-2">
+										<div class="container">
+											<div class="row">
+												<ul class="sub-menu-container mega-menu-column border-left-0 col-lg-3">
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Footwear</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item"><a class="menu-link" href="#"><div>Casual Shoes</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Formal Shoes</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sports shoes</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Flip Flops</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Slippers</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sandals</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
+														</ul>
+													</li>
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Clothing</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item"><a class="menu-link" href="#"><div>Casual Shirts</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>T-Shirts</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Collared Tees</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Pants / Trousers</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
+														</ul>
+													</li>
+												</ul>
+												<ul class="sub-menu-container mega-menu-column border-left-0 col-lg-3">
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Sportswear</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sports Casual Shirts</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sports T-Shirts</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sports Collared Tees</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sports Shoes</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Jackets</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Swimwears</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
+														</ul>
+													</li>
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Innerwears</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item"><a class="menu-link" href="#"><div>Boxers</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Vests</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sleepwears</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
+														</ul>
+													</li>
+												</ul>
+												<ul class="sub-menu-container mega-menu-column border-left-0 col-lg-3">
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Innerwears</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item"><a class="menu-link" href="#"><div>Boxers</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Vests</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sleepwears</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Show all <i class="icon-angle-right"></i></div></a></li>
+														</ul>
+													</li>
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Sunglasses</div></a>
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Watches</div></a>
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Bags</div></a>
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Headphones</div></a>
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Accessories</div></a>
+												</ul>
+												<ul class="sub-menu-container mega-menu-column col-lg-3 border-left-0">
+													<li class="card p-0 bg-transparent border-0">
+														<img class="card-img-top" src="demos/shop/images/menu-image.jpg" alt="image cap">
+														<a href="#" class="btn btn-link text-left font-weight-medium pl-0 bg-transparent"><u>Editor's Pick</u></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item mega-menu mega-menu-small"><a class="menu-link" href="#"><div>Women</div></a>
+									<div class="mega-menu-content mega-menu-style-2">
+										<div class="container">
+											<div class="row">
+												<ul class="sub-menu-container mega-menu-column col-lg-6">
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Footwear</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item"><a class="menu-link" href="#"><div>Casual Shoes</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Formal Shoes</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sports shoes</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Flip Flops</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Slippers</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Sandals</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Party Shoes</div></a></li>
+														</ul>
+													</li>
+												</ul>
+												<ul class="sub-menu-container mega-menu-column col-lg-6">
+													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Clothing</div></a>
+														<ul class="sub-menu-container">
+															<li class="menu-item"><a class="menu-link" href="#"><div>Casual Shirts</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>T-Shirts</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Collared Tees</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Pants / Trousers</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Ethnic Wear</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Jeans</div></a></li>
+															<li class="menu-item"><a class="menu-link" href="#"><div>Swimwear</div></a></li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Accessories</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Blog</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Sales</div></a></li>
+							</ul>
 
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
 				</div>
-
 			</div>
-
 		</header><!-- #header end -->
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element swiper_wrapper clearfix" data-autoplay="6000" data-speed="800" data-loop="true" data-grab="true" data-effect="fade" data-arrow="false" style="height: 600px;">
+		<section id="slider" class="slider-element swiper_wrapper" data-autoplay="6000" data-speed="800" data-loop="true" data-grab="true" data-effect="fade" data-arrow="false" style="height: 600px;">
 
 			<div class="swiper-container swiper-parent">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide dark" style="background-image: url('demos/shop/images/slider/1.jpg');">
-						<div class="container clearfix">
+					<div class="swiper-slide dark">
+						<div class="container">
 							<div class="slider-caption slider-caption-center">
-								<div class="h5 mb-2 font-secondary">Fresh Arrivals</div>
-								<h2 class="bottommargin-sm text-white">Winter / 2018</h2>
-								<a href="#" class="button bg-white text-dark button-light">Shop Menswear</a>
+								<div>
+									<div class="h5 mb-2 font-secondary">Fresh Arrivals</div>
+									<h2 class="bottommargin-sm text-white">Winter / 2021</h2>
+									<a href="#" class="button bg-white text-dark button-light">Shop Menswear</a>
+								</div>
 							</div>
 						</div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/shop/images/slider/1.jpg');"></div>
 					</div>
-					<div class="swiper-slide dark" style="background: url('demos/shop/images/slider/3.jpg') no-repeat center 20%; background-size: cover">
-						<div class="container clearfix">
+					<div class="swiper-slide dark">
+						<div class="container">
 							<div class="slider-caption slider-caption-center">
-								<div class="h5 mb-2 font-secondary">Summer Collections</div>
-								<h2 class="bottommargin-sm text-white">Sale 40% Off</h2>
-								<a href="#" class="button bg-white text-dark button-light">Shop Beachwear</a>
+								<div>
+									<div class="h5 mb-2 font-secondary">Summer Collections</div>
+									<h2 class="bottommargin-sm text-white">Sale 40% Off</h2>
+									<a href="#" class="button bg-white text-dark button-light">Shop Beachwear</a>
+								</div>
 							</div>
 						</div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/shop/images/slider/3.jpg'); background-position: center 20%;"></div>
 					</div>
-					<div class="swiper-slide dark" style="background: url('demos/shop/images/slider/2.jpg') no-repeat center 40%; background-size: cover">
-						<div class="container clearfix">
+					<div class="swiper-slide dark">
+						<div class="container">
 							<div class="slider-caption slider-caption-center">
-								<h2 class="bottommargin-sm text-white">New Arrivals / 18</h2>
-								<a href="#" class="button bg-white text-dark button-light">Shop Womenswear</a>
+								<div>
+									<h2 class="bottommargin-sm text-white">New Arrivals / 18</h2>
+									<a href="#" class="button bg-white text-dark button-light">Shop Womenswear</a>
+								</div>
 							</div>
 						</div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/shop/images/slider/2.jpg'); background-position: center 40%;"></div>
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>
@@ -383,14 +402,12 @@
 		<!-- Content
 		============================================= -->
 		<section id="content">
-
 			<div class="content-wrap">
-
 				<div class="container clearfix">
 
 					<!-- Shop Categories
 					============================================= -->
-					<div class="fancy-title title-dotted-border title-center mb-4">
+					<div class="fancy-title title-border title-center mb-4">
 						<h4>Shop popular categories</h4>
 					</div>
 
@@ -398,8 +415,8 @@
 						<div class="col-lg-7">
 							<a href="#" style="background: url('demos/shop/images/categories/2-1.jpg') no-repeat right center; background-size: cover;">
 								<div class="vertical-middle dark center">
-									<div class="heading-block nomargin noborder">
-										<h3 class="nott t600 ls0">For Him</h3>
+									<div class="heading-block m-0 border-0">
+										<h3 class="nott font-weight-semibold ls0">For Him</h3>
 									</div>
 								</div>
 							</a>
@@ -407,8 +424,8 @@
 						<div class="col-lg-5">
 							<a href="#" style="background: url('demos/shop/images/categories/1.jpg') no-repeat center right; background-size: cover;">
 								<div class="vertical-middle dark center">
-									<div class="heading-block nomargin noborder">
-										<h3 class="nott t600 ls0">For Her</h3>
+									<div class="heading-block m-0 border-0">
+										<h3 class="nott font-weight-semibold ls0">For Her</h3>
 									</div>
 								</div>
 							</a>
@@ -417,8 +434,8 @@
 						<div class="col-lg-4">
 							<a href="#" style="background: url('demos/shop/images/categories/4.jpg') no-repeat center center; background-size: cover;">
 								<div class="vertical-middle dark center">
-									<div class="heading-block nomargin noborder">
-										<h3 class="nott t600 ls0">Popular Products</h3>
+									<div class="heading-block m-0 border-0">
+										<h3 class="nott font-weight-semibold ls0">Popular Products</h3>
 										<small class="button bg-white text-dark button-light button-mini">Browse Now</small>
 									</div>
 								</div>
@@ -427,8 +444,8 @@
 						<div class="col-lg-4">
 							<a href="#" style="background: url('demos/shop/images/categories/3.jpg') no-repeat center center; background-size: cover;">
 								<div class="vertical-middle dark center">
-									<div class="heading-block nomargin noborder">
-										<h3 class="nott t600 ls0">Footwears</h3>
+									<div class="heading-block m-0 border-0">
+										<h3 class="nott font-weight-semibold ls0">Footwears</h3>
 										<small class="button bg-white text-dark button-light button-mini">Shop Now</small>
 									</div>
 								</div>
@@ -437,8 +454,8 @@
 						<div class="col-lg-4">
 							<a href="#" style="background: url('demos/shop/images/categories/5.jpg') no-repeat center center; background-size: cover;">
 								<div class="vertical-middle dark center">
-									<div class="heading-block nomargin noborder">
-										<h3 class="nott t600 ls0">Sportswear</h3>
+									<div class="heading-block m-0 border-0">
+										<h3 class="nott font-weight-semibold ls0">Sportswear</h3>
 										<small class="button bg-white text-dark button-light button-mini">Shop Now</small>
 									</div>
 								</div>
@@ -448,7 +465,7 @@
 
 					<!-- Featured Carousel
 					============================================= -->
-					<div class="fancy-title title-dotted-border mt-4 mb-1 title-center">
+					<div class="fancy-title title-border mt-4 title-center">
 						<h4>Weekly Featured Items</h4>
 					</div>
 
@@ -457,14 +474,17 @@
 						<!-- Shop Item 1
 						============================================= -->
 						<div class="oc-item">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/featured/1.jpg" alt="Round Neck T-shirts"></a>
 									<a href="#"><img src="demos/shop/images/items/featured/1-1.jpg" alt="Round Neck T-shirts"></a>
-									<div class="sale-flash">Sale!</div>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="sale-flash badge badge-danger p-2">Sale!</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -484,13 +504,16 @@
 						<!-- Shop Item 2
 						============================================= -->
 						<div class="oc-item">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/featured/2.jpg" alt="Navy Blue Dress"></a>
 									<a href="#"><img src="demos/shop/images/items/featured/2-1.jpg" alt="Navy Blue Dress"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -510,15 +533,18 @@
 						<!-- Shop Item 3
 						============================================= -->
 						<div class="oc-item">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/featured/5.jpg" alt="Shoes"></a>
 									<a href="#"><img src="demos/shop/images/items/featured/5-1.jpg" alt="Shoes"></a>
-									<div class="product-overlay">
-										<a href="demos/shop/ajax/shop-item-no-stock.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="demos/shop/ajax/shop-item-no-stock.html" class="btn btn-dark" data-lightbox="ajax">Quick View</a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
-								<div class="sale-flash bg-danger">Out of Stock!</div>
+								<div class="sale-flash badge badge-secondary p-2">Out of Stock!</div>
 								<div class="product-desc">
 									<div class="product-title mb-1"><h3><a href="#">White athletic shoe</a></h3></div>
 									<div class="product-price font-primary"><ins>$35.00</ins></div>
@@ -536,7 +562,7 @@
 						<!-- Shop Item 4
 						============================================= -->
 						<div class="oc-item">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<div class="fslider" data-arrows="false" data-autoplay="4500">
 										<div class="flexslider">
@@ -548,12 +574,15 @@
 											</div>
 										</div>
 									</div>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
-								<div class="sale-flash">Sale!</div>
+								<div class="sale-flash badge badge-danger p-2">Sale!</div>
 								<div class="product-desc">
 									<div class="product-title mb-1"><h3><a href="#">Navy blue T-shirt, Round neck, Short Sleeves</a></h3></div>
 									<div class="product-price font-primary"><del class="mr-1">$27.99</del> <ins>$21.00</ins></div>
@@ -571,12 +600,15 @@
 						<!-- Shop Item 5
 						============================================= -->
 						<div class="oc-item">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/featured/3.jpg" alt="T-shirts"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -601,28 +633,28 @@
 				============================================= -->
 				<div class="section my-4">
 					<div class="container">
-						<div class="row align-items-stretch grid-container clearfix" data-layout="fitRows">
+						<div class="row align-items-stretch">
 							<div class="col-md-5">
 								<div class="row">
 									<div class="col-md-12 center p-5">
-										<div class="heading-block mb-1 nobottomborder divcenter">
+										<div class="heading-block mb-1 border-bottom-0 mx-auto">
 											<div class="font-secondary text-black-50 mb-1">New Arrivals</div>
 											<h3 class="nott ls0">Fresh Arrivals / Autumn 18</h3>
-											<p class="t400 mt-2 mb-3 text-muted" style="font-size: 17px; line-height: 1.4">Dynamically drive interdependent metrics for worldwide portals. Proactively grow client technology schemas.</p>
-											<a href="#" class="button bg-dark text-white button-dark button-small noleftmargin">Shop Now</a>
+											<p class="font-weight-normal mt-2 mb-3 text-muted" style="font-size: 17px; line-height: 1.4">Dynamically drive interdependent metrics for worldwide portals. Proactively grow client technology schemas.</p>
+											<a href="#" class="button bg-dark text-white button-dark button-small ml-0">Shop Now</a>
 										</div>
 									</div>
 									<div class="col-6">
-										<a href="demos/shop/images/sections/1-2.jpg" data-lightbox="image"><img src="demos/shop/images/sections/1-2.jpg" alt=""></a>
+										<a href="demos/shop/images/sections/1-2.jpg" data-lightbox="image"><img src="demos/shop/images/sections/1-2.jpg" alt="Image"></a>
 									</div>
 									<div class="col-6">
-										<a href="demos/shop/images/sections/1-3.jpg" data-lightbox="image"><img src="demos/shop/images/sections/1-3.jpg" alt=""></a>
+										<a href="demos/shop/images/sections/1-3.jpg" data-lightbox="image"><img src="demos/shop/images/sections/1-3.jpg" alt="Image"></a>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-7 d-none d-md-block">
-								<a href="https://www.youtube.com/watch?v=bpNcuh_BnsA" data-lightbox="iframe" class="d-block" style="background: url('demos/shop/images/sections/1.jpg') center center no-repeat; background-size: cover; height:100%">
-									<div class="vertical-middle center">
+							<div class="col-md-7 min-vh-50">
+								<a href="https://www.youtube.com/watch?v=bpNcuh_BnsA" data-lightbox="iframe" class="d-block position-relative h-100" style="background: url('demos/shop/images/sections/1.jpg') center center no-repeat; background-size: cover;">
+									<div class="vertical-middle text-center">
 										<div class="play-icon"><i class="icon-play-sign display-3 text-light"></i></div>
 									</div>
 								</a>
@@ -637,7 +669,7 @@
 				============================================= -->
 				<div class="container clearfix">
 
-					<div class="fancy-title title-dotted-border topmargin-sm mb-4 title-center">
+					<div class="fancy-title title-border topmargin-sm mb-4 title-center">
 						<h4>New Arrivals: Men</h4>
 					</div>
 
@@ -646,14 +678,17 @@
 						<!-- Shop Item 1
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/1.jpg" alt="Image 1"></a>
 									<a href="#"><img src="demos/shop/images/items/new/1-1.jpg" alt="Image 1"></a>
-									<div class="sale-flash">Sale!</div>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="sale-flash badge badge-danger p-2">Sale!</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -673,13 +708,16 @@
 						<!-- Shop Item 2
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/2.jpg" alt="Image 2"></a>
 									<a href="#"><img src="demos/shop/images/items/new/2-1.jpg" alt="Image 2"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -699,15 +737,18 @@
 						<!-- Shop Item 3
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/4.jpg" alt="Image 3"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
-								<div class="sale-flash">Sale!</div>
+								<div class="sale-flash badge badge-danger p-2">Sale!</div>
 								<div class="product-desc">
 									<div class="product-title mb-1"><h3><a href="#">Printed Men Short</a></h3></div>
 									<div class="product-price font-primary"><del class="mr-1">$41.99</del> <ins>$35.00</ins></div>
@@ -725,7 +766,7 @@
 						<!-- Shop Item 4
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<div class="fslider" data-arrows="false" data-autoplay="4500">
 										<div class="flexslider">
@@ -735,9 +776,12 @@
 											</div>
 										</div>
 									</div>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -757,13 +801,16 @@
 						<!-- Shop Item 5
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/6.jpg" alt="Image 5"></a>
 									<a href="#"><img src="demos/shop/images/items/new/6-1.jpg" alt="Image 5"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -783,15 +830,18 @@
 						<!-- Shop Item 6
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/5.jpg" alt="Image 6"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
-								<div class="sale-flash">Sale!</div>
+								<div class="sale-flash badge badge-danger p-2">Sale!</div>
 								<div class="product-desc">
 									<div class="product-title mb-1"><h3><a href="#">Red Stripe Girls Top</a></h3></div>
 									<div class="product-price font-primary"><del class="mr-1">$41.99</del> <ins>$35.00</ins></div>
@@ -809,12 +859,15 @@
 						<!-- Shop Item 7
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/7.jpg" alt="Image 7"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -834,12 +887,15 @@
 						<!-- Shop Item 8
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/8.jpg" alt="Image 8"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -859,16 +915,19 @@
 						<!-- Shop Item 9
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/9.jpg" alt="Image 9"></a>
 									<a href="#"><img src="demos/shop/images/items/new/9-1.jpg" alt="Image 3"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
-								<div class="sale-flash">Sale!</div>
+								<div class="sale-flash badge badge-danger p-2">Sale!</div>
 								<div class="product-desc">
 									<div class="product-title mb-1"><h3><a href="#">Workout Sweat T-shirt</a></h3></div>
 									<div class="product-price font-primary"><del class="mr-1">$21.99</del> <ins>$15.00</ins></div>
@@ -886,14 +945,18 @@
 						<!-- Shop Item 10
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/10.jpg" alt="Image 10"></a>
-									<div class="product-overlay">
-										<a href="demos/shop/ajax/shop-item-no-stock.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="include/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
-								<div class="sale-flash bg-danger">Out of Stock!</div>
+								<div class="sale-flash badge badge-secondary p-2">Out of Stock!</div>
 								<div class="product-desc">
 									<div class="product-title mb-1"><h3><a href="#">Sky Blue Printed Bag</a></h3></div>
 									<div class="product-price font-primary"><ins>$61.49</ins></div>
@@ -911,7 +974,7 @@
 						<!-- Shop Item 11
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<div class="fslider" data-arrows="false" data-autoplay="4500">
 										<div class="flexslider">
@@ -921,9 +984,12 @@
 											</div>
 										</div>
 									</div>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -943,12 +1009,15 @@
 						<!-- Shop Item 12
 						============================================= -->
 						<div class="col-lg-2 col-md-3 col-6 px-2">
-							<div class="product iproduct clearfix">
+							<div class="product">
 								<div class="product-image">
 									<a href="#"><img src="demos/shop/images/items/new/12.jpg" alt="Image 6"></a>
-									<div class="product-overlay">
-										<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-										<a href="demos/shop/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-line-search"></i><span>Quick View</span></a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+											<a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-basket"></i></a>
+											<a href="demos/shop/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+										</div>
+										<div class="bg-overlay-bg bg-transparent"></div>
 									</div>
 								</div>
 								<div class="product-desc">
@@ -971,18 +1040,18 @@
 
 				<!-- Sign Up
 				============================================= -->
-				<div class="section my-4 py-5 clearfix">
+				<div class="section my-4 py-5">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="row align-items-stretch align-items-center clearfix">
-									<div class="col-md-7" style="background: url('demos/shop/images/sections/3.jpg') center center no-repeat; background-size: cover; height:100%">
+								<div class="row align-items-stretch align-items-center">
+									<div class="col-md-7 min-vh-50" style="background: url('demos/shop/images/sections/3.jpg') center center no-repeat; background-size: cover;">
 										<div class="vertical-middle pl-5">
 											<h2 class="pl-5"><strong>40%</strong> Off<br>First Order*</h2>
 										</div>
 									</div>
 									<div class="col-md-5 bg-white">
-										<div class="card noborder py-2">
+										<div class="card border-0 py-2">
 											<div class="card-body">
 												<h3 class="card-title mb-4 ls0">Sign up to get the most out of shopping.</h3>
 												<ul class="iconlist ml-3">
@@ -990,7 +1059,7 @@
 													<li><i class="icon-circle-blank text-black-50"></i> 30 Days Return Policy</li>
 													<li><i class="icon-circle-blank text-black-50"></i> Cash on Delivery Accepted</li>
 												</ul>
-												<a href="#" class="button button-rounded ls0 t600 ml-0 mb-2 nott px-4">Sign Up</a><br>
+												<a href="#" class="button button-rounded ls0 font-weight-semibold ml-0 mb-2 nott px-4">Sign Up</a><br>
 												<small class="font-italic text-black-50">Don't worry, it's totally free.</small>
 											</div>
 										</div>
@@ -1001,71 +1070,109 @@
 					</div>
 				</div>
 
-				<div class="clear"></div>
-
-				<div class="container clearfix">
+				<div class="container">
 
 					<!-- Features
 					============================================= -->
-					<div class="row topmargin clearfix">
+					<div class="row col-mb-50 mb-0 mt-5">
 						<div class="col-lg-7">
-							<div class="row">
+							<div class="row mt-3">
 								<div class="col-sm-6">
-									<div class="feature-box fbox-small fbox-plain">
+									<div class="feature-box fbox-sm fbox-plain">
 										<div class="fbox-icon">
 											<a href="#"><i class="icon-line2-present text-dark text-dark"></i></a>
 										</div>
-										<h3 class="t400">100% Original</h3>
-										<p>Canvas provides support for Native HTML5 Videos that can be added to a Full Width Background.</p>
+										<div class="fbox-content">
+											<h3 class="font-weight-normal">100% Original</h3>
+											<p>Canvas provides support for Native HTML5 Videos that can be added to a Full Width Background.</p>
+										</div>
 									</div>
 								</div>
 
 								<div class="col-sm-6 mt-4 mt-sm-0">
-									<div class="feature-box fbox-small fbox-plain">
+									<div class="feature-box fbox-sm fbox-plain">
 										<div class="fbox-icon">
 											<a href="#"><i class="icon-line2-globe text-dark"></i></a>
 										</div>
-										<h3 class="t400">Free Shipping</h3>
-										<p>Display your Content attractively using Parallax Sections that have unlimited customizable areas.</p>
+										<div class="fbox-content">
+											<h3 class="font-weight-normal">Free Shipping</h3>
+											<p>Display your Content attractively using Parallax Sections that have unlimited customizable areas.</p>
+										</div>
 									</div>
 								</div>
 
 								<div class="col-sm-6 mt-4">
-									<div class="feature-box fbox-small fbox-plain">
+									<div class="feature-box fbox-sm fbox-plain">
 										<div class="fbox-icon">
 											<a href="#"><i class="icon-line2-reload text-dark"></i></a>
 										</div>
-										<h3 class="t400">30-Days Returns</h3>
-										<p>You have complete easy control on each &amp; every element that provides endless customization possibilities.</p>
+										<div class="fbox-content">
+											<h3 class="font-weight-normal">30-Days Returns</h3>
+											<p>You have complete easy control on each &amp; every element that provides endless customization possibilities.</p>
+										</div>
 									</div>
 								</div>
 
 								<div class="col-sm-6 mt-4">
-									<div class="feature-box fbox-small fbox-plain">
+									<div class="feature-box fbox-sm fbox-plain">
 										<div class="fbox-icon">
 											<a href="#"><i class="icon-line2-wallet text-dark"></i></a>
 										</div>
-										<h3 class="t400">Payment Options</h3>
-										<p>We accept Visa, MasterCard and American Express. And We also Deliver by COD(only in US)</p>
+										<div class="fbox-content">
+											<h3 class="font-weight-normal">Payment Options</h3>
+											<p>We accept Visa, MasterCard and American Express. And We also Deliver by COD(only in US)</p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-lg-5 mt-4 mt-lg-0">
+						<div class="col-lg-5">
 							<div class="accordion clearfix">
 
-								<div class="acctitle"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>Our Mission</div>
-								<div class="acc_content clearfix">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+								<div class="accordion-header">
+									<div class="accordion-icon">
+										<i class="accordion-closed icon-ok-circle"></i>
+										<i class="accordion-open icon-remove-circle"></i>
+									</div>
+									<div class="accordion-title">
+										Our Mission
+									</div>
+								</div>
+								<div class="accordion-content">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
 
-								<div class="acctitle"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>What we Do?</div>
-								<div class="acc_content clearfix">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</div>
+								<div class="accordion-header">
+									<div class="accordion-icon">
+										<i class="accordion-closed icon-ok-circle"></i>
+										<i class="accordion-open icon-remove-circle"></i>
+									</div>
+									<div class="accordion-title">
+										What we Do?
+									</div>
+								</div>
+								<div class="accordion-content">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</div>
 
-								<div class="acctitle"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>Our Company's Values</div>
-								<div class="acc_content clearfix">Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur.</div>
+								<div class="accordion-header">
+									<div class="accordion-icon">
+										<i class="accordion-closed icon-ok-circle"></i>
+										<i class="accordion-open icon-remove-circle"></i>
+									</div>
+									<div class="accordion-title">
+										Our Company's Values
+									</div>
+								</div>
+								<div class="accordion-content">Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur.</div>
 
-								<div class="acctitle"><i class="acc-closed icon-ok-circle"></i><i class="acc-open icon-remove-circle"></i>Our Return Policy</div>
-								<div class="acc_content clearfix">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</div>
+								<div class="accordion-header">
+									<div class="accordion-icon">
+										<i class="accordion-closed icon-ok-circle"></i>
+										<i class="accordion-open icon-remove-circle"></i>
+									</div>
+									<div class="accordion-title">
+										Our Return Policy
+									</div>
+								</div>
+								<div class="accordion-content">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</div>
 
 							</div>
 						</div>
@@ -1076,29 +1183,29 @@
 
 					<!-- Brands
 					============================================= -->
-					<div class="row mt-5 clearfix">
+					<div class="row mt-5">
 						<div class="col-12">
-							<div class="fancy-title title-dotted-border title-center mb-4">
+							<div class="fancy-title title-border title-center mb-4">
 								<h4>Brands who give Flat <span class="text-danger">40%</span> Off</h4>
 							</div>
 
-							<ul class="clients-grid grid-8 nobottommargin clearfix">
-								<li><a href="#"><img src="images/clients/logo/1.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/2.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/3.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/4.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/5.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/6.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/7.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/8.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/9.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/10.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/11.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/12.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/13.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/14.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/15.png" alt="Clients"></a></li>
-								<li><a href="#"><img src="images/clients/logo/16.png" alt="Clients"></a></li>
+							<ul class="clients-grid grid-2 grid-sm-3 grid-md-6 grid-lg-8 mb-0">
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/1.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/2.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/3.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/4.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/5.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/6.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/7.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/8.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/9.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/10.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/11.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/12.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/13.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/14.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/15.png" alt="Clients"></a></li>
+								<li class="grid-item"><a href="#"><img src="images/clients/logo/16.png" alt="Clients"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -1109,19 +1216,19 @@
 
 				<!-- App Buttons
 				============================================= -->
-				<div class="section pb-0 mb-0 clearfix" style="background-color: #f8f5f0">
+				<div class="section pb-0 mb-0" style="background-color: #f8f5f0">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6 offset-1 bottommargin-lg d-flex flex-column align-self-center">
-								<h3 class="card-title t400 ls0">Follow. Find. Favorite.<br>Discover Fashion on the Go.</h3>
+								<h3 class="card-title font-weight-normal ls0">Follow. Find. Favorite.<br>Discover Fashion on the Go.</h3>
 								<span>Proactively enable Corporate Benefits.</span>
 								<div class="mt-3">
-									<a href="#" class="button inline-block button-small button-rounded button-desc t400 ls1 clearfix"><i class="icon-apple"></i><div><span>Download Canvas Shop</span>App Store</div></a>
-									<a href="#" class="button inline-block button-small button-rounded button-desc button-light text-dark t400 ls1 bg-white border clearfix"><i class="icon-googleplay"></i><div><span>Download Canvas Shop</span>Google Play</div></a>
+									<a href="#" class="button inline-block button-small button-rounded button-desc font-weight-normal ls1 clearfix"><i class="icon-apple"></i><div><span>Download Canvas Shop</span>App Store</div></a>
+									<a href="#" class="button inline-block button-small button-rounded button-desc button-light text-dark font-weight-normal ls1 bg-white border clearfix"><i class="icon-googleplay"></i><div><span>Download Canvas Shop</span>Google Play</div></a>
 								</div>
 							</div>
 							<div class="col-md-4 d-none d-md-flex align-items-end">
-								<img src="demos/shop/images/sections/app.png" alt="Image" class="nobottommargin">
+								<img src="demos/shop/images/sections/app.png" alt="Image" class="mb-0">
 							</div>
 						</div>
 					</div>
@@ -1129,31 +1236,29 @@
 
 				<!-- Last Section
 				============================================= -->
-				<div class="section footer-stick bg-white nomargin py-3 border-bottom">
+				<div class="section footer-stick bg-white m-0 py-3 border-bottom">
 					<div class="container clearfix">
 
 						<div class="row clearfix">
 							<div class="col-lg-4 col-md-6">
-								<div class="shop-footer-features mb-3 mb-lg-3"><i class="icon-line2-globe-alt"></i><h5 class="inline-block mb-0 ml-2 t600"><a href="#">Free Shipping</a><span class="t400 text-muted"> &amp; Easy Returns</span></h5></div>
+								<div class="shop-footer-features mb-3 mb-lg-3"><i class="icon-line2-globe-alt"></i><h5 class="inline-block mb-0 ml-2 font-weight-semibold"><a href="#">Free Shipping</a><span class="font-weight-normal text-muted"> &amp; Easy Returns</span></h5></div>
 							</div>
 							<div class="col-lg-4 col-md-6">
-								<div class="shop-footer-features mb-3 mb-lg-3"><i class="icon-line2-notebook"></i><h5 class="inline-block mb-0 ml-2"><a href="#">Geniune Products</a><span class="t400 text-muted"> Guaranteed</span></h5></div>
+								<div class="shop-footer-features mb-3 mb-lg-3"><i class="icon-line2-notebook"></i><h5 class="inline-block mb-0 ml-2"><a href="#">Geniune Products</a><span class="font-weight-normal text-muted"> Guaranteed</span></h5></div>
 							</div>
 							<div class="col-lg-4 col-md-12">
-								<div class="shop-footer-features mb-3 mb-lg-3"><i class="icon-line2-lock"></i><h5 class="inline-block mb-0 ml-2"><a href="#">256-Bit</a> <span class="t400 text-muted">Secured Checkouts</span></h5></div>
+								<div class="shop-footer-features mb-3 mb-lg-3"><i class="icon-line2-lock"></i><h5 class="inline-block mb-0 ml-2"><a href="#">256-Bit</a> <span class="font-weight-normal text-muted">Secured Checkouts</span></h5></div>
 							</div>
 						</div>
 
 					</div>
 				</div>
-
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="nobg noborder">
+		<footer id="footer" class="bg-transparent border-0">
 
 			<div class="container clearfix">
 
@@ -1230,10 +1335,10 @@
 								<div class="widget subscribe-widget mt-2 clearfix">
 									<p class="mb-4"><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</p>
 									<div class="widget-subscribe-form-result"></div>
-									<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mt-1 nobottommargin d-flex">
+									<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mt-1 mb-0 d-flex">
 										<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control sm-form-control required email" placeholder="Enter your Email Address">
 
-										<button class="button nott t400 ml-1 my-0" type="submit">Subscribe Now</button>
+										<button class="button nott font-weight-normal ml-1 my-0" type="submit">Subscribe Now</button>
 									</form>
 								</div>
 
@@ -1248,13 +1353,13 @@
 
 			<!-- Copyrights
 			============================================= -->
-			<div id="copyrights" class="nobg">
+			<div id="copyrights" class="bg-transparent">
 
 				<div class="container clearfix">
 
 					<div class="row justify-content-between align-items-center">
 						<div class="col-md-6">
-							Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.<br>
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
 							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 						</div>
 
@@ -1280,7 +1385,6 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

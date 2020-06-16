@@ -1,9 +1,5 @@
 /* ----------------------------------------------------------------
-	CSS Specific to the Hosting Demo
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Styling of this Demo
-
+	Canvas: Hosting
 -----------------------------------------------------------------*/
 
 
@@ -79,27 +75,13 @@
 	line-height: 52px;
 }
 
-.dark #header-wrap:not(.not-dark) #primary-menu > ul > li > a { color: #FFF !important; }
+.dark #header-wrap:not(.not-dark) .primary-menu > ul > li > a { color: #FFF !important; }
 
 .slider-element { height: 700px; }
 
-#header .button {
-	margin: 30px 0 30px 10px;
-	-webkit-transition: all .4s ease;
-	-o-transition: all .4s ease;
-	transition: all .4s ease;
-}
+.menu-link { letter-spacing: 0; }
 
-body.top-search-open #header .button { opacity: 0; }
-
-#header.sticky-header:not(.static-sticky) .button {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#primary-menu ul li > a { letter-spacing: 0; }
-
-#content { overflow: visible; }
+.content-wrap { overflow: visible; }
 
 .slider-box-wrap {
 	position: relative;
@@ -209,14 +191,14 @@ body.top-search-open #header .button { opacity: 0; }
 	width: 350px;
 }
 
-.cloud:after, .cloud:before {
+.cloud::after, .cloud::before {
 	background: #FFF;
 	content: '';
 	position: absolute;
 	z-indeX: -1;
 }
 
-.cloud:after {
+.cloud::after {
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 	border-radius: 100px;
@@ -226,7 +208,7 @@ body.top-search-open #header .button { opacity: 0; }
 	width: 100px;
 }
 
-.cloud:before {
+.cloud::before {
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
 	border-radius: 200px;
@@ -236,12 +218,9 @@ body.top-search-open #header .button { opacity: 0; }
 	top: -90px;
 }
 
-.mega-menu-column .feature-box.fbox-center .fbox-icon { margin-bottom: 12px; }
-
 .mega-menu-content .feature-box h3 a { color: #222; }
 
-.mega-menu-content .feature-box.fbox-center:not(.fbox-bg) h3:after { content: none; }
-.dark #primary-menu ul li .mega-menu-content ul.mega-menu-column:not(:first-child) { border-left-color: #F2F2F2 !important; }
+.dark .primary-menu ul li .mega-menu-content ul.mega-menu-column:not(:first-child) { border-left-color: #F2F2F2 !important; }
 
 /* Hotspot */
 .hotspot-img { position: relative; }
@@ -377,7 +356,7 @@ body.top-search-open #header .button { opacity: 0; }
 .iconlist a:hover { text-decoration: underline !important; }
 .text-muted { opacity: 0.5; }
 
-.pricing-price:after { content: none }
+.pricing-price::after { content: none }
 
 .irs-single { top: -12px; }
 
@@ -389,7 +368,7 @@ body.top-search-open #header .button { opacity: 0; }
 	top: 13px;
 }
 
-.irs-slider:after {
+.irs-slider::after {
 	content: "\e733";
 	font-family: 'font-icons';
 	color: #FFF;
@@ -428,8 +407,8 @@ body.top-search-open #header .button { opacity: 0; }
 
 .clients { max-height: 50px; }
 
-.owl-stage-outer:before,
-.owl-stage-outer:after {
+.owl-stage-outer::before,
+.owl-stage-outer::after {
 	position: absolute;
 	content: '';
 	top: 0;
@@ -443,7 +422,7 @@ body.top-search-open #header .button { opacity: 0; }
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#00f9f9f9',GradientType=1 );
 }
 
-.owl-stage-outer:after {
+.owl-stage-outer::after {
 	left: auto;
 	right: 0;
 	background: -moz-linear-gradient(right, rgba(249,249,249,1) 52%, rgba(249,249,249,0.06) 90%, rgba(249,249,249,0) 100%);
@@ -451,8 +430,8 @@ body.top-search-open #header .button { opacity: 0; }
 	background: linear-gradient(to left, rgba(249,249,249,1) 52%,rgba(249,249,249,0.06) 90%,rgba(249,249,249,0) 100%);
 }
 
-.bg-angle:after,
-.section.bg-angle:before {
+.bg-angle::after,
+.section.bg-angle::before {
 	content: '';
 	height: 100%;
 	overflow: hidden;
@@ -472,13 +451,13 @@ body.top-search-open #header .button { opacity: 0; }
 	z-index: 1;
 }
 
-.section.bg-angle:before { top: -30px; }
+.section.bg-angle::before { top: -30px; }
 
-.section.bg-angle:after,
-.section.bg-angle:before { background-color: #FFF; }
+.section.bg-angle::after,
+.section.bg-angle::before { background-color: #FFF; }
 
-.dark #primary-menu ul li,
-.dark #primary-menu ul li .mega-menu-content ul.mega-menu-column:not(:first-child) { border-top-color: rgba(255, 255, 255, 0.1) }
+.dark .primary-menu ul li,
+.dark .primary-menu ul li .mega-menu-content ul.mega-menu-column:not(:first-child) { border-top-color: rgba(255, 255, 255, 0.1) }
 
 
 /* Devices Under 991 Width */
@@ -493,25 +472,7 @@ body.top-search-open #header .button { opacity: 0; }
 
 	#header.transparent-header { z-index: 1 !important; }
 
-	#header .button {
-		position: absolute;
-		top: 50%;
-		right: 0;
-		-webkit-transform: translateY(-50%);
-		-o-transform: translateY(-50%);
-		transform: translateY(-50%);
-		margin: 0;
-	}
-
 	.vertical-middle { z-index: 0; }
-
-	#header .button {
-		position: absolute;
-		top: 50px;
-		right: 15px;
-		margin: 0;
-		padding: 0 14px;
-	}
 
 	.cpu-price,
 	.ram-price,
@@ -519,34 +480,12 @@ body.top-search-open #header .button { opacity: 0; }
 
 	.pricing-price { font-size: 52px; }
 
-	.mega-menu-column .feature-box {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-
-	.mega-menu-column .feature-box.fbox-center .fbox-icon {
-		margin: 0;
-		width: 28px;
-		height: 28px;
-		margin-right: 10px;
-	}
-
-	.mega-menu-content .feature-box h3 a { font-size: 13px; text-transform: capitalize; letter-spacing: 0; }
-
-	.dark .mega-menu-content .feature-box h3 a { color: #FFF; }
-
-	.mega-menu-content .feature-box.fbox-center { text-align: left; }
-
 	.mega-menu-content .btn.btn-link { display: none; }
 
-	#primary-menu ul li .mega-menu-content.style-2 ul.mega-menu-column { padding: 10px 0; }
+	.primary-menu ul li .mega-menu-content.style-2 ul.mega-menu-column { padding: 10px 0; }
 
-	.owl-stage-outer:before,
-	.owl-stage-outer:after { display: none; }
+	.owl-stage-outer::before,
+	.owl-stage-outer::after { display: none; }
 
 	.slider-bottom-box { padding: 15px; }
 

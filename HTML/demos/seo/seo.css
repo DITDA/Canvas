@@ -1,9 +1,5 @@
 /* ----------------------------------------------------------------
-	CSS Specific to the Seo Demo
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Styling of this Demo
-
+	Canvas: SEO
 -----------------------------------------------------------------*/
 
 /* Root Settings
@@ -30,13 +26,13 @@
 	box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-#header .button { display: none; }
-
 /* Top Links
 -----------------------------------------------------------------*/
-.top-links ul li { border-left: 0; }
+.top-links-item {
+	border-left: 0;
+}
 
-.top-links li a img {
+.top-links-item a img {
 	position: relative;
 	display: inline-block;
 	border-radius: 20px;
@@ -101,49 +97,22 @@
 
 /* Pricing Switcher
 -----------------------------------------------------------------*/
-.pricing-tenure-switcher { position: relative; }
-
-.pricing-tenure-switcher .pts-left,
-
-.pricing-tenure-switcher .pts-right,
-.pricing-tenure-switcher .pts-switcher {
-	display: inline-block;
-	margin: 0 10px;
-	height: 30px;
-	overflow: hidden;
-}
-
-.pricing-tenure-switcher .pts-left,
-.pricing-tenure-switcher .pts-right {
-	font-size: var(--basefontsize);
-	font-weight: 600;
-	color: #AAA;
-	line-height: 30px;
-}
-
-.pricing-tenure-switcher .pts-switch-active { color: #333; }
-
-.pricing-tenure-switcher .pts-switcher label { margin-bottom: 0; }
-
-input.switch-toggle-round + label:before,
+input.switch-toggle-round + label::before,
 input.switch-toggle-round + label {
 	border-radius: 4px;
 	background-color: var(--themecolor);
 }
 
 .price-discount {
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 50%;
-	margin-top: -15px;
-	margin-left: 65px;
+	position: relative;
+	top: -12px;
+	margin-left: 10px;
 	background: url('images/icons/discount.svg') no-repeat 0 0;
 	width: 60px;
 	height: 39px;
 }
 
-input.switch-toggle-round + label:after { border-radius: 4px }
+input.switch-toggle-round + label::after { border-radius: 4px }
 
 /* Pricing Boxes
 -----------------------------------------------------------------*/
@@ -186,11 +155,10 @@ input.switch-toggle-round + label:after { border-radius: 4px }
 	font-weight: 500;
 }
 
-.pricing-price:after { content: none; }
+.pricing-price::after { content: none; }
 
 .pricing-price span.price-tenure {
 	display: block;
-	font-size: 15px;
 	font-weight: normal;
 	color: #AAA;
 	text-transform: lowercase;
@@ -198,7 +166,9 @@ input.switch-toggle-round + label:after { border-radius: 4px }
 
 /* Pricing Boxes - Features
 -----------------------------------------------------------------*/
-.pricing-features ul { padding: 0 0 20px 0; }
+.pricing-features {
+	padding: 0 0 1.25rem 0;
+}
 
 .pricing-features li {
 	padding: 7px 0;
@@ -283,9 +253,8 @@ input.switch-toggle-round + label:after { border-radius: 4px }
 }
 
 .entry .entry-title h3 a { color: #222 !important }
-.entry-meta li { font-style: normal; }
-.entry-meta li:before { content: "\00b7"; }
-.entry-meta li a { font-weight: 500; }
+
+.entry-meta li::before { content: "\00b7"; }
 
 /* Footer
 -----------------------------------------------------------------*/
@@ -314,7 +283,7 @@ input.switch-toggle-round + label:after { border-radius: 4px }
 	box-shadow: none;
 }
 
-.promo-section:before {
+.promo-section::before {
 	content: '';
     position: absolute;
     top: -17%;
@@ -331,75 +300,31 @@ input.switch-toggle-round + label:after { border-radius: 4px }
 -----------------------------------------------------------------*/
 @media (min-width: 992px) {
 
-	#header.transparent-header.floating-header + #slider {
-		top: -165px;
-		margin-bottom: -165px;
+	#header.transparent-header.floating-header {
+		margin-top: 15px;
 	}
-
-	#header.transparent-header.floating-header { margin-top: 25px; }
 
 	#header:not(.sticky-header) #header-wrap .container { box-shadow: var(--headerboxshadow) }
 
-	#header.transparent-header + #page-title.page-title-parallax .container { padding-top: 80px; }
-
-	#primary-menu ul li > a {
-		padding-top: 29px;
-		padding-bottom: 29px;
+	.menu-link {
 		text-transform: none;
 		letter-spacing: 0;
 		font-size: var(--menufontsize);
 		font-weight: 600;
 	}
 
-	#top-search {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-
-	#header,
-	#header-wrap,
-	#logo img { height: 80px; }
-
-	#header.sticky-header:not(.static-sticky),
-	#header.sticky-header:not(.static-sticky) #header-wrap,
-	#header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img { height: 70px; }
-
-	#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
-		padding-top: 24px;
-		padding-bottom: 24px;
-	}
-
-	#header.sticky-header:not(.static-sticky) #top-search {
-		margin-top: 25px !important;
-		margin-bottom: 25px !important;
-	}
-
-	#header .button {
-		display: inline-block;
-		margin: 20px 0;
-		text-transform: none;
-		letter-spacing: 0;
-		font-size: calc( var(--basefontsize) - 1px );
-		-webkit-transition: all .4s ease;
-		-o-transition: all .4s ease;
-		transition: all .4s ease;
-	}
-
-	#header.sticky-header .button {
-		margin-top: 15px;
-		margin-bottom: 15px;
+	.sub-menu-container .menu-item > .menu-link {
+		font-size: calc( var(--menufontsize) - 1px );
 	}
 
 	/* Topbar
 	-----------------------------------------------------------------*/
 	#top-bar.transparent-topbar {
-		display: block;
-		z-index: 299;
 		border-bottom: 0;
-		padding-top: 15px;
+		z-index: 399;
+		margin-top: 15px;
+		background: transparent;
 	}
-
-	#top-bar.transparent-topbar { background: transparent !important; }
 
 	/* Slider Text
 	-----------------------------------------------------------------*/

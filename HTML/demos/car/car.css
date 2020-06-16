@@ -1,6 +1,5 @@
 /* ----------------------------------------------------------------
-	Canvas: Car Demo
-	Version: 1.1
+	Canvas: Car
 -----------------------------------------------------------------*/
 
 /* Runing Car
@@ -137,12 +136,6 @@ img.wheel {
 	padding-top: 200px;
 }
 
-/* Primary Menu */
-#primary-menu ul li > a {
-	font-size: 13px;
-	letter-spacing: 1px;
-}
-
 /* heading-block */
 .heading-block.hlarge h3 {
 	font-size: 44px;
@@ -224,12 +217,6 @@ img.wheel {
 
 .swiper-pagination span.swiper-pagination-bullet-active { background-color: #c85e51 !important; }
 
-.text-overlay-title h3 { font-size: 22px; }
-.text-overlay-meta {
-	font-size: 14px;
-	margin-bottom: 10px;
-}
-
 .feature-box.fbox-plain .fbox-icon img { height: 48px; }
 
 .section .iconlist li {
@@ -241,21 +228,18 @@ img.wheel {
 
 /* Portfolio Filter
 -----------------------------------------------------------------*/
-.portfolio-filter.style-2 {
-	width: 100%;
+.grid-filter.style-2 {
 	margin: 0 0 15px -14px;
 }
 
-.portfolio-filter li.activeFilter a { font-weight: normal; }
-.portfolio-overlay { background-color: rgba(0, 0, 0, 0.75); }
+.grid-filter li.activeFilter a { font-weight: normal; }
 
-.portfolio-filter.style-2 li a:not(.button) {
+.grid-filter.style-2 li a:not(.button) {
 	font-size: 20px;
 	color: #555 !important;
 }
 
-.portfolio-filter.style-2 li a.button-reset {
-	margin: 8px 0 0 0;
+.grid-filter.style-2 li a.button-reset {
 	padding: 0 17px !important;
 	font-size: 12px;
 	line-height: 34px;
@@ -265,7 +249,7 @@ img.wheel {
 	letter-spacing: 1px;
 }
 
-.portfolio-filter.style-2 li a span {
+.grid-filter.style-2 li a span {
 	display: block;
 	margin-top: 7px;
 	font-family: 'Mukta Vaani';
@@ -277,30 +261,31 @@ img.wheel {
 	text-align: center;
 }
 
-.portfolio-filter.style-2 li a:not(.button),
-.portfolio-filter.style-2 li a span {
+.grid-filter.style-2 li a:not(.button),
+.grid-filter.style-2 li a span {
 	-webkit-transition: color .3s ease;
 	-o-transition: color .3s ease;
 	transition: color .3s ease;
 }
 
-.portfolio-filter.style-2 li a:not(.button):hover,
-.portfolio-filter.style-2 li a:not(.button):hover span,
-.portfolio-filter.style-2 li.activeFilter a:not(.button),
-.portfolio-filter.style-2 li.activeFilter a:not(.button) span {
+.grid-filter.style-2 li a:not(.button):hover,
+.grid-filter.style-2 li a:not(.button):hover span,
+.grid-filter.style-2 li.activeFilter a:not(.button),
+.grid-filter.style-2 li.activeFilter a:not(.button) span {
 	color: #c85e51 !important;
 	background-color: transparent !important;
 }
 
-.portfolio-filter.style-2 li.activeFilter a.button-reset {
+.grid-filter.style-2 li.activeFilter a.button-reset {
 	opacity: 0;
 	-webkit-transition: opacity .4s ease;
 	-o-transition: opacity .4s ease;
 	transition: opacity .4s ease;
 }
-.portfolio-filter.style-2 li a.button-reset { opacity: 1; }
 
-.portfolio-desc span { font-size: 13px; }
+.grid-filter.style-2 li a.button-reset { opacity: 1; }
+
+.portfolio-desc span { font-size: 0.875rem; }
 
 .filter-p-pricing {
 	position: absolute;
@@ -313,7 +298,7 @@ img.wheel {
 	font-family: 'Mukta Vaani';
 }
 
-.filter-p-pricing:before {
+.filter-p-pricing::before {
 	position: absolute;
 	content: '';
 	display: block;
@@ -368,7 +353,6 @@ img.wheel {
 -----------------------------------------------------------------*/
 .videoplay-on-hover .vertical-middle,
 .videoplay-on-hover .video-overlay {
-	z-index: 1;
 	opacity: 1;
 	-webkit-transition: opacity .2s ease;
 	-o-transition: opacity .2s ease;
@@ -486,58 +470,16 @@ textarea.border-form-control {
 	/* Primary Menu Header size */
 	#header { border-bottom: 1px solid #e7e7e7 }
 
-	#logo { float: right; }
-	#primary-menu { float: left; }
-
-	#header.transparent-header + #slider,
-	#header.transparent-header + #page-title.page-title-parallax,
-	#header.transparent-header + #google-map,
-	#slider + #header.transparent-header {
-		top: -50px;
-		margin-bottom: -50px;
-	}
-
-	#header.transparent-header + #page-title.page-title-parallax .container { padding-top: 50px; }
-
-	#header.sticky-header ~ #page-menu.sticky-page-menu #page-menu-wrap,
-	#header.sticky-header ~ #content #page-menu.sticky-page-menu #page-menu-wrap { top: 50px; }
-
-	#primary-menu ul li > a {
-		padding: 14px 13px;
-	}
-
-	#header,
-	#header-wrap,
-	#logo img { height: 50px; }
-
-	#header.sticky-header:not(.static-sticky),
-	#header.sticky-header:not(.static-sticky) #header-wrap,
-	#header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img { height: 50px; }
-
 	#header.full-header #logo,
-	#header.full-header #primary-menu > ul {
+	#header.full-header .menu-container {
 		border-right: 0;
 		padding-right: 0;
 		margin-right: 0;
 	}
 
-	#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
-		padding-top: 19px;
-		padding-bottom: 19px;
-	}
-
-	#header.sticky-header:not(.static-sticky) #top-search,
-	#header.sticky-header:not(.static-sticky) #top-cart,
-	#header.sticky-header:not(.static-sticky) #side-panel-trigger {
-		margin-top: 20px !important;
-		margin-bottom: 20px !important;
-	}
-
-	#header.sticky-header:not(.static-sticky) #top-cart .top-cart-content,
-	#header.sticky-header:not(.static-sticky) #primary-menu.sub-title.style-2 > div #top-cart .top-cart-content { top: 25px; }
-
 	/* Slider caption */
 	.swiper-pagination { bottom: 40px !important; }
+
 	.swiper-pagination span {
 		width: 70px;
 		height: 6px;
@@ -661,7 +603,7 @@ body.side-panel-open #side-panel .widget {
 	transform: scale(1.15);
 }
 
-.arrow-box:after {
+.arrow-box::after {
 	right: 100%;
 	top: 50%;
 	border: solid transparent;
@@ -676,7 +618,7 @@ body.side-panel-open #side-panel .widget {
 	z-index: 1;
 }
 
-.arrow-box.right:after {
+.arrow-box.right::after {
 	left: 100%;
 	border-right: 0;
 	border-left-color: #ffffff;

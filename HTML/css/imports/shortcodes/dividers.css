@@ -1,166 +1,112 @@
-
 /*-----------------------------------------------------------------------------------
 
-    Shortcodes: dividers.css
+	Shortcodes: dividers.scss
 
 -----------------------------------------------------------------------------------*/
-
-
 /* ----------------------------------------------------------------
 	Divider
 -----------------------------------------------------------------*/
-
-
 .divider {
-	position: relative;
-	overflow: hidden;
-	margin: 35px 0;
-	color: #E5E5E5;
-	width: 100%;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 3rem auto;
+  color: #e5e5e5;
+  width: 100%;
+  /* Divider - Icon Align Right
+  -----------------------------------------------------------------*/
+  /* Divider - Icon Align Center
+  -----------------------------------------------------------------*/
+  /* Divider - Rounded Icon
+  -----------------------------------------------------------------*/
+  /* Divider - Rounded & Border
+  -----------------------------------------------------------------*/
+  /* Divider - Line Only
+  -----------------------------------------------------------------*/
 }
-
-.divider.divider-margin { margin: 70px 0; }
-
-.divider:after,
-.divider.divider-center:before,
-.divider.divider-center.divider-short:before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	top: 8px;
-	left: 30px;
-	height: 0;
-	border-top: 1px solid #EEE;
+.divider.divider-margin-lg {
+  margin: 5rem auto;
 }
-
-.divider.divider-thick:after,
-.divider.divider-center.divider-thick:before,
-.divider.divider-center.divider-short.divider-thick:before { border-top-width: 3px; }
-
-.divider.divider-short:after { width: 30%; }
-
-.divider.divider-vshort:after { width: 12%; }
-
-.divider i {
-	position: relative;
-	width: 18px;
-	height: 18px;
-	line-height: 1;
-	font-size: 18px !important;
-	text-align: center;
+.divider::after, .divider::before {
+  content: '';
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 1px;
+  background-color: #eeeeee;
 }
-
-.divider a {
-	position: relative;
-	display: inline-block;
-	color: inherit;
-	-webkit-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
+.divider::before {
+  display: none;
+  margin-right: 0.5rem;
 }
-
-.divider a:hover { color: #888; }
-
-
-/* Divider - Icon Align Right
------------------------------------------------------------------*/
-
-.divider.divider-right { text-align: right; }
-
-.divider.divider-right:after {
-	left: auto;
-	right: 30px;
+.divider::after {
+  margin-left: 0.5rem;
 }
-
-
-/* Divider - Icon Align Center
------------------------------------------------------------------*/
-
-.divider.divider-center,
-.divider.divider-center.divider-short { text-align: center; }
-
-.divider.divider-center:before {
-	left: -50% !important;
-	right: 0;
-	margin-left: -20px;
+.divider.divider-thick::after, .divider.divider-thick::before {
+  height: 3px;
 }
-
-.divider.divider-center:after {
-	left: 50% !important;
-	right: 0;
-	margin-left: 20px;
+.divider.divider-sm {
+  width: 55%;
 }
-
-
-/* Short Divider - Icon Align Center
------------------------------------------------------------------*/
-
-.divider.divider-center.divider-short:before {
-	left: auto !important;
-	right: 50%;
-	margin-right: 20px;
-	width: 15%;
+.divider.divider-xs {
+  width: 35%;
 }
-
-.divider.divider-center.divider-short:after {
-	left: 50% !important;
-	right: auto !important;
-	margin-left: 20px;
-	width: 15%;
+.divider i,
+.divider a, .divider-text {
+  position: relative;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 24px;
+  max-width: 100%;
+  line-height: 1;
+  font-size: 18px !important;
+  text-align: center;
 }
-
-.divider.divider-center.divider-vshort:before,
-.divider.divider-center.divider-vshort:after { width: 6%; }
-
-
-/* Divider - Rounded Icon
------------------------------------------------------------------*/
-
-.divider.divider-rounded { color: #BBB; }
-
-.divider.divider-rounded:after,
-.divider.divider-rounded.divider-center:before,
-.divider.divider-rounded.divider-short:before,
-.divider.divider-border:after,
-.divider.divider-border.divider-center:before,
-.divider.divider-border.divider-short:before {
-	top: 19px;
-	left: 40px;
+.divider a, .divider-text {
+  width: auto;
+  color: inherit;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
-
-.divider.divider-rounded i,
+.divider a:hover, .divider-text:hover {
+  color: #888888;
+}
+.divider.divider-right::before {
+  display: block;
+}
+.divider.divider-right::after {
+  display: none;
+}
+.divider.divider-center::before {
+  display: block;
+}
+.divider.divider-rounded i, .divider.divider-border i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #bbbbbb;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+.divider.divider-border::before, .divider.divider-border::after, .divider.divider-rounded::before, .divider.divider-rounded::after {
+  margin-left: 0;
+  margin-right: 0;
+}
+.divider.divider-border {
+  color: #e5e5e5;
+}
 .divider.divider-border i {
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	background-color: #F5F5F5;
-	border-radius: 50%;
+  line-height: 38px;
+  background-color: transparent;
+  border: 1px solid #eeeeee;
 }
-
-.divider.divider-rounded.divider-right:after,
-.divider.divider-border.divider-right:after {
-	left: auto;
-	right: 40px;
-}
-
-
-/* Divider - Rounded & Border
------------------------------------------------------------------*/
-
-.divider.divider-border { color: #E5E5E5; }
-
-.divider.divider-border i {
-	line-height: 38px;
-	background-color: transparent;
-	border: 1px solid #EEE;
-}
-
-
-/* Divider - Line Only
------------------------------------------------------------------*/
-
-.divider.divider-line:before,
-.divider.divider-line:after {
-	margin-left: 0 !important;
-	margin-right: 0 !important;
+.divider.divider-line::before, .divider.divider-line::after {
+  margin-left: 0;
+  margin-right: 0;
 }

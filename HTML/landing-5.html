@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title
@@ -32,74 +32,76 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="transparent-header page-section dark">
-
+		<header id="header" class="transparent-header page-section dark" data-sticky-class="not-dark">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
 
-				<div class="container clearfix">
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
 
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
 
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu">
+							<ul class="menu-container one-page-menu">
+								<li class="menu-item current"><a class="menu-link" href="#" data-href="#header"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-features"><div>Features</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-pricing"><div>Pricing</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-testimonials"><div>Testimonials</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-specs"><div>Specifications</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-buy"><div>Buy Now</div></a></li>
+							</ul>
 
-						<ul class="one-page-menu">
-							<li class="current"><a href="#" data-href="#header"><div>Home</div></a></li>
-							<li><a href="#" data-href="#section-features"><div>Features</div></a></li>
-							<li><a href="#" data-href="#section-pricing"><div>Pricing</div></a></li>
-							<li><a href="#" data-href="#section-testimonials"><div>Testimonials</div></a></li>
-							<li><a href="#" data-href="#section-specs"><div>Specifications</div></a></li>
-							<li><a href="#" data-href="#section-buy"><div>Buy Now</div></a></li>
-						</ul>
+						</nav><!-- #primary-menu end -->
 
-					</nav><!-- #primary-menu end -->
-
+					</div>
 				</div>
-
 			</div>
-
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-element" style="background: url(images/landing/landing2.jpg) center; overflow: visible;" data-height-xl="500" data-height-lg="500" data-height-md="600" data-height-sm="600" data-height-xs="600">
-			<div class="container clearfix">
+		<section id="slider" class="slider-element include-header" style="background: url(images/landing/landing2.jpg) center; overflow: visible;" data-height-xl="500" data-height-lg="500" data-height-md="600" data-height-sm="600" data-height-xs="600">
+			<div class="container">
 
 				<div class="form-widget" data-loader="button">
 
 					<div class="form-result"></div>
 
-					<form action="include/form.php" method="post" class="landing-wide-form landing-form-overlay dark nobottommargin clearfix">
-						<div class="heading-block nobottommargin nobottomborder">
-							<h2>Signup for FREE</h2>
-							<span>Get 30 Days Unlimited Access</span>
+					<form action="include/form.php" method="post" class="landing-wide-form landing-form-overlay dark mb-0 w-50 clearfix">
+						<div class="row">
+							<div class="col-12 form-group mb-4">
+								<div class="heading-block mb-0 border-bottom-0">
+									<h2>Signup for FREE</h2>
+									<span>Get 30 Days Unlimited Access</span>
+								</div>
+							</div>
+							<div class="col-12 form-group">
+								<input type="text" name="template-landing5-name" class="form-control required form-control-lg not-dark" value="" placeholder="Your Name*">
+							</div>
+							<div class="col-12 form-group">
+								<input type="email" name="template-landing5-email" class="form-control required form-control-lg not-dark" value="" placeholder="Your Email*">
+							</div>
+							<div class="col-12 form-group">
+								<input type="password" name="template-landing5-password" class="form-control required form-control-lg not-dark" value="" placeholder="Choose Password*">
+							</div>
+							<div class="col-12 form-group">
+								<input type="password" name="template-landing5-repassword" class="form-control required form-control-lg not-dark" value="" placeholder="Confirm Password*">
+							</div>
+							<div class="col-12 form-group d-none">
+								<input type="text" id="template-landing5-botcheck" name="template-landing5-botcheck" value="" class="form-control" />
+							</div>
+							<div class="col-12 form-group">
+								<button class="btn btn-lg btn-danger btn-block m-0" value="submit" type="submit">START FREE TRIAL</button>
+							</div>
 						</div>
-						<div class="line" style="margin: 20px 0 30px;"></div>
-						<div class="col_full">
-							<input type="text" name="template-landing5-name" class="form-control required form-control-lg not-dark" value="" placeholder="Your Name*">
-						</div>
-						<div class="col_full">
-							<input type="email" name="template-landing5-email" class="form-control required form-control-lg not-dark" value="" placeholder="Your Email*">
-						</div>
-						<div class="col_full">
-							<input type="password" name="template-landing5-password" class="form-control required form-control-lg not-dark" value="" placeholder="Choose Password*">
-						</div>
-						<div class="col_full">
-							<input type="password" name="template-landing5-repassword" class="form-control required form-control-lg not-dark" value="" placeholder="Confirm Password*">
-						</div>
-						<div class="col_full hidden">
-							<input type="text" id="template-landing5-botcheck" name="template-landing5-botcheck" value="" class="form-control" />
-						</div>
-						<div class="col_full nobottommargin">
-							<button class="btn btn-lg btn-danger btn-block nomargin" value="submit" type="submit" style="">START FREE TRIAL</button>
-						</div>
-
 						<input type="hidden" name="prefix" value="template-landing5-">
 					</form>
 
@@ -110,14 +112,18 @@
 
 		<!-- Content
 		============================================= -->
-		<section id="content" style="overflow: visible;">
+		<section id="content">
 
-			<div class="content-wrap">
+			<div class="content-wrap" style="overflow: visible;">
 
-				<div class="promo promo-dark promo-full landing-promo header-stick">
+				<div class="promo promo-dark promo-full landing-promo p-5 header-stick">
 					<div class="container clearfix">
-						<h3>Beautiful Landing Page designs waiting for you inside <i class="icon-circle-arrow-right" style="position:relative;top:2px;"></i></h3>
-						<span>You'll love our beautiful &amp; interactive builder that makes your build process easier &amp; fun.</span>
+						<div class="row align-items-center">
+							<div class="col-12 col-lg">
+								<h3>Beautiful Landing Page designs waiting for you inside <i class="icon-circle-arrow-right position-relative" style="top:2px;"></i></h3>
+								<span>You'll love our beautiful &amp; interactive builder that makes your build process easier &amp; fun.</span>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -125,135 +131,148 @@
 
 					<div class="clear bottommargin-lg"></div>
 
-					<div id="section-features" class="heading-block title-center page-section">
+					<div id="section-features" class="heading-block text-center page-section">
 						<h2>Features Overview</h2>
 						<span>Some of the Features that are gonna blow your mind off</span>
 					</div>
 
-					<div class="col_one_third">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn">
-								<a href="#"><img src="images/icons/features/responsive.png" alt="Responsive Layout"></a>
+					<div class="row justify-content-center col-mb-50 mb-0">
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn">
+									<a href="#"><img src="images/icons/features/responsive.png" alt="Responsive Layout"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Responsive Layout</h3>
+									<p>Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.</p>
+								</div>
 							</div>
-							<h3>Responsive Layout</h3>
-							<p>Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.</p>
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn" data-delay="200">
+									<a href="#"><img src="images/icons/features/retina.png" alt="Retina Graphics"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Retina Graphics</h3>
+									<p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Retina Icons, Fonts &amp; all others graphics are optimized.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn" data-delay="400">
+									<a href="#"><img src="images/icons/features/performance.png" alt="Powerful Performance"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Powerful Performance</h3>
+									<p>Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn" data-delay="600">
+									<a href="#"><img src="images/icons/features/flag.png" alt="Responsive Layout"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Endless Possibilities</h3>
+									<p>You have complete easy control on each &amp; every element that provides endless customization possibilities.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn" data-delay="800">
+									<a href="#"><img src="images/icons/features/tick.png" alt="Retina Graphics"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Light &amp; Dark Scheme</h3>
+									<p>Change your Website's Primary Scheme instantly by simply adding the dark class to the body.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn" data-delay="1000">
+									<a href="#"><img src="images/icons/features/tools.png" alt="Powerful Performance"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Customizable Fonts</h3>
+									<p>Use any Font you like from Google Web Fonts, Typekit or other Web Fonts. They will blend in perfectly.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn" data-delay="1200">
+									<a href="#"><img src="images/icons/features/map.png" alt="Responsive Layout"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Responsive Layout</h3>
+									<p>Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn" data-delay="1400">
+									<a href="#"><img src="images/icons/features/seo.png" alt="Retina Graphics"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Retina Graphics</h3>
+									<p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Retina Icons, Fonts &amp; all others graphics are optimized.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-lg-4">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon" data-animate="bounceIn" data-delay="1600">
+									<a href="#"><img src="images/icons/features/support.png" alt="Powerful Performance"></a>
+								</div>
+								<div class="fbox-content">
+									<h3>Powerful Performance</h3>
+									<p>Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.</p>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div class="col_one_third">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn" data-delay="200">
-								<a href="#"><img src="images/icons/features/retina.png" alt="Retina Graphics"></a>
-							</div>
-							<h3>Retina Graphics</h3>
-							<p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Retina Icons, Fonts &amp; all others graphics are optimized.</p>
-						</div>
-					</div>
+					<div class="divider divider-sm divider-center"><i class="icon-circle"></i></div>
 
-					<div class="col_one_third col_last">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn" data-delay="400">
-								<a href="#"><img src="images/icons/features/performance.png" alt="Powerful Performance"></a>
-							</div>
-							<h3>Powerful Performance</h3>
-							<p>Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.</p>
-						</div>
-					</div>
-
-					<div class="clear"></div>
-
-					<div class="col_one_third">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn" data-delay="600">
-								<a href="#"><img src="images/icons/features/flag.png" alt="Responsive Layout"></a>
-							</div>
-							<h3>Endless Possibilities</h3>
-							<p>You have complete easy control on each &amp; every element that provides endless customization possibilities.</p>
-						</div>
-					</div>
-
-					<div class="col_one_third">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn" data-delay="800">
-								<a href="#"><img src="images/icons/features/tick.png" alt="Retina Graphics"></a>
-							</div>
-							<h3>Light &amp; Dark Scheme</h3>
-							<p>Change your Website's Primary Scheme instantly by simply adding the dark class to the body.</p>
-						</div>
-					</div>
-
-					<div class="col_one_third col_last">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn" data-delay="1000">
-								<a href="#"><img src="images/icons/features/tools.png" alt="Powerful Performance"></a>
-							</div>
-							<h3>Customizable Fonts</h3>
-							<p>Use any Font you like from Google Web Fonts, Typekit or other Web Fonts. They will blend in perfectly.</p>
-						</div>
-					</div>
-
-					<div class="clear"></div>
-
-					<div class="col_one_third">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn" data-delay="1200">
-								<a href="#"><img src="images/icons/features/map.png" alt="Responsive Layout"></a>
-							</div>
-							<h3>Responsive Layout</h3>
-							<p>Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.</p>
-						</div>
-					</div>
-
-					<div class="col_one_third">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn" data-delay="1400">
-								<a href="#"><img src="images/icons/features/seo.png" alt="Retina Graphics"></a>
-							</div>
-							<h3>Retina Graphics</h3>
-							<p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Retina Icons, Fonts &amp; all others graphics are optimized.</p>
-						</div>
-					</div>
-
-					<div class="col_one_third col_last">
-						<div class="feature-box fbox-plain">
-							<div class="fbox-icon" data-animate="bounceIn" data-delay="1600">
-								<a href="#"><img src="images/icons/features/support.png" alt="Powerful Performance"></a>
-							</div>
-							<h3>Powerful Performance</h3>
-							<p>Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.</p>
-						</div>
-					</div>
-
-					<div class="clear"></div>
-
-					<div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
-
-					<div id="section-pricing" class="heading-block title-center nobottomborder page-section">
+					<div id="section-pricing" class="heading-block text-center border-bottom-0 page-section">
 						<h2>Pricing Details</h2>
 						<span>Our All inclusive Pricing Plan that covers you well</span>
 					</div>
 
-					<div class="pricing-box pricing-extended bottommargin clearfix">
-
-						<div class="pricing-desc">
+					<div class="pricing-box pricing-extended row align-items-stretch mb-5 mx-0">
+						<div class="pricing-desc col-lg-9 p-4">
 							<div class="pricing-title">
 								<h3>How many Themes can you Download today?</h3>
 							</div>
-							<div class="pricing-features">
-								<ul class="iconlist-color cleafix">
-									<li><i class="icon-desktop"></i> Ultra Responsive Layouts</li>
-									<li><i class="icon-eye-open"></i> Retina Ready Designs</li>
-									<li><i class="icon-beaker"></i> Advanced Admin Panel</li>
-									<li><i class="icon-magic"></i> Tons of Customization Options</li>
-									<li><i class="icon-font"></i> Support for Custom Fonts</li>
-									<li><i class="icon-stack3"></i> Premium Sliders Included</li>
-									<li><i class="icon-file2"></i> Photoshop Source Files Included</li>
-									<li><i class="icon-support"></i> 24x7 Priority Email Support</li>
+							<div class="pricing-features pb-0">
+								<ul class="row">
+									<li class="col-md-6"><i class="icon-desktop mr-2"></i> Ultra Responsive Layouts</li>
+									<li class="col-md-6"><i class="icon-eye-open mr-2"></i> Retina Ready Designs</li>
+									<li class="col-md-6"><i class="icon-beaker mr-2"></i> Advanced Admin Panel</li>
+									<li class="col-md-6"><i class="icon-magic mr-2"></i> Tons of Customization Options</li>
+									<li class="col-md-6"><i class="icon-font mr-2"></i> Support for Custom Fonts</li>
+									<li class="col-md-6"><i class="icon-stack3 mr-2"></i> Premium Sliders Included</li>
+									<li class="col-md-6"><i class="icon-file2 mr-2"></i> Photoshop Source Files Included</li>
+									<li class="col-md-6"><i class="icon-support mr-2"></i> 24x7 Priority Email Support</li>
 								</ul>
 							</div>
 						</div>
 
-						<div class="pricing-action-area">
+						<div class="pricing-action-area col-lg d-flex flex-column justify-content-center">
 							<div class="pricing-meta">
 								As Low as
 							</div>
@@ -261,13 +280,10 @@
 								<span class="price-unit">&euro;</span>39<span class="price-tenure">monthly</span>
 							</div>
 							<div class="pricing-action">
-								<a href="#" class="button button-3d button-large btn-block nomargin">Get Started</a>
+								<a href="#" class="button button-3d button-large btn-block m-0">Get Started</a>
 							</div>
 						</div>
-
 					</div>
-
-					<div class="clear"></div>
 
 				</div>
 
@@ -275,13 +291,13 @@
 
 					<div class="container clearfix">
 
-						<div id="section-testimonials" class="heading-block title-center page-section">
+						<div id="section-testimonials" class="heading-block text-center page-section">
 							<h2>Testimonials</h2>
 							<span>Our All inclusive Pricing Plan that covers you well</span>
 						</div>
 
-						<ul class="testimonials-grid grid-3 clearfix">
-							<li>
+						<ul class="testimonials-grid grid-1 grid-md-2 grid-lg-3">
+							<li class="grid-item">
 								<div class="testimonial">
 									<div class="testi-image">
 										<a href="#"><img src="images/testimonials/1.jpg" alt="Customer Testimonails"></a>
@@ -295,7 +311,7 @@
 									</div>
 								</div>
 							</li>
-							<li>
+							<li class="grid-item">
 								<div class="testimonial">
 									<div class="testi-image">
 										<a href="#"><img src="images/testimonials/2.jpg" alt="Customer Testimonails"></a>
@@ -309,7 +325,7 @@
 									</div>
 								</div>
 							</li>
-							<li>
+							<li class="grid-item">
 								<div class="testimonial">
 									<div class="testi-image">
 										<a href="#"><img src="images/testimonials/7.jpg" alt="Customer Testimonails"></a>
@@ -323,7 +339,7 @@
 									</div>
 								</div>
 							</li>
-							<li>
+							<li class="grid-item">
 								<div class="testimonial">
 									<div class="testi-image">
 										<a href="#"><img src="images/testimonials/3.jpg" alt="Customer Testimonails"></a>
@@ -337,7 +353,7 @@
 									</div>
 								</div>
 							</li>
-							<li>
+							<li class="grid-item">
 								<div class="testimonial">
 									<div class="testi-image">
 										<a href="#"><img src="images/testimonials/4.jpg" alt="Customer Testimonails"></a>
@@ -351,7 +367,7 @@
 									</div>
 								</div>
 							</li>
-							<li>
+							<li class="grid-item">
 								<div class="testimonial">
 									<div class="testi-image">
 										<a href="#"><img src="images/testimonials/8.jpg" alt="Customer Testimonails"></a>
@@ -373,17 +389,17 @@
 
 				<div class="container clearfix">
 
-					<div id="section-specs" class="heading-block title-center page-section">
+					<div id="section-specs" class="heading-block text-center page-section">
 						<h2>Product Specifications</h2>
 						<span>Complete list of the Tech Specifications for your understanding</span>
 					</div>
 
-					<div id="side-navigation">
+					<div id="side-navigation" class="row" data-plugin="tabs">
 
-						<div class="col_one_third">
+						<div class="col-md-4">
 
 							<ul class="sidenav">
-								<li class="ui-tabs-active"><a href="#snav-content1"><i class="icon-screen"></i>Responsive Layout<i class="icon-chevron-right"></i></a></li>
+								<li><a href="#snav-content1"><i class="icon-screen"></i>Responsive Layout<i class="icon-chevron-right"></i></a></li>
 								<li><a href="#snav-content2"><i class="icon-magic"></i>Retina Ready Display<i class="icon-chevron-right"></i></a></li>
 								<li><a href="#snav-content3"><i class="icon-tint"></i>Unlimited Color Options<i class="icon-chevron-right"></i></a></li>
 								<li><a href="#snav-content4"><i class="icon-gift"></i>Bootstrap 3.1 Compatible<i class="icon-chevron-right"></i></a></li>
@@ -392,11 +408,11 @@
 
 						</div>
 
-						<div class="col_two_third col_last">
+						<div class="col-md-8">
 
 							<div id="snav-content1">
 								<h3>Ultra Responsive Template</h3>
-								<img class="alignright img-responsive" src="images/landing/responsive.png" alt="">
+								<img class="alignright img-responsive" src="images/landing/responsive.png" alt="Image">
 
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, ex, inventore, tenetur, repellat ipsam soluta libero amet nam aspernatur perspiciatis quos praesentium et debitis ea odit enim illo aliquid eligendi numquam neque. Ipsum, voluptatibus, perspiciatis a quam aliquid cumque cupiditate id ipsa tempora eveniet. Cupiditate, necessitatibus, consequatur odio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, vitae, laboriosam libero nihil labore hic modi? Odit, veritatis nulla molestiae!
 							</div>
@@ -407,12 +423,12 @@
 							</div>
 
 							<div id="snav-content3">
-								<img class="alignleft img-responsive" src="https://www.w3schools.com/tags/colormap.gif" alt="">
+								<img class="alignleft img-responsive" src="https://www.w3schools.com/tags/colormap.gif" alt="Image">
 								<h3>Unlimited Color Options</h3>Dolor aperiam modi aliquam dolores consequatur error commodi ad eius incidunt! Libero, odio incidunt ullam sunt fugiat? Laboriosam, perferendis, debitis, harum soluta iste eos sunt odit architecto porro eveniet sint optio nihil animi. Laudantium, quam, culpa, velit molestias exercitationem reprehenderit enim distinctio aliquam aut ex numquam sequi assumenda veritatis fuga voluptatum. Magni, voluptates adipisci unde sapiente eligendi ea maxime tempora pariatur ipsa.. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, aspernatur, saepe, quidem animi hic rem libero earum fuga voluptas culpa iure qui accusantium ab quae dolorum laborum quia repellat fugit aut minima molestias placeat mollitia doloribus quibusdam consectetur officia nesciunt ad. Ab, quod ipsum commodi assumenda doloribus possimus sed laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 							</div>
 
 							<div id="snav-content4">
-								<img class="alignleft img-responsive" src="images/landing/bootstrap.png" alt="">
+								<img class="alignleft img-responsive" src="images/landing/bootstrap.png" alt="Image">
 								<h3>Bootstrap v3.2.0 Compatiable</h3>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nostrum, dolores id quo nam repudiandae ad culpa architecto minima nemo eaque soluta nulla laborum neque provident saepe facilis expedita numquam quas alias in perferendis accusamus ipsam blanditiis sit voluptatem temporibus vero error veritatis repellat eos reiciendis repellendus quam. Officia dicta ipsam nostrum aperiam. Dolor, expedita enim modi nostrum commodi sint architecto aliquam aut mollitia repellendus deserunt quaerat aspernatur aperiam voluptatibus consequatur rerum consequuntur.
 							</div>
@@ -433,184 +449,202 @@
 
 					<div class="container clearfix">
 
-						<div id="section-buy" class="heading-block title-center nobottomborder page-section">
+						<div id="section-buy" class="heading-block text-center border-bottom-0 page-section">
 							<h2>Enough? Start Building!</h2>
 							<span>Now that you have read all the Tid-Bits, so start with a plan</span>
 						</div>
 
 						<div class="center">
 
-							<a href="#" data-animate="tada" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>Start your FREE Trial</a> - OR - <a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Sign Up for a Subscription</a>
+							<a href="#" data-animate="tada" class="button button-3d button-teal button-xlarge mb-0"><i class="icon-star3"></i>Start your FREE Trial</a> - OR - <a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge mb-0"><i class="icon-user2"></i>Sign Up for a Subscription</a>
 
 						</div>
 
 					</div>
 
 				</div>
-
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
 		<footer id="footer" class="dark">
-
 			<div class="container">
 
 				<!-- Footer Widgets
 				============================================= -->
-				<div class="footer-widgets-wrap clearfix">
+				<div class="footer-widgets-wrap">
 
-					<div class="col_two_third">
+					<div class="row col-mb-50">
+						<div class="col-lg-8">
 
-						<div class="col_one_third">
+							<div class="row col-mb-50">
+								<div class="col-md-4">
 
-							<div class="widget clearfix">
+									<div class="widget clearfix">
 
-								<img src="images/footer-widget-logo.png" alt="" class="footer-logo">
+										<img src="images/footer-widget-logo.png" alt="Image" class="footer-logo">
 
-								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+										<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
 
-								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
-									<address>
-										<strong>Headquarters:</strong><br>
-										795 Folsom Ave, Suite 600<br>
-										San Francisco, CA 94107<br>
-									</address>
-									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
-									<abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>
-									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+										<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+											<address>
+												<strong>Headquarters:</strong><br>
+												795 Folsom Ave, Suite 600<br>
+												San Francisco, CA 94107<br>
+											</address>
+											<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+											<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
+											<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+										</div>
+
+									</div>
+
 								</div>
 
-							</div>
+								<div class="col-md-4">
 
-						</div>
+									<div class="widget widget_links clearfix">
 
-						<div class="col_one_third">
+										<h4>Blogroll</h4>
 
-							<div class="widget widget_links clearfix">
+										<ul>
+											<li><a href="https://codex.wordpress.org/">Documentation</a></li>
+											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+											<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
+											<li><a href="https://wordpress.org/support/">Support Forums</a></li>
+											<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
+											<li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
+											<li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
+										</ul>
 
-								<h4>Blogroll</h4>
+									</div>
 
-								<ul>
-									<li><a href="https://codex.wordpress.org/">Documentation</a></li>
-									<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
-									<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
-									<li><a href="https://wordpress.org/support/">Support Forums</a></li>
-									<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
-									<li><a href="https://wordpress.org/news/">WordPress Blog</a></li>
-									<li><a href="https://planet.wordpress.org/">WordPress Planet</a></li>
-								</ul>
+								</div>
 
-							</div>
+								<div class="col-md-4">
 
-						</div>
+									<div class="widget clearfix">
+										<h4>Recent Posts</h4>
 
-						<div class="col_one_third col_last">
-
-							<div class="widget clearfix">
-								<h4>Recent Posts</h4>
-
-								<div id="post-list-footer">
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+										<div class="posts-sm row col-mb-30" id="post-list-footer">
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
 											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4 col-lg-12">
+									<div class="widget clearfix" style="margin-bottom: -20px;">
+
+										<div class="row">
+											<div class="col-lg-6 bottommargin-sm">
+												<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+												<h5 class="mb-0">Total Downloads</h5>
 											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
-										</div>
-									</div>
 
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+											<div class="col-lg-6 bottommargin-sm">
+												<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+												<h5 class="mb-0">Clients</h5>
 											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
 										</div>
+
 									</div>
 								</div>
-							</div>
 
-						</div>
-
-					</div>
-
-					<div class="col_one_third col_last">
-
-						<div class="widget clearfix" style="margin-bottom: -20px;">
-
-							<div class="row">
-
-								<div class="col-lg-6 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
-									<h5 class="nobottommargin">Total Downloads</h5>
-								</div>
-
-								<div class="col-lg-6 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
-									<h5 class="nobottommargin">Clients</h5>
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="widget subscribe-widget clearfix">
-							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div class="widget-subscribe-form-result"></div>
-							<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="nobottommargin">
-								<div class="input-group divcenter">
-									<div class="input-group-prepend">
-										<div class="input-group-text"><i class="icon-email2"></i></div>
-									</div>
-									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-									<div class="input-group-append">
-										<button class="btn btn-success" type="submit">Subscribe</button>
+								<div class="col-md-5 col-lg-12">
+									<div class="widget subscribe-widget clearfix">
+										<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<div class="input-group mx-auto">
+												<div class="input-group-prepend">
+													<div class="input-group-text"><i class="icon-email2"></i></div>
+												</div>
+												<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+												<div class="input-group-append">
+													<button class="btn btn-success" type="submit">Subscribe</button>
+												</div>
+											</div>
+										</form>
 									</div>
 								</div>
-							</form>
-						</div>
 
-						<div class="widget clearfix" style="margin-bottom: -20px;">
+								<div class="col-md-3 col-lg-12">
+									<div class="widget clearfix" style="margin-bottom: -20px;">
 
-							<div class="row">
+										<div class="row">
+											<div class="col-6 col-md-12 col-lg-6 clearfix bottommargin-sm">
+												<a href="#" class="social-icon si-dark si-colored si-facebook mb-0" style="margin-right: 10px;">
+													<i class="icon-facebook"></i>
+													<i class="icon-facebook"></i>
+												</a>
+												<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+											</div>
+											<div class="col-6 col-md-12 col-lg-6 clearfix">
+												<a href="#" class="social-icon si-dark si-colored si-rss mb-0" style="margin-right: 10px;">
+													<i class="icon-rss"></i>
+													<i class="icon-rss"></i>
+												</a>
+												<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+											</div>
+										</div>
 
-								<div class="col-lg-6 clearfix bottommargin-sm">
-									<a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
-								</div>
-								<div class="col-lg-6 clearfix">
-									<a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
-										<i class="icon-rss"></i>
-										<i class="icon-rss"></i>
-									</a>
-									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+									</div>
 								</div>
 
 							</div>
 
 						</div>
-
 					</div>
 
 				</div><!-- .footer-widgets-wrap end -->
@@ -620,66 +654,67 @@
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights">
+				<div class="container">
 
-				<div class="container clearfix">
+					<div class="row col-mb-30">
 
-					<div class="col_half">
-						Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.<br>
-						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
-					</div>
-
-					<div class="col_half col_last tright">
-						<div class="fright clearfix">
-							<a href="#" class="social-icon si-small si-borderless si-facebook">
-								<i class="icon-facebook"></i>
-								<i class="icon-facebook"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-gplus">
-								<i class="icon-gplus"></i>
-								<i class="icon-gplus"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-pinterest">
-								<i class="icon-pinterest"></i>
-								<i class="icon-pinterest"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-vimeo">
-								<i class="icon-vimeo"></i>
-								<i class="icon-vimeo"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-github">
-								<i class="icon-github"></i>
-								<i class="icon-github"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-yahoo">
-								<i class="icon-yahoo"></i>
-								<i class="icon-yahoo"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-linkedin">
-								<i class="icon-linkedin"></i>
-								<i class="icon-linkedin"></i>
-							</a>
+						<div class="col-md-6 text-center text-md-left">
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 						</div>
 
-						<div class="clear"></div>
+						<div class="col-md-6 text-center text-md-right">
+							<div class="d-flex justify-content-center justify-content-md-end">
+								<a href="#" class="social-icon si-small si-borderless si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
 
-						<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+								<a href="#" class="social-icon si-small si-borderless si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-gplus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-pinterest">
+									<i class="icon-pinterest"></i>
+									<i class="icon-pinterest"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-vimeo">
+									<i class="icon-vimeo"></i>
+									<i class="icon-vimeo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-github">
+									<i class="icon-github"></i>
+									<i class="icon-github"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-yahoo">
+									<i class="icon-yahoo"></i>
+									<i class="icon-yahoo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+							</div>
+
+							<div class="clear"></div>
+
+							<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+						</div>
+
 					</div>
 
 				</div>
-
 			</div><!-- #copyrights end -->
-
 		</footer><!-- #footer end -->
 
 	</div><!-- #wrapper end -->
@@ -691,17 +726,10 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
-
-	<script>
-		$(function() {
-			$( "#side-navigation" ).tabs({ show: { effect: "fade", duration: 400 } });
-		});
-	</script>
 
 </body>
 </html>

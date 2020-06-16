@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 
 	<!-- Movers Demo Specific Stylesheet -->
 	<link rel="stylesheet" href="css/colors.php?color=0F66DD" type="text/css" /> <!-- Theme Color -->
@@ -43,100 +43,107 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="sticky-style-2 dark">
+		<header id="header" class="dark" data-menu-padding="24" data-sticky-shrink="false">
+			<div class="container">
+				<div class="header-row">
 
-			<div class="container clearfix">
+					<!-- Logo
+					============================================= -->
+					<div id="logo" class="ml-auto ml-md-0">
+						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img class="mx-auto" src="images/logo.png" alt="Canvas Logo"></a>
+						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img class="mx-auto" src="images/logo@2x.png" alt="Canvas Logo"></a>
+					</div><!-- #logo end -->
 
-				<!-- Logo
-				============================================= -->
-				<div id="logo" class="">
-					<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img class="divcenter" src="images/logo.png" alt="Canvas Logo"></a>
-					<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img class="divcenter" src="images/logo@2x.png" alt="Canvas Logo"></a>
-				</div><!-- #logo end -->
+					<ul class="header-extras d-none d-sm-flex mx-auto mx-md-0 mb-4 mb-md-0">
+						<li>
+							<i class="i-plain icon-call m-0"></i>
+							<div class="he-text font-weight-normal text-white-50">
+								Call Us:
+								<span><a href="tel:+111 22-33-44" class="text-white font-weight-medium">+111 22-33-44</a></span>
+							</div>
+						</li>
+						<li>
+							<i class="i-plain icon-line2-envelope m-0"></i>
+							<div class="he-text font-weight-normal text-white-50">
+								Email Us:
+								<span><a href="mailto:info@canvas.com" target="_top" class="text-white font-weight-medium">info@canvas.com</a></span>
+							</div>
+						</li>
+					</ul>
 
-				<ul class="header-extras">
-					<li>
-						<i class="i-plain icon-call nomargin"></i>
-						<div class="he-text t400 text-white-50">
-							Call Us:
-							<span><a href="tel:+111 22-33-44" class="text-white t500">+111 22-33-44</a></span>
-						</div>
-					</li>
-					<li>
-						<i class="i-plain icon-line2-envelope nomargin"></i>
-						<div class="he-text t400 text-white-50">
-							Email Us:
-							<span><a href="mailto:info@canvas.com" target="_top" class="text-white t500">info@canvas.com</a></span>
-						</div>
-					</li>
-				</ul>
-
+				</div>
 			</div>
 
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-between flex-row-reverse flex-lg-row">
 
-				<!-- Primary Navigation
-				============================================= -->
-				<nav id="primary-menu" class="style-2 with-arrows  not-dark">
+						<div class="header-misc">
 
-					<div class="container clearfix">
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+							</div><!-- #top-search end -->
 
-						<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+							<!-- Header Buttons
+							============================================= -->
+							<div class="header-buttons d-none d-sm-inline-block">
+								<a href="#slider" data-scrollto="#slider" data-offset="-80" class="button button-rounded button-white button-light button-small m-0">Get a Quote</a>
+							</div>
 
-						<ul>
-							<li class="current"><a href="#"><div>Home</div></a></li>
-							<li><a href="#"><div>Our Company</div></a></li>
-							<li><a href="#"><div>Rates</div></a>
-								<ul>
-									<li><a href="#"><div><i class="icon-line2-home"></i>Home Moving</div></a></li>
-									<li><a href="#"><div><i class="icon-building2"></i>Office Moving</div></a></li>
-									<li><a href="#"><div><i class="icon-line2-globe"></i>International Moving</div></a></li>
-									<li><a href="#"><div><i class="icon-paw"></i>Pet Shifting</div></a></li>
-									<li><a href="#"><div><i class="icon-car"></i>Car Shifting</div></a></li>
-									<li><a href="#"><div><i class="icon-truck1"></i>Hire Truck</div></a></li>
-								</ul>
-							</li>
-							<li><a href="#"><div>Team</div></a></li>
-							<li><a href="#"><div>FAQs</div></a></li>
-							<li><a href="#"><div>Blog</div></a></li>
-							<li><a href="#"><div>Contact Us</div></a></li>
-						</ul>
-
-						<!-- Header Buttons
-						============================================= -->
-						<div class="header-buttons d-none d-sm-inline-block">
-							<a href="#slider" data-scrollto="#slider" data-offset="-80" class="button button-rounded button-white button-light button-small m-0">Get a Quote</a>
 						</div>
 
-						<!-- Top Search
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<!-- Primary Navigation
 						============================================= -->
-						<div id="top-search" class="mr-4">
-							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-							<form action="search.html" method="get">
-								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-							</form>
-						</div><!-- #top-search end -->
+						<nav class="primary-menu with-arrows not-dark">
+
+							<ul class="menu-container">
+								<li class="current menu-item"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Our Company</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Rates</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-line2-home"></i>Home Moving</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-building2"></i>Office Moving</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-line2-globe"></i>International Moving</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-paw"></i>Pet Shifting</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-car"></i>Car Shifting</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-truck1"></i>Hire Truck</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Team</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>FAQs</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Blog</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact Us</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
 
 					</div>
-
-				</nav><!-- #primary-menu end -->
-
+				</div>
 			</div>
-
 		</header><!-- #header end -->
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element bgcolor clearfix" style="height: auto; padding: 60px 0; background: url('demos/movers/images/bg-2.png') no-repeat center center / 100% 100%;">
+		<section id="slider" class="slider-element bg-color" style="height: auto; padding: 60px 0; background: url('demos/movers/images/bg-2.png') no-repeat center center / 100% 100%;">
 
 			<div class="container" style="z-index: 2">
 				<div class="center">
-					<h2 class="text-white h2 t600 mb-2">Welcome to the Canvas Packers and Movers.</h2>
+					<h2 class="text-white h2 font-weight-semibold mb-2">Welcome to the Canvas Packers and Movers.</h2>
 					<p class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aperiam.</p>
 				</div>
-				<div class="row topmargin justify-content-end clearfix">
+				<div class="row topmargin justify-content-end">
 					<div class="col-lg-6">
-						<ul class="nav nav-tabs nav-justified flex-column border-bottom-0 flex-md-row bgcolor mt-4" role="tablist">
+						<ul class="nav nav-tabs nav-justified flex-column border-bottom-0 flex-md-row bg-color mt-4" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link py-3 active" id="home-moving-tab" data-toggle="tab" href="#home-moving" role="tab" aria-controls="home-moving" aria-selected="true">Home Moving</a>
 							</li>
@@ -153,56 +160,60 @@
 								<div class="form-widget">
 									<div class="form-result"></div>
 									<form class="row home-moving-form position-relative mb-0" action="include/form.php" method="post" enctype="multipart/form-data">
-										<div class="form-process"></div>
+										<div class="form-process">
+											<div class="css3-spinner">
+												<div class="css3-spinner-scaler"></div>
+											</div>
+										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-truck1"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-truck1"></i></span>
 											</div>
 											<input type="text" name="home-moving-form-location-from" id="home-moving-form-location-from" class="form-control required" value="" placeholder="Location From">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-map"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-map"></i></span>
 											</div>
 											<input type="text" name="home-moving-form-location-to" id="home-moving-form-location-to" class="form-control required" value="" placeholder="Location To">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-user"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-user"></i></span>
 											</div>
 											<input type="text" name="home-moving-form-name" id="home-moving-form-name" class="form-control required" value="" placeholder="Your Full Name">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-envelope"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-envelope"></i></span>
 											</div>
 											<input type="email" name="home-moving-form-email" id="home-moving-form-email" class="form-control required" value="" placeholder="Your Email">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-call-out"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-call-out"></i></span>
 											</div>
 											<input type="text" name="home-moving-form-phone" id="home-moving-form-phone" class="form-control required" value="" placeholder="Your Phone Number">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-calendar"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-calendar"></i></span>
 											</div>
 											<input type="text" class="form-control home-date required" name="home-moving-form-date" id="home-moving-form-date" value="" placeholder="Your Date">
 										</div>
 
-										<div class="col-12 hidden">
+										<div class="col-12 d-none">
 											<input type="text" id="home-moving-form-botcheck" name="home-moving-form-botcheck" value="" />
 										</div>
 
 										<div class="col-12">
-											<button type="submit" name="home-moving-form-submit" class="btn bgcolor text-white t500 btn-block py-2 mt-2">Contact Us</button>
+											<button type="submit" name="home-moving-form-submit" class="btn bg-color text-white font-weight-medium btn-block py-2 mt-2">Contact Us</button>
 										</div>
 
 										<input type="hidden" name="prefix" value="home-moving-form-">
@@ -216,56 +227,60 @@
 								<div class="form-widget">
 									<div class="form-result"></div>
 									<form class="row office-moving-form position-relative mb-0" action="include/form.php" method="post" enctype="multipart/form-data">
-										<div class="form-process"></div>
+										<div class="form-process">
+											<div class="css3-spinner">
+												<div class="css3-spinner-scaler"></div>
+											</div>
+										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-truck1"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-truck1"></i></span>
 											</div>
 											<input type="text" name="office-moving-form-location-from" id="office-moving-form-location-from" class="form-control required" value="" placeholder="Location From">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-map"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-map"></i></span>
 											</div>
 											<input type="text" name="office-moving-form-location-to" id="office-moving-form-location-to" class="form-control required" value="" placeholder="Location To">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-user"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-user"></i></span>
 											</div>
 											<input type="text" name="office-moving-form-name" id="office-moving-form-name" class="form-control required" value="" placeholder="Your Full Name">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-envelope"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-envelope"></i></span>
 											</div>
 											<input type="email" name="office-moving-form-email" id="office-moving-form-email" class="form-control required" value="" placeholder="Your Email">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-call-out"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-call-out"></i></span>
 											</div>
 											<input type="text" name="office-moving-form-phone" id="office-moving-form-phone" class="form-control required" value="" placeholder="Your Phone Number">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-calendar"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-calendar"></i></span>
 											</div>
 											<input type="text" class="form-control home-date required" name="office-moving-form-date" id="office-moving-form-date" value="" placeholder="Your Date">
 										</div>
 
-										<div class="col-12 hidden">
+										<div class="col-12 d-none">
 											<input type="text" id="office-moving-form-botcheck" name="office-moving-form-botcheck" value="" />
 										</div>
 
 										<div class="col-12">
-											<button type="submit" name="office-moving-form-submit" class="btn bgcolor text-white t500 btn-block py-2 mt-2">Contact Us</button>
+											<button type="submit" name="office-moving-form-submit" class="btn bg-color text-white font-weight-medium btn-block py-2 mt-2">Contact Us</button>
 										</div>
 
 										<input type="hidden" name="prefix" value="office-moving-form-">
@@ -278,11 +293,15 @@
 								<div class="form-widget">
 									<div class="form-result"></div>
 									<form class="row others-moving-form position-relative mb-0" action="include/form.php" method="post" enctype="multipart/form-data">
-										<div class="form-process"></div>
+										<div class="form-process">
+											<div class="css3-spinner">
+												<div class="css3-spinner-scaler"></div>
+											</div>
+										</div>
 
 										<div class="col-12 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><img src="demos/movers/images/baggage.png" height="18" alt="baggage Icon"></span>
+												<span class="input-group-text bg-transparent"><img src="demos/movers/images/baggage.png" height="18" alt="baggage Icon"></span>
 											</div>
 											<select class="required custom-select" name="others-moving-form-service" id="others-moving-form-service">
 												<option value="" disabled selected>-- Select Your Service --</option>
@@ -295,14 +314,14 @@
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-social-dropbox"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-social-dropbox"></i></span>
 											</div>
 											<input type="text" name="others-moving-form-item" id="others-moving-form-item" class="form-control required" value="" placeholder="Your Item">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text text-muted nobg"><i class="icon-user-circle1"></i></span>
+												<span class="input-group-text text-muted bg-transparent"><i class="icon-user-circle1"></i></span>
 											</div>
 											<select class="required custom-select" name="others-moving-form-movers" id="others-moving-form-movers">
 												<option value="" disabled selected>-- Select Movers --</option>
@@ -315,52 +334,52 @@
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-truck1"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-truck1"></i></span>
 											</div>
 											<input type="text" name="others-moving-form-location-from" id="others-moving-form-location-from" class="form-control required" value="" placeholder="Location From">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-map"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-map"></i></span>
 											</div>
 											<input type="text" name="others-moving-form-location-to" id="others-moving-form-location-to" class="form-control required" value="" placeholder="Location To">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-user"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-user"></i></span>
 											</div>
 											<input type="text" name="others-moving-form-name" id="others-moving-form-name" class="form-control required" value="" placeholder="Your Full Name">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-envelope"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-envelope"></i></span>
 											</div>
 											<input type="email" name="others-moving-form-email" id="others-moving-form-email" class="form-control required" value="" placeholder="Your Email">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-call-out"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-call-out"></i></span>
 											</div>
 											<input type="text" name="others-moving-form-phone" id="others-moving-form-phone" class="form-control required" value="" placeholder="Your Phone Number">
 										</div>
 
 										<div class="col-sm-6 input-group form-group">
 											<div class="input-group-prepend">
-												<span class="input-group-text nobg"><i class="icon-line2-calendar"></i></span>
+												<span class="input-group-text bg-transparent"><i class="icon-line2-calendar"></i></span>
 											</div>
 											<input type="text" class="form-control home-date required" name="others-moving-form-date" id="others-moving-form-date" value="" placeholder="Your Date">
 										</div>
 
-										<div class="col-12 hidden">
+										<div class="col-12 d-none">
 											<input type="text" id="others-moving-form-botcheck" name="others-moving-form-botcheck" value="" />
 										</div>
 
 										<div class="col-12">
-											<button type="submit" name="others-moving-form-submit" class="btn bgcolor text-white t500 btn-block py-2 mt-2">Contact Us</button>
+											<button type="submit" name="others-moving-form-submit" class="btn bg-color text-white font-weight-medium btn-block py-2 mt-2">Contact Us</button>
 										</div>
 
 										<input type="hidden" name="prefix" value="others-moving-form-">
@@ -380,7 +399,7 @@
 
 			<div class="svg-separator">
 				<div>
-					<svg preserveAspectRatio="xMidYMax meet" viewBox="0 0 1600 100" style="" data-height="100">
+					<svg preserveAspectRatio="xMidYMax meet" viewBox="0 0 1600 100" data-height="100">
 						<path style="opacity: 1;fill: rgba(255,255,255,0.75);" d="M1040,56c0.5,0,1,0,1.6,0c-16.6-8.9-36.4-15.7-66.4-15.7c-56,0-76.8,23.7-106.9,41C881.1,89.3,895.6,96,920,96
 						C979.5,96,980,56,1040,56z"></path> <path style="opacity: 1;fill: rgba(255,255,255,0.75);" d="M1699.8,96l0,10H1946l-0.3-6.9c0,0,0,0-88,0s-88.6-58.8-176.5-58.8c-51.4,0-73,20.1-99.6,36.8 c14.5,9.6,29.6,18.9,58.4,18.9C1699.8,96,1699.8,96,1699.8,96z"></path> <path style="opacity: 1;fill: rgba(255,255,255,0.75);" d="M1400,96c19.5,0,32.7-4.3,43.7-10c-35.2-17.3-54.1-45.7-115.5-45.7c-32.3,0-52.8,7.9-70.2,17.8 c6.4-1.3,13.6-2.1,22-2.1C1340.1,56,1340.3,96,1400,96z"></path> <path style="opacity: 1;fill: rgba(255,255,255,0.75);" d="M320,56c6.6,0,12.4,0.5,17.7,1.3c-17-9.6-37.3-17-68.5-17c-60.4,0-79.5,27.8-114,45.2 c11.2,6,24.6,10.5,44.8,10.5C260,96,259.9,56,320,56z"></path> <path style="opacity: 1;fill: rgba(255,255,255,0.75);" d="M680,96c23.7,0,38.1-6.3,50.5-13.9C699.6,64.8,679,40.3,622.2,40.3c-30,0-49.8,6.8-66.3,15.8 c1.3,0,2.7-0.1,4.1-0.1C619.7,56,620.2,96,680,96z"></path> <path style="opacity: 1;fill: rgba(255,255,255,0.75);" d="M-40,95.6c28.3,0,43.3-8.7,57.4-18C-9.6,60.8-31,40.2-83.2,40.2c-14.3,0-26.3,1.6-36.8,4.2V106h60V96L-40,95.6
 						z"></path>
@@ -404,7 +423,7 @@
 					<div class="row justify-content-center mb-5">
 						<div class="col-lg-7 center">
 							<div class="heading-block">
-								<h3 class="nott mb-3 t600 ls0">How We Make your Shifting Easy</h3>
+								<h3 class="nott mb-3 font-weight-semibold ls0">How We Make your Shifting Easy</h3>
 								<span class="text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate corporis, facilis assumenda optio consequuntur amet iure, quidem animi nam inventore!</span>
 							</div>
 						</div>
@@ -412,7 +431,7 @@
 						<div class="col-lg-8">
 							<div class="row align-items-center">
 								<div class="col-sm-6">
-									<img src="demos/movers/images/others/4.png" alt="Image 1" class="">
+									<img src="demos/movers/images/others/4.png" alt="Image 1">
 								</div>
 								<div class="col-sm-6">
 									<h3>After you Share your Shifting details, Our Team will contact you.</h3>
@@ -427,12 +446,12 @@
 									<a target="_blank" href="https://icons8.com" class="color btn btn-sm p-0 btn-link"><u>illustration by Ouch.pics</u> <i class="icon-line-arrow-right"></i></a>
 								</div>
 								<div class="col-sm-6">
-									<img src="demos/movers/images/others/2.png" alt="Image 1" class="">
+									<img src="demos/movers/images/others/2.png" alt="Image 1">
 								</div>
 							</div>
 							<div class="row align-items-center mt-5">
 								<div class="col-sm-6">
-									<img src="demos/movers/images/others/1.png" alt="Image 1" class="">
+									<img src="demos/movers/images/others/1.png" alt="Image 1">
 								</div>
 								<div class="col-sm-6">
 									<h3>Deliver whenever you are Ready.</h3>
@@ -452,29 +471,29 @@
 						<div class="row justify-content-between mb-4" style="padding: 100px 0 160px;">
 							<div class="col-lg-5 col-md-6 offset-lg-1 pt-3">
 								<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" data-lightbox="iframe" class="play-video ml-3"><i class="icon-play"></i></a>
-								<h2 class="display-4 t700 text-white topmargin-lg">Services we can help you with.</h2>
+								<h2 class="display-4 font-weight-bold text-white topmargin-lg">Services we can help you with.</h2>
 							</div>
 							<div class="col-lg-5 col-md-6 mb-0 mb-md-5">
 								<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt distinctio dolor nemo quasi cum. A ipsam tempora voluptatem officiis! Accusantium!</p>
 								<h3 class="mb-2 text-white">Service We Provide:</h3>
 								<div class="d-flex">
 									<ul class="col-6 iconlist">
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">100% Trustable</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">100% Safe &amp; Secure</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">On-Time Delivery</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">Verified Movers</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">Liecenced Company</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">No Hidden Charges</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">Live Chat</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">100% Trustable</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">100% Safe &amp; Secure</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">On-Time Delivery</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">Verified Movers</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">Liecenced Company</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">No Hidden Charges</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">Live Chat</span></li>
 									</ul>
 									<ul class="col-6 iconlist">
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">24x7  Support</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">No Extra Payments</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">Also Deliver on Sunday</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">Minimum 1 Mover Free</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">Track Items by App</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">International Delivery</span></li>
-										<li class="my-2"><i class="icon-line-circle-check t300"></i> <span class="pl-2">Door to Door</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">24x7  Support</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">No Extra Payments</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">Also Deliver on Sunday</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">Minimum 1 Mover Free</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">Track Items by App</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">International Delivery</span></li>
+										<li class="my-2"><i class="icon-line-circle-check font-weight-light"></i> <span class="pl-2">Door to Door</span></li>
 									</ul>
 								</div>
 							</div>
@@ -485,71 +504,71 @@
 						<path style="fill:#FFF;" d="M-.5,288.5s297-175,792-97,599,52,671,25v143H-.5Z" transform="translate(0 -171.47)"/></svg>
 				</div>
 
-				<div class="section section-features nobg mt-0 p-0 clearfix">
+				<div class="section section-features bg-transparent mt-0 p-0 clearfix">
 					<div class="container clearfix">
-						<div class="row">
+						<div class="row col-mb-50 col-mb-lg-80">
 							<div class="col-md-4">
 								<div class="feature-box media-box">
 									<div class="fbox-icon position-relative mb-4" style="background-image: url('demos/movers/images/featured-img/1.jpg');">
 										<i class="icon-line2-home"></i>
 									</div>
-									<div class="fbox-desc">
-										<h3 class="t600">Office Moving.</h3>
+									<div class="fbox-content">
+										<h3 class="font-weight-semibold">Office Moving.</h3>
 										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 mt-5 mt-md-0">
+							<div class="col-md-4">
 								<div class="feature-box media-box">
 									<div class="fbox-icon position-relative mb-4" style="background-image: url('demos/movers/images/featured-img/2.jpg');">
 										<i class="icon-building2"></i>
 									</div>
-									<div class="fbox-desc">
-										<h3 class="t600">Home Moving.</h3>
+									<div class="fbox-content">
+										<h3 class="font-weight-semibold">Home Moving.</h3>
 										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 mt-5 mt-md-0">
+							<div class="col-md-4">
 								<div class="feature-box media-box">
 									<div class="fbox-icon position-relative mb-4" style="background-image: url('demos/movers/images/featured-img/3.jpg');">
 										<i class="icon-line2-globe"></i>
 									</div>
-									<div class="fbox-desc">
-										<h3 class="t600">International Moving.</h3>
+									<div class="fbox-content">
+										<h3 class="font-weight-semibold">International Moving.</h3>
 										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 topmargin-lg">
+							<div class="col-md-4">
 								<div class="feature-box media-box">
 									<div class="fbox-icon position-relative mb-4">
 										<i class="icon-paw"></i>
 									</div>
-									<div class="fbox-desc">
-										<h3 class="t600">Pet Shifting.</h3>
+									<div class="fbox-content">
+										<h3 class="font-weight-semibold">Pet Shifting.</h3>
 										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 topmargin-lg">
+							<div class="col-md-4">
 								<div class="feature-box media-box">
 									<div class="fbox-icon position-relative mb-4" style="background-image: url('demos/movers/images/featured-img/1.jpg');">
 										<i class="icon-car"></i>
 									</div>
-									<div class="fbox-desc">
-										<h3 class="t600">Car Shifting.</h3>
+									<div class="fbox-content">
+										<h3 class="font-weight-semibold">Car Shifting.</h3>
 										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 topmargin-lg">
+							<div class="col-md-4">
 								<div class="feature-box media-box">
 									<div class="fbox-icon position-relative mb-4">
 										<i class="icon-truck1"></i>
 									</div>
-									<div class="fbox-desc">
-										<h3 class="t600">Hire Truck.</h3>
+									<div class="fbox-content">
+										<h3 class="font-weight-semibold">Hire Truck.</h3>
 										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum.</p>
 									</div>
 								</div>
@@ -591,25 +610,25 @@
 							<div class="col-sm-3 col-6 center">
 								<div class="counter-dots"></div>
 								<div class="counter font-secondary"><span data-from="100" data-to="11000" data-refresh-interval="50" data-speed="2100" data-comma="true"></span>+</div>
-								<h5 class="capitalize ls0 mt-0"><u>Moved Monthly</u></h5>
+								<h5 class="text-capitalize ls0 mt-0"><u>Moved Monthly</u></h5>
 							</div>
 
 							<div class="col-sm-3 col-6 center">
 								<div class="counter-dots"></div>
 								<div class="counter font-secondary"><span data-from="3" data-to="26" data-refresh-interval="50" data-speed="2200" data-comma="true"></span>+</div>
-								<h5 class="capitalize ls0 mt-0"><u>Years of Experience</u></h5>
+								<h5 class="text-capitalize ls0 mt-0"><u>Years of Experience</u></h5>
 							</div>
 
 							<div class="col-sm-3 col-6 center">
 								<div class="counter-dots"></div>
 								<div class="counter font-secondary"><span data-from="100" data-to="6000" data-refresh-interval="25" data-speed="2300" data-comma="true"></span>+</div>
-								<h5 class="capitalize ls0 mt-0"><u>Trained Manpower</u></h5>
+								<h5 class="text-capitalize ls0 mt-0"><u>Trained Manpower</u></h5>
 							</div>
 
 							<div class="col-sm-3 col-6 center">
 								<div class="counter-dots"></div>
 								<div class="counter font-secondary"><span data-from="1" data-to="21" data-refresh-interval="10" data-speed="2100" data-comma="true"></span>+</div>
-								<h5 class="capitalize ls0 mt-0"><u>Countries Worldwide</u></h5>
+								<h5 class="text-capitalize ls0 mt-0"><u>Countries Worldwide</u></h5>
 							</div>
 
 						</div>
@@ -628,15 +647,15 @@
 						</div>
 					</div>
 					<div class="container">
-						<div class="divcenter" style="max-width: 1200px; padding: 120px 0 50px;">
+						<div class="mx-auto" style="max-width: 1200px; padding: 120px 0 50px;">
 							<div class="d-flex justify-content-between align-items-center mb-4 dark">
 								<h3 class="mb-0">What Our Users Say:</h3>
-								<a href="#" class="button button-white button-light button-rounded button-small t500 m-0">View More</a>
+								<a href="#" class="button button-white button-light button-rounded button-small font-weight-medium m-0">View More</a>
 							</div>
 							<div class="row row-eq-height justify-content-center">
 								<div class="col-md-6">
 									<div class="bg-white shadow-sm d-flex justify-content-center flex-column rounded">
-										<div class="testimonial nobg noshadow noborder p-0">
+										<div class="testimonial bg-transparent shadow-none border-0 p-0">
 											<div class="d-flex flex-row mb-4 align-items-center">
 												<div class="testi-image">
 													<a href="#"><img src="demos/pet/images/testimonials/1.jpg" alt="Customer Testimonails"></a>
@@ -652,7 +671,7 @@
 								</div>
 								<div class="col-md-6 mt-3 mt-md-0">
 									<div class="bg-white shadow-sm d-flex justify-content-center flex-column mb-3 rounded p-5">
-										<div class="testimonial small nobg noshadow noborder p-0">
+										<div class="testimonial small bg-transparent shadow-none border-0 p-0">
 											<div class="d-flex flex-row mb-4 align-items-center">
 												<h4 class="ml-1 mb-0">John Dow</h4>
 											</div>
@@ -663,7 +682,7 @@
 										</div>
 									</div>
 									<div class="bg-white shadow-sm d-flex justify-content-center flex-column rounded p-5">
-										<div class="testimonial small nobg noshadow noborder p-0">
+										<div class="testimonial small bg-transparent shadow-none border-0 p-0">
 											<div class="d-flex flex-row mb-4 align-items-center">
 												<h4 class="ml-1 mb-0">John Dow</h4>
 											</div>
@@ -683,32 +702,56 @@
 				</div>
 
 				<div class="container mb-5">
-					<div class="section-clients divcenter" style="max-width: 700px">
+					<div class="section-clients mx-auto" style="max-width: 700px">
 						<div class="center clearfix mb-4">
-							<span class="badge badge-pill lightthemecolor color uppercase ls1 t500 py-2 px-3">We’ve valuable Organizations Since 2014</span>
+							<span class="badge badge-pill lightthemecolor color text-uppercase ls1 font-weight-medium py-2 px-3">We’ve valuable Organizations Since 2021</span>
 						</div>
 						<div class="clear"></div>
 
 						<div class="toggle mt-5" data-state="open">
-							<div class="togglet t500"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-cross"></i>Why Canvas for Home Shifting?</div>
-							<div class="togglec text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+							<div class="toggle-header flex-row-reverse">
+								<div class="toggle-icon">
+									<i class="toggle-closed icon-line-circle-plus"></i>
+									<i class="toggle-open icon-line-circle-cross"></i>
+								</div>
+								<div class="toggle-title font-weight-medium">
+									Why Canvas for Home Shifting?
+								</div>
+							</div>
+							<div class="toggle-content text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
 						</div>
 
 						<div class="toggle">
-							<div class="togglet t500"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-cross"></i>Advanced Moving Equipments</div>
-							<div class="togglec text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+							<div class="toggle-header flex-row-reverse">
+								<div class="toggle-icon">
+									<i class="toggle-closed icon-line-circle-plus"></i>
+									<i class="toggle-open icon-line-circle-cross"></i>
+								</div>
+								<div class="toggle-title font-weight-medium">
+									Advanced Moving Equipments
+								</div>
+							</div>
+							<div class="toggle-content text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
 						</div>
 
-						<div class="toggle noborder">
-							<div class="togglet t500"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-cross"></i>Best Moving Equipments</div>
-							<div class="togglec text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+						<div class="toggle border-0">
+							<div class="toggle-header flex-row-reverse">
+								<div class="toggle-icon">
+									<i class="toggle-closed icon-line-circle-plus"></i>
+									<i class="toggle-open icon-line-circle-cross"></i>
+								</div>
+								<div class="toggle-title font-weight-medium">
+									Best Moving Equipments
+								</div>
+							</div>
+							<div class="toggle-content text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="clear"></div>
 
-				<div class="section dark pt-0 mb-0 bgcolor" style="background: url('demos/movers/images/bg-2.png') no-repeat center bottom / 100%; overflow: visible">
+				<div class="section dark pt-0 mb-0 bg-color" style="background: url('demos/movers/images/bg-2.png') no-repeat center bottom / 100%; overflow: visible">
 					<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1960 206.8" class="bg-white">
 						<path class="svg-themecolor" style="opacity:0.2;" d="M0,142.8A2337.49,2337.49,0,0,1,297.5,56.3C569.33-3.53,783.89.22,849.5,2.3c215.78,6.86,382.12,45.39,503.25,73.45,158.87,36.8,283.09,79.13,458.75,54.55A816.49,816.49,0,0,0,1983,86.8v110H0Z"/>
 						<path class="svg-themecolor" d="M.5,152.8s498-177,849-150,1031,238,1134,94v110H.5Z"/>
@@ -717,23 +760,22 @@
 						<div class="row align-items-center justify-content-center center my-4">
 
 							<div class="col-sm-8">
-								<div class="heading-block nobottomborder mb-4">
-									<h2 class="t600 ls0 nott mb-3" style="font-size: 44px; line-height: 1.3">Contact Our Movers Specialist</h2>
+								<div class="heading-block border-bottom-0 mb-4">
+									<h2 class="font-weight-semibold ls0 nott mb-3" style="font-size: 44px; line-height: 1.3">Contact Our Movers Specialist</h2>
 									<p>Phosfluorescently develop customized relationships vis-a-vis B2C infomediaries.</p>
 								</div>
-								<a href="#" class="button button-white button-light button-rounded t500 m-0">Get In Touch</a>
+								<a href="#" class="button button-white button-light button-rounded font-weight-medium m-0">Get In Touch</a>
 							</div>
 
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="nobg noborder">
+		<footer id="footer" class="bg-transparent border-0">
 
 			<div class="container">
 
@@ -848,13 +890,13 @@
 
 			<!-- Copyrights
 			============================================= -->
-			<div id="copyrights" class="nobg">
+			<div id="copyrights" class="bg-transparent">
 
 				<div class="container clearfix">
 
 					<div class="row justify-content-between align-items-center">
 						<div class="col-md-6 text-black-50">
-							Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.
 						</div>
 
 						<div class="col-md-6 d-md-flex flex-md-column align-items-md-end mt-4 mt-md-0">
@@ -879,7 +921,6 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<!-- DatePicker JS -->
 	<script src="js/components/datepicker.js"></script>

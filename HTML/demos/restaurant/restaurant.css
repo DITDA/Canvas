@@ -1,6 +1,5 @@
 /* ----------------------------------------------------------------
-	Canvas: Restaurant Demo
-	Version: 1.0
+	Canvas: Restaurant
 -----------------------------------------------------------------*/
 
 :root {
@@ -124,9 +123,7 @@
 }
 
 .entry {
-	padding: 0;
 	margin: 0;
-	border-bottom: 0;
 	-webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.08);
 	-moz-box-shadow: 0 0 15px 2px rgba(0,0,0,0.08);
 	box-shadow: 0 0 15px 2px rgba(0,0,0,0.08);
@@ -134,29 +131,9 @@
 
 .entry-title {
 	background-color: #FFF;
-	padding: 15px;
 }
 
-.entry-title h2 {
-	text-transform: none;
-	font-size: 17px;
-	letter-spacing: 0;
-	font-weight: 500;
-	letter-spacing: 0;
-}
-
-
-.entry-meta { margin: 8px 0 0; }
-
-.ipost .entry-meta li a {
-	font-size: 11px;
-	font-style: normal;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: #999;
-}
-
-.entry-meta li:before {
+.entry-meta li::before {
 	content: '\00b7';
 	opacity: 1;
 }
@@ -182,12 +159,7 @@ ul.tab-nav:not(.tab-nav-lg) li a {
 
 ul.tab-nav:not(.tab-nav-lg) li a img { display: none; }
 
-.iportfolio {
-	width: 89%;
-	margin: 0 auto;
-}
-
-.iportfolio .portfolio-image:after {
+.portfolio-item .portfolio-image::after {
 	opacity: 0;
 	text-align: center;
 	vertical-align: -50%;
@@ -208,7 +180,7 @@ ul.tab-nav:not(.tab-nav-lg) li a img { display: none; }
 	transition: opacity .3s ease;
 }
 
-.iportfolio:hover .portfolio-image:after { opacity: 1; }
+.portfolio-item:hover .portfolio-image::after { opacity: 1; }
 
 .portfolio-desc h4 a {
 	color: #666;
@@ -265,21 +237,22 @@ textarea.border-form-control {
 .custom-select.border-form-control { background: url('images/icons/down-arrow.svg') 96% / 5% no-repeat;}
 
 @media (min-width: 992px) {
-	#header,
-	#header-wrap {
-		z-index: 200;
-		background-color: transparent;
-		background-repeat: repeat-x;
-		background-position: center bottom;
-		background-size: auto 100%;
+	#header.transparent-header #header-wrap::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc( 100% + 20px );
+		z-index: -1;
+		background-image: url('images/sketch-header.png') !important;
+		background-color: transparent !important;
+		background-repeat: repeat-x !important;
+		background-position: center bottom !important;
+		background-size: auto 100% !important;
 		-webkit-transition: all .5s ease;
 		-o-transition: all .5s ease;
 		transition: all .5s ease;
-	}
-
-	#primary-menu ul li > a {
-		padding-top: 32px;
-		padding-bottom: 10px;
 	}
 
 	#header.sticky-header #header-wrap {
@@ -333,6 +306,10 @@ textarea.border-form-control {
 		width: 40%;
 	}
 }
+
+
+/* Page Loader CSS */
+.css3-spinner::before,.pizza .slice::after,.pizza .slice::before{content:''}.css3-spinner{height:100vh;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:#FFF}.css3-spinner::before{position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);width:15vmin;height:2vmin;background:#DDD;margin-top:17.5vmin;-webkit-filter:blur(10px);filter:blur(10px);border-radius:100%}.pizza{height:20vmin;width:20vmin;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:0 0;position:relative;-webkit-animation:rotate 13s linear infinite;animation:rotate 13s linear infinite}@-webkit-keyframes rotate{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.pizza .slice{z-index:-1;overflow:visible;position:absolute;width:0;height:0;border-style:solid;border-width:10vmin 2.75vmin 0;border-color:#ffdc73 transparent transparent;left:7.5vmin;top:0;-webkit-transform-origin:50% 100%;transform-origin:50% 100%;-webkit-transform:rotate(0);transform:rotate(0);-webkit-animation:loading 1.8125s ease-in-out infinite;animation:loading 1.8125s ease-in-out infinite}@-webkit-keyframes loading{0%,100%,49%{opacity:1}50%,99%{opacity:0}}@keyframes loading{0%,100%,49%{opacity:1}50%,99%{opacity:0}}.pizza .slice:nth-of-type(2n)::after{box-shadow:.5vmin 2.5vmin 0 #cc333f}.pizza .slice:nth-of-type(4n)::after{box-shadow:.5vmin 2.5vmin 0 #cc333f,1.5vmin 5vmin 0 #cc333f}.pizza .slice:nth-of-type(1){-webkit-transform:rotate(-27.75deg);transform:rotate(-27.75deg);-webkit-animation-delay:-62.5ms;animation-delay:-62.5ms}.pizza .slice:nth-of-type(2){-webkit-transform:rotate(-55.5deg);transform:rotate(-55.5deg);-webkit-animation-delay:-125ms;animation-delay:-125ms}.pizza .slice:nth-of-type(3){-webkit-transform:rotate(-83.25deg);transform:rotate(-83.25deg);-webkit-animation-delay:-.1875s;animation-delay:-.1875s}.pizza .slice:nth-of-type(4){-webkit-transform:rotate(-111deg);transform:rotate(-111deg);-webkit-animation-delay:-.25s;animation-delay:-.25s}.pizza .slice:nth-of-type(5){-webkit-transform:rotate(-138.75deg);transform:rotate(-138.75deg);-webkit-animation-delay:-.3125s;animation-delay:-.3125s}.pizza .slice:nth-of-type(6){-webkit-transform:rotate(-166.5deg);transform:rotate(-166.5deg);-webkit-animation-delay:-375ms;animation-delay:-375ms}.pizza .slice:nth-of-type(7){-webkit-transform:rotate(-194.25deg);transform:rotate(-194.25deg);-webkit-animation-delay:-.4375s;animation-delay:-.4375s}.pizza .slice:nth-of-type(8){-webkit-transform:rotate(-222deg);transform:rotate(-222deg);-webkit-animation-delay:-.5s;animation-delay:-.5s}.pizza .slice:nth-of-type(9){-webkit-transform:rotate(-249.75deg);transform:rotate(-249.75deg);-webkit-animation-delay:-.5625s;animation-delay:-.5625s}.pizza .slice:nth-of-type(10){-webkit-transform:rotate(-277.5deg);transform:rotate(-277.5deg);-webkit-animation-delay:-625ms;animation-delay:-625ms}.pizza .slice:nth-of-type(11){-webkit-transform:rotate(-305.25deg);transform:rotate(-305.25deg);-webkit-animation-delay:-.6875s;animation-delay:-.6875s}.pizza .slice:nth-of-type(12){-webkit-transform:rotate(-333deg);transform:rotate(-333deg);-webkit-animation-delay:-.75s;animation-delay:-.75s}.pizza .slice::before{position:absolute;height:1.5vmin;width:6vmin;background:#bbb083;top:-10.5vmin;left:-3vmin;border-radius:100vmin 100vmin .5vmin .5vmin/50vmin}.pizza .slice::after{border-radius:100%;position:absolute;width:1.25vmin;height:1.25vmin;background:#cc333f;left:-1vmin;top:-7vmin;z-index:2}
 
 
 

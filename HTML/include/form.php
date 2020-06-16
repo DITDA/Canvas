@@ -9,7 +9,7 @@
 
 
 /*-------------------------------------------------
-	PHPMailer Initialization Files
+	PHPMailer Initialization
 ---------------------------------------------------*/
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -77,6 +77,17 @@ $message = array(
 
 
 /*-------------------------------------------------
+	Blocked Words from Forms
+---------------------------------------------------*/
+
+$spam_keywords = array(
+	'viagra',
+	'cialis',
+	'levitra'
+);
+
+
+/*-------------------------------------------------
 	Form Processor
 ---------------------------------------------------*/
 
@@ -111,6 +122,27 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	if( $botpassed == false ) {
 		echo '{ "alert": "error", "message": "' . $message['error_bot'] . '" }';
 		exit;
+	}
+
+
+	/*-------------------------------------------------
+		SPAM Protection
+	---------------------------------------------------*/
+
+	function spam_keyword_check( $submitted, $spamwords ) {
+		if( !is_array( $spamwords ) ) $spamwords = array( $spamwords );
+		foreach( $spamwords as $spamstring ) {
+			if( ( $position = stripos( $submitted, $spamstring ) ) !== false ) return $position;
+		}
+		return false;
+	}
+
+	foreach( $submits as $spam_submit ) {
+		if( spam_keyword_check( $spam_submit, $spam_keywords ) ) {
+			// A successful message is displayed to the submitter that makes him think that the Form has been sent so that he cannot modify the keywords to prevent SPAM
+			echo '{ "alert": "success", "message": "' . $message['success'] . '" }';
+			exit;
+		}
 	}
 
 
@@ -202,7 +234,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		if( empty( $value ) ) continue;
 
 		$name = str_replace( $prefix , '', $name );
-		$name = ucwords( str_replace( '-', ' ', $name ) );
+		$name = mb_convert_case( $name, MB_CASE_TITLE, "UTF-8" );
 
 		if( is_array( $value ) ) {
 			$value = implode( ', ', $value );
@@ -359,6 +391,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	}
 
 	$mail->MsgHTML( $body );
+	$mail->CharSet = "UTF-8";
 	$sendEmail = $mail->Send();
 
 	if( $sendEmail == true ):

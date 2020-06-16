@@ -1,13 +1,9 @@
 /* ----------------------------------------------------------------
-	CSS Specific to the Course Demo
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Styling of this Demo
-
+	Canvas: Course
 -----------------------------------------------------------------*/
 
 
-:root{
+:root {
 	--themecolor: #0474c4;
 }
 
@@ -15,7 +11,7 @@
 
 /* Headers
 ---------------------------------------------------------------------------- */
-.dark .top-links li > a {
+.dark .top-links-item > a {
 	color: #EEE;
 	font-weight: 400;
 	text-transform: none;
@@ -25,7 +21,10 @@
 
 .dark #top-social li a { color: #FFF; }
 
-#top-social li, #top-social li a, #top-social li .ts-icon, #top-social li .ts-text { font-weight: 400; }
+#top-social li,
+#top-social li a,
+#top-social li .ts-icon,
+#top-social li .ts-text { font-weight: 400; }
 
 
 .navbar-expand-lg .navbar-nav .nav-item .nav-link {
@@ -41,7 +40,7 @@
 
 .navbar-expand-lg .navbar-nav .nav-item:hover .nav-link { color: var(--themecolor) }
 
-#primary-menu ul li > a {
+.menu-link {
 	text-transform: none;
 	font-weight: 400;
 	letter-spacing: 0;
@@ -49,26 +48,9 @@
 	color: #333 !important;
 }
 
-#primary-menu ul ul li > a {
+.sub-menu-container .menu-link {
 	font-weight: 400;
 	font-size: 14px;
-}
-
-#header-wrap .button {
-	text-transform: none;
-	font-weight: 400;
-	text-shadow: none;
-	letter-spacing: 0;
-	font-size: 14px;
-}
-
-#header-wrap .header-buttons {
-	display: inline-block;
-	float: right;
-	margin: 8px 0;
-	-webkit-transition: all .4s ease;
-	-o-transition: all .4s ease;
-	transition: all .4s ease;
 }
 
 /* Text Rotater
@@ -214,16 +196,7 @@
 		padding: 4px 0;
 	}
 
-	#header-wrap .header-buttons {
-		position: absolute;
-		top: 0;
-		right: 70px;
-		margin: 8px auto;
-	}
-
 	.navbar-expand-lg .navbar-nav .nav-item .nav-link { margin-left: 0; }
-
-	.top-search-open .header-buttons { opacity: 0 }
 
 	.course-categories .card a span { font-size: 12px; }
 }
@@ -245,13 +218,8 @@
 }
 
 @media (max-width: 767px) {
-	#top-social, .flex-caption, .slider-arrow-top-sm, .slider-arrow-bottom-sm {
+	.flex-caption, .slider-arrow-top-sm, .slider-arrow-bottom-sm {
 	    display: inline-block !important;
-	}
-
-	#top-cart {
-		display: inline-block;
-		right: 20px;
 	}
 }
 
@@ -261,7 +229,5 @@
 }
 
 #top-search form input::-moz-placeholder { text-transform: none; letter-spacing: 0; color: #AAA; font-size: 24px; }
-#top-search form input:-ms-input-placeholder { text-transform: none; letter-spacing: 0; color: #AAA; font-size: 24px; }
+#top-search form input::-ms-input-placeholder { text-transform: none; letter-spacing: 0; color: #AAA; font-size: 24px; }
 #top-search form input::-webkit-input-placeholder { text-transform: none; letter-spacing: 0; color: #AAA; font-size: 24px;}
-
-body.top-search-open #top-cart { opacity: 1 }

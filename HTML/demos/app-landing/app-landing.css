@@ -1,53 +1,52 @@
 /* ----------------------------------------------------------------
 	Canvas: App Landing
-	Version: 1.0
 -----------------------------------------------------------------*/
 
 
 #header-wrap > .container { border-bottom: 1px solid rgba(255,255,255,0.2); }
 
-#primary-menu > ul > li > a {
-	font-size: 15px;
-	padding-left: 20px;
-	padding-right: 20px;
-	font-weight: 400 !important;
-	text-transform: capitalize;
-	font-family: 'Poppins', sans-serif !important;
-}
-
 @media (min-width: 992px) {
 
-	#primary-menu > ul > li.menu-item-emphasis > a {
+	.menu-container > .menu-item > .menu-link {
+		font-size: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-weight: 400;
+		text-transform: capitalize;
+		font-family: 'Poppins', sans-serif !important;
+	}
+
+	.menu-item.menu-item-emphasis > .menu-link {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.menu-item.menu-item-emphasis > .menu-link div {
 		padding-top: 9px;
 		padding-bottom: 9px;
+		margin-top: -9px;
+		margin-bottom: -9px;
+		padding-left: 20px;
+		padding-right: 20px;
 		border-radius: 20px;
-		margin-top: 30px;
-		margin-bottom: 30px;
 	}
 
-	#header.sticky-header #primary-menu > ul > li.menu-item-emphasis > a {
-		padding-top: 9px !important;
-		padding-bottom: 9px !important;
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-
-	#header:not(.sticky-header) #primary-menu > ul > li.menu-item-emphasis > a {
+	#header:not(.sticky-header) .menu-item.menu-item-emphasis > .menu-link div {
 		background-color: rgba(255,255,255,0.1);
 		text-shadow: none;
 	}
 
-	#header:not(.sticky-header) #primary-menu > ul > li.menu-item-emphasis > a:hover {
+	#header:not(.sticky-header) .menu-item.menu-item-emphasis:hover > .menu-link div {
 		background-color: #FFF;
 		color: #267DF4 !important;
 	}
 
-	#header.sticky-header #primary-menu > ul > li.menu-item-emphasis > a {
+	#header.sticky-header .menu-item.menu-item-emphasis > .menu-link div {
 		background-color: #267DF4;
 		color: #FFF;
 	}
 
-	#primary-menu ul ul:not(.mega-menu-column) {
+	.sub-menu-container:not(.mega-menu-column) {
 		width: 260px;
 		padding: 20px;
 		border: 1px solid #EEE !important;
@@ -55,7 +54,7 @@
 		left: -20px;
 	}
 
-	#primary-menu ul ul li > a {
+	.sub-menu-container .menu-item > .menu-link {
 		font-size: 14px;
 		font-weight: 400;
 		text-transform: capitalize;
@@ -63,31 +62,9 @@
 		font-family: 'Poppins', sans-serif !important;
 	}
 
-	#primary-menu ul ul li:hover > a { padding-left: 25px; }
+	.sub-menu-container .menu-item:hover > .menu-link { padding-left: 25px; }
 
 }
-
-
-#header.sticky-header:not(.static-sticky),
-#header.sticky-header:not(.static-sticky) #header-wrap,
-#header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img { height: 80px; }
-
-#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
-	padding-top: 29px;
-	padding-bottom: 29px;
-}
-
-#header.sticky-header:not(.static-sticky) #top-search,
-#header.sticky-header:not(.static-sticky) #top-cart,
-#header.sticky-header:not(.static-sticky) #side-panel-trigger {
-	margin-top: 30px !important;
-	margin-bottom: 30px !important;
-}
-
-#header.sticky-header:not(.static-sticky) #top-cart .top-cart-content,
-#header.sticky-header:not(.static-sticky) #primary-menu.sub-title.style-2 > div #top-cart .top-cart-content { top: 50px; }
-
-
 
 
 #slider .emphasis-title h1 { font-size: 48px; }
@@ -249,9 +226,7 @@
 .widget.widget_links.app_landing_widget_link li a:hover { color: #666; }
 
 
-
 .pricing-box {
-	margin: 0 20px;
 	padding: 30px;
 	background-color: #FFF;
 	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.08);
@@ -269,7 +244,7 @@
 	letter-spacing: 0;
 }
 
-.pricing-price:after,
+.pricing-price::after,
 .pricing-features {
 	border: 0;
 	font-family: 'Poppins', sans-serif;
@@ -294,31 +269,7 @@
 	letter-spacing: 1px;
 }
 
-
-.pricing-tenure-switcher { position: relative; }
-
-.pricing-tenure-switcher .pts-left,
-.pricing-tenure-switcher .pts-right,
-.pricing-tenure-switcher .pts-switcher {
-	display: inline-block;
-	margin: 0 10px;
-	height: 30px;
-	overflow: hidden;
-}
-
-.pricing-tenure-switcher .pts-left,
-.pricing-tenure-switcher .pts-right {
-	font-size: 16px;
-	font-weight: 600;
-	color: #AAA;
-	line-height: 30px;
-}
-
-.pricing-tenure-switcher .pts-switch-active { color: #333; }
-
-.pricing-tenure-switcher .pts-switcher label { margin-bottom: 0; }
-
-.pts-switcher input.switch-toggle-round + label:before,
+.pts-switcher input.switch-toggle-round + label::before,
 .pts-switcher input.switch-toggle-round + label { background-color: #267DF4; }
 
 
@@ -446,12 +397,12 @@
 
 @media (min-width: 992px) {
 
-	.rtl #primary-menu ul ul:not(.mega-menu-column) {
+	.rtl .primary-menu ul ul:not(.mega-menu-column) {
 		right: -20px;
 		left: auto;
 	}
 
-	.rtl #primary-menu ul ul li:hover > a { padding-right: 25px; padding-left: 0; }
+	.rtl .primary-menu ul ul li:hover > a { padding-right: 25px; padding-left: 0; }
 
 }
 

@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -27,10 +27,10 @@
 
 	<link rel="stylesheet" href="one-page/css/fonts.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<link rel="stylesheet" href="demos/xmas/css/colors.css" type="text/css" />
+	<link rel="stylesheet" href="css/colors.php?color=BD1B06" type="text/css" />
 
 	<!-- Document Title
 	============================================= -->
@@ -46,113 +46,103 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header transparent-header static-sticky show-on-sticky" data-sticky-offset="full" data-sticky-offset-negative="300">
-
+		<header id="header" class="full-header transparent-header show-on-sticky" data-sticky-shrink="false" data-sticky-offset="full" data-sticky-offset-negative="300">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
 
-				<div class="container clearfix">
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html" class="standard-logo"><img src="demos/xmas/images/canvasxmas.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo"><img src="demos/xmas/images/canvasxmas@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
 
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="index.html" class="standard-logo"><img src="demos/xmas/images/canvasxmas.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo"><img src="demos/xmas/images/canvasxmas@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
 
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu">
+							<ul class="menu-container one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#wrapper"><div>Top</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-overview"><div>Overview</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-offers"><div>Offers</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-categories"><div>Categories</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#footer"><div>Subscribe</div></a></li>
+							</ul>
 
-						<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
-							<li><a href="#" data-href="#wrapper"><div>Top</div></a></li>
-							<li><a href="#" data-href="#section-overview"><div>Overview</div></a></li>
-							<li><a href="#" data-href="#section-offers"><div>Offers</div></a></li>
-							<li><a href="#" data-href="#section-categories"><div>Categories</div></a></li>
-							<li><a href="#" data-href="#footer"><div>Subscribe</div></a></li>
-						</ul>
+						</nav><!-- #primary-menu end -->
 
-					</nav><!-- #primary-menu end -->
-
+					</div>
 				</div>
-
 			</div>
-
 		</header><!-- #header end -->
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element full-screen" data-height-md="800" data-height-sm="850" data-height-xs="850">
-
-			<div class="full-screen dark section nopadding nomargin noborder ohidden" style="background-image: url('demos/xmas/images/hero.jpg'); background-size: cover; background-position: center center;" data-height-md="800" data-height-sm="850" data-height-xs="850">
+		<section id="slider" class="slider-element include-header dark min-vh-100" style="height: 800px;">
+			<div class="slider-inner" style="background-image: url('demos/xmas/images/hero.jpg'); background-size: cover; background-position: center center;">
 
 				<div class="snowfall"></div>
 
-				<div class="container center">
-					<div class="vertical-middle">
-						<div class="vertical-middle-offset">
-							<div class="emphasis-title inline-block">
-								<h1 style="font-size:2.5em;" class="font-body t700 ls3 uppercase">Fabulous Offers &amp; Great Deals till</h1>
-							</div>
-							<div class="clear"></div>
-							<div id="countdown-xmas" class="xmas-countdown bottommargin-lg divcenter" style="max-width:700px;"></div>
-							<a href="#" class="button button-border button-light button-circle" data-scrollto="#section-offers" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">View Offers</a>
-						</div>
+				<div class="container text-center mt-5">
+					<div class="emphasis-title mt-5">
+						<h1 style="font-size:2.5em;" class="font-body font-weight-bold ls3 text-uppercase">Fabulous Offers &amp; Great Deals till</h1>
 					</div>
+					<div id="countdown-xmas" class="xmas-countdown countdown bottommargin-lg mx-auto" data-year="2020" data-month="12" data-day="25" style="max-width:700px;"></div>
+					<a href="#" class="button button-border button-light button-circle" data-scrollto="#section-offers" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">View Offers</a>
 				</div>
-
-				<!-- <div class="video-wrap">
-					<div class="video-overlay" style="background: rgba(0,0,0,0.2);"></div>
-				</div> -->
 
 				<a href="#" data-scrollto="#section-offers" data-easing="easeInOutExpo" data-speed="1250" data-offset="65" class="one-page-arrow dark"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
 
 			</div>
-
 		</section><!-- #slider end -->
 
 		<!-- Content
 		============================================= -->
 		<section id="content">
-
-			<div class="content-wrap notoppadding">
+			<div class="content-wrap pt-0">
 
 				<div id="section-overview" class="page-section">
-					<div class="container clearfix">
+					<div class="container">
 
-						<div class="col_one_third nobottommargin">
-							<div class="feature-box media-box">
-								<div class="fbox-media">
-									<img style="max-width: 150px;" class="divcenter" src="demos/xmas/images/overview/f1.jpg" alt="Gift your Loved Ones">
-								</div>
-								<div class="fbox-desc center">
-									<h3>Gift your Loved Ones<span class="subtitle">Surprise them this Holiday Season</span></h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+						<div class="row justify-content-center col-mb-50">
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img style="max-width: 150px;" class="mx-auto" src="demos/xmas/images/overview/f1.jpg" alt="Gift your Loved Ones">
+									</div>
+									<div class="fbox-content center">
+										<h3>Gift your Loved Ones<span class="subtitle">Surprise them this Holiday Season</span></h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="col_one_third nobottommargin">
-							<div class="feature-box media-box">
-								<div class="fbox-media">
-									<img style="max-width: 150px;" class="divcenter" src="demos/xmas/images/overview/f2.jpg" alt="Celebrate XMAS Together">
-								</div>
-								<div class="fbox-desc center">
-									<h3>Celebrate XMAS Together<span class="subtitle">Bring back your Childhood Memories</span></h3>
-									<p>Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur, labore totam. Accusamus perspiciatis asperiores labore esse.</p>
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img style="max-width: 150px;" class="mx-auto" src="demos/xmas/images/overview/f2.jpg" alt="Celebrate XMAS Together">
+									</div>
+									<div class="fbox-content center">
+										<h3>Celebrate XMAS Together<span class="subtitle">Bring back your Childhood Memories</span></h3>
+										<p>Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur, labore totam. Accusamus perspiciatis asperiores labore esse.</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="col_one_third nobottommargin col_last">
-							<div class="feature-box media-box">
-								<div class="fbox-media">
-									<img style="max-width: 150px;" class="divcenter" src="demos/xmas/images/overview/f3.jpg" alt="Sweets, Cakes &amp; More">
-								</div>
-								<div class="fbox-desc center">
-									<h3>Sweets, Cakes &amp; More<span class="subtitle">Sweet Tooth with Chocolaty Indulgence</span></h3>
-									<p>Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae, atque tempora ullam. Vitae delectus quia, consequuntur rerum quo.</p>
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img style="max-width: 150px;" class="mx-auto" src="demos/xmas/images/overview/f3.jpg" alt="Sweets, Cakes &amp; More">
+									</div>
+									<div class="fbox-content center">
+										<h3>Sweets, Cakes &amp; More<span class="subtitle">Sweet Tooth with Chocolaty Indulgence</span></h3>
+										<p>Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae, atque tempora ullam. Vitae delectus quia, consequuntur rerum quo.</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -160,26 +150,26 @@
 					</div>
 				</div>
 
-				<div id="section-offers" class="page-section nopadding">
-					<div class="section nomargin dark bgcolor">
+				<div id="section-offers" class="page-section p-0">
+					<div class="section m-0 dark bg-color">
 						<div class="snowfall" style="opacity:0.5;"></div>
-						<div class="container clearfix">
-							<h2 class="uppercase nobottommargin center ls2">Today's Discounted Products</h2>
+						<div class="container">
+							<h2 class="text-uppercase mb-0 center ls2">Today's Discounted Products</h2>
 						</div>
 					</div>
 
 					<div style="background: url('demos/xmas/images/products-bg.jpg') repeat center top; background-size: auto 100%; height: 150px;"></div>
 
-					<div class="container clearfix topmargin-lg">
+					<div class="container topmargin-lg">
 						<div class="row clearfix">
 
 							<div class="col-lg-6 bottommargin">
-								<div class="iproduct">
+								<div class="product">
 									<div class="row">
 										<div class="col-md-6">
 											<div class="product-image">
 												<a href="#"><img src="demos/xmas/images/products/1.jpg" alt="High-Heel Girl's Sandals"></a>
-												<div class="sale-flash">50% Off*</div>
+												<div class="sale-flash badge badge-danger p-2">50% Off*</div>
 											</div>
 										</div>
 
@@ -195,7 +185,7 @@
 													<i class="icon-star-half-full"></i>
 												</div>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-												<a href="#" class="button button-rounded button-addcart nomargin"><i class="icon-shopping-cart"></i> Add to Cart</a>
+												<a href="#" class="button button-rounded button-addcart m-0"><i class="icon-shopping-cart"></i> Add to Cart</a>
 											</div>
 										</div>
 									</div>
@@ -203,13 +193,13 @@
 							</div>
 
 							<div class="col-lg-6 bottommargin">
-								<div class="iproduct">
+								<div class="product">
 									<div class="row">
 										<div class="col-md-6">
 											<div class="product-image">
 												<a href="#"><img src="demos/xmas/images/products/3.jpg" alt="Black Leather Jacket"></a>
 												<a href="#"><img src="demos/xmas/images/products/3-1.jpg" alt="Black Leather Jacket"></a>
-												<div class="sale-flash">20% Off*</div>
+												<div class="sale-flash badge badge-danger p-2">20% Off*</div>
 											</div>
 										</div>
 
@@ -225,7 +215,7 @@
 													<i class="icon-star3"></i>
 												</div>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-												<a href="#" class="button button-rounded button-addcart nomargin"><i class="icon-shopping-cart"></i> Add to Cart</a>
+												<a href="#" class="button button-rounded button-addcart m-0"><i class="icon-shopping-cart"></i> Add to Cart</a>
 											</div>
 										</div>
 									</div>
@@ -233,13 +223,13 @@
 							</div>
 
 							<div class="col-lg-6 bottommargin">
-								<div class="iproduct">
+								<div class="product">
 									<div class="row">
 										<div class="col-md-6">
 											<div class="product-image">
 												<a href="#"><img src="demos/xmas/images/products/4.jpg" alt="Retro Men's Watch"></a>
 												<a href="#"><img src="demos/xmas/images/products/4-1.jpg" alt="Retro Men's Watch"></a>
-												<div class="sale-flash">50% Off*</div>
+												<div class="sale-flash badge badge-danger p-2">50% Off*</div>
 											</div>
 										</div>
 
@@ -255,7 +245,7 @@
 													<i class="icon-star-half-full"></i>
 												</div>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-												<a href="#" class="button button-rounded button-addcart nomargin"><i class="icon-shopping-cart"></i> Add to Cart</a>
+												<a href="#" class="button button-rounded button-addcart m-0"><i class="icon-shopping-cart"></i> Add to Cart</a>
 											</div>
 										</div>
 									</div>
@@ -263,12 +253,12 @@
 							</div>
 
 							<div class="col-lg-6 bottommargin">
-								<div class="iproduct">
+								<div class="product">
 									<div class="row">
 										<div class="col-md-6">
 											<div class="product-image">
 												<a href="#"><img src="demos/xmas/images/products/2.jpg" alt="Brown Sneakers"></a>
-												<div class="sale-flash">50% Off*</div>
+												<div class="sale-flash badge badge-danger p-2">50% Off*</div>
 											</div>
 										</div>
 
@@ -284,7 +274,7 @@
 													<i class="icon-star-empty"></i>
 												</div>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-												<a href="#" class="button button-rounded button-addcart nomargin"><i class="icon-shopping-cart"></i> Add to Cart</a>
+												<a href="#" class="button button-rounded button-addcart m-0"><i class="icon-shopping-cart"></i> Add to Cart</a>
 											</div>
 										</div>
 									</div>
@@ -294,61 +284,63 @@
 						</div>
 					</div>
 
-					<div class="section nobottommargin" style="background: url('demos/xmas/images/promo-bg.jpg') no-repeat center center; background-size: cover; padding:80px 0;">
+					<div class="section mb-0" style="background: url('demos/xmas/images/promo-bg.jpg') no-repeat center center; background-size: cover; padding:80px 0;">
 						<div class="snowfall"></div>
-						<div class="divcenter center" style="max-width: 900px;">
-							<h2 class="nobottommargin t500 font-body">Craving for More? Check Out <a href="#" data-scrollto="#template-contactform" data-offset="140" data-easing="easeInOutExpo" data-speed="1250" class="button button-dark button-rounded notopmargin nobottommargin" style="position: relative; top: -5px; margin-left: 10px;">More Offers</a></h2>
+						<div class="mx-auto center" style="max-width: 900px;">
+							<h2 class="mb-0 font-weight-medium font-body">Craving for More? Check Out <a href="#" data-scrollto="#template-contactform" data-offset="140" data-easing="easeInOutExpo" data-speed="1250" class="button button-dark button-rounded my-0" style="position: relative; top: -5px; margin-left: 10px;">More Offers</a></h2>
 						</div>
 					</div>
 
 				</div>
 
-				<div id="section-categories" class="page-section nobottompadding">
-					<div class="container clearfix">
+				<div id="section-categories" class="page-section pb-0">
+					<div class="container">
 
-						<div class="heading-block center nobottomborder">
+						<div class="heading-block center border-bottom-0">
 							<h3>More Deals across More Categories</h3>
 							<span>Best Ways to Save More this Holiday Season</span>
 						</div>
 
-						<div class="col_one_third nobottommargin">
-							<div class="feature-box media-box">
-								<div class="fbox-media">
-									<img src="demos/xmas/images/cats/1.jpg" alt="Why choose Us?">
+						<div class="row justify-content-center col-mb-50">
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img src="demos/xmas/images/cats/1.jpg" alt="Why choose Us?">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Consumer Electronics<span class="subtitle">Save more than 50% on Selected Products</span></h3>
+									</div>
 								</div>
-								<div class="fbox-desc">
-									<h3>Consumer Electronics<span class="subtitle">Save more than 50% on Selected Products</span></h3>
+							</div>
+
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img src="demos/xmas/images/cats/2.jpg" alt="Effective Planning">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Gaming Consoles<span class="subtitle">Save More while you Play More</span></h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img src="demos/xmas/images/cats/3.jpg" alt="Why choose Us?">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Winter Fashion<span class="subtitle">Get Ready for the Winters</span></h3>
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="col_one_third nobottommargin">
-							<div class="feature-box media-box">
-								<div class="fbox-media">
-									<img src="demos/xmas/images/cats/2.jpg" alt="Effective Planning">
-								</div>
-								<div class="fbox-desc">
-									<h3>Gaming Consoles<span class="subtitle">Save More while you Play More</span></h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="col_one_third nobottommargin col_last">
-							<div class="feature-box media-box">
-								<div class="fbox-media">
-									<img src="demos/xmas/images/cats/3.jpg" alt="Why choose Us?">
-								</div>
-								<div class="fbox-desc">
-									<h3>Winter Fashion<span class="subtitle">Get Ready for the Winters</span></h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="clear"></div><div class="line"></div>
+						<div class="line"></div>
 
 						<div class="row payments-info">
 							<div class="col-lg-6">
-								<p class="lead nomargin">Free Shipping on Orders of <strong>$199</strong> or above.</p>
+								<p class="lead m-0">Free Shipping on Orders of <strong>$199</strong> or above.</p>
 							</div>
 							<div class="col-lg-6">
 								<ul class="payment-cards clearfix">
@@ -366,19 +358,18 @@
 					</div>
 				</div>
 
-				<a href="#" class="button button-full footer-stick si-colored si-forrst center nobottomborder tright topmargin" style="padding:40px 0;">
-					<div class="container clearfix">
+				<a href="#" class="button button-full footer-stick si-colored si-forrst center border-bottom-0 text-right topmargin" style="padding:40px 0;">
+					<div class="container">
 						Use <strong>XMAS10</strong> during Checkout and Get Additional 10% Off!
 					</div>
 				</a>
 
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark page-section nopadding noborder" style="padding-top:10px;">
+		<footer id="footer" class="dark page-section p-0 border-0" style="padding-top:10px;">
 
 			<div style="background: url('demos/xmas/images/bulbs.png') repeat-x center top; background-size: auto 100%; height: 54px;"></div>
 
@@ -387,17 +378,17 @@
 			<div class="container center">
 				<div class="footer-widgets-wrap">
 
-					<div class="row divcenter clearfix">
+					<div class="row mx-auto clearfix">
 
 						<div class="col-lg-6 offset-lg-3">
 
 							<div class="widget subscribe-widget clearfix">
 								<h4 style="margin-bottom:20px;">More Discounts on Subscription</h4>
 
-								<p style="font-size:16px;" class="t300 bottommargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam distinctio voluptates odio iste eum fuga assumenda voluptatibus cum eaque.</p>
+								<p style="font-size:16px;" class="font-weight-light bottommargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam distinctio voluptates odio iste eum fuga assumenda voluptatibus cum eaque.</p>
 
 								<div class="widget-subscribe-form-result"></div>
-								<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="nobottommargin">
+								<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
 									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control form-control-lg not-dark required email" placeholder="Your Email Address">
 									<button class="button button-border button-circle button-light topmargin-sm" type="submit">Subscribe Now</button>
 								</form>
@@ -412,7 +403,7 @@
 
 			<div id="copyrights">
 				<div class="container center clearfix">
-					Copyright Canvas 2015 | All Rights Reserved
+					Copyrights Canvas 2020 | All Rights Reserved
 				</div>
 			</div>
 
@@ -427,20 +418,10 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
-
-	<script>
-
-		jQuery(document).ready( function($){
-			var xmasDate = new Date(2019, 11, 25);
-			$('#countdown-xmas').countdown({until: xmasDate});
-		});
-
-	</script>
 
 </body>
 </html>

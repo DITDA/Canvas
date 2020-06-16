@@ -7,11 +7,12 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Mukta+Vaani:300,400,500,600,700|Open+Sans:300,400,600,700,800,900" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Mukta+Vaani:300,400,500,600,700|Open+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
 	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
 
 	<!-- Bootstrap Select CSS -->
 	<link rel="stylesheet" href="css/components/bs-select.css" type="text/css" />
@@ -21,13 +22,12 @@
 	<link rel="stylesheet" href="demos/car/css/car-icons/style.css" type="text/css" />
 	<!-- / -->
 
-	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
 	<link rel="stylesheet" href="demos/car/css/fonts.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link rel="stylesheet" href="css/colors.php?color=c85e51" type="text/css" />
@@ -39,7 +39,7 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>Automotive | Canvas</title>
+	<title>Car | Canvas</title>
 
 	<style>
 		/* Revolution Slider */
@@ -70,18 +70,22 @@
 
 				<p>It has always been, and will always be, about quality. We're passionate about ethically sourcing the finest coffee beans, roasting them with great care. We'd like to hear your message!</p>
 
-				<div class="widget quick-contact-widget form-widget noborder notoppadding clearfix">
+				<div class="widget quick-contact-widget form-widget border-0 pt-0 clearfix">
 
 					<h4>Quick Contact</h4>
 					<div class="form-result"></div>
-					<form id="quick-contact-form" name="quick-contact-form" action="include/form.php" method="post" class="quick-contact-form nobottommargin">
-						<div class="form-process"></div>
+					<form id="quick-contact-form" name="quick-contact-form" action="include/form.php" method="post" class="quick-contact-form mb-0">
+						<div class="form-process">
+							<div class="css3-spinner">
+								<div class="css3-spinner-scaler"></div>
+							</div>
+						</div>
 						<input type="text" class="required sm-form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name" />
 						<input type="text" class="required sm-form-control email input-block-level" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address" />
 						<textarea class="required sm-form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Message"></textarea>
-						<input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+						<input type="text" class="d-none" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
 						<input type="hidden" name="prefix" value="quick-contact-form-">
-						<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d nomargin" value="submit">Send Email</button>
+						<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d m-0" value="submit">Send Email</button>
 					</form>
 
 				</div>
@@ -99,104 +103,116 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="static-sticky full-header clearfix">
-
+		<header id="header" class="full-header" data-sticky-shrink="false" data-logo-height="50" data-menu-padding="14">
 			<div id="header-wrap">
+				<div class="container-fluid">
+					<div class="header-row flex-lg-row-reverse">
 
-				<div class="container-fluid clearfix">
-
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-					<!-- Logo
+						<!-- Logo
 						============================================= -->
-					<div id="logo">
-						<a href="demo-car.html" class="standard-logo"><img src="demos/car/images/logo.png" alt="Canvas Logo"></a>
-						<a href="demo-car.html" class="retina-logo"><img src="demos/car/images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
+						<div id="logo" class="mr-lg-0 ml-lg-auto">
+							<a href="demo-car.html" class="standard-logo"><img src="demos/car/images/logo.png" alt="Canvas Logo"></a>
+							<a href="demo-car.html" class="retina-logo"><img src="demos/car/images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu" class="with-arrows clearfix">
-						<ul>
-							<li class="current"><a href="#"><div>Home</div></a></li>
-							<!-- Mega Menu -->
-							<li class="mega-menu"><a href="demos/car/car-single.html"><div>Models</div></a>
-								<div class="mega-menu-content style-2 clearfix">
-									<ul class="mega-menu-column col-lg-12">
-										<li>
-											<div class="widget center clearfix">
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
 
-												<h3 class="nobottommargin">Featured Models</h3>
-												<a href="#" class="button button-small button-rounded button-border button-dark button-black font-primary" style="margin: 10px 0 40px">Show all Cars</a>
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows">
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="demo-car.html"><div>Home</div></a></li>
+								<!-- Mega Menu -->
+								<li class="menu-item mega-menu"><a class="menu-link" href="demo-car-single.html"><div>Models</div></a>
+									<div class="mega-menu-content mega-menu-style-2">
+										<div class="container">
+											<div class="row">
+												<ul class="sub-menu-container mega-menu-column col-12">
+													<li class="menu-item">
+														<div class="widget text-center">
 
-												<!-- Mega Menu Cars Carousel -->
-												<div class="owl-carousel customjs image-carousel carousel-widget" data-margin="20" data-nav="false" data-pagi="true" data-items-xs="1" data-items-sm="2" data-items-md="4" data-items-lg="6" data-items-xl="6">
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/1.png" alt="Car">BMW 1 Series ActiveE</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/4.png" alt="Car">Mercedes-Benz S-Class</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/5.png" alt="Car">Gran Turismo</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/6.png" alt="Car">Mclaren 675LT SPIDER</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/7.png" alt="Car">Honda City</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/8.png" alt="Car">Toyota Qualis</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/9.png" alt="Car">Honda WR-V</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/10.png" alt="Car">Suzuki Breeza</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/2.png" alt="Car">Chevrolet Spark</a></div>
-													<div class="oc-item center"><a href="demos/car/car-single.html"><img src="demos/car/images/mega-menu/3.png" alt="Car">Honda JaZZ</a></div>
+															<h3 class="mb-0">Featured Models</h3>
+															<a href="#" class="button button-small button-rounded button-border button-dark button-black font-primary" style="margin: 10px 0 40px">Show all Cars</a>
 
-												</div>
+															<!-- Mega Menu Cars Carousel -->
+															<div class="owl-carousel image-carousel carousel-widget" data-margin="20" data-nav="false" data-pagi="true" data-items-xs="1" data-items-sm="2" data-items-md="4" data-items-lg="6" data-items-xl="6">
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/1.png" alt="Car">BMW 1 Series ActiveE</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/4.png" alt="Car">Mercedes-Benz S-Class</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/5.png" alt="Car">Gran Turismo</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/6.png" alt="Car">Mclaren 675LT SPIDER</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/7.png" alt="Car">Honda City</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/8.png" alt="Car">Toyota Qualis</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/9.png" alt="Car">Honda WR-V</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/10.png" alt="Car">Suzuki Breeza</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/2.png" alt="Car">Chevrolet Spark</a></div>
+																<div class="oc-item center"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/3.png" alt="Car">Honda JaZZ</a></div>
+
+															</div>
+														</div>
+													</li>
+												</ul>
 											</div>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li><a href="demos/car/car-listing.html"><div>Car Listing</div></a></li>
-							<li><a href="demos/car/car-dealers.html"><div>Dealers</div></a></li>
-							<li><a href="demos/car/car-accessories.html"><div>Accessories</div></a></li>
-							<li><a href="demos/car/car-interiors.html"><div>Interiors</div></a></li>
-							<li><a href="demos/car/car-faqs.html"><div>FAQs</div></a></li>
-							<li><a href="demos/car/car-blog.html"><div>Blog</div></a></li>
-							<li><a href="demos/car/car-contact.html"><div>Contacts</div></a></li>
-						</ul>
-					</nav><!-- #primary-menu end -->
+										</div>
+									</div>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="demo-car-listing.html"><div>Car Listing</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-car-dealers.html"><div>Dealers</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-car-accessories.html"><div>Accessories</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-car-interiors.html"><div>Interiors</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-car-faqs.html"><div>FAQs</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-car-blog.html"><div>Blog</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-car-contact.html"><div>Contacts</div></a></li>
+							</ul>
+						</nav><!-- #primary-menu end -->
+
+					</div>
 				</div>
-
 			</div>
-
-			<div id="header-trigger"><i class="icon-line-menu"></i><i class="icon-line-cross"></i></div>
-
 		</header><!-- #header end -->
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element swiper_wrapper full-screen force-full-screen clearfix" data-dots="true" data-loop="true" data-grab="false">
+		<section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-100" data-dots="true" data-loop="true" data-grab="false">
 
 			<div class="swiper-container swiper-parent">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide dark" style="background-image: url('demos/car/images/hero-slider/4.jpg'); background-size: cover">
-						<div class="container clearfix">
-							<div class="slider-caption top-left center">
-								<h2 class="font-primary nott">Renegade 730S</h2>
-								<p class="t300 font-primary d-none d-sm-block">Raise your limits over</p>
-								<a href="demos/car/car-single.html" class="button button-rounded button-border button-white button-light nott">View Details</a>
+					<div class="swiper-slide dark">
+						<div class="container">
+							<div class="slider-caption top-left">
+								<div>
+									<h2 class="font-primary nott">Renegade 730S</h2>
+									<p class="font-weight-light font-primary d-none d-sm-block">Raise your limits over</p>
+									<a href="demos/car/car-single.html" class="button button-rounded button-border button-white button-light nott">View Details</a>
+								</div>
 							</div>
 						</div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/car/images/hero-slider/4.jpg');"></div>
 					</div>
-					<div class="swiper-slide dark" style="background-image: url('demos/car/images/hero-slider/2.jpg'); background-size: cover">
-						<div class="container clearfix">
-							<div class="slider-caption center">
-								<h2 class="font-primary nott">Chevrolet Traverse</h2>
-								<p class="t300 font-primary d-none d-sm-block">New and Powerful SUV</p>
-								<a href="demos/car/car-single.html" class="button button-rounded button-border button-white button-light nott">View Details</a>
+					<div class="swiper-slide dark">
+						<div class="container">
+							<div class="slider-caption">
+								<div>
+									<h2 class="font-primary nott">Chevrolet Traverse</h2>
+									<p class="font-weight-light font-primary d-none d-sm-block">New and Powerful SUV</p>
+									<a href="demos/car/car-single.html" class="button button-rounded button-border button-white button-light nott">View Details</a>
+								</div>
 							</div>
 						</div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/car/images/hero-slider/2.jpg');"></div>
 					</div>
-					<div class="swiper-slide dark" style="background-image: url('demos/car/images/hero-slider/3.jpg'); background-size: cover">
-						<div class="container clearfix">
+					<div class="swiper-slide dark">
+						<div class="container">
 							<div class="slider-caption slider-caption-center">
-								<h2 class="font-primary nott">Audi 2018 S5 Cabriolet</h2>
-								<p class="t300 font-primary d-none d-sm-block">A Black Diamond</p>
-								<a href="demos/car/car-single.html" class="button button-rounded button-border button-white button-light nott">View Details</a>
+								<div>
+									<h2 class="font-primary nott">Audi 2021 S5 Cabriolet</h2>
+									<p class="font-weight-light font-primary d-none d-sm-block">A Black Diamond</p>
+									<a href="demos/car/car-single.html" class="button button-rounded button-border button-white button-light nott">View Details</a>
+								</div>
 							</div>
 						</div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/car/images/hero-slider/3.jpg');"></div>
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>
@@ -208,43 +224,37 @@
 		============================================= -->
 		<section id="content" class="clearfix">
 
-			<div class="content-wrap nobottompadding" style="padding-top: 1px">
+			<div class="content-wrap pb-0" style="padding-top: 1px">
 
 				<!-- Masonry Thums
 				============================================= -->
-				<div class="row m-0 dark clearfix" data-height-xs="500" data-height-sm="500" data-height-md="350" data-height-lg="350" data-height-xl="350">
+				<div class="row m-0 dark" data-height-xs="500" data-height-sm="500" data-height-md="350" data-height-lg="350" data-height-xl="350">
 					<a href="demos/car/car-single.html" class="col-md-4 image_fade border-right" style="background: url('demos/car/images/categories/1.jpg') no-repeat center center / cover;">
-						<div class="overlay">
-							<div class="text-overlay">
-								<div class="text-overlay-title">
+						<div class="bg-overlay">
+							<div class="bg-overlay-content text-overlay-mask dark align-items-end justify-content-start">
+								<div class="portfolio-desc py-0">
 									<h3>Exteriors Looks</h3>
-								</div>
-								<div class="text-overlay-meta">
 									<span>McLaren 430L &rarr;</span>
 								</div>
 							</div>
 						</div>
 					</a>
 					<a href="demos/car/car-accessories.html" class="col-md-4 image_fade p-0 border-right" style="background: url('demos/car/images/categories/2.jpg') no-repeat center center / cover;">
-						<div class="overlay">
-							<div class="text-overlay">
-								<div class="text-overlay-title">
+						<div class="bg-overlay">
+							<div class="bg-overlay-content text-overlay-mask dark align-items-end justify-content-start">
+								<div class="portfolio-desc py-0">
 									<h3>Interior Looks</h3>
-								</div>
-								<div class="text-overlay-meta">
 									<span>Beautiful Dashing Interiors &rarr;</span>
 								</div>
 							</div>
 						</div>
 					</a>
 					<a href="demos/car/car-contact.html" class="col-md-4 image_fade p-0" style="background: url('demos/car/images/categories/3.jpg') no-repeat center center / cover;">
-						<div class="overlay">
-							<div class="text-overlay">
-								<div class="text-overlay-title">
+						<div class="bg-overlay">
+							<div class="bg-overlay-content text-overlay-mask dark align-items-end justify-content-start">
+								<div class="portfolio-desc py-0">
 									<h3>Our Stores</h3>
-								</div>
-								<div class="text-overlay-meta">
-									<span>find out Stores &rarr;</span>
+									<span>Find Out Stores &rarr;</span>
 								</div>
 							</div>
 						</div>
@@ -253,10 +263,10 @@
 
 				<!-- Moving car on scroll
 				============================================= -->
-				<div class="section notopmargin clearfix" style="padding: 100px 0">
+				<div class="section mt-0 clearfix" style="padding: 100px 0">
 					<div class="running-car topmargin-sm">
-						<img class="car" src="demos/car/images/moving-car/car.jpg" alt="">
-						<img class="wheel" src="demos/car/images/moving-car/car-tier.png" alt="">
+						<img class="car" src="demos/car/images/moving-car/car.jpg" alt="Image">
+						<img class="wheel" src="demos/car/images/moving-car/car-tier.png" alt="Image">
 					</div>
 					<div class="container clearfix">
 						<div class="row clearfix" style="position: relative;">
@@ -278,12 +288,12 @@
 
 						<div class="col-lg-4 col-md-6 topmargin bottommargin-sm">
 
-							<div class="heading-block nobottomborder">
+							<div class="heading-block border-bottom-0">
 								<h2 class="nott ls0" style="font-size: 44px; line-height: 1.2">Explore the New Mercedec Benz</h2>
 							</div>
 							<span style="color: #BBB;">Eum nihil pretium quas aliqua, laboris ipsam diam congue natoque mollitia occaecati! Cubilia pede, numquam fringilla proident dis? Molestias repellat.<br><br>Quas perferendis urna, officiis necessitatibus deserunt recusandae urna ullamco hac do beatae cubilia iste dolorum, facilisi? Sit, hic, varius! Sollicitudin.<br><br>Nostrum feugiat beatae proident porro eleifend adipiscing nostrud aliquid sit.</span>
 							<div class="clear"></div>
-							<a href="demos/car/car-single.html" class="button button-rounded button-black button-dark noleftmargin topmargin-sm clearfix">Know More</a>
+							<a href="demos/car/car-single.html" class="button button-rounded button-black button-dark ml-0 topmargin-sm clearfix">Know More</a>
 
 						</div>
 
@@ -296,24 +306,30 @@
 								<div class="fbox-icon">
 									<a href="#"><i class="icon-car-battery"></i></a>
 								</div>
-								<h3>Long Battery Life</h3>
-								<p>Canvas provides support for Native HTML5 Videos that can be added to a Background.</p>
+								<div class="fbox-content">
+									<h3>Long Battery Life</h3>
+									<p>Canvas provides support for Native HTML5 Videos that can be added to a Background.</p>
+								</div>
 							</div>
 
 							<div class="feature-box fbox-plain topmargin">
 								<div class="fbox-icon">
 									<a href="#"><i class="icon-car-cogs2"></i></a>
 								</div>
-								<h3>24x7 Service</h3>
-								<p>Complete control on each &amp; every element that provides endless customization.</p>
+								<div class="fbox-content">
+									<h3>24x7 Service</h3>
+									<p>Complete control on each &amp; every element that provides endless customization.</p>
+								</div>
 							</div>
 
 							<div class="feature-box fbox-plain topmargin">
 								<div class="fbox-icon">
 									<a href="#"><i class="icon-car-pump"></i></a>
 								</div>
-								<h3>Petrol, Diesel &amp; LPG</h3>
-								<p>Change your Website's Primary Scheme instantly by simply adding the dark class.</p>
+								<div class="fbox-content">
+									<h3>Petrol, Diesel &amp; LPG</h3>
+									<p>Change your Website's Primary Scheme instantly by simply adding the dark class.</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -322,18 +338,18 @@
 
 				<!-- Revolution Slider
 				============================================= -->
-				<div class="section nobottommargin clearfix" style="background: #FFF url('demos/car/images/revslider/bg.png') center 70% no-repeat; background-size: 100% auto; padding: 100px 0 10px">
+				<div class="section mb-0 clearfix" style="background: #FFF url('demos/car/images/revslider/bg.png') center 70% no-repeat; background-size: 100% auto; padding: 100px 0 10px">
 					<div class="container clearfix">
-						<div id="rev_slider_424_1_wrapper" class="rev_slider_wrapper nomargin nopadding fullwidthbanner-container" data-alias="image-gallery">
+						<div id="rev_slider_424_1_wrapper" class="rev_slider_wrapper m-0 p-0 fullwidthbanner-container" data-alias="image-gallery">
 							<!-- START REVOLUTION SLIDER 5.2.0 auto mode -->
 							<div id="rev_slider_424_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.2.0">
 								<ul>	<!-- SLIDE  -->
 									<!-- SLIDE  -->
 									<li data-index="rs-1479" data-transition="slidefromleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/car/images/revslider/1.png"  data-rotate="0"  data-saveperformance="off"  data-title="BMW 3 Series Sedan" data-param1="Sedan" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 										<!-- MAIN IMAGE -->
-										<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt=""  data-lazyload="demos/car/images/revslider/1.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+										<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt="Image"  data-lazyload="demos/car/images/revslider/1.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 										<!-- LAYER NR. 2 -->
-										<div class="tp-caption font-body ls2 uppercase tp-resizeme"
+										<div class="tp-caption font-body ls2 text-uppercase tp-resizeme"
 											id="slide-1479-layer-1"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['0','0','0','90']"
@@ -355,7 +371,7 @@
 											style="z-index: 6; min-width: 370px; max-width: 370px; color: #EEE; white-space: nowrap;">BMW - 3 Series </div>
 
 										<!-- LAYER NR. 3 -->
-										<div class="tp-caption font-primary uppercase t700 tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase font-weight-bold tp-resizeme"
 											id="slide-1479-layer-2"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['30','30','92','68']"
@@ -376,7 +392,7 @@
 											style="z-index: 7; color: #FFF; letter-spacing: 2px; white-space: normal;">BMW 3 Series Sedan</div>
 
 										<!-- LAYER NR. 4 -->
-										<div class="tp-caption font-primary uppercase tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase tp-resizeme"
 											id="slide-1479-layer-3"
 											data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['115','115','215','154']"
@@ -440,9 +456,9 @@
 									<!-- SLIDE  -->
 									<li data-index="rs-1480" data-transition="slidefromleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/car/images/revslider/2.png"  data-rotate="0"  data-saveperformance="off"  data-title="Audi A4 - White" data-param1="Sedan" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 										<!-- MAIN IMAGE -->
-										<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt=""  data-lazyload="demos/car/images/revslider/2.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+										<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt="Image"  data-lazyload="demos/car/images/revslider/2.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 										<!-- LAYER NR. 2 -->
-										<div class="tp-caption font-body ls2 uppercase tp-resizeme"
+										<div class="tp-caption font-body ls2 text-uppercase tp-resizeme"
 											id="slide-1480-layer-1"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['0','0','0','90']"
@@ -464,7 +480,7 @@
 											style="z-index: 6; min-width: 370px; max-width: 370px; color: #EEE; white-space: nowrap;">Audi</div>
 
 										<!-- LAYER NR. 3 -->
-										<div class="tp-caption font-primary uppercase t700 tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase font-weight-bold tp-resizeme"
 											id="slide-1480-layer-2"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['30','30','92','68']"
@@ -485,7 +501,7 @@
 											style="z-index: 7; color: #FFF; letter-spacing: 2px; white-space: normal;">Audi A4 - Sedan</div>
 
 										<!-- LAYER NR. 4 -->
-										<div class="tp-caption font-primary uppercase tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase tp-resizeme"
 											id="slide-1480-layer-3"
 											data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['115','115','215','154']"
@@ -548,10 +564,10 @@
 									</li>
 									<li data-index="rs-1481" data-transition="slidefromleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/car/images/revslider/3.png"  data-rotate="0"  data-saveperformance="off"  data-title="Brand New Mustand" data-param1="Sedan" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 										<!-- MAIN IMAGE -->
-										<img src="include/rs-plugin/demos/assets/images/dummy.png" alt=""  data-lazyload="demos/car/images/revslider/3.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina">
+										<img src="include/rs-plugin/demos/assets/images/dummy.png" alt="Image"  data-lazyload="demos/car/images/revslider/3.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina">
 
 										<!-- LAYER NR. 2 -->
-										<div class="tp-caption font-body ls2 uppercase tp-resizeme"
+										<div class="tp-caption font-body ls2 text-uppercase tp-resizeme"
 											id="slide-1481-layer-1"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['0','0','0','90']"
@@ -573,7 +589,7 @@
 											style="z-index: 6; min-width: 370px; max-width: 370px; color: #EEE; white-space: nowrap;">Ford Mustang </div>
 
 										<!-- LAYER NR. 3 -->
-										<div class="tp-caption font-primary uppercase t700 tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase font-weight-bold tp-resizeme"
 											id="slide-1481-layer-2"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['30','30','92','68']"
@@ -594,7 +610,7 @@
 											style="z-index: 7; color: #FFF; letter-spacing: 2px; white-space: normal;">Brand New Mustang</div>
 
 										<!-- LAYER NR. 4 -->
-										<div class="tp-caption font-primary uppercase tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase tp-resizeme"
 											id="slide-1481-layer-3"
 											data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['115','115','215','154']"
@@ -658,9 +674,9 @@
 									<!-- SLIDE  -->
 									<li data-index="rs-1482" data-transition="slidefromleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/car/images/revslider/4.png"  data-rotate="0"  data-saveperformance="off"  data-title="Audi A3 Cabriolet" data-param1="Convertible" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 										<!-- MAIN IMAGE -->
-										<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt=""  data-lazyload="demos/car/images/revslider/4.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+										<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt="Image"  data-lazyload="demos/car/images/revslider/4.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 										<!-- LAYER NR. 2 -->
-										<div class="tp-caption font-body ls2 uppercase tp-resizeme"
+										<div class="tp-caption font-body ls2 text-uppercase tp-resizeme"
 											id="slide-1482-layer-1"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['40','40','40','90']"
@@ -682,7 +698,7 @@
 											style="z-index: 6; min-width: 370px; max-width: 370px; color: #EEE; white-space: nowrap;">Audi Convertible</div>
 
 										<!-- LAYER NR. 3 -->
-										<div class="tp-caption font-primary uppercase t700 tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase font-weight-bold tp-resizeme"
 											id="slide-1482-layer-2"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['70','70','92','68']"
@@ -703,7 +719,7 @@
 											style="z-index: 7; color: #FFF; letter-spacing: 2px; white-space: normal;">Audi A3 cabriolet</div>
 
 										<!-- LAYER NR. 4 -->
-										<div class="tp-caption font-primary uppercase tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase tp-resizeme"
 											id="slide-1482-layer-3"
 											data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['115','115','215','154']"
@@ -767,9 +783,9 @@
 									<!-- SLIDE  -->
 									<li data-index="rs-1483" data-transition="slidefromleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/car/images/revslider/5.png"  data-rotate="0"  data-saveperformance="off"  data-title="Mercedes-Benz E-Class" data-param1="Sedan" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 										<!-- MAIN IMAGE -->
-										<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt=""  data-lazyload="demos/car/images/revslider/5.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+										<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt="Image"  data-lazyload="demos/car/images/revslider/5.png" data-bgposition="left center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 										<!-- LAYER NR. 2 -->
-										<div class="tp-caption font-body ls2 uppercase tp-resizeme"
+										<div class="tp-caption font-body ls2 text-uppercase tp-resizeme"
 											id="slide-1483-layer-1"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['40','40','40','90']"
@@ -791,7 +807,7 @@
 											style="z-index: 6; min-width: 370px; max-width: 370px; color: #EEE; white-space: nowrap;">Mercedes-Benz</div>
 
 										<!-- LAYER NR. 3 -->
-										<div class="tp-caption font-primary uppercase t700 tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase font-weight-bold tp-resizeme"
 											id="slide-1483-layer-2"
 											data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['70','70','92','68']"
@@ -812,7 +828,7 @@
 											style="z-index: 7; color: #FFF; letter-spacing: 2px; white-space: normal;">Mercedes-Benz E-Class</div>
 
 										<!-- LAYER NR. 4 -->
-										<div class="tp-caption font-primary uppercase tp-resizeme"
+										<div class="tp-caption font-primary text-uppercase tp-resizeme"
 											id="slide-1483-layer-3"
 											data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']"
 											data-y="['top','top','top','top']" data-voffset="['115','115','215','154']"
@@ -874,7 +890,7 @@
 										</div>
 									</li>
 								</ul>
-								<div class="tp-bannertimer hidden"></div>
+								<div class="tp-bannertimer d-none"></div>
 							</div>
 						</div><!-- END REVOLUTION SLIDER -->
 					</div>
@@ -882,11 +898,11 @@
 
 				<!-- 360 degree car
 				============================================= -->
-				<div class="section dark nobottommargin clearfix" style="background: #FFF url('demos/car/images/1.jpg') right bottom no-repeat; background-size: cover; padding: 80px 0 40px">
+				<div class="section dark mb-0 clearfix" style="background: #FFF url('demos/car/images/1.jpg') right bottom no-repeat; background-size: cover; padding: 80px 0 40px">
 					<div class="container-fluid clearfix" style="position: relative; z-index: 2;">
 						<div class="row clearfix">
 							<div class="col-lg-8">
-								<div class="heading-block noborder nobottommargin center">
+								<div class="heading-block border-0 mb-0 center">
 									<h3 style="font-size: 32px; text-transform: ;  font-weight: 700;">360 Degree Drag</h3>
 								</div>
 								<!-- 360 degree Car Content -->
@@ -901,14 +917,14 @@
 							<div class="col-lg-4">
 								<div class="row clearfix">
 									<div class="col-lg-10">
-										<div class="heading-block topmargin-sm noborder">
+										<div class="heading-block topmargin-sm border-0">
 											<h3 style="text-transform: none; font-size: 36px; letter-spacing: 0px; font-weight: 700;">Select other Models</h3>
 											<span>Intrinsicly formulate plug-and-play systems with interactive communities. Quickly aggregate plug-and-play.</span>
 										</div>
-										<form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
+										<form id="login-form" name="login-form" class="row mb-0" action="#" method="post">
 
-											<div class="col_full">
-												<select class="selectpicker sm-form-control customjs border-form-control" title="Select Brand" data-live-search="true" data-size="6" style="width:100%;">
+											<div class="col-12 form-group">
+												<select class="selectpicker w-100 customjs" title="Select Brand" data-live-search="true" data-size="6">
 													<option value="AUDI">Audi</option>
 													<option value="BMW All Series">BMW All Series</option>
 													<option value="HONDA">Honda</option>
@@ -918,8 +934,8 @@
 												</select>
 											</div>
 
-											<div class="col_full">
-												<select class="selectpicker sm-form-control customjs border-form-control" data-size="6" data-live-search="true" title="Select Model" style="width:100%; line-height: 30px;">
+											<div class="col-12 form-group">
+												<select class="selectpicker w-100 customjs" data-size="6" data-live-search="true" title="Select Model" style="line-height: 30px;">
 													<optgroup label="AUDI">
 														<option value="R8">Audi R8</option>
 														<option value="TT">Audi TT</option>
@@ -955,18 +971,18 @@
 														<option value="Accord-Plug-In">Honda Accord Plug-In</option>
 													</optgroup>
 													<optgroup label="MERCEDES-BENZ">
-														<option value="S-Class">2015 Mercedes-Benz S-Class Sedan</option>
-														<option value="C-Class">2015 Mercedes-Benz C-Class Sedan</option>
-														<option value="E-Class">2015 Mercedes-Benz E-Class Sedan</option>
-														<option value="E-Class-Hybrid">2015 Mercedes-Benz E-Class Hybrid</option>
-														<option value="Maybach-S600">2016 Mercedes-Benz Maybach S600</option>
-														<option value="B-Class-Electric-Drive">2015 Mercedes-Benz B-Class Electric Drive</option>
+														<option value="S-Class">2021 Mercedes-Benz S-Class Sedan</option>
+														<option value="C-Class">2021 Mercedes-Benz C-Class Sedan</option>
+														<option value="E-Class">2021 Mercedes-Benz E-Class Sedan</option>
+														<option value="E-Class-Hybrid">2021 Mercedes-Benz E-Class Hybrid</option>
+														<option value="Maybach-S600">2021 Mercedes-Benz Maybach S600</option>
+														<option value="B-Class-Electric-Drive">2021 Mercedes-Benz B-Class Electric Drive</option>
 													</optgroup>
 												</select>
 											</div>
 
-											<div class="col_full nobottommargin">
-												<button class="button button-rounded btn-block t400 nomargin" id="login-form-submit" name="login-form-submit" value="login">Search</button>
+											<div class="col-12 form-group">
+												<button class="button button-rounded btn-block font-weight-normal m-0" id="login-form-submit" name="login-form-submit" value="login">Search</button>
 											</div>
 
 										</form>
@@ -982,198 +998,209 @@
 
 				<!-- 360 degree car
 				============================================= -->
-				<div class="section nomargin nobg clearfix" style="padding: 100px 0;">
+				<div class="section m-0 bg-transparent clearfix" style="padding: 100px 0;">
 					<div class="container clearfix">
 						<div class="heading-block center">
-							<div class="before-heading uppercase ls1" style="font-size: 13px; font-style: normal;">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-							<h3 class="t700">Featured Vehicles</h3>
+							<div class="before-heading text-uppercase ls1" style="font-size: 13px; font-style: normal;">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+							<h3 class="font-weight-bold">Featured Vehicles</h3>
 						</div>
 
-						<!-- Portfolio Filter
+						<!-- Grid Filter
 						============================================= -->
-						<ul class="portfolio-filter style-2 clearfix" data-container="#portfolio">
+						<ul class="grid-filter style-2 w-100" data-container="#portfolio">
 							<li><a href="#" data-filter=".cf-cuv"><i class="icon-car-cuv"></i><span>Cuv</span></a></li>
 							<li><a href="#" data-filter=".cf-sedan"><i class="icon-car-sedan"></i><span>Sedan</span></a></li>
 							<li><a href="#" data-filter=".cf-supercar"><i class="icon-car-supercar"></i><span>Supercar</span></a></li>
 							<li><a href="#" data-filter=".cf-hatchback"><i class="icon-car-hatchback"></i><span>Hatchback</span></a></li>
 							<li><a href="#" data-filter=".cf-cabriolet"><i class="icon-car-cabriolet"></i><span>Cabriolet</span></a></li>
 							<!-- Show All Button -->
-							 <li class="fright activeFilter"><a class="button button-small button-rounded button-reset" href="#" data-filter="*">Show All</a></li>
-						</ul> <!-- #portfolio-filter end -->
-
-						<div class="clear"></div>
+							<li class="activeFilter ml-auto"><a class="button button-small button-rounded button-reset" href="#" data-filter="*">Show All</a></li>
+						</ul><!-- .grid-filter end -->
 
 						<!-- Portfolio Items
 						============================================= -->
-						<div id="portfolio" class="portfolio portfolio-3 grid-container clearfix" data-layout="fitRows">
+						<div id="portfolio" class="portfolio row grid-container gutter-20 col-mb-30" data-layout="fitRows">
 
 							<!-- Car 1 -->
-							<article class="portfolio-item cf-sedan" style="padding-bottom: 40px">
-								<div class="portfolio-image">
-									<a href="demos/car/car-single.html">
-										<img src="demos/car/images/filter-cars/1.jpg" alt="Open Imagination">
-										<div class="filter-p-pricing">
-											<span class="p-price t700 ls1">$32,568</span>
-											<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
-										</div>
-									</a>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="demos/car/car-single.html">Ford Mustang - White</a></h3>
-									<span>Dramatically synthesize parallel applications vis-a-vis revolutionary e-tailers. Monotonectally incubate cooperative partnerships.</span>
-								</div>
-								<div class="row no-gutters car-p-features font-primary clearfix">
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-meter"></i><span> 20000</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-door"></i><span> 5 Seater</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-fuel2"></i><span> 20kmpl</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-signal"></i><span> Automatic</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-wheel"></i><span> 15 Inch</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-care"></i><span> 2015</span></div>
+							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-sedan">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="demos/car/car-single.html">
+											<img src="demos/car/images/filter-cars/1.jpg" alt="Open Imagination">
+											<div class="filter-p-pricing">
+												<span class="p-price font-weight-bold ls1">$32,568</span>
+												<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
+											</div>
+										</a>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="demos/car/car-single.html">Ford Mustang - White</a></h3>
+										<span>Dramatically synthesize parallel applications vis-a-vis revolutionary e-tailers. Monotonectally incubate cooperative partnerships.</span>
+									</div>
+									<div class="row no-gutters car-p-features font-primary clearfix">
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-meter"></i><span> 20000</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-door"></i><span> 5 Seater</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-fuel2"></i><span> 20kmpl</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-signal"></i><span> Automatic</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-wheel"></i><span> 15 Inch</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-care"></i><span> 2021</span></div>
+									</div>
 								</div>
 							</article>
 
 							<!-- Car 2 -->
-							<article class="portfolio-item cf-suv" style="padding-bottom: 40px">
-								<div class="portfolio-image">
-									<a href="demos/car/car-single.html">
-										<img src="demos/car/images/filter-cars/2.jpg" alt="Open Imagination">
-										<div class="filter-p-pricing">
-											<span class="p-price t700 ls1">$32,568</span>
-											<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
-										</div>
-									</a>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="demos/car/car-single.html">Chevrolet Brown Traverse</a></h3>
-									<span>Enthusiastically incubate turnkey technologies for exceptional materials. Seamlessly implement emerging scenarios.</span>
-								</div>
-								<div class="row no-gutters car-p-features font-primary clearfix">
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-meter"></i><span> 0-50 mph</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-door"></i><span> 7 Seater</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-paint"></i><span> Brown</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-signal"></i><span> Manual</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-wheel"></i><span> 20-Inch</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-care"></i><span> 2018</span></div>
+							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-suv">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="demos/car/car-single.html">
+											<img src="demos/car/images/filter-cars/2.jpg" alt="Open Imagination">
+											<div class="filter-p-pricing">
+												<span class="p-price font-weight-bold ls1">$32,568</span>
+												<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
+											</div>
+										</a>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="demos/car/car-single.html">Chevrolet Brown Traverse</a></h3>
+										<span>Enthusiastically incubate turnkey technologies for exceptional materials. Seamlessly implement emerging scenarios.</span>
+									</div>
+									<div class="row no-gutters car-p-features font-primary clearfix">
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-meter"></i><span> 0-50 mph</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-door"></i><span> 7 Seater</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-paint"></i><span> Brown</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-signal"></i><span> Manual</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-wheel"></i><span> 20-Inch</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-care"></i><span> 2021</span></div>
+									</div>
 								</div>
 							</article>
 
 							<!-- Car 3 -->
-							<article class="portfolio-item cf-cabriolet" style="padding-bottom: 40px">
-								<div class="portfolio-image">
-									<a href="demos/car/car-single.html">
-										<img src="demos/car/images/filter-cars/3.jpg" alt="Open Imagination">
-										<div class="filter-p-pricing">
-											<span class="p-price t700 ls1">$62,300</span>
-											<span class="p-price-msrp">MSRP : <strong>$62,700</strong></span>
-										</div>
-									</a>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="demos/car/car-single.html">Audi 2018 S5 Cabriolet</a></h3>
-									<span>Competently evolve intuitive synergy without corporate human capital. Monotonectally.</span>
-								</div>
-								<div class="row no-gutters car-p-features font-primary clearfix">
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-meter"></i><span> 0-60 mph</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-bearing"></i><span> Six-cylinder</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-fuel2"></i><span> 23 mpg8</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-signal"></i><span> Automatic</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-care"></i><span> 2018</span></div>
+							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-cabriolet">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="demos/car/car-single.html">
+											<img src="demos/car/images/filter-cars/3.jpg" alt="Open Imagination">
+											<div class="filter-p-pricing">
+												<span class="p-price font-weight-bold ls1">$62,300</span>
+												<span class="p-price-msrp">MSRP : <strong>$62,700</strong></span>
+											</div>
+										</a>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="demos/car/car-single.html">Audi 2021 S5 Cabriolet</a></h3>
+										<span>Competently evolve intuitive synergy without corporate human capital. Monotonectally.</span>
+									</div>
+									<div class="row no-gutters car-p-features font-primary clearfix">
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-meter"></i><span> 0-60 mph</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-bearing"></i><span> Six-cylinder</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-fuel2"></i><span> 23 mpg8</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-signal"></i><span> Automatic</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-care"></i><span> 2021</span></div>
+									</div>
 								</div>
 							</article>
 
 							<!-- Car 4 -->
-							<article class="portfolio-item cf-cuv">
-								<div class="portfolio-image">
-									<a href="demos/car/car-single.html">
-										<img src="demos/car/images/filter-cars/4.jpg" alt="Open Imagination">
-										<div class="filter-p-pricing">
-											<span class="p-price t700 ls1">$32,568</span>
-											<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
-										</div>
-									</a>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="demos/car/car-single.html">BMW 3 Series, ABS</a></h3>
-									<span>Energistically engineer user friendly synergy vis-a-vis enabled channels. Rapidiously utilize value-added. Laudantium debitis perferendis obcaecati.</span>
-								</div>
-								<div class="row no-gutters car-p-features font-primary clearfix">
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-meter"></i><span> 0-80 mph</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-fuel2"></i><span> Hybrid</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-signal"></i><span> Automatic</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-stearing"></i><span> 3000</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-care"></i><span> 2017</span></div>
+							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-cuv">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="demos/car/car-single.html">
+											<img src="demos/car/images/filter-cars/4.jpg" alt="Open Imagination">
+											<div class="filter-p-pricing">
+												<span class="p-price font-weight-bold ls1">$32,568</span>
+												<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
+											</div>
+										</a>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="demos/car/car-single.html">BMW 3 Series, ABS</a></h3>
+										<span>Energistically engineer user friendly synergy vis-a-vis enabled channels. Rapidiously utilize value-added. Laudantium debitis perferendis obcaecati.</span>
+									</div>
+									<div class="row no-gutters car-p-features font-primary clearfix">
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-meter"></i><span> 0-80 mph</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-fuel2"></i><span> Hybrid</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-signal"></i><span> Automatic</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-stearing"></i><span> 3000</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-care"></i><span> 2021</span></div>
+									</div>
 								</div>
 							</article>
 
 							<!-- Car 5 -->
-							<article class="portfolio-item cf-supercar">
-								<div class="portfolio-image">
-									<a href="demos/car/car-single.html">
-										<img src="demos/car/images/filter-cars/5.jpg" alt="Open Imagination">
-										<div class="filter-p-pricing">
-											<span class="p-price t700 ls1">$32,568</span>
-											<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
-										</div>
-									</a>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="demos/car/car-single.html">2016 LEXUS IS 200T FSPORT</a></h3>
-									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium debitis unde laboriosam perferendis obcaecati.</span>
-								</div>
-								<div class="row no-gutters car-p-features font-primary clearfix">
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-cog3"></i><span> 30,000 mi</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-paint"></i><span> Metalic</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-fuel"></i><span> 11 kmpl</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-signal"></i><span> Automatic</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-wheel"></i><span> 18 Inch</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-care"></i><span> 2018</span></div>
+							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-supercar">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="demos/car/car-single.html">
+											<img src="demos/car/images/filter-cars/5.jpg" alt="Open Imagination">
+											<div class="filter-p-pricing">
+												<span class="p-price font-weight-bold ls1">$32,568</span>
+												<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
+											</div>
+										</a>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="demos/car/car-single.html">2021 LEXUS IS 200T FSPORT</a></h3>
+										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium debitis unde laboriosam perferendis obcaecati.</span>
+									</div>
+									<div class="row no-gutters car-p-features font-primary clearfix">
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-cog3"></i><span> 30,000 mi</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-paint"></i><span> Metalic</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-fuel"></i><span> 11 kmpl</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-signal"></i><span> Automatic</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-wheel"></i><span> 18 Inch</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-care"></i><span> 2021</span></div>
+									</div>
 								</div>
 							</article>
 
 							<!-- Car 6 -->
-							<article class="portfolio-item cf-hatchback">
-								<div class="portfolio-image">
-									<a href="demos/car/car-single.html">
-										<img src="demos/car/images/filter-cars/6.jpg" alt="Open Imagination">
-										<div class="filter-p-pricing">
-											<span class="p-price t700 ls1">$32,568</span>
-											<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
-										</div>
-									</a>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="demos/car/car-single.html">Chevrolet T430 Hatchback</a></h3>
-									<span>Appropriately exploit strategic niche markets rather than optimal products. Enthusiastically negotiate perferendis the art methods of empowermen.</span>
-								</div>
-								<div class="row no-gutters car-p-features font-primary clearfix">
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-meter"></i><span> 20000</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-door"></i><span> 5 Seater</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-fuel2"></i><span> 20kmpl</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-signal"></i><span> Automatic</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-wheel"></i><span> 15 Inch</span></div>
-									<div class="col-lg-4 col-6 nopadding"><i class="icon-car-care"></i><span> 2015</span></div>
+							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-hatchback">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="demos/car/car-single.html">
+											<img src="demos/car/images/filter-cars/6.jpg" alt="Open Imagination">
+											<div class="filter-p-pricing">
+												<span class="p-price font-weight-bold ls1">$32,568</span>
+												<span class="p-price-msrp">MSRP : <strong>$35,698</strong></span>
+											</div>
+										</a>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="demos/car/car-single.html">Chevrolet T430 Hatchback</a></h3>
+										<span>Appropriately exploit strategic niche markets rather than optimal products. Enthusiastically negotiate perferendis the art methods of empowermen.</span>
+									</div>
+									<div class="row no-gutters car-p-features font-primary clearfix">
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-meter"></i><span> 20000</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-door"></i><span> 5 Seater</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-fuel2"></i><span> 20kmpl</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-signal"></i><span> Automatic</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-wheel"></i><span> 15 Inch</span></div>
+										<div class="col-lg-4 col-6 p-0"><i class="icon-car-care"></i><span> 2021</span></div>
+									</div>
 								</div>
 							</article>
 
 						</div>
+
 					</div>
 				</div> <!-- Filter Car lists end -->
 
 				<!-- Video Gallery on Hover
 				============================================= -->
-				<div class="section nomargin ohidden">
-					<div class="heading-block nobottommargin center">
+				<div class="section m-0 overflow-hidden">
+					<div class="heading-block mb-0 center">
 						<h2>Video Gallery</h2>
 					</div>
 				</div>
-				<div class="dark section nopadding nomargin ohidden" style="height: 740px">
-					<div class="row" style="height: 100%;">
+				<div class="dark section p-0 m-0 overflow-hidden" style="height: 740px">
+					<div class="row h-100 align-items-stretch">
 						<!-- Video 1 -->
-						<div class="col-md-6 col-12 nopadding half-screen dark videoplay-on-hover">
+						<div class="col-md-6 col-12 p-0 dark videoplay-on-hover">
 							<a href="demos/car/car-listing.html">
-								<div class="vertical-middle center" style="z-index: 1">
-									<div class="before-heading uppercase ls1" style="font-size: 14px; font-style: normal; color: #EEE">Mercedes</div>
-									<h2 class="nobottommargin ls1">Mercedes-AMG GT</h2>
+								<div class="vertical-middle center">
+									<div class="before-heading text-uppercase ls1" style="font-size: 14px; font-style: normal; color: #EEE">Mercedes</div>
+									<h2 class="mb-0 ls1">Mercedes-AMG GT</h2>
 								</div>
 								<div class="video-wrap">
 									<video id="slide-video-1" poster="demos/car/images/videos/1.jpg" preload="auto" loop muted>
@@ -1184,11 +1211,11 @@
 							</a>
 						</div>
 						<!-- Video 2 -->
-						<div class="col-md-6 col-12 nopadding half-screen dark videoplay-on-hover">
+						<div class="col-md-6 col-12 p-0 dark videoplay-on-hover">
 							<a href="demos/car/car-listing.html">
-								<div class="vertical-middle center" style="z-index: 1">
-									<div class="before-heading uppercase ls1" style="font-size: 14px; font-style: normal; color: #EEE">Mercedes</div>
-									<h2 class="nobottommargin ls1">Mercedes-AMG C 63</h2>
+								<div class="vertical-middle center">
+									<div class="before-heading text-uppercase ls1" style="font-size: 14px; font-style: normal; color: #EEE">Mercedes</div>
+									<h2 class="mb-0 ls1">Mercedes-AMG C 63</h2>
 								</div>
 								<div class="video-wrap">
 									<video id="slide-video-2" poster="demos/car/images/videos/2.jpg" preload="auto" loop muted>
@@ -1199,11 +1226,11 @@
 							</a>
 						</div>
 						<!-- Video 3 -->
-						<div class="col-md-6 col-12 nopadding half-screen dark videoplay-on-hover">
+						<div class="col-md-6 col-12 p-0 dark videoplay-on-hover">
 							<a href="demos/car/car-listing.html">
-								<div class="vertical-middle center" style="z-index: 1">
+								<div class="vertical-middle center">
 									<div class="before-heading uppercase ls1" style="font-size: 14px; font-style: normal; color: #EEE">BMW Auto</div>
-									<h2 class="nobottommargin ls1">BMW Z4 Roadster</h2>
+									<h2 class="mb-0 ls1">BMW Z4 Roadster</h2>
 								</div>
 								<div class="video-wrap">
 									<video id="slide-video-3" poster="demos/car/images/videos/3.jpg" preload="auto" loop muted>
@@ -1214,11 +1241,11 @@
 							</a>
 						</div>
 						<!-- Video 4 -->
-						<div class="col-md-6 col-12 nopadding half-screen dark videoplay-on-hover">
+						<div class="col-md-6 col-12 p-0 dark videoplay-on-hover">
 							<a href="demos/car/car-listing.html">
-								<div class="vertical-middle center" style="z-index: 1">
+								<div class="vertical-middle center">
 									<div class="before-heading uppercase ls1" style="font-size: 14px; font-style: normal; color: #EEE">Mercedes Benz</div>
-									<h2 class="nobottommargin ls1">Mercedes-COUPÉ GLE 63</h2>
+									<h2 class="mb-0 ls1">Mercedes-COUPÉ GLE 63</h2>
 								</div>
 								<div class="video-wrap">
 									<video id="slide-video-4" poster="demos/car/images/videos/4.jpg" preload="auto" loop muted>
@@ -1233,12 +1260,12 @@
 
 				<!-- Counter Area
 				============================================= -->
-				<div class="section counter-section nomargin dark clearfix">
+				<div class="section counter-section m-0 dark clearfix">
 					<div class="container clearfix align-items-stretch">
 						<div class="row">
 							<div class="col-lg-3 col-md-6 center">
 								<div>
-									<i class="i-plain i-large divcenter color icon-car-fulltime"></i>
+									<i class="i-plain i-large mx-auto color icon-car-fulltime"></i>
 									<div class="counter"><span data-from="10" data-to="11365" data-refresh-interval="50" data-speed="1000"></span></div>
 									<h5>Happy Customers</h5>
 								</div>
@@ -1246,7 +1273,7 @@
 
 							<div class="col-lg-3 col-md-6 center">
 								<div>
-									<i class="i-plain i-large divcenter color icon-car-money"></i>
+									<i class="i-plain i-large mx-auto color icon-car-money"></i>
 									<div class="counter"><span data-from="10" data-to="145" data-refresh-interval="50" data-speed="700"></span></div>
 									<h5>Cars in Stock</h5>
 								</div>
@@ -1254,7 +1281,7 @@
 
 							<div class="col-lg-3 col-md-6 center">
 								<div>
-									<i class="i-plain i-large divcenter color icon-car-fan"></i>
+									<i class="i-plain i-large mx-auto color icon-car-fan"></i>
 									<div class="counter"><span data-from="10" data-to="50" data-refresh-interval="85" data-speed="1200"></span></div>
 									<h5>Showrooms</h5>
 								</div>
@@ -1262,7 +1289,7 @@
 
 							<div class="col-lg-3 col-md-6 center">
 								<div>
-									<i class="i-plain i-large divcenter color icon-car-fuel2"></i>
+									<i class="i-plain i-large mx-auto color icon-car-fuel2"></i>
 									<div class="counter"><span data-from="10" data-to="7664" data-refresh-interval="30" data-speed="900"></span></div>
 									<h5>Awwards</h5>
 								</div>
@@ -1273,7 +1300,7 @@
 
 				<!-- Featured Section
 				============================================= -->
-				<div class="section nomargin clearfix" style="background: #FFF url('demos/car/images/features/section-bg.jpg') left bottom no-repeat; background-size: cover; padding: 140px 0">
+				<div class="section m-0 clearfix" style="background: #FFF url('demos/car/images/features/section-bg.jpg') left bottom no-repeat; background-size: cover; padding: 140px 0">
 					<div class="container clearfix">
 						<div class="row clearfix">
 							<div class="col-lg-6 col-md-9">
@@ -1288,9 +1315,9 @@
 											<div class="fbox-icon" style="position: relative;">
 												<a href="#"><i class="icon-car-service2"></i></a>
 											</div>
-											<div class="fbox-desc" style="margin-top: 25px">
+											<div class="fbox-content" style="margin-top: 25px">
 												<h3>Skilled Professionals.</h3>
-												<p class="t300" style="color: #666;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est perspiciatis mollitia.</p>
+												<p class="font-weight-light" style="color: #666;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est perspiciatis mollitia.</p>
 											</div>
 										</div>
 									</div>
@@ -1299,9 +1326,9 @@
 											<div class="fbox-icon" style="position: relative;">
 												<a href="#"><i class="icon-car-crane"></i></a>
 											</div>
-											<div class="fbox-desc" style="margin-top: 25px">
+											<div class="fbox-content" style="margin-top: 25px">
 												<h3>Skilled Professionals.</h3>
-												<p class="t300" style="color: #666;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est perspiciatis mollitia.</p>
+												<p class="font-weight-light" style="color: #666;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est perspiciatis mollitia.</p>
 											</div>
 										</div>
 									</div>
@@ -1314,28 +1341,28 @@
 
 				<!-- Buy And Sell Section
 				============================================= -->
-				<div class="section nomargin nopadding clearfix">
+				<div class="section m-0 p-0 clearfix">
 					<div class="row align-items-stretch clearfix">
 						<!-- Half Section 1 -->
-						<div class="col-lg-6 dark bgcolor" style="background: url('demos/car/images/5.jpg') center center no-repeat; background-size: cover;">
+						<div class="col-lg-6 dark bg-color" style="background: url('demos/car/images/5.jpg') center center no-repeat; background-size: cover;">
 							<div class="col-padding clearfix">
 								<i class="i-plain i-xlarge icon-car-service inline-block" style="margin-bottom: 20px;"></i>
-								<div class="heading-block noborder" style="margin-bottom: 20px;">
+								<div class="heading-block border-0" style="margin-bottom: 20px;">
 									<h3>Are You Looking for a New Car?</h3>
 								</div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aspernatur, doloribus. Aspernatur, maiores earum eaque quas temporibus eius dolore dicta.</p>
-								<a href="#" class="button button-rounded button-white button-light nomargin">Know More</a>
+								<a href="#" class="button button-rounded button-white button-light m-0">Know More</a>
 							</div>
 						</div>
 						<!-- Half Section 2 -->
-						<div class="col-lg-6 clearfix bgcolor" style="background: url('demos/car/images/6.jpg') center center no-repeat; background-size: cover;">
+						<div class="col-lg-6 clearfix bg-color" style="background: url('demos/car/images/6.jpg') center center no-repeat; background-size: cover;">
 							<div class="col-padding clearfix">
 								<i class="i-plain i-xlarge icon-car-care inline-block" style="margin-bottom: 20px;"></i>
-								<div class="heading-block noborder" style="margin-bottom: 20px;">
+								<div class="heading-block border-0" style="margin-bottom: 20px;">
 									<h3>Want to sell a used car?</h3>
 								</div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aspernatur, doloribus. Aspernatur, maiores earum eaque quas temporibus eius dolore dicta.</p>
-								<a href="#" class="button button-large button-dark button-black button-rounded nomargin">Know More</a>
+								<a href="#" class="button button-large button-dark button-black button-rounded m-0">Know More</a>
 							</div>
 						</div>
 					</div>
@@ -1343,93 +1370,88 @@
 
 				<!-- Before Footer Section
 				============================================= -->
-				<div class="section nomargin clearfix" style="background: #FFF url('demos/car/images/footer-bg.jpg') center bottom no-repeat; background-size: cover; height: 770px">
-					<div class="divcenter dark center clearfix" style="max-width: 570px">
-						<div class="heading-block dark bottommargin-sm noborder">
-							<h2 class="nott t500">Raise Your Heart</h2>
+				<div class="section m-0 clearfix" style="background: #FFF url('demos/car/images/footer-bg.jpg') center bottom no-repeat; background-size: cover; height: 770px">
+					<div class="mx-auto dark center clearfix" style="max-width: 570px">
+						<div class="heading-block dark bottommargin-sm border-0">
+							<h2 class="nott font-weight-medium">Raise Your Heart</h2>
 							<p style="color: #DDD; margin-top: 10px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsa necessitatibus rem facere perspiciatis neque laborum est, illum commodi sunt, nobis voluptas.</p>
 						</div>
-						<a href="demos/car/car-contact.html" class="uppercase t700 ls2" style="color: #FFF; font-size: 12px; border-bottom: 1px solid #FFF">Request a Quote</a> &rarr;
+						<a href="demos/car/car-contact.html" class="uppercase font-weight-bold ls2" style="color: #FFF; font-size: 12px; border-bottom: 1px solid #FFF">Request a Quote</a> &rarr;
 					</div>
 				</div>
-
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark noborder" style="background-color: #080808;">
-
-			<div class="container-fluid clearfix">
-
+		<footer id="footer" class="dark border-0" style="background-color: #080808;">
+			<div class="container-fluid px-5 clearfix">
 				<!-- Footer Widgets
 				============================================= -->
-				<div class="footer-widgets-wrap clearfix" style="padding: 30px;">
+				<div class="footer-widgets-wrap">
 
-					<div class="row clearfix">
-						<div class="col-lg-6">
+					<div class="row col-mb-50 justify-content-between">
+						<div class="col-lg-7">
 
-							<div class="col_one_fourth">
-								<div class="widget widget_links clearfix">
-									<h4>Hire</h4>
-									<ul>
-										<li><a href="#">Documentation</a></li>
-										<li><a href="#">Feedback</a></li>
-										<li><a href="#">Plugins</a></li>
-									</ul>
+							<div class="row col-mb-30">
+								<div class="col-6 col-lg-3">
+									<div class="widget widget_links widget-li-noicon">
+										<h4>Hire</h4>
+										<ul>
+											<li><a href="#">Documentation</a></li>
+											<li><a href="#">Feedback</a></li>
+											<li><a href="#">Plugins</a></li>
+										</ul>
+									</div>
 								</div>
-							</div>
-							<div class="col_one_fourth">
-								<div class="widget widget_links clearfix">
-									<h4>Community</h4>
-									<ul>
-										<li><a href="#">Documentation</a></li>
-										<li><a href="#">Feedback</a></li>
-										<li><a href="#">Plugins</a></li>
-										<li><a href="#">Support Forums</a></li>
-									</ul>
+								<div class="col-6 col-lg-3">
+									<div class="widget widget_links widget-li-noicon">
+										<h4>Community</h4>
+										<ul>
+											<li><a href="#">Documentation</a></li>
+											<li><a href="#">Feedback</a></li>
+											<li><a href="#">Plugins</a></li>
+											<li><a href="#">Support Forums</a></li>
+										</ul>
+									</div>
 								</div>
-							</div>
-							<div class="col_one_fourth">
-								<div class="widget widget_links clearfix">
-									<h4>Learn</h4>
-									<ul>
-										<li><a href="#">Documentation</a></li>
-										<li><a href="#">Feedback</a></li>
-										<li><a href="#">Plugins</a></li>
-									</ul>
+								<div class="col-6 col-lg-3">
+									<div class="widget widget_links widget-li-noicon">
+										<h4>Learn</h4>
+										<ul>
+											<li><a href="#">Documentation</a></li>
+											<li><a href="#">Feedback</a></li>
+											<li><a href="#">Plugins</a></li>
+										</ul>
+									</div>
 								</div>
-							</div>
-							<div class="col_one_fourth col_last">
-								<div class="widget widget_links clearfix">
-									<h4>About</h4>
-									<ul>
-										<li><a href="#">Documentation</a></li>
-										<li><a href="#">Feedback</a></li>
-										<li><a href="#">Plugins</a></li>
-									</ul>
+								<div class="col-6 col-lg-3">
+									<div class="widget widget_links widget-li-noicon">
+										<h4>About</h4>
+										<ul>
+											<li><a href="#">Documentation</a></li>
+											<li><a href="#">Feedback</a></li>
+											<li><a href="#">Plugins</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 
 						</div>
 
-						<div class="col-lg-5 fright tright col_last">
-
-							<img src="demos/car/images/logo-footer.png" alt="" height="50" style="margin-top: ">
+						<div class="col-lg-5 text-center text-lg-right">
+							<img src="demos/car/images/logo-footer.png" alt="Image" height="50">
 							<br>
 							<div style="color: #444">
-								<span>&copy; Canvas Automotive. All Rights Reserved.</span><div class="clear"></div>
+								<span>&copy; Canvas Automotive. All Rights Reserved.</span>
+								<div class="clear"></div>
 								<p style="margin-top: 10px;">Objectively restore standards compliant opportunities whereas one-to-one collaboration and idea-sharing.</p>
 							</div>
-
 						</div>
 					</div>
 
 				</div><!-- .footer-widgets-wrap end -->
-
 			</div>
-
 		</footer><!-- #footer end -->
 
 	</div><!-- #wrapper end -->
@@ -1440,12 +1462,11 @@
 
 	<!-- Contact Button
 	============================================= -->
-	<div id="contact-me" class="icon-line-mail side-panel-trigger bgcolor"></div>
+	<div id="contact-me" class="icon-line-mail side-panel-trigger bg-color"></div>
 
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 	<script src="demos/car/js/360rotator.js"></script>
 
 	<!-- Bootstrap Select Plugin -->
@@ -1470,6 +1491,8 @@
 	<script src="js/functions.js"></script>
 
 	<script>
+
+		var $ = jQuery.noConflict();
 
 		//Car Appear In View
 		function isScrolledIntoView(elem) {

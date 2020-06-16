@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
@@ -51,363 +51,373 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="transparent-header static-sticky clearfix">
-
+		<header id="header" class="transparent-header" data-sticky-shrink="false">
 			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
 
-				<div class="container clearfix">
-
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-					<!-- Logo
-					============================================= -->
-					<div id="logo" class="">
-						<a href="index.html" class="standard-logo"><img src="demos/recipes/images/logo.png" alt="Canvas Logo"></a>
-						<a href="index.html" class="retina-logo"><img src="demos/recipes/images/logo@2x.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
-
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu">
-
-						<ul>
-							<li class="current"><a href="#"><div>Home</div></a></li>
-							<li><a href="demos/recipes/about-us.html"><div>About Us</div></a></li>
-							<li><a href="demos/recipes/recipes.html"><div>Recipes <i class="icon-angle-down1 d-none d-lg-inline-block"></i></div></a>
-								<ul class="rounded-bottom">
-									<li><a href="demos/recipes/recipe-single.html"><div>Recipe Single Page</div></a></li>
-									 <div class="dropdown-divider my-0"></div>
-									<li><a href="demos/recipes/recipes.html"><div>Popular</div></a></li>
-									<li><a href="demos/recipes/recipes.html"><div>Recent</div></a></li>
-									<li><a href="demos/recipes/recipes.html"><div>Most liked</div></a></li>
-									<li><a href="demos/recipes/recipes.html"><div>Most Commented</div></a></li>
-								</ul>
-							</li>
-							<li><a href="demos/recipes/contact.html"><div>Contact Us</div></a></li>
-						</ul>
-
-						<!-- Top Search
+						<!-- Logo
 						============================================= -->
-						<div id="top-search">
-							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-							<form action="search.html" method="get">
-								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-							</form>
-						</div><!-- #top-search end -->
+						<div id="logo">
+							<a href="index.html" class="standard-logo"><img src="demos/recipes/images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo"><img src="demos/recipes/images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
 
-					</nav><!-- #primary-menu end -->
+						<div class="header-misc">
 
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="demo-recipes.html"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-recipes-about-us.html"><div>About Us</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-recipes-recipes.html"><div>Recipes <i class="icon-angle-down1 d-none d-lg-inline-block"></i></div></a>
+									<ul class="sub-menu-container rounded-bottom">
+										<li class="menu-item"><a class="menu-link" href="demo-recipes-recipe-single.html"><div>Recipe Single Page</div></a></li>
+										 <div class="dropdown-divider my-0"></div>
+										<li class="menu-item"><a class="menu-link" href="demo-recipes-recipes.html"><div>Popular</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="demo-recipes-recipes.html"><div>Recent</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="demo-recipes-recipes.html"><div>Most liked</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="demo-recipes-recipes.html"><div>Most Commented</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="demo-recipes-contact.html"><div>Contact Us</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
 				</div>
-
 			</div>
-
 		</header><!-- #header end -->
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element full-screen">
-			<div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper full-screen fullscreen-container" data-alias="distortion-addon" data-source="gallery" style="background:#000000;padding:0px;">
-				<!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
-				<div id="rev_slider_2_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
-					<ul>
-						<!-- SLIDE  -->
-						<li  data-index="rs-7" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/recipes/images/slider/1/100x50-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"demos/recipes/images/slider/fibers_small.jpg","imagesize":"external","autoplay":true,"scalex":4,"scaley":4,"speedx":0.5,"speedy":-0.5,"rotationx":0,"rotationy":0,"rotation":0,"transtime":2000,"easing":"Power3.easeOut","transcross":false,"transpower":false,"transitionx":0,"transitiony":0,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0}'>
-							<!-- MAIN IMAGE -->
-							<img src="demos/recipes/images/slider/dummy.png"  alt="" data-duration="4000" data-lazyload="demos/recipes/images/slider/1/bg.jpg" data-bgposition="center center"  data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-							<!-- LAYERS -->
+		<section id="slider" class="slider-element min-vh-60 min-vh-md-100 include-header">
+			<div class="slider-inner">
 
-							<!-- LAYER NR. 1 -->
-							<h3 class="tp-caption font-primary tp-resizeme"
-								 id="slide-7-layer-13-1"
-								 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['225','165','45','10']"
-								 data-fontsize="['54','54','54','40']"
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
+				<div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="distortion-addon" data-source="gallery" style="background:#000000;padding:0px;">
+					<!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
+					<div id="rev_slider_2_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
+						<ul>
+							<!-- SLIDE  -->
+							<li  data-index="rs-7" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/recipes/images/slider/1/100x50-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"demos/recipes/images/slider/fibers_small.jpg","imagesize":"external","autoplay":true,"scalex":4,"scaley":4,"speedx":0.5,"speedy":-0.5,"rotationx":0,"rotationy":0,"rotation":0,"transtime":2000,"easing":"Power3.easeOut","transcross":false,"transpower":false,"transitionx":0,"transitiony":0,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0}'>
+								<!-- MAIN IMAGE -->
+								<img src="demos/recipes/images/slider/dummy.png"  alt="Image" data-duration="4000" data-lazyload="demos/recipes/images/slider/1/bg.jpg" data-bgposition="center center"  data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
 
-								data-type="text"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 1 -->
+								<h3 class="tp-caption font-primary tp-resizeme"
+									 id="slide-7-layer-13-1"
+									 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['225','165','45','10']"
+									 data-fontsize="['54','54','54','40']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
 
-								data-frames='[{"delay":1200,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-type="text"
+									data-responsive_offset="on"
 
-								style="z-index: 7; white-space: nowrap; font-size: 54px; line-height: 54px; letter-spacing: 0px; color:#FFF">Avocado and Egg Toast </h3>
+									data-frames='[{"delay":1200,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
 
-							<!-- LAYER NR. 2 -->
-							<p class="tp-caption Restaurant-Description  tp-resizeme"
-								 id="slide-7-layer-13-2"
-								data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['315','245','135','80']"
-								data-fontsize="['18','18','18','18']"
-								data-lineheight="['30','30','30','30']"
-								data-fontweight="['400','400','400','400']"
-								data-width="['480','480','480','400']"
-								data-height="none"
+									style="z-index: 7; white-space: nowrap; font-size: 54px; line-height: 54px; letter-spacing: 0px; color:#FFF">Avocado and Egg Toast </h3>
 
-								data-type="text"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 2 -->
+								<p class="tp-caption Restaurant-Description  tp-resizeme"
+									 id="slide-7-layer-13-2"
+									data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['315','245','135','80']"
+									data-fontsize="['18','18','18','18']"
+									data-lineheight="['30','30','30','30']"
+									data-fontweight="['400','400','400','400']"
+									data-width="['480','480','480','400']"
+									data-height="none"
+									data-visibility="['on', 'on', 'off', 'off']"
 
-								data-frames='[{"delay":1500,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['left','left','center','center']"
+									data-type="text"
+									data-responsive_offset="on"
 
-								style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; letter-spacing: 0px;">Appropriately provide access to front-end potentialities via synergistic experiences. Competently maximize open-source imperatives after corporate systems.</p>
+									data-frames='[{"delay":1500,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['left','left','center','center']"
 
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption tp-resizeme"
-								 id="slide-7-layer-12"
-								 data-x="['right','right','middle','middle']" data-hoffset="['0','0','0','0']"
-								 data-y="['middle','middle','top','top']" data-voffset="['50','0','535','236']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="normal"
+									style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; letter-spacing: 0px;">Appropriately provide access to front-end potentialities via synergistic experiences. Competently maximize open-source imperatives after corporate systems.</p>
 
-								data-type="image"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 3 -->
+								<div class="tp-caption tp-resizeme"
+									 id="slide-7-layer-12"
+									 data-x="['right','right','middle','middle']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','top','top']" data-voffset="['50','0','535','236']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="normal"
 
-								data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
+									data-type="image"
+									data-responsive_offset="on"
 
-								style="z-index: 6;">
-								<div class="rs-looped rs-rotate"  data-easing="Linear.easeNone" data-startdeg="0" data-enddeg="180" data-speed="40" data-origin="50% 50%"><img src="demos/recipes/images/slider/dummy.png" alt="" data-ww="['530px','500px','300px','200px']" data-hh="['530px','500px','300px','200px']" data-lazyload="demos/recipes/images/slider/1/1.png" data-no-retina> </div>
-							</div>
+									data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
 
-							<!-- LAYER NR. 6 -->
-							<div class="tp-caption   tp-resizeme"
-								 id="slide-7-layer-20"
-								 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['440','370','260','460']"
-											data-width="none"
-											data-fontsize="['20','18','20','20']"
-								data-height="none"
-								data-whitespace="nowrap"
+									style="z-index: 6;">
+									<div class="rs-looped rs-rotate"  data-easing="Linear.easeNone" data-startdeg="0" data-enddeg="180" data-speed="40" data-origin="50% 50%"><img src="demos/recipes/images/slider/dummy.png" alt="Image" data-ww="['530px','500px','300px','200px']" data-hh="['530px','500px','300px','200px']" data-lazyload="demos/recipes/images/slider/1/1.png" data-no-retina> </div>
+								</div>
 
-								data-type="text"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-7-layer-20"
+									 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['440','370','260','460']"
+												data-width="none"
+												data-fontsize="['20','18','20','20']"
+									data-height="none"
+									data-whitespace="nowrap"
 
-								data-frames='[{"delay":2600,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
+									data-type="text"
+									data-responsive_offset="on"
 
-								style="z-index: 14; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;"><span class="mr-3"><i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i></span> <strong>4.0 </strong><span style="font-weight: 300">(2,123 Reviews)</span>
-							</div>
+									data-frames='[{"delay":2600,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
 
-							<!-- LAYER NR. 5 -->
-							<div class="tp-caption slider-features tp-resizeme"
-								 id="slide-7-layer-19"
-								 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['515','440','325','535']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
+									style="z-index: 14; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;"><span class="mr-3"><i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i></span> <strong>4.0 </strong><span style="font-weight: 300">(2,123 Reviews)</span>
+								</div>
 
-								data-type="text"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 5 -->
+								<div class="tp-caption slider-features tp-resizeme"
+									 id="slide-7-layer-19"
+									 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['510','440','325','535']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
 
-								data-frames='[{"delay":2500,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
+									data-type="text"
+									data-responsive_offset="on"
 
-								style="z-index: 13;">
-								<ul class="list-unstyled dark">
-									<li class="d-inline-block">
-										<img src="demos/recipes/images/icons/timer.svg" alt="Timer" width="30">
-										<h4>40 Mins</h4>
-									</li>
+									data-frames='[{"delay":2500,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
 
-									<li class="d-inline-block">
-										<img src="demos/recipes/images/icons/ingredients.svg" alt="ingredients" width="30">
-										<h4>9 Ingredients</h4>
-									</li>
+									style="z-index: 13;">
+									<ul class="list-unstyled dark">
+										<li class="d-inline-block">
+											<img src="demos/recipes/images/icons/timer.svg" alt="Timer" width="30">
+											<h4>40 Mins</h4>
+										</li>
 
-									<li class="d-inline-block">
-										<img src="demos/recipes/images/icons/kcal.svg" alt="kcal" width="30">
-										<h4>600 Kcal</h4>
-									</li>
-								</ul>
-							</div>
-							<a class="tp-caption rev-btn button button-large m-0 button-white t700 button-circle button-light"
-								href="demos/recipes/recipe-single.html" target="_blank"
-								id="slide-7-layer-13"
-								 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['570','530','350','555']"
-								data-height="none"
-								data-type="button"
-								data-actions=''
-								data-responsive_offset="off"
-								data-responsive="off"
-								data-frames='[{"delay":3000,"speed":1600,"frame":"0","from":"x:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;","bgcolor":"#FFF","to":"o:1;fbr:100;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","bgcolor":"#FFF","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"150","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;","style":"c:#000;"}]'
-								style="z-index: 9; background-color: #FFF"><span>View Recipe</span> <i class="icon-angle-right"></i>
-							</a>
-						</li>
-						<!-- SLIDE  -->
-						<!-- SLIDE  -->
-						<li data-index="rs-8" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/recipes/images/slider/1/100x50-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"demos/recipes/images/slider/fibers_small.jpg","imagesize":"external","autoplay":true,"scalex":4,"scaley":4,"speedx":0.5,"speedy":-0.5,"rotationx":0,"rotationy":0,"rotation":0,"transtime":2000,"easing":"Power3.easeOut","transcross":false,"transpower":false,"transitionx":0,"transitiony":0,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0}'>
-							<!-- MAIN IMAGE -->
-							<img src="demos/recipes/images/slider/dummy.png"  alt="" data-duration="4000" data-lazyload="demos/recipes/images/slider/2/bg.jpg" data-bgposition="center center"  data-bgparallax="4" class="rev-slidebg" data-no-retina>
-							<!-- LAYERS -->
+										<li class="d-inline-block">
+											<img src="demos/recipes/images/icons/ingredients.svg" alt="ingredients" width="30">
+											<h4>9 Ingredients</h4>
+										</li>
 
-							<!-- LAYER NR. 1 -->
-							<h3 class="tp-caption font-primary tp-resizeme"
-								 id="slide-8-layer-13-1"
-								 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['225','165','45','10']"
-								 data-fontsize="['54','54','54','40']"
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
+										<li class="d-inline-block">
+											<img src="demos/recipes/images/icons/kcal.svg" alt="kcal" width="30">
+											<h4>600 Kcal</h4>
+										</li>
+									</ul>
+								</div>
+								<a class="tp-caption rev-btn button button-large m-0 button-white font-weight-bold button-circle button-light"
+									href="demos/recipes/recipe-single.html" target="_blank"
+									id="slide-7-layer-13"
+									 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['500','500','320','500']"
+									data-height="none"
+									data-type="button"
+									data-actions=''
+									data-responsive_offset="off"
+									data-responsive="off"
+									data-frames='[{"delay":3000,"speed":1600,"frame":"0","from":"x:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;","bgcolor":"#FFF","to":"o:1;fbr:100;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","bgcolor":"#FFF","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"150","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;","style":"c:#000;"}]'
+									style="z-index: 9; background-color: #FFF"><span>View Recipe</span> <i class="icon-angle-right"></i>
+								</a>
+							</li>
+							<!-- SLIDE  -->
+							<!-- SLIDE  -->
+							<li data-index="rs-8" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="demos/recipes/images/slider/1/100x50-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"demos/recipes/images/slider/fibers_small.jpg","imagesize":"external","autoplay":true,"scalex":4,"scaley":4,"speedx":0.5,"speedy":-0.5,"rotationx":0,"rotationy":0,"rotation":0,"transtime":2000,"easing":"Power3.easeOut","transcross":false,"transpower":false,"transitionx":0,"transitiony":0,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0}'>
+								<!-- MAIN IMAGE -->
+								<img src="demos/recipes/images/slider/dummy.png"  alt="Image" data-duration="4000" data-lazyload="demos/recipes/images/slider/2/bg.jpg" data-bgposition="center center"  data-bgparallax="4" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
 
-								data-type="text"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 1 -->
+								<h3 class="tp-caption font-primary tp-resizeme"
+									 id="slide-8-layer-13-1"
+									 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['225','165','45','10']"
+									 data-fontsize="['54','54','54','40']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
 
-								data-frames='[{"delay":2000,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-type="text"
+									data-responsive_offset="on"
 
-								style="z-index: 7; white-space: nowrap; font-size: 54px; line-height: 50px; letter-spacing: 0px; color: #111;">Homemade Brunch</h3>
+									data-frames='[{"delay":2000,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
 
-							<!-- LAYER NR. 2 -->
-							<p class="tp-caption Restaurant-Description  tp-resizeme"
-								 id="slide-8-layer-13-2"
-								data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['315','245','135','80']"
-								data-fontsize="['18','18','18','18']"
-								data-lineheight="['30','30','30','30']"
-								data-fontweight="['400','400','400','400']"
-								data-width="['480','480','480','400']"
-								data-height="none"
+									style="z-index: 7; white-space: nowrap; font-size: 54px; line-height: 50px; letter-spacing: 0px; color: #111;">Homemade Brunch</h3>
 
-								data-type="text"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 2 -->
+								<p class="tp-caption Restaurant-Description  tp-resizeme"
+									 id="slide-8-layer-13-2"
+									data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['315','245','135','80']"
+									data-fontsize="['18','18','18','18']"
+									data-lineheight="['30','30','30','30']"
+									data-fontweight="['400','400','400','400']"
+									data-width="['480','480','480','400']"
+									data-height="none"
+									data-visibility="['on', 'on', 'off', 'off']"
 
-								data-frames='[{"delay":2500,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['left','left','center','center']"
+									data-type="text"
+									data-responsive_offset="on"
 
-								style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; letter-spacing: 0px;color: #111;">Collaboratively fabricate focused web services and premium total linkage. Globally re-engineer covalent potentialities with scalable scenarios. Rapidiously syndicate future-proof.</p>
+									data-frames='[{"delay":2500,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['left','left','center','center']"
 
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption tp-resizeme"
-								 id="slide-8-layer-12"
-								 data-x="['right','right','middle','middle']" data-hoffset="['0','0','0','0']"
-								 data-y="['middle','middle','top','top']" data-voffset="['50','0','535','236']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="normal"
+									style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; letter-spacing: 0px;color: #111;">Collaboratively fabricate focused web services and premium total linkage. Globally re-engineer covalent potentialities with scalable scenarios. Rapidiously syndicate future-proof.</p>
 
-								data-type="image"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 3 -->
+								<div class="tp-caption tp-resizeme"
+									id="slide-8-layer-12"
+									data-x="['right','right','middle','middle']" data-hoffset="['0','0','0','0']"
+									data-y="['middle','middle','top','top']" data-voffset="['50','0','535','236']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="normal"
 
-								data-frames='[{"delay":2500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
+									data-type="image"
+									data-responsive_offset="on"
 
-								style="z-index: 6;">
-								<div class="rs-looped rs-rotate"  data-easing="Linear.easeNone" data-startdeg="0" data-enddeg="180" data-speed="40" data-origin="50% 50%"><img src="demos/recipes/images/slider/dummy.png" alt="" data-ww="['602px','500px','300px','200px']" data-hh="['602px','500px','300px','200px']" data-lazyload="demos/recipes/images/slider/2/1.png" data-no-retina> </div>
-							</div>
+									data-frames='[{"delay":2500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
 
-							<!-- LAYER NR. 6 -->
-							<div class="tp-caption   tp-resizeme"
-								 id="slide-8-layer-20"
-								 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['475','400','260','460']"
-											data-width="none"
-											data-fontsize="['20','18','20','20']"
-								data-height="none"
-								data-whitespace="nowrap"
+									style="z-index: 6;">
+									<div class="rs-looped rs-rotate"  data-easing="Linear.easeNone" data-startdeg="0" data-enddeg="180" data-speed="40" data-origin="50% 50%"><img src="demos/recipes/images/slider/dummy.png" alt="Image" data-ww="['602px','500px','300px','200px']" data-hh="['602px','500px','300px','200px']" data-lazyload="demos/recipes/images/slider/2/1.png" data-no-retina> </div>
+								</div>
 
-								data-type="text"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-8-layer-20"
+									 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['440','370','260','460']"
+												data-width="none"
+												data-fontsize="['20','18','20','20']"
+									data-height="none"
+									data-whitespace="nowrap"
 
-								data-frames='[{"delay":3100,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
+									data-type="text"
+									data-responsive_offset="on"
 
-								style="z-index: 14; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #333; letter-spacing: 0px;"><span class="mr-3"><i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star-half"></i></span><strong>4.7 </strong><span style="font-weight: 300">(1,313 Reviews)</span>
-							</div>
+									data-frames='[{"delay":3100,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
 
-							<!-- LAYER NR. 5 -->
-							<div class="tp-caption slider-features tp-resizeme"
-								 id="slide-8-layer-19"
-								 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['545','460','325','535']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
+									style="z-index: 14; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #333; letter-spacing: 0px;"><span class="mr-3"><i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star-half"></i></span><strong>4.7 </strong><span style="font-weight: 300">(1,313 Reviews)</span>
+								</div>
 
-								data-type="text"
-								data-responsive_offset="on"
+								<!-- LAYER NR. 5 -->
+								<div class="tp-caption slider-features tp-resizeme"
+									 id="slide-8-layer-19"
+									 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['510','440','325','535']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
 
-								data-frames='[{"delay":3400,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
+									data-type="text"
+									data-responsive_offset="on"
 
-								style="z-index: 13;">
-								<ul class="list-unstyled">
-									<li class="d-inline-block">
-										<img src="demos/recipes/images/icons/timer-dark.svg" alt="Timer" width="30">
-										<h4>37 Mins</h4>
-									</li>
+									data-frames='[{"delay":3400,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
 
-									<li class="d-inline-block">
-										<img src="demos/recipes/images/icons/ingredients-dark.svg" alt="ingredients" width="30">
-										<h4>11 Ingredients</h4>
-									</li>
+									style="z-index: 13;">
+									<ul class="list-unstyled">
+										<li class="d-inline-block">
+											<img src="demos/recipes/images/icons/timer-dark.svg" alt="Timer" width="30">
+											<h4>37 Mins</h4>
+										</li>
 
-									<li class="d-inline-block">
-										<img src="demos/recipes/images/icons/kcal-dark.svg" alt="kcal" width="30">
-										<h4>450 Kcal</h4>
-									</li>
-								</ul>
-							</div>
-							<a class="tp-caption rev-btn button button-large m-0 button-black t700 button-circle button-dark"
-								href="demos/recipes/recipe-single.html" target="_blank"
-								id="slide-8-layer-13"
-								 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
-								 data-y="['top','top','top','top']" data-voffset="['580','570','350','555']"
-								data-height="none"
-								data-type="button"
-								data-actions=''
-								data-responsive_offset="off"
-								data-responsive="off"
-								data-frames='[{"delay":3500,"speed":1600,"frame":"0","from":"x:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;","bgcolor":"#000","to":"o:1;fbr:100;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","bgcolor":"#000","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"150","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;","style":"c:#FFF;"}]'
-								style="z-index: 9; background-color: #000"><span>View Recipe</span> <i class="icon-angle-right"></i>
-							</a>
-						</li>
-					</ul>
-					<div class="tp-bannertimer" style="height: 6px; background: rgba(255,255,255,0.15);"></div>
-				</div>
-			</div><!-- END REVOLUTION SLIDER -->
+										<li class="d-inline-block">
+											<img src="demos/recipes/images/icons/ingredients-dark.svg" alt="ingredients" width="30">
+											<h4>11 Ingredients</h4>
+										</li>
+
+										<li class="d-inline-block">
+											<img src="demos/recipes/images/icons/kcal-dark.svg" alt="kcal" width="30">
+											<h4>450 Kcal</h4>
+										</li>
+									</ul>
+								</div>
+								<a class="tp-caption rev-btn button button-large m-0 button-black font-weight-bold button-circle button-dark"
+									href="demos/recipes/recipe-single.html" target="_blank"
+									id="slide-8-layer-13"
+									 data-x="['left','left','middle','middle']" data-hoffset="['0','30','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['500','500','320','525']"
+									data-height="none"
+									data-type="button"
+									data-actions=''
+									data-responsive_offset="off"
+									data-responsive="off"
+									data-frames='[{"delay":3500,"speed":1600,"frame":"0","from":"x:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;","bgcolor":"#000","to":"o:1;fbr:100;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","bgcolor":"#000","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"150","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;","style":"c:#FFF;"}]'
+									style="z-index: 9; background-color: #000"><span>View Recipe</span> <i class="icon-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+						<div class="tp-bannertimer" style="height: 6px; background: rgba(255,255,255,0.15);"></div>
+					</div>
+				</div><!-- END REVOLUTION SLIDER -->
+
+			</div>
 		</section>
 
 		<!-- Content
 		============================================= -->
-		<section id="content" style="overflow: inherit;">
+		<section id="content">
+			<div class="content-wrap pb-0" style="overflow: visible;">
 
-			<div class="content-wrap pb-0">
-
-				<div class="section mt-2 nobg">
+				<div class="section mt-2 bg-transparent">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-8 offset-2 center">
-								<h2 class="text-title-light text-dark mb-5 ls1 uppercase">Hello &amp; Welcome.</h2>
+								<h2 class="text-title-light text-dark mb-5 ls1 text-uppercase">Hello &amp; Welcome.</h2>
 								<p style="font-size: 17px; color: #777">I'm John Doe, Authoritatively communicate world-class alignments before low-risk high-yield growth strategies. Synergistically envisioneer transparent niches after dynamic "outside the box" thinking. Uniquely  partnerships before synergistic niche markets.<br><br>Cheers to all that you do!</p>
 								<img src="demos/barber/images/about/sign.png" alt="Sign" width="150" class="mt-3">
 							</div>
@@ -470,11 +480,11 @@
 					</div>
 				</div>
 
-				<div class="section recipe-itmes p-0" style="overflow: visible; background-color: #f9f9f9">
+				<div class="section recipe-itmes p-0" style="overflow: visible;background-color: #f9f9f9">
 					<div class="row align-items-stretch align-content-stretch no-gutters">
 						<div class="col-lg-4 dark">
-							<div class="position-sticky full-screen d-flex flex-column align-items-center center justify-content-center" style="top:0; background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url('demos/recipes/images/popular/side-bg.jpg') center center / cover; min-height: 300px" data-height-md="300">
-								<h2 class="display-4 px-3 center t700 d-block">Latest<br>Recipes</h2>
+							<div class="position-sticky min-vh-60 min-vh-md-100 d-flex flex-column align-items-center center justify-content-center" style="top:0; background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url('demos/recipes/images/popular/side-bg.jpg') center center / cover;">
+								<h2 class="display-4 px-3 center font-weight-bold d-block">Latest<br>Recipes</h2>
 								<a href="demos/recipes/recipes.html" class="button button-large button-light button-white button-circle m-0 px-5">View All</a>
 							</div>
 						</div>
@@ -488,10 +498,10 @@
 											<img src="demos/recipes/images/popular/1.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Gunther Beard</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.6</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.6</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Green Goddess Avocado Hummus</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Dec 26, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Dec 26, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -503,10 +513,10 @@
 										<img src="demos/recipes/images/popular/2.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Chauffina Carr</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.9</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.9</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Strawberry Kiwi Healthy Bowl</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Dec 1, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Dec 1, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -518,10 +528,10 @@
 										<img src="demos/recipes/images/popular/3.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Eric Widget </a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.3</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.3</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Rustic Sweet Treat</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Nov 20, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Nov 20, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -533,10 +543,10 @@
 										<img src="demos/recipes/images/popular/4.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Quiche Hollandaise</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.5</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.5</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">A Delicious Homemade Breakfast</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Oct 2, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Oct 2, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -548,10 +558,10 @@
 										<img src="demos/recipes/images/popular/5.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Norman Gordon</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.5</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.5</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Pumpkin Bars with Cream Cheese Frosting</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Sep 18, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Sep 18, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -563,10 +573,10 @@
 										<img src="demos/recipes/images/popular/6.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Druid Wensleydale</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.0</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.0</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">The Best Homemade Pizza Recipes</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Sep 7, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Sep 7, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -578,10 +588,10 @@
 										<img src="demos/recipes/images/popular/7.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Bailey Wonger</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.5</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.5</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Baked Salmon with Sweet-Potatoes</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Aug 12, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Aug 12, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -593,10 +603,10 @@
 										<img src="demos/recipes/images/popular/8.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Pelican Steve</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.2</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.2</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">A Kollam Grilled Cheese with Vegetables</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Aug 8, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Aug 8, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -608,10 +618,10 @@
 										<img src="demos/recipes/images/popular/9.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Malcolm Function</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.3</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.3</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Garden Veggie Delux Pizza</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Jul 26, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Jul 26, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -623,10 +633,10 @@
 										<img src="demos/recipes/images/popular/10.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Dianne Ameter</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.5</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.5</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Spinach Artichoke Dip Pasta with Chicken</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>Jun 15, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>Jun 15, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -638,10 +648,10 @@
 										<img src="demos/recipes/images/popular/11.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Weir Doe</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.4</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.4</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Quick Black Pepper Pork Lunch</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>May 11, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>May 11, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -653,10 +663,10 @@
 										<img src="demos/recipes/images/popular/12.png" alt="image">
 											<div class="d-flex justify-content-between align-items-center mt-4 mb-2">
 												<p class="card-author">By <a href="#">Niles Peppertrout</a></p>
-												<span class="badge badge-primary bgcolor"><i class="icon-star3"></i> 4.0</span>
+												<span class="badge badge-primary bg-color"><i class="icon-star3"></i> 4.0</span>
 											</div>
 											<h3 class="card-title"><a href="demos/recipes/recipe-single.html" class="stretched-link">Afternoon Plates of Pasta</a></h3>
-											<h5 class="card-date"><i class="icon-line2-calendar"></i>May 4, 2019</h5>
+											<h5 class="card-date"><i class="icon-line2-calendar"></i>May 4, 2021</h5>
 										</div>
 									</div>
 								</div>
@@ -665,7 +675,7 @@
 					</div>
 				</div>
 
-				<div class="section nobg" style="padding: 100px 0">
+				<div class="section bg-transparent" style="padding: 100px 0">
 					<div class="container">
 						<h2 class="text-title-light" style="margin: 0 0 -20px 15px;">Recipes of the Week</h2>
 						<div id="recipes-carousel" class="owl-carousel carousel-widget" data-margin="0" data-nav="true" data-pagi="false" data-items="1">
@@ -696,7 +706,7 @@
 											</li>
 										</ul>
 									</div>
-									<div><a href="demos/recipes/recipe-single.html" class="button button-circle button-large m-0 t600 nott ls0 tright">View Recipe <i class="icon-angle-right"></i></a></div>
+									<div><a href="demos/recipes/recipe-single.html" class="button button-circle button-large m-0 font-weight-semibold nott ls0 text-right">View Recipe <i class="icon-angle-right"></i></a></div>
 								</div>
 							</div>
 
@@ -727,7 +737,7 @@
 											</li>
 										</ul>
 									</div>
-									<div><a href="demos/recipes/recipe-single.html" class="button button-circle button-large m-0 t600 ls0 nott tright">View Recipe <i class="icon-angle-right"></i></a></div>
+									<div><a href="demos/recipes/recipe-single.html" class="button button-circle button-large m-0 font-weight-semibold ls0 nott text-right">View Recipe <i class="icon-angle-right"></i></a></div>
 								</div>
 							</div>
 						</div>
@@ -759,7 +769,7 @@
 								<div class="card border-0 shadow-sm">
 									<img src="demos/recipes/images/blog/healthy-food.jpg" class="card-img-top" alt="Image">
 									<div class="card-body" style="padding: 40px">
-										<h4 class="card-title mb-3">Top 10 Healthy Foods of 2019</h4>
+										<h4 class="card-title mb-3">Top 10 Healthy Foods of 2021</h4>
 										<p class="card-text">Dramatically initiate authoritatively interactive e-tailers with enterprise results phosfluorescently.</p>
 										<a href="#" class="card-link stretched-link">Learn More <i class="icon-angle-right position-relative ml-2" style="top: 2px"></i></a>
 									</div>
@@ -785,16 +795,16 @@
 						<div class="row">
 							<div class="col-sm-6 mt-4 mt-sm-0 subscribe-widget" data-loader="button">
 								<img src="demos/recipes/images/icons/email.svg" alt="Enmail Icon" width="60" class="mb-4">
-								<div class="heading-block nobottomborder mb-5">
+								<div class="heading-block border-bottom-0 mb-5">
 									<h2 class="nott ls0 mb-1">Stay Updated!</h2>
 									<p class="lead text-muted">Easy Recipes and Cookings right to your Inbox</p>
 								</div>
 								<div class="widget-subscribe-form-result"></div>
-								<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+								<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="mb-0">
 									<div class="input-group input-group-lg">
 										<input type="email" name="widget-subscribe-form-email" class="form-control required" placeholder="Enter Your Email Address..">
 										<div class="input-group-append">
-											<button type="submit" class="btn text-white bgcolor px-4" id="inputGroup-sizing-lg">Subscribe</button>
+											<button type="submit" class="btn text-white bg-color px-4" id="inputGroup-sizing-lg">Subscribe</button>
 										</div>
 									</div>
 								</form>
@@ -805,18 +815,17 @@
 				</div>
 
 			</div>
-
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="bg-white noborder">
+		<footer id="footer" class="bg-white border-0">
 
 			<div class="container">
 
 				<!-- Footer Widgets
 				============================================= -->
-				<div class="footer-widgets-wrap clearfix">
+				<div class="footer-widgets-wrap">
 
 					<div class="row">
 
@@ -875,7 +884,7 @@
 							<div id="instagram" class="widget clearfix">
 
 								<h4 class="ls0 nott">Instagram Photos</h4>
-								<div id="instagram-photos" class="instagram-photos masonry-thumbs grid-4" data-user="5834720953" data-count="8" data-type="user"></div>
+								<div id="instagram-photos" class="instagram-photos masonry-thumbs grid-4" data-user="blog.canvastemplate" data-count="8"></div>
 
 							</div>
 						</div>
@@ -892,7 +901,7 @@
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
 						<div class="col-sm-4 d-flex justify-content-sm-start mb-3 mb-sm-0 text-black-50">
-							Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.
 						</div>
 						<div class="col-sm-4 d-flex justify-content-sm-center mb-3 mb-sm-0">
 							<a href="https://facebook.com/semicolonweb" target="_blank" class="social-icon si-small si-colored si-facebook" title="Facebook">
@@ -931,7 +940,6 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 
 	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
 	<script src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
@@ -959,6 +967,7 @@
 	<script>
 		var revapi2,
 		tpj;
+		var $ = jQuery.noConflict();
 		(function() {
 			if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();
 

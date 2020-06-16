@@ -1,21 +1,16 @@
 /* ----------------------------------------------------------------
-	CSS Specific to the Construction Demo
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Styling of this Demo
-
-	Version: 4.2
+	Canvas: Construction
 -----------------------------------------------------------------*/
 
 
 #top-bar { background-color: #FFF; }
 
-.top-links li > a {
+.top-links-item > a {
 	font-weight: 400;
 	font-size: 12px;
 }
 
-.top-links ul ul a { font-size: 11px; }
+.top-links-sub-menu .top-links-item > a { font-size: 11px; }
 
 .header-extras li {
 	margin-left: 30px;
@@ -57,20 +52,18 @@
 #header-wrap { background-color: #FFF; }
 
 
-.device-md #primary-menu i.icon-angle-down,
-.device-sm #primary-menu i.icon-angle-down,
-.device-xs #primary-menu i.icon-angle-down { display: none !important; }
-
-
-.lowercase { text-transform: lowercase !important; }
-
+.device-md .primary-menu i.icon-angle-down,
+.device-sm .primary-menu i.icon-angle-down,
+.device-xs .primary-menu i.icon-angle-down { display: none !important; }
 
 .slider-caption {
+	max-width: 450px;
+}
+
+.slider-caption > div {
 	background-color: rgba(255,255,255,0.9);
 	border-radius: 2px;
-	left: -25px;
 	padding: 40px;
-	max-width: 450px;
 }
 
 .slider-caption h2 {
@@ -81,12 +74,6 @@
 .slider-caption p {
 	margin-bottom: 0;
 	font-size: 18px;
-}
-
-
-.slider-caption.slider-caption-right {
-	left: auto;
-	right: -25px;
 }
 
 .dark .slider-caption { background-color: rgba(0,0,0,0.75) }

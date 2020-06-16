@@ -5,160 +5,91 @@
 
 -----------------------------------------------------------------*/
 
+
 /* ----------------------------------------------------------------
 	Footer
 -----------------------------------------------------------------*/
-
 #footer {
 	position: relative;
 	background-color: $footer-bg;
-	border-top: 5px solid rgba($black,0.2);
-	.footer-widgets-wrap {
-		position: relative;
-		padding: $content-padding 0;
-	}
-	&.dark,
-	.dark & {
-		background-color: $footer-bg-dark;
-		color: darken($text-color-dark, 13.33);
-		border-top-color: rgba($black,0.2);
-	}
+	border-top: $footer-top-border;
 }
 
-.device-xl,
-.device-lg {
-	&.sticky-footer {
-		#top-bar { z-index: 299; }
-		#header { z-index: 199; }
-		#slider,
-		#page-submenu,
-		#page-title,
-		#content,
-		#slider,
-		#page-submenu,
-		#page-title,
-		#content { z-index: 2; }
+@if $footer-sticky-global {
+	@include media-breakpoint-up(lg) {
 		#footer {
-			position: fixed;
+			position: sticky;
 			top: auto;
 			bottom: 0;
 			left: 0;
-			width: 100%;
-			z-index: 1;
 		}
-		&:not(.stretched) #footer {
-			left: 50%;
-			transform: translateX(-50%);
-			width: map-get($grid-breakpoints, "xl") + 20; //1220px;
-		}
+
+		#slider:not(.slider-parallax-invisible),
+		#page-submenu,
+		#page-title,
+		#content { z-index: 2; }
 	}
 }
 
-.device-lg.sticky-footer:not(.stretched) #footer {
-	width: map-get($grid-breakpoints, "lg") + 8; //1220px;
+@include media-breakpoint-up(lg) {
+	.sticky-footer #slider:not(.slider-parallax-invisible),
+	.sticky-footer #page-submenu,
+	.sticky-footer #page-title,
+	.sticky-footer #content { z-index: 2; }
+
+	.sticky-footer #footer {
+		position: sticky;
+		top: auto;
+		bottom: 0;
+		left: 0;
+	}
 }
 
-.footer-widgets-wrap {
-	.col_full,
-	.col_half,
-	.col_one_third,
-	.col_two_third,
-	.col_three_fourth,
-	.col_one_fourth,
-	.col_one_fifth,
-	.col_two_fifth,
-	.col_three_fifth,
-	.col_four_fifth,
-	.col_one_sixth,
-	.col_five_sixth {
-		margin-bottom: 0;
-	}
-	.dark & a {
-		color: darken($text-color-dark, 13.33%);
-		&:hover {
-			color: darken($text-color-dark, 33.33%);
-		}
-	}
+#footer .footer-widgets-wrap {
+	position: relative;
+	padding: $content-padding 0;
 }
 
 #copyrights {
 	padding: round($content-padding / 2) 0;
 	background-color: darken($footer-bg, 6.67);
-	font-size: $font-size-body;
+	font-size: $copyrights-font-size;
 	line-height: $line-height-content;
-	.dark & {
-		background-color: rgba($black,0.2);
-		color: rgba($white,0.25);
-		text-shadow: 1px 1px 1px rgba($black,0.1);
-	}
-	i {
-		&.footer-icon {
-			position: relative;
-			top: 1px;
-			font-size: $font-size-body;
-			width: 14px;
-			text-align: center;
-			margin-right: 3px;
-			.dark & {
-				color: rgba($white,0.3);
-			}
-		}
-	}
-	.col_half {
-		margin-bottom: 0 !important;
-		@include media-breakpoint-down(sm) { text-align: center; }
-	}
-	a {
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-	.tright {
-		a {
-			&:last-child {
-				margin-right: 0;
-				@include media-breakpoint-down(sm) { display: none; }
-			}
-		}
-	}
-}
 
-.copyright-links {
+	i.footer-icon {
+		position: relative;
+		top: 1px;
+		font-size: $copyrights-font-size;
+		width: $copyrights-font-size;
+		text-align: center;
+		margin-right: 3px;
+	}
+
 	a {
 		display: inline-block;
 		margin: 0 3px;
 		color: darken($text-color, 6.67);
 		border-bottom: 1px dotted $text-color;
-		.dark & {
-			color: rgba($white,0.25);
-			border-bottom-color: rgba($white,0.25);
-		}
 		&:hover {
 			color: lighten($text-color, 6.67);
 			border-bottom: 1px solid lighten($text-color, 13.33);
-
-			.dark & {
-				color: rgba($white,0.35);
-				border-bottom-color: rgba($white,0.35);
-			}
 		}
 	}
+	.text-right a:last-child { margin-right: 0; }
 }
 
-.copyrights-menu {
-	margin-bottom: 10px;
+
+.copyrights-menu { margin-bottom: 10px;
 	a {
-		font-size: $font-size-body;
+		font-size: $copyrights-font-size;
 		margin: 0 10px;
 		border-bottom: 0 !important;
+		&:first-child { margin-left: 0; }
 	}
 }
+
 
 .footer-logo {
 	display: block;
 	margin-bottom: 30px;
-	@include media-breakpoint-down(sm) {
-		margin-left: auto;
-		margin-right: auto;
-	}
 }
