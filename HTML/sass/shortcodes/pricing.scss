@@ -1,0 +1,440 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: pricing.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Pricing Boxes
+-----------------------------------------------------------------*/
+
+.pricing { position: relative; }
+
+.pricing [class^=col-] {
+	padding: 0;
+	margin-top: 20px;
+}
+
+@include media-breakpoint-down(md) {
+	.pricing {
+		[class^=col-md-] {
+			.pricing-box {
+				&.best-price {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+
+/* Pricing Boxes
+-----------------------------------------------------------------*/
+
+.pricing-box {
+	position: relative;
+	border: $pricing-border-size solid $pricing-border-color;
+	@include border-radius($pricing-border-radius);
+	text-align: center;
+	box-shadow: $pricing-box-shadow;
+	background-color: $pricing-background;
+	.dark & {
+		border-color: rgba($white,0.1);
+		background-color: rgba($black,0.2);
+		box-shadow: 0 1px 1px rgba($black,0.1);
+	}
+}
+
+
+/* Pricing Boxes - Title
+-----------------------------------------------------------------*/
+
+.pricing-title {
+	padding: $pricing-title-padding 0;
+	background-color: $pricing-title-bg;
+	@include border-top-radius($pricing-border-radius);
+	text-shadow: 1px 1px 1px $body-bg;
+	border-bottom: $pricing-title-border;
+	.dark & {
+		background-color: rgba($white,0.03);
+		text-shadow: 1px 1px 1px rgba($black,0.15);
+		border-bottom-color: rgba($white,0.1);
+	}
+
+	h3 {
+		margin: 0;
+		font-size: $pricing-title-font-size;
+		letter-spacing: $pricing-title-font-spacing;
+		font-weight: $pricing-title-font-weight;
+		text-transform: $pricing-title-font-transform;
+		color: $pricing-title-font-color;
+		.dark & { color: darken($text-color-dark, 6.67%); }
+	}
+
+	span {
+		display: block;
+		color: lighten($pricing-base-color, 33.33%);
+		font-weight: 300;
+		font-size: round($pricing-title-font-size * 0.7);
+		margin-top: 3px;
+		text-transform: $pricing-title-font-transform;
+	}
+}
+
+
+/* Pricing Boxes - Price
+-----------------------------------------------------------------*/
+
+.pricing-price {
+	position: relative;
+	padding: $pricing-price-padding 0;
+	color: $pricing-price-color;
+	font-weight: 300;
+	font-size: $pricing-price-font-size;
+	line-height: 1;
+	.dark & { color: $text-color-dark; }
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: $pricing-price-bottom-border-width;
+		border-top: $pricing-price-bottom-border-size;
+		top: auto;
+		bottom: 0;
+		left: 50%;
+		margin-left: - round($pricing-price-bottom-border-width / 2);
+		.dark & { border-top-color: rgba($white,0.1); }
+	}
+
+	span {
+		display: inline-block;
+		vertical-align: top;
+		margin: 7px 3px 0 0;
+		font-size: $pricing-price-currency-icon;
+		font-weight: normal;
+
+		&.price-tenure {
+			vertical-align: baseline;
+			font-size: $pricing-price-month;
+			font-weight: normal;
+			color: lighten($pricing-base-color, 33.33%);
+			margin: 0 0 0 3px;
+		}
+	}
+}
+
+
+/* Pricing Boxes - Features
+-----------------------------------------------------------------*/
+
+.pricing-features {
+	border-bottom: $pricing-border-size solid $pricing-border-color;
+	.dark & { border-bottom-color: rgba($white,0.1); }
+
+	ul {
+		margin: 0;
+		padding: $pricing-title-padding 0;
+		list-style: none;
+	}
+
+	li {
+		padding: $pricing-features-font-padding 0;
+		font-size: $pricing-features-font-size;
+	}
+}
+
+
+/* Pricing Boxes - Action
+-----------------------------------------------------------------*/
+
+.pricing-action { padding: $pricing-title-padding round($pricing-title-padding * 2); }
+
+
+/* Pricing Boxes - Best Price
+-----------------------------------------------------------------*/
+
+.pricing-box {
+	&.best-price {
+		background-color: $pricing-popular-bg;
+		box-shadow: $pricing-popular-box-shadow;
+		z-index: 10;
+		@if $pricing-popular-title-padding > 30 {
+			margin: - round($pricing-popular-title-padding / 2) (-$pricing-border-size) 0 (-$pricing-border-size);
+		} @else {
+			margin: (-$pricing-popular-title-padding) (-$pricing-border-size) 0 (-$pricing-border-size);
+		}
+
+		@include media-breakpoint-down(sm) { margin: 0; }
+
+		.dark & {
+			background-color: transparent;
+			box-shadow: 0 0 8px rgba($black,0.1);
+		}
+
+		.pricing-title {
+			background-color: $body-bg;
+			padding: $pricing-popular-title-padding 0;
+			.dark & { background-color: transparent; }
+
+			h3 {
+				font-size: $pricing-popular-title-font-size;
+			}
+		}
+
+		.pricing-price {
+			color: $pricing-popular-font-color;
+			font-size: $pricing-popular-pricing-font-size;
+		}
+	}
+
+	/* Pricing Boxes - Minimal
+	-----------------------------------------------------------------*/
+
+	&.pricing-minimal {
+		.pricing-price {
+			background-color: $pricing-minimal-bg;
+			border-bottom: $pricing-border-size solid $pricing-border-color;
+
+			.dark & {
+				background-color: transparent;
+				border-bottom-color: rgba($white,0.1);
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+
+/* Pricing Boxes - 5 Columns
+-----------------------------------------------------------------*/
+
+.pricing {
+	&.pricing-5 {
+		@include media-breakpoint-down(md) { justify-content: center;}
+		.pricing-box {
+			float: left;
+			width: 20%;
+			margin-top: $pricing-popular-title-padding;
+
+			@include media-breakpoint-down(lg) {
+				@if $pricing-5-lg-col != 5 {
+					float: none;
+					width: auto;
+					@include make-col($pricing-5-lg-col);
+				}
+			}
+
+			@include media-breakpoint-down(md) {
+				@if $pricing-5-md-col != 5 {
+					float: none;
+					width: auto;
+					@include make-col($pricing-5-md-col);
+				}
+			}
+
+			@include media-breakpoint-down(sm) {
+				@include make-col($pricing-5-sm-col);
+			}
+
+			@include media-breakpoint-down(xs) {
+				@include make-col($pricing-5-xs-col);
+			}
+
+			&.best-price {
+				margin-top: 0;
+				@include media-breakpoint-down(md) {
+					margin-top: $pricing-popular-title-padding;
+					.pricing-title {
+						padding: 15px 0;
+					}
+				}
+			}
+
+			&:nth-child(5) {
+				margin-left: (-$pricing-border-size);
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			.pricing-price {
+				font-size: round($pricing-price-font-size / 1.33);
+				span {
+					font-size: $pricing-title-font-size;
+					&.price-tenure {
+						font-size: round($pricing-price-font-size / 5.33);
+					}
+				}
+			}
+		}
+
+		.pricing-title {
+			h3 {
+				font-size: round($pricing-title-font-size * .9);
+				@include media-breakpoint-down(md) {
+					font-size: round($pricing-title-font-size / 1.42);
+				}
+			}
+			@include media-breakpoint-down(md) {
+				span {
+					font-size: round($pricing-title-font-size / 1.67);
+				}
+			}
+		}
+
+		.best-price {
+			.pricing-title {
+				h3 {
+					font-size: $pricing-title-font-size;
+					@include media-breakpoint-down(md) {
+						font-size: round($pricing-title-font-size / 1.42);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* Pricing Boxes - Extended
+-----------------------------------------------------------------*/
+
+.pricing-box {
+	&.pricing-extended {
+		background-color: $pricing-minimal-bg;
+		text-align: left;
+
+		.dark & { background-color: transparent; }
+
+		.pricing-desc {
+			float: left;
+			width: $pricing-extended-desc-width;
+			padding: $pricing-extended-padding;
+			@include media-breakpoint-down(md) {
+				position: relative;
+				float: none;
+				width: auto;
+				padding: $pricing-extended-padding;
+			}
+		}
+
+		.pricing-title {
+			background-color: transparent;
+			padding-top: 0;
+			text-align: left;
+		}
+
+		.pricing-features {
+			border: 0;
+
+			ul {
+				padding: $pricing-title-padding 0 0 0;
+				@include make-row(0);
+			}
+
+			li {
+				padding: $pricing-features-font-padding 0;
+				font-size: round($pricing-features-font-size * 1.1);
+				@include make-col($pricing-extended-features-col);
+
+				@include media-breakpoint-down(sm) {
+					@include make-col(12);
+					float: none;
+				}
+
+				i {
+					position: relative;
+					top: 1px;
+					width: round($pricing-features-font-size * 1.14);
+					margin-right: 2px;
+				}
+			}
+		}
+
+		.pricing-action-area {
+			position: absolute;
+			top: 0;
+			left: auto;
+			right: 0;
+			width: round(100% - $pricing-extended-desc-width);
+			height: 100%;
+			border-left: $pricing-title-border;
+			background-color: $pricing-title-bg;
+			padding: $pricing-extended-padding;
+			@include border-right-radius($pricing-border-radius);
+			text-align: center;
+			@include make-row(0);
+			flex-wrap: wrap;
+			-webkit-box-align: center !important;
+		    -ms-flex-align: center !important;
+		    align-items: center !important;
+		    flex-direction: column;
+		    justify-content: center !important;
+		    @include media-breakpoint-down(md) {
+		    	display: block;
+				position: relative;
+				float: none;
+				width: auto;
+				height: auto;
+				padding: $pricing-extended-padding;
+				border-left: 0;
+				border: $pricing-border-size solid rgba($black-color,0.05);
+				@include border-radius(0 0 $pricing-border-radius $pricing-border-radius);
+				.dark & { border-top-color: rgba($white,0.15); }
+			}
+
+			.dark & {
+				border-left-color: rgba($white,0.15);
+				background-color: rgba($black,0.2);
+			}
+
+			.pricing-price,
+			.pricing-action {
+				padding: 0;
+				@include media-breakpoint-only(lg) {
+					a { @include btn-size-variant($button...); }
+				}
+			}
+
+			.pricing-price {
+				padding-bottom: $pricing-popular-title-padding;
+
+				&::after {
+					display: none;
+				}
+
+				span.price-tenure {
+					display: block;
+					margin: 10px 0 0 0;
+					font-weight: 300;
+					text-transform: uppercase;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.pricing-meta {
+			color: lighten($pricing-base-color, 33.33%);
+			font-weight: 300;
+			font-size: round($pricing-title-font-size * 0.7);
+			letter-spacing: $pricing-title-font-spacing;
+			text-transform: $pricing-title-font-transform;
+			padding-bottom: 10px;
+			.dark & { color: darken($text-color-dark, 33.33%); }
+		}
+	}
+}
+
+.table-comparison,
+.table-comparison th { text-align: center; }
+
+.table-comparison th,
+.table-comparison td {
+	&:first-child {
+		text-align: left;
+		font-weight: bold;
+	}
+}

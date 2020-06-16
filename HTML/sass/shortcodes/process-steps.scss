@@ -1,0 +1,93 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: process-steps.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Process Steps
+-----------------------------------------------------------------*/
+
+.process-steps {
+	margin: 0 0 40px;
+	list-style: none;
+
+	li {
+		float: left;
+		position: relative;
+		width: 25%;
+		text-align: center;
+		overflow: hidden;
+
+		@include media-breakpoint-down(sm) {
+			float: none;
+			width: auto !important;
+			margin-top: 20px;
+			&:first-child {
+				margin-top: 0;
+			}
+			&:before,
+			&:after {
+				display: none;
+			}
+			h5 { margin: 10px 0 0 0; }
+		}
+
+		.i-circled { margin-bottom: 0 !important; }
+		.i-bordered {
+			background-color: $body-bg;
+			.dark & {
+				background-color: lighten($body-bg-dark, 6.67);
+			}
+		}
+
+		h5 {
+			margin: 15px 0 0 0;
+			font-size: 16px;
+			font-weight: 300;
+		}
+
+		&.active,
+		&.ui-tabs-active {
+			h5 {
+				font-weight: 700;
+				color: $theme-color;
+			}
+
+			a {
+				background-color: $theme-color !important;
+				color: #FFF;
+				text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+				border-color: $theme-color !important;
+			}
+		}
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 30px;
+			left: 0;
+			margin-left: -26px;
+			width: 50%;
+			border-top: 1px dashed darken($body-bg, 13.33);
+			.dark & {
+				border-top: rgba($white,0.15);
+			}
+		}
+
+		&:after {
+			left: auto;
+			right: 0;
+			margin: 0 -26px 0 0;
+		}
+
+		&:first-child:before,
+		&:last-child:after { display: none; }
+	}
+
+	&.process-2 li { width: 50%; }
+	&.process-3 li { width: 33.33%; }
+	&.process-5 li { width: 20%; }
+
+}

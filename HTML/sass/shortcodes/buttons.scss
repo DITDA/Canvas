@@ -1,0 +1,551 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: buttons.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Buttons
+-----------------------------------------------------------------*/
+
+
+.button {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	white-space: nowrap;
+	margin: 5px;
+	padding: 0 $button-padding-width;
+	font-size: $button-font-size;
+	height: $button-height;
+	line-height: $button-height;
+	background-color: $button-color;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border: none;
+	text-shadow: 1px 1px 1px $button-text-shadow;
+
+	body:not(.device-touch) & {
+		@include transition(all $button-transition-speed);
+	}
+
+	&-dark {
+		background-color: $button-dark;
+		@at-root .dark &:not(.button-border) { background-color: rgba($black,0.3); }
+		&:hover {
+			background-color: $button-color; .dark & { background-color: $theme-color; }
+		}
+	}
+
+	&-light {
+		background-color: $button-light;
+		color: $button-dark;
+		text-shadow: none !important;
+		@at-root .dark #{&}:not(.button-border):hover { background-color: $body-bg-dark; }
+	}
+
+	&:hover {
+		background-color: $button-dark;
+		color: $white;
+		text-shadow: 1px 1px 1px $button-text-shadow;
+		.dark & { background-color: rgba($black,0.3); }
+	}
+	&-mini {
+		padding: 0 $button-mini-padding-width;
+		font-size: $button-mini-font-size;
+		height: $button-mini-height;
+		line-height: $button-mini-height;
+	}
+
+	&-small {
+		padding: 0 $button-small-padding-width;
+		font-size: $button-small-font-size;
+		height: $button-small-height;
+		line-height: $button-small-height;
+	}
+
+	&-large {
+		padding: 0 $button-large-padding-width;
+		height: $button-large-height;
+		font-size: $button-large-font-size;
+		line-height: $button-large-height;
+	}
+
+	&-xlarge {
+		padding: 0 $button-xlarge-padding-width;
+		font-size: $button-xlarge-font-size;
+		letter-spacing: 2px;
+		height: $button-xlarge-height;
+		line-height: $button-xlarge-height;
+	}
+
+	&-desc {
+		text-align: left;
+		padding: 24px 34px;
+		font-size: 22px;
+		height: auto;
+		line-height: 1;
+		font-family: $heading-font;
+		@include media-breakpoint-down(sm) {
+			max-width: 100%;
+			@include button-size($button-desc-sm...);
+		}
+		@include media-breakpoint-down(xs) {
+			padding: 20px 17px;
+			font-size: 15px;
+			max-width: 100%;
+		}
+
+		span {
+			display: block;
+			margin-top: 10px;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			font-family: $secondary-font;
+			font-style: italic;
+			text-transform: none;
+			@include media-breakpoint-down(sm) { font-size: 11px; }
+		}
+	}
+
+	i {
+		position: relative;
+		top: 1px;
+		line-height: 1;
+		margin-right: $button-icon-margin;
+		width: 16px;
+		text-align: center;
+	}
+
+	&.tright i { margin: 0 0 0 $button-icon-margin; }
+
+	&-mini i { margin-right: $button-icon-margin - 2; }
+
+	&-mini.tright i { margin: 0 0 0 $button-icon-margin - 2; }
+
+	&-small i { margin-right: $button-icon-margin - 1; }
+
+	&-small.tright i { margin: 0 0 0 $button-icon-margin - 1; }
+
+	&-xlarge i {
+		top: 2px;
+		margin-right: $button-icon-margin + 3;
+	}
+
+	&-xlarge.tright i { margin: 0 0 0 $button-icon-margin + 2; }
+
+	&-desc i {
+		top: 1px;
+		font-size: 48px;
+		width: 48px;
+		text-align: center;
+		margin-right: 12px;
+	}
+
+	&-desc.tright i { margin: 0 0 0 12px; }
+
+	&-desc div { display: inline-block; }
+
+	&-rounded { @include border-radius($button-rounded); }
+
+	/* Buttons - Border
+	-----------------------------------------------------------------*/
+
+	&.button-border {
+		border: $button-border-width solid $button-dark;
+		background-color: transparent;
+		color: $button-dark;
+		line-height: ($button-height - ($button-border-width * 2));
+		font-weight: 700;
+		text-shadow: none;
+		@at-root .dark #{&}:not(.button-light) {
+			border-color: rgba($white,0.4);
+			color: rgba($white,0.5);
+			&:hover { color: $text-color-dark; }
+		}
+		@at-root .not-dark #{&}:not(.button-light) {
+			border-color: $button-dark;
+			color: $button-dark;
+			:hover {
+				background-color: $button-dark;
+				color: $white;
+			}
+		}
+
+		&.button-mini { line-height: ($button-mini-height - ($button-border-width * 2)); }
+		&.button-small { line-height: ($button-small-height - ($button-border-width * 2)); }
+		&.button-large { line-height: ($button-large-height - ($button-border-width * 2)); }
+		&.button-xlarge { line-height: ($button-xlarge-height - ($button-border-width * 2)); }
+		&.button-desc { line-height: 1; }
+
+		&.button-border-thin {
+			border-width: $button-border-thin-width;
+			line-height: ($button-height - ($button-border-thin-width * 2));
+
+			&.button-mini { line-height: ($button-mini-height - ($button-border-thin-width * 2)); }
+			&.button-small { line-height: ($button-small-height - ($button-border-thin-width * 2)); }
+			&.button-large { line-height: ($button-large-height - ($button-border-thin-width * 2)); }
+			&.button-xlarge { line-height: ($button-xlarge-height - ($button-border-thin-width * 2)); }
+
+		}
+		&:not(.button-fill):hover {
+			background-color: $button-dark;
+			color: $white;
+			border-color: transparent !important;
+			text-shadow: 1px 1px 1px $button-text-shadow;
+		}
+
+		&.button-light {
+			border-color: $button-light;
+			color: $button-light;
+			&:hover {
+				background-color: $button-light;
+				color: $button-dark;
+				text-shadow: none;
+			}
+		}
+	}
+
+	/* Buttons - 3D
+	-----------------------------------------------------------------*/
+
+	&.button-3d {
+		@include border-radius($button-rounded);
+		border-bottom: $button-3d-border solid rgba(0,0,0,0.15);
+		@include transition(none);
+		&:hover {
+			background-color: $button-color !important;
+			opacity: 0.9;
+		}
+	}
+
+	&.button-3d.button-light:hover,
+	&.button-reveal.button-light:hover {
+		text-shadow: none;
+		color: $button-dark;
+	}
+
+
+	/* Buttons - Icon Reveal
+	-----------------------------------------------------------------*/
+	$button-reveal-mini-icon: ($button-reveal-icon - 10);
+	$button-reveal-small-icon: ($button-reveal-icon - 6);
+	$button-reveal-large-icon: ($button-reveal-icon + 6);
+	$button-reveal-xlarge-icon: ($button-reveal-icon + 12);
+
+	&.button-reveal {
+		padding: 0 ($button-padding-width + 6);
+		overflow: hidden;
+		i {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -$button-reveal-icon;
+			width: $button-reveal-icon;
+			height: $button-height;
+			line-height: $button-height;
+			margin: 0;
+			text-align: center;
+			background-color: rgba(0,0,0,0.1);
+
+			body:not(.device-touch) & {
+				@include transition(left $button-reveal-transition-speed, right $button-reveal-transition-speed);
+			}
+		}
+		&.button-border i { top: -2px; }
+		&.tright {
+			&:hover span { left: - round($button-reveal-icon / 2); }
+			i {
+				left: auto;
+				right: -$button-reveal-icon;
+			}
+		}
+
+		&.button-3d,
+		&.button-rounded {
+			i { @include border-radius($button-rounded 0 0 $button-rounded); }
+			&.tright i,
+			&.tright i { @include border-radius(0 $button-rounded $button-rounded 0); }
+		}
+
+		span {
+			display: inline-block;
+			position: relative;
+			left: 0;
+
+			body:not(.device-touch) & {
+				@include transition(left $button-reveal-transition-speed, right $button-reveal-transition-speed);
+			}
+		}
+
+		&.button-mini {
+			padding: 0 ($button-mini-padding-width + 3);
+			i {
+				left: -$button-reveal-mini-icon;
+				width: $button-reveal-mini-icon;
+				height: $button-mini-height;
+				line-height: $button-mini-height;
+			}
+
+			&.tright {
+				&:hover span { left: - round($button-reveal-mini-icon / 2); }
+				i {
+					left: auto;
+					right: -$button-reveal-mini-icon;
+				}
+			}
+
+			&:hover span { left: round($button-reveal-mini-icon / 2); }
+		}
+
+		&.button-small {
+			padding: 0 ($button-small-padding-width + 5);
+			i {
+				left: -$button-reveal-small-icon;
+				width: $button-reveal-small-icon;
+				height: $button-small-height;
+				line-height: $button-small-height;
+			}
+
+			&.tright {
+				&:hover span { left: - round($button-reveal-small-icon / 2); }
+				i {
+					left: auto;
+					right: -$button-reveal-small-icon;
+				}
+			}
+			&:hover span { left: round($button-reveal-small-icon / 2); }
+		}
+
+		&.button-large {
+			padding: 0 ($button-large-padding-width + 6);
+			i {
+				left: -$button-reveal-large-icon;
+				width: $button-reveal-large-icon;
+				height: $button-large-height;
+				line-height: $button-large-height;
+			}
+
+			&.tright {
+				&:hover span { left: - round($button-reveal-large-icon / 2); }
+				i {
+					left: auto;
+					right: -$button-reveal-large-icon;
+				}
+			}
+			&:hover span { left: round($button-reveal-large-icon / 2); }
+		}
+
+		&.button-xlarge {
+			padding: 0 ($button-xlarge-padding-width + 8);
+			i {
+				left: -$button-reveal-xlarge-icon;
+				width: $button-reveal-xlarge-icon;
+				height: $button-xlarge-height;
+				line-height: $button-xlarge-height;
+			}
+
+			&.tright {
+				&:hover span { left: - round($button-reveal-xlarge-icon / 2); }
+				i {
+					left: auto;
+					right: -$button-reveal-xlarge-icon;
+				}
+			}
+			&:hover span { left: round($button-reveal-xlarge-icon / 2); }
+		}
+
+		&:hover {
+			i { left: 0; }
+			span { left: round($button-reveal-icon / 2); }
+		}
+
+		&.tright:hover i {
+			left: auto;
+			right: 0;
+		}
+
+	}
+}
+
+
+/* Buttons - Promo 100% Width
+-----------------------------------------------------------------*/
+
+.button {
+	&.button-full {
+		display: block;
+		width: 100%;
+		white-space: normal;
+		margin: 0;
+		height: auto;
+		line-height: 1.6;
+		padding: $button-full-padding 0;
+		font-size: $button-full-font-size;
+		font-weight: 300;
+		text-transform: none;
+		@include border-radius(0);
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+
+		@include media-breakpoint-down(md) {
+			font-size: round($button-full-font-size / 1.37);
+			i { top: 3px !important;}
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: round($button-full-font-size / 1.67);
+			i {
+				top: 2px !important;
+				margin-left: 3px !important;
+			}
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: round($button-full-font-size / 1.875);
+		}
+
+		&.button-light {
+			border-bottom: 1px solid rgba(0,0,0,0.15);
+			strong { border-bottom-color: $button-dark; }
+			&:hover strong { border-bottom-color: $button-light; }
+		}
+
+		strong {
+			font-weight: 700;
+			border-bottom: 2px solid $button-light;
+			body:not(.device-touch) & {
+				@include transition(border $button-transition-speed);
+			}
+		}
+	}
+}
+
+
+/* Buttons - Circle
+-----------------------------------------------------------------*/
+
+.button {
+	&.button-circle {
+		@include border-radius(round($button-height / 2));
+		&.button-mini { @include border-radius(round($button-mini-height / 2)); }
+		&.button-small { @include border-radius(round($button-small-height / 2)); }
+		&.button-large { @include border-radius(round($button-large-height / 2)); }
+		&.button-xlarge { @include border-radius(round($button-xlarge-height / 2)); }
+	}
+}
+
+
+/* Buttons - Fill Effect
+-----------------------------------------------------------------*/
+
+.button.button-border {
+	&.button-fill {
+		overflow: hidden;
+		transform-style: preserve-3d;
+		-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+		-webkit-backface-visibility: hidden;
+		span { position: relative; }
+
+		&:hover {
+			background-color: transparent !important;
+			color: #FFF;
+			text-shadow: 1px 1px 1px $button-text-shadow;
+			&:before { width: 100%; }
+		}
+
+		&.button-light {
+			&:hover {
+				border-color: $button-light !important;
+				color: $button-dark !important;
+				text-shadow: none;
+			}
+			&:before { background-color: $button-light; }
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			background-color: $button-dark;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			@include transition(all $button-fill-transition-speed);
+			-webkit-backface-visibility: hidden;
+		}
+
+		&.fill-from-right:before {
+			left: auto;
+			right: 0;
+		}
+
+		&.fill-from-top:before,
+		&.fill-from-bottom:before {
+			@include transition(all $button-fill-transition-speed);
+		}
+
+		&.fill-from-top{
+			&:before {
+				width: 100%;
+				height: 0;
+			}
+			&:hover:before { height: 100%; }
+		}
+
+		&.fill-from-bottom {
+			&:before {
+				width: 100%;
+				height: 0;
+				top: auto;
+				bottom: 0;
+			}
+			&:hover:before { height: 100%; }
+		}
+	}
+}
+
+
+/* Buttons - Colors
+-----------------------------------------------------------------*/
+
+//Buttons Colored - Mixin
+@mixin buttons-color($colors) {
+  @each $name, $hex in $colors {
+	.button-#{$name} {
+		background-color: $hex;
+		&.button-3d:hover,
+		&.button-reveal:hover,
+		&.button-border:hover,
+		&.button-border.button-fill:before {
+    		background-color: $hex !important;
+    	}
+    }
+    .button-border {
+    	&.button-#{$name},
+	    &.button-light.button-#{$name} {
+			color: $hex;
+			border-color: $hex;
+		}
+    }
+  }
+}
+
+// Include Buttons Colored
+@if $buttons-color == true { @include buttons-color($colors); }
+@if $buttons-social-colors == true { @include buttons-color($si-colors); } // Default False in Variables.scss
+
+
+/* Buttons - No Hover
+-----------------------------------------------------------------*/
+
+.button.button-nohover:hover {
+	opacity: inherit !important;
+	background-color: inherit !important;
+	color: inherit !important;
+	border-color: inherit !important;
+}

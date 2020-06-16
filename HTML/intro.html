@@ -1,0 +1,3323 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Open+Sans:300,400,600,700,800,900" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="one-page/css/et-line.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="css/intro-fonts.css" type="text/css" />
+	<link rel="stylesheet" href="css/colors.php?color=4772d9" type="text/css" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Canvas | The Multi-Purpose HTML5 Template</title>
+
+<style>
+.slider-element .heading-block > span {
+	font-size: 18px;
+	letter-spacing: 0;
+	max-width: 620px;
+	font-weight: 400;
+	color: #454545;
+	line-height: 30px;
+	margin-top: 23px;
+	margin-bottom: 15px;
+}
+
+.w-20 { width: 20%; }
+
+.sticky-nav {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 140px;
+}
+
+.tab-hover .nav-link {
+	position: relative;
+	display: block;
+	color: #444;
+	font-size: 16px;
+	font-weight: 600;
+	-webkit-transition: color .25s linear;
+	-o-transition: color .25s linear;
+	transition: color .25s linear;
+}
+
+.tab-hover .nav-link.active { color: #4772d9; }
+
+.tab-hover .nav-link:after {
+	content: '';
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	width: 40%;
+	height: 2px;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	margin-left: 15px;
+	margin-top: -1px;
+	-ms-transform: translate( 25%, -1px );
+	transform: translate( 25%, -1px );
+	background: linear-gradient(to right,transparent 10%,#4772d9 50%);
+	transition: all .4s ease-in-out;
+	background-color: #4772d9;
+	-backface-visibility: hidden;
+}
+
+.tab-hover .nav-link.active:after {
+	opacity: 1;
+	-ms-transform: translate( 0, -1px );
+	transform: translate( 0, -1px )
+}
+
+@media (max-width: 767.98px) {
+
+	.slider-element .heading-block h1 small { font-size: 15px; }
+
+	.t-rotate {
+		font-size: 34px !important;
+		letter-spacing: 0;
+	 	line-height: 1.2;
+	}
+
+	.sticky-nav {
+		position: relative;
+		top: auto;
+	}
+
+	.tab-hover .nav {
+		border-bottom: 2px solid #EEE;
+		padding-bottom: 15px;
+		margin-bottom: 50px;
+	}
+
+	.tab-hover .nav-link {
+		padding: 8px;
+	}
+
+	.tab-hover .nav-link:after { display: none; }
+
+	.w-20 { width: 33.333%; }
+}
+
+
+.tab-hover h3 {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+
+.intro-support-block {
+	border-top: 1px solid #EEE;
+	overflow: hidden;
+}
+
+.intro-support-block > div:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: -1px;
+	width: 0;
+	height: 100%;
+	border-left: 1px solid #EEE;
+}
+
+.intro-support-block a.col-padding {
+	display: block;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.intro-support-block a.col-padding:hover { background-color: #F5F5F5; }
+
+.intro-support-block span {
+	display: block;
+	font-size: 20px;
+	color: #444;
+	margin-top: 15px;
+}
+
+.device-sm .intro-support-block > div:before,
+.device-xs .intro-support-block > div:before {
+	top: -1px;
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-left: 0;
+	border-top: 1px solid #EEE;
+}
+
+.testimonial {
+	padding: 40px;
+	box-shadow:0 0.1rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+	border: 0;
+}
+
+.testimonials-rating {
+	margin-top: 15px;
+	color: #FFD700;
+	font-size: 18px;
+	line-height: 1;
+}
+
+.testi-content p {
+	font-size: 18px;
+	color: #666;
+}
+
+.testi-content p:before,
+.testi-content p:after { display: none; }
+
+.testi-meta:before { display: none; }
+.testi-meta span { padding-left: 0; }
+
+#section-multipage .portfolio-desc h3,
+#section-onepage .portfolio-desc h3 { font-size: 17px; }
+
+.portfolio-desc h3 .badge {
+	display: inline-block;
+	position: relative;
+	top: -2px;
+	padding: 4px 6px;
+	font-size: 60%;
+	margin-left: 5px;
+	font-weight: 400;
+}
+
+#niche-demos .iportfolio .portfolio-image .flexslider a { width: inherit; }
+
+.flex-caption {
+	bottom: 10px;
+	left: 65px;
+	font-size: 0.825rem;
+	background-color: #000;
+	border-radius: 4px;
+}
+
+.intro-grid a { min-height: 200px; }
+
+.intro-grid .grid-section-inner {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 100%;
+	padding: 0 15px;
+	margin: 0 -15px;
+	text-align: center;
+	transform: scale(1);
+	transform-origin: 50% 50%;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.intro-grid .grid-section-inner:hover {
+	z-index: 2;
+	background: #FFF;
+	transform: scale(1.1);
+	box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.07);
+}
+
+.intro-grid h3 {
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.intro-grid img {
+	max-width: 48px;
+}
+
+.intro-grid a:before,
+.intro-grid a:after {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 100%;
+	top: 0;
+	right: -1px;
+	border-right: 1px solid #EEE;
+}
+
+.intro-grid a:after {
+	width: 100%;
+	height: 0;
+	height: 0;
+	top: auto;
+	bottom: -1px;
+	left: 0;
+	right: auto;
+	border-top: 1px solid #EEE;
+	border-right: 0;
+}
+
+.more-link {
+	font-weight: 400;
+	border-bottom-width: 1px;
+	font-size: 13px;
+	font-style: normal;
+	font-family: 'Poppins', sans-serif;
+}
+
+.more-link i.icon-angle-right {
+	position: relative;
+	top: 2px;
+	margin-left: 3px;
+}
+
+#page-menu {
+	height: 0;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+#page-menu #page-menu-wrap {
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	-webkit-transform: translate3d(0,-44px,0);
+	-o-transform: translate3d(0,-44px,0);
+	transform: translate3d(0,-44px,0);
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+
+#page-menu.sticky-page-menu { overflow: visible; }
+
+#page-menu.sticky-page-menu #page-menu-wrap {
+	opacity: 1;
+	pointer-events: auto;
+	-webkit-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+</style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix" data-animation-in="bounce">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header clearfix">
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo">
+						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+					</div><!-- #logo end -->
+
+					<!-- Primary Navigation
+					============================================= -->
+					<nav id="primary-menu" class="">
+
+						<ul>
+							<li><a href="index.html"><div>Home</div></a>
+								<ul>
+									<li><a href="index-corporate.html"><div>Home - Corporate</div></a>
+										<ul>
+											<li><a href="index-corporate.html"><div>Corporate - Layout 1</div></a></li>
+											<li><a href="index-corporate-2.html"><div>Corporate - Layout 2</div></a></li>
+											<li><a href="index-corporate-3.html"><div>Corporate - Layout 3</div></a></li>
+											<li><a href="index-corporate-4.html"><div>Corporate - Layout 4</div></a></li>
+										</ul>
+									</li>
+									<li><a href="index-portfolio.html"><div>Home - Portfolio</div></a>
+										<ul>
+											<li><a href="index-portfolio.html"><div>Portfolio - Layout 1</div></a></li>
+											<li><a href="index-portfolio-2.html"><div>Portfolio - Layout 2</div></a></li>
+											<li><a href="index-portfolio-3.html"><div>Portfolio - Masonry</div></a></li>
+											<li><a href="index-portfolio-4.html"><div>Portfolio - AJAX</div></a></li>
+										</ul>
+									</li>
+									<li><a href="index-blog.html"><div>Home - Blog</div></a>
+										<ul>
+											<li><a href="index-blog.html"><div>Blog - Layout 1</div></a></li>
+											<li><a href="index-blog-2.html"><div>Blog - Layout 2</div></a></li>
+											<li><a href="index-blog-3.html"><div>Blog - Layout 3</div></a></li>
+										</ul>
+									</li>
+									<li><a href="index-shop.html"><div>Home - Shop</div></a>
+										<ul>
+											<li><a href="index-shop.html"><div>Shop - Layout 1</div></a></li>
+											<li><a href="index-shop-2.html"><div>Shop - Layout 2</div></a></li>
+										</ul>
+									</li>
+									<li><a href="index-magazine.html"><div>Home - Magazine</div></a>
+										<ul>
+											<li><a href="index-magazine.html"><div>Magazine - Layout 1</div></a></li>
+											<li><a href="index-magazine-2.html"><div>Magazine - Layout 2</div></a></li>
+											<li><a href="index-magazine-3.html"><div>Magazine - Layout 3</div></a></li>
+										</ul>
+									</li>
+									<li><a href="landing.html"><div>Home - Landing Page</div></a>
+										<ul>
+											<li><a href="landing.html"><div>Landing Page - Layout 1</div></a></li>
+											<li><a href="landing-2.html"><div>Landing Page - Layout 2</div></a></li>
+											<li><a href="landing-3.html"><div>Landing Page - Layout 3</div></a></li>
+											<li><a href="landing-4.html"><div>Landing Page - Layout 4</div></a></li>
+											<li><a href="landing-5.html"><div>Landing Page - Layout 5</div></a></li>
+										</ul>
+									</li>
+									<li><a href="index-fullscreen-image.html"><div>Home - Full Screen</div></a>
+										<ul>
+											<li><a href="index-fullscreen-image.html"><div>Full Screen - Image</div></a></li>
+											<li><a href="index-fullscreen-slider.html"><div>Full Screen - Slider</div></a></li>
+											<li><a href="index-fullscreen-video.html"><div>Full Screen - Video</div></a></li>
+										</ul>
+									</li>
+									<li><a href="index-onepage.html"><div>Home - One Page</div></a>
+										<ul>
+											<li><a href="index-onepage.html"><div>One Page - Default</div></a></li>
+											<li><a href="index-onepage-2.html"><div>One Page - Submenu</div></a></li>
+											<li><a href="index-onepage-3.html"><div>One Page - Dots Style</div></a></li>
+										</ul>
+									</li>
+									<li><a href="index-wedding.html"><div>Home - Wedding</div></a></li>
+									<li><a href="index-restaurant.html"><div>Home - Restaurant</div></a></li>
+									<li><a href="index-events.html"><div>Home - Events</div></a></li>
+									<li><a href="index-parallax.html"><div>Home - Parallax</div></a></li>
+									<li><a href="index-app-showcase.html"><div>Home - App Showcase</div></a></li>
+								</ul>
+							</li>
+							<li><a href="#"><div>Features</div></a>
+								<ul>
+									<li><a href="#"><div><i class="icon-stack"></i>Sliders</div></a>
+										<ul>
+											<li><a href="slider-revolution.html"><div>Revolution Slider</div></a>
+												<ul>
+													<li><a href="rs-demos.html"><div>Premium Templates</div></a></li>
+													<li><a href="slider-revolution.html"><div>Full Screen</div></a></li>
+													<li><a href="slider-revolution-fullwidth.html"><div>Full Width</div></a></li>
+													<li><a href="slider-revolution-kenburns.html"><div>Kenburns Effect</div></a></li>
+													<li><a href="slider-revolution-html5-videos.html"><div>HTML5 Video</div></a></li>
+												</ul>
+											</li>
+											<li><a href="slider-canvas.html"><div>Canvas Slider</div></a>
+												<ul>
+													<li><a href="slider-canvas.html"><div>Full Width</div></a></li>
+													<li><a href="slider-canvas-fade.html"><div>Fade Transition</div></a></li>
+													<li><a href="slider-canvas-autoplay.html"><div>Autoplay Feature</div></a></li>
+													<li><a href="slider-canvas-video-event.html"><div>Custom Video Event</div></a></li>
+													<li><a href="slider-canvas-pagination.html"><div>Pagination Navigation</div></a></li>
+													<li><a href="slider-canvas-3.html"><div>3 Columns</div></a></li>
+													<li><a href="slider-canvas-4.html"><div>4 Columns</div></a></li>
+													<li><a href="slider-canvas-5.html"><div>5 Columns</div></a></li>
+												</ul>
+											</li>
+											<li><a href="slider-flex.html"><div>Flex Slider</div></a>
+												<ul>
+													<li><a href="slider-flex.html"><div>Default Layout</div></a></li>
+													<li><a href="slider-flex-thumbs.html"><div>with Thumbs</div></a></li>
+												</ul>
+											</li>
+											<li><a href="slider-owl.html"><div>Owl Slider</div></a>
+												<ul>
+													<li><a href="slider-owl-full.html"><div>Full Width</div></a></li>
+													<li><a href="slider-owl.html"><div>Boxed Width</div></a></li>
+													<li><a href="slider-owl-videos.html"><div>Video Slider</div></a></li>
+												</ul>
+											</li>
+											<li><a href="static-parallax.html"><div>Static Media</div></a>
+												<ul>
+													<li><a href="static-parallax.html"><div>Static - Parallax</div></a></li>
+													<li><a href="static-image.html"><div>Static - Image</div></a></li>
+													<li><a href="static-thumbs-grid.html"><div>Static - Thumb Gallery</div></a></li>
+													<li><a href="static-html5-video.html"><div>Static - HTML5 Video</div></a></li>
+													<li><a href="static-embed-video.html"><div>Static - Embedded Video</div></a></li>
+												</ul>
+											</li>
+											<li><a href="slider-camera.html"><div>Camera Slider</div></a></li>
+											<li><a href="slider-elastic.html"><div>Elastic Slider</div></a></li>
+											<li><a href="slider-nivo.html"><div>Nivo Slider</div></a></li>
+										</ul>
+									</li>
+									<li><a href="widgets.html"><div><i class="icon-gift"></i>Widgets</div></a>
+										<ul>
+											<li><a href="widgets.html"><div>Links</div></a></li>
+											<li><a href="widgets.html"><div>Flickr Photostream</div></a></li>
+											<li><a href="widgets.html"><div>Dribbble Shots</div></a></li>
+											<li><a href="widgets.html"><div>Instagram Feed</div></a></li>
+											<li><a href="widgets.html"><div>Posts List</div></a></li>
+											<li><a href="widgets.html"><div>Twitter Feed</div></a></li>
+											<li><a href="widgets.html"><div>Tabbed Widgets</div></a></li>
+											<li><a href="widgets.html"><div>Carousel</div></a></li>
+											<li><a href="widgets.html"><div>Subscribers</div></a></li>
+											<li><a href="widgets.html"><div>Social Icons</div></a></li>
+											<li><a href="widgets.html"><div>Testimonials</div></a></li>
+											<li><a href="widgets.html"><div>Quick Contact</div></a></li>
+											<li><a href="widgets.html"><div>Tags Cloud</div></a></li>
+											<li><a href="widgets.html"><div>Video Embeds</div></a></li>
+											<li><a href="widgets.html"><div>Raw Text/HTML</div></a></li>
+										</ul>
+									</li>
+									<li><a href="#"><div><i class="icon-umbrella"></i>Headers</div></a>
+										<ul>
+											<li><a href="header-light.html"><div>Light Version</div></a></li>
+											<li><a href="header-dark.html"><div>Dark Version</div></a></li>
+											<li><a href="header-transparent.html"><div>Transparent</div></a></li>
+											<li><a href="header-semi-transparent.html"><div>Semi Transparent</div></a>
+												<ul>
+													<li><a href="header-semi-transparent.html"><div>Light Version</div></a></li>
+													<li><a href="header-semi-transparent-dark.html"><div>Dark Version</div></a></li>
+												</ul>
+											</li>
+											<li><a href="header-side-left.html"><div>Left Side Header</div></a>
+												<ul>
+													<li><a href="header-side-left.html"><div>Fixed Position</div></a></li>
+													<li><a href="header-side-left-open.html"><div>OnClick Open</div></a></li>
+													<li><a href="header-side-left-open-push.html"><div>Push Content</div></a></li>
+												</ul>
+											</li>
+											<li><a href="header-side-right.html"><div>Right Side Header</div></a>
+												<ul>
+													<li><a href="header-side-right.html"><div>Fixed Position</div></a></li>
+													<li><a href="header-side-right-open.html"><div>OnClick Open</div></a></li>
+													<li><a href="header-side-right-open-push.html"><div>Push Content</div></a></li>
+												</ul>
+											</li>
+											<li><a href="header-floating.html"><div>Floating Version</div></a></li>
+											<li><a href="static-sticky.html"><div>Static Sticky</div></a></li>
+											<li><a href="responsive-sticky.html"><div>Responsive Sticky</div></a></li>
+											<li><a href="logo-changer.html"><div>Alternate Logos</div></a></li>
+											<li><a href="alternate-mobile-menu.html"><div>Alternate Mobile Menu</div></a></li>
+										</ul>
+									</li>
+									<li><a href="forms.html"><div><i class="icon-wpforms"></i>Forms</div></a></li>
+									<li><a href="side-panel.html"><div><i class="icon-line-layout"></i>Side Panel</div></a>
+										<ul>
+											<li><a href="side-panel-left-overlay.html"><div>Left Overlay</div></a></li>
+											<li><a href="side-panel-left-push.html"><div>Left Push</div></a></li>
+											<li><a href="side-panel-right-overlay.html"><div>Right Overlay</div></a></li>
+											<li><a href="side-panel.html"><div>Right Push</div></a></li>
+											<li><a href="side-panel-light.html"><div>Light Background</div></a></li>
+										</ul>
+									</li>
+									<li><a href="mega-menu.html"><div><i class="icon-line-columns"></i>Mega Menu</div></a></li>
+									<li><a href="#"><div><i class="icon-align-justify2"></i>Menu Styles</div></a>
+										<ul>
+											<li><a href="header-light.html"><div>Menu - Style 1</div></a></li>
+											<li><a href="menu-2.html"><div>Menu - Style 2</div></a></li>
+											<li><a href="menu-3.html"><div>Menu - Style 3</div></a></li>
+											<li><a href="menu-4.html"><div>Menu - Style 4</div></a></li>
+											<li><a href="menu-5.html"><div>Menu - Style 5</div></a></li>
+											<li><a href="menu-6.html"><div>Menu - Style 6</div></a></li>
+											<li><a href="menu-7.html"><div>Menu - Style 7</div></a></li>
+											<li><a href="menu-8.html"><div>Menu - Style 8</div></a></li>
+											<li><a href="menu-9.html"><div>Menu - Style 9</div></a></li>
+											<li><a href="menu-10.html"><div>Menu - Overlay</div></a></li>
+										</ul>
+									</li>
+									<li><a href="#"><div><i class="icon-ok-sign"></i>Page Titles</div></a>
+										<ul>
+											<li><a href="page.html"><div>Left Align</div></a></li>
+											<li><a href="page-title-right.html"><div>Right Align</div></a></li>
+											<li><a href="page-title-center.html"><div>Center Align</div></a></li>
+											<li><a href="page-titledark.html"><div>Dark Style</div></a></li>
+											<li><a href="page-title-pattern.html"><div>Pattern Background</div></a></li>
+											<li><a href="page-title-parallax.html"><div>Parallax Background</div></a>
+												<ul>
+													<li><a href="page-title-parallax.html"><div>Default Header</div></a></li>
+													<li><a href="page-title-parallax-header.html"><div>Transparent Header</div></a></li>
+												</ul>
+											</li>
+											<li><a href="page-title-video.html"><div>HTML5 Video</div></a></li>
+											<li><a href="page-title-nobg.html"><div>No Background</div></a></li>
+											<li><a href="page-title-mini.html"><div>Mini Version</div></a></li>
+										</ul>
+									</li>
+									<li><a href="contact.html"><div><i class="icon-envelope-alt"></i>Contact Pages</div></a>
+										<ul>
+											<li><a href="contact.html">Contact 1</a></li>
+											<li><a href="contact-2.html">Contact 2</a></li>
+											<li><a href="contact-3.html">Contact 3</a></li>
+											<li><a href="contact-4.html">Contact 4</a></li>
+											<li><a href="contact-5.html">Contact 5</a></li>
+											<li><a href="contact-6.html">Contact 6</a></li>
+											<li><a href="contact-7.html">Contact 7</a></li>
+										</ul>
+									</li>
+									<li><a href="#footer" data-scrollto="#footer"><div><i class="icon-th"></i>Footers</div></a>
+										<ul>
+											<li><a href="sticky-footer.html"><div>Sticky Footer</div></a></li>
+											<li><a href="#footer" data-scrollto="#footer"><div>Footer - Layout 1</div></a></li>
+											<li><a href="footer-2.html#footer"><div>Footer - Layout 2</div></a></li>
+											<li><a href="footer-3.html#footer"><div>Footer - Layout 3</div></a></li>
+											<li><a href="footer-4.html#footer"><div>Footer - Layout 4</div></a></li>
+											<li><a href="footer-5.html#footer"><div>Footer - Layout 5</div></a></li>
+											<li><a href="footer-6.html#footer"><div>Footer - Layout 6</div></a></li>
+											<li><a href="footer-7.html#footer"><div>Footer - Layout 7</div></a></li>
+										</ul>
+									</li>
+									<li><a href="#"><div><i class="icon-calendar3"></i>Events</div></a>
+										<ul>
+											<li><a href="events-calendar.html"><div>Full Width Calendar</div></a></li>
+											<li><a href="events-list.html"><div>Events List</div></a>
+												<ul>
+													<li><a href="events-list.html"><div>Right Sidebar</div></a></li>
+													<li><a href="events-list-left-sidebar.html"><div>Left Sidebar</div></a></li>
+													<li><a href="events-list-both-sidebar.html"><div>Both Sidebar</div></a></li>
+													<li><a href="events-list-fullwidth.html"><div>Full Width</div></a></li>
+													<li><a href="events-list-parallax.html"><div>Parallax List</div></a></li>
+												</ul>
+											</li>
+											<li><a href="event-single.html"><div>Single Event</div></a>
+												<ul>
+													<li><a href="event-single-right-sidebar.html"><div>Right Sidebar</div></a></li>
+													<li><a href="event-single-left-sidebar.html"><div>Left Sidebar</div></a></li>
+													<li><a href="event-single-both-sidebar.html"><div>Both Sidebar</div></a></li>
+													<li><a href="event-single.html"><div>Full Width</div></a></li>
+												</ul>
+											</li>
+											<li><a href="event-single-full-width-image.html"><div>Single Event - Full</div></a>
+												<ul>
+													<li><a href="event-single-full-width-image.html"><div>Parallax Image</div></a></li>
+													<li><a href="event-single-full-width-map.html"><div>Google Map</div></a></li>
+													<li><a href="event-single-full-width-slider.html"><div>Slider Gallery</div></a></li>
+													<li><a href="event-single-full-width-video.html"><div>HTML5 Video</div></a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="modal-onload.html"><div><i class="icon-line-expand"></i>Modal OnLoad</div></a>
+										<ul>
+											<li><a href="modal-onload.html"><div>Simple Layout</div></a></li>
+											<li><a href="modal-onload-iframe.html"><div>Video iFrame</div></a></li>
+											<li><a href="modal-onload-subscribe.html"><div>Subscription Form</div></a></li>
+											<li><a href="modal-onload-common-height.html"><div>Common Height</div></a></li>
+											<li><a href="modal-onload-cookie.html"><div>Cookies Enabled</div></a></li>
+										</ul>
+									</li>
+									<li><a href="coming-soon.html"><div><i class="icon-time"></i>Coming Soon</div></a>
+										<ul>
+											<li><a href="coming-soon.html"><div>Simple Layout</div></a></li>
+											<li><a href="coming-soon-2.html"><div>Parallax Image</div></a></li>
+											<li><a href="coming-soon-3.html"><div>HTML5 Video</div></a></li>
+										</ul>
+									</li>
+									<li><a href="#"><div><i class="icon-adjust"></i>Dark Version</div></a></li>
+								</ul>
+							</li>
+							<li class="mega-menu"><a href="#"><div>Pages</div></a>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
+										<li class="mega-menu-title"><a href="#"><div>Introduction</div></a>
+											<ul>
+												<li><a href="about.html"><div>About Us</div></a></li>
+												<li><a href="about-2.html"><div>About Us - Layout 2</div></a></li>
+												<li><a href="about-me.html"><div>About Me</div></a></li>
+												<li><a href="team.html"><div>Team Members</div></a></li>
+												<li><a href="jobs.html"><div>Careers</div></a></li>
+												<li><a href="side-navigation.html"><div>Side Navigation</div></a></li>
+												<li><a href="page-submenu.html"><div>Page Submenu</div></a></li>
+												<li><a href="sitemap.html"><div>Sitemap</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-md-3">
+										<li class="mega-menu-title"><a href="#"><div>Utility</div></a>
+											<ul>
+												<li><a href="services.html"><div>Services - Layout 1</div></a></li>
+												<li><a href="services-2.html"><div>Services - Layout 2</div></a></li>
+												<li><a href="services-3.html"><div>Services - Layout 3</div></a></li>
+												<li><a href="faqs.html"><div>FAQs - Layout 1</div></a></li>
+												<li><a href="faqs-2.html"><div>FAQs - Layout 2</div></a></li>
+												<li><a href="faqs-3.html"><div>FAQs - Layout 3</div></a></li>
+												<li><a href="faqs-4.html"><div>FAQs - Layout 4</div></a></li>
+												<li><a href="maintenance.html"><div>Maintenance Page</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-md-3">
+										<li class="mega-menu-title"><a href="#"><div>Layout Grids</div></a>
+											<ul>
+												<li><a href="full-width.html"><div>Full Width</div></a></li>
+												<li><a href="full-width-wide.html"><div>Full Width - Wide</div></a></li>
+												<li><a href="right-sidebar.html"><div>Right Sidebar</div></a></li>
+												<li><a href="left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li><a href="both-sidebar.html"><div>Both Sidebar</div></a></li>
+												<li><a href="both-right-sidebar.html"><div>Both Right Sidebar</div></a></li>
+												<li><a href="both-left-sidebar.html"><div>Both Left Sidebar</div></a></li>
+												<li><a href="blank-page.html"><div>Blank Page</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-md-3">
+										<li class="mega-menu-title"><a href="#"><div>Miscellaneous</div></a>
+											<ul>
+												<li><a href="login-register.html"><div>Login/Register</div></a></li>
+												<li><a href="login-register-2.html"><div>Login/Register - Style 2</div></a></li>
+												<li><a href="login-register-3.html"><div>Login/Register - Style 3</div></a></li>
+												<li><a href="login-1.html"><div>Login - Style 1</div></a></li>
+												<li><a href="login-2.html"><div>Login - Style 2</div></a></li>
+												<li><a href="404.html"><div>404 - Simple Layout</div></a></li>
+												<li><a href="404-2.html"><div>404 - Parallax Image</div></a></li>
+												<li><a href="404-3.html"><div>404 - HTML5 Video</div></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="mega-menu"><a href="#"><div>Portfolio</div></a>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-5">
+										<li class="mega-menu-title"><a href="#"><div>Grids</div></a>
+											<ul>
+												<li><a href="portfolio-1.html"><div>1 Column</div></a></li>
+												<li><a href="portfolio-2.html"><div>2 Columns</div></a></li>
+												<li><a href="portfolio-3.html"><div>3 Columns</div></a></li>
+												<li><a href="portfolio.html"><div>4 Columns</div></a></li>
+												<li><a href="portfolio-5.html"><div>5 Columns</div></a></li>
+												<li><a href="portfolio-6.html"><div>6 Columns</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-5">
+										<li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
+											<ul>
+												<li><a href="portfolio-mixed-masonry.html"><div>Mixed Columns</div></a></li>
+												<li><a href="portfolio-2-masonry.html"><div>2 Columns</div></a></li>
+												<li><a href="portfolio-3-masonry.html"><div>3 Columns</div></a></li>
+												<li><a href="portfolio-masonry.html"><div>4 Columns</div></a></li>
+												<li><a href="portfolio-5-masonry.html"><div>5 Columns</div></a></li>
+												<li><a href="portfolio-6-masonry.html"><div>6 Columns</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-5">
+										<li class="mega-menu-title"><a href="#"><div>Loading Styles</div></a>
+											<ul>
+												<li><a href="portfolio.html"><div>jQuery Filter</div></a></li>
+												<li><a href="portfolio-pagination.html"><div>Pagination</div></a></li>
+												<li><a href="portfolio-jpagination.html"><div>jQuery Pagination</div></a></li>
+												<li><a href="portfolio-infinity-scroll.html"><div>Infinity Scroll</div></a></li>
+												<li><a href="portfolio-ajax.html"><div>AJAX In Page</div></a></li>
+												<li><a href="portfolio-ajax-in-modal.html"><div>AJAX In Modal</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-5">
+										<li class="mega-menu-title"><a href="#"><div>Single Project</div></a>
+											<ul>
+												<li><a href="portfolio-single-extended.html"><div>Extended Item</div></a></li>
+												<li><a href="portfolio-single-fullwidth.html"><div>Parallax Image</div></a></li>
+												<li><a href="portfolio-single-gallery-full.html"><div>Slider Gallery</div></a></li>
+												<li><a href="portfolio-single-video-fullwidth-left-sidebar.html"><div>HTML5 Video</div></a></li>
+												<li><a href="portfolio-single-thumbs-right-sidebar.html"><div>Masonry Thumbs</div></a></li>
+												<li><a href="portfolio-single-video-both-sidebar.html"><div>Embed Video</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-5">
+										<li class="mega-menu-title"><a href="#"><div>Layouts</div></a>
+											<ul>
+												<li><a href="portfolio-nomargin.html"><div>Default</div></a></li>
+												<li><a href="portfolio-1-alt-right-sidebar.html"><div>Right Sidebar</div></a></li>
+												<li><a href="portfolio-3-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li><a href="portfolio-2-both-sidebar.html"><div>Both Sidebar</div></a></li>
+												<li><a href="portfolio-fullwidth-notitle.html"><div>100% Width</div></a></li>
+												<li><a href="portfolio-parallax.html"><div>Parallax</div></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="mega-menu"><a href="#"><div>Blog</div></a>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
+										<li class="mega-menu-title"><a href="#"><div>Default</div></a>
+											<ul>
+												<li><a href="blog.html"><div>Right Sidebar</div></a></li>
+												<li><a href="blog-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li><a href="blog-both-sidebar.html"><div>Both Sidebar</div></a></li>
+												<li><a href="blog-full-width.html"><div>Full Width</div></a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-title"><a href="#"><div>Timeline</div></a>
+											<ul>
+												<li><a href="blog-timeline-right-sidebar.html"><div>Right Sidebar</div></a></li>
+												<li><a href="blog-timeline-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li><a href="blog-timeline.html"><div>Full Width</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-md-3">
+										<li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
+											<ul>
+												<li><a href="blog-masonry.html"><div>4 Columns</div></a></li>
+												<li><a href="blog-masonry-3.html"><div>3 Columns</div></a></li>
+												<li><a href="blog-masonry-2.html"><div>2 Columns</div></a></li>
+												<li><a href="blog-masonry-full.html"><div>100% Width</div></a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-title"><a href="#"><div>Grid</div></a>
+											<ul>
+												<li><a href="blog-grid.html"><div>4 Columns</div></a></li>
+												<li><a href="blog-grid-3.html"><div>3 Columns</div></a></li>
+												<li><a href="blog-grid-2.html"><div>2 Columns</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-md-3">
+										<li class="mega-menu-title"><a href="#"><div>Small Thumbs</div></a>
+											<ul>
+												<li><a href="blog-small-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li><a href="blog-small.html"><div>Right Sidebar</div></a></li>
+												<li><a href="blog-small-both-sidebar.html"><div>Both Sidebar</div></a></li>
+												<li><a href="blog-small-full-width.html"><div>Full Width</div></a></li>
+												<li><a href="blog-small-alt.html"><div>Alternate Layout</div></a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-title"><a href="#"><div>Item Splitting</div></a>
+											<ul>
+												<li><a href="blog-grid.html"><div>Pagination</div></a></li>
+												<li><a href="blog-masonry.html"><div>Infinite Scroll</div></a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="mega-menu-column col-md-3">
+										<li class="mega-menu-title"><a href="#"><div>Single</div></a>
+											<ul>
+												<li><a href="blog-single.html"><div>Default Layout</div></a></li>
+												<li><a href="blog-single-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li><a href="blog-single-full.html"><div>Full Width</div></a></li>
+												<li><a href="blog-single-small.html"><div>Small Image</div></a></li>
+												<li><a href="blog-single-split-right-sidebar.html"><div>Split Layout</div></a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-title"><a href="#"><div>Comments Module</div></a>
+											<ul>
+												<li><a href="blog-single-left-sidebar.html#comments"><div>Facebook Comments</div></a></li>
+												<li><a href="blog-single-small.html#comments"><div>Disqus Comments</div></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="shop.html"><div>Shop</div></a>
+								<ul>
+									<li><a href="shop.html"><div>4 Columns</div></a></li>
+									<li><a href="shop-3.html"><div>3 Columns</div></a>
+										<ul>
+											<li><a href="shop-3.html"><div>Full Width</div></a></li>
+											<li><a href="shop-3-right-sidebar.html"><div>Right Sidebar</div></a></li>
+											<li><a href="shop-3-left-sidebar.html"><div>Left Sidebar</div></a></li>
+										</ul>
+									</li>
+									<li><a href="shop-2.html"><div>2 Columns</div></a>
+										<ul>
+											<li><a href="shop-2-right-sidebar.html"><div>Right Sidebar</div></a></li>
+											<li><a href="shop-2-left-sidebar.html"><div>Left Sidebar</div></a></li>
+											<li><a href="shop-2-both-sidebar.html"><div>Both Sidebar</div></a></li>
+										</ul>
+									</li>
+									<li><a href="shop-1.html"><div>1 Columns</div></a>
+										<ul>
+											<li><a href="shop-1.html"><div>Full Width</div></a></li>
+											<li><a href="shop-1-right-sidebar.html"><div>Right Sidebar</div></a></li>
+											<li><a href="shop-1-left-sidebar.html"><div>Left Sidebar</div></a></li>
+											<li><a href="shop-1-both-sidebar.html"><div>Both Sidebar</div></a></li>
+										</ul>
+									</li>
+									<li><a href="shop-category-parallax.html"><div>Categories - Parallax</div></a></li>
+									<li><a href="shop-single.html"><div>Single Product</div></a>
+										<ul>
+											<li><a href="shop-single.html"><div>Full Width</div></a></li>
+											<li><a href="shop-single-right-sidebar.html"><div>Right Sidebar</div></a></li>
+											<li><a href="shop-single-left-sidebar.html"><div>Left Sidebar</div></a></li>
+											<li><a href="shop-single-both-sidebar.html"><div>Both Sidebar</div></a></li>
+										</ul>
+									</li>
+									<li><a href="cart.html"><div>Cart</div></a></li>
+									<li><a href="checkout.html"><div>Checkout</div></a></li>
+								</ul>
+							</li>
+							<li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
+								<div class="mega-menu-content clearfix">
+									<ul class="mega-menu-column col-5">
+										<li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
+										<li><a href="buttons.html"><div><i class="icon-link"></i>Buttons</div></a></li>
+										<li><a href="carousel.html"><div><i class="icon-heart3"></i>Carousel</div></a></li>
+										<li><a href="charts.html"><div><i class="icon-bar-chart"></i>Charts</div></a></li>
+										<li><a href="clients.html"><div><i class="icon-apple"></i>Clients</div></a></li>
+										<li><a href="columns-grids.html"><div><i class="icon-th-large"></i>Columns</div></a></li>
+										<li><a href="counters.html"><div><i class="icon-time"></i>Counters</div></a></li>
+										<li><a href="component-datatable.html"><div><i class="icon-table"></i>Data Tables</div></a></li>
+										<li><a href="component-datepicker.html"><div><i class="icon-calendar3"></i>Date &amp; Time Pickers</div></a></li>
+									</ul>
+									<ul class="mega-menu-column col-5">
+										<li><a href="dividers.html"><div><i class="icon-indent-right"></i>Dividers</div></a></li>
+										<li><a href="featured-boxes.html"><div><i class="icon-lightbulb"></i>Icon Boxes</div></a></li>
+										<li><a href="gallery.html"><div><i class="icon-picture"></i>Galleries</div></a></li>
+										<li><a href="headings-dropcaps.html"><div><i class="icon-pencil2"></i>Heading Styles</div></a></li>
+										<li><a href="icon-lists.html"><div><i class="icon-list-alt"></i>Icon Lists</div></a></li>
+										<li><a href="labels-badges.html"><div><i class="icon-plus-sign"></i>Labels</div></a></li>
+										<li><a href="lightbox.html"><div><i class="icon-resize-full"></i>Lightbox</div></a></li>
+										<li><a href="component-editable.html"><div><i class="icon-edit"></i>Editable Fields</div></a></li>
+										<li><a href="component-uploads.html"><div><i class="icon-line-upload"></i>File Uploads</div></a></li>
+									</ul>
+									<ul class="mega-menu-column col-5">
+										<li><a href="lists-cards.html"><div><i class="icon-th-list"></i>Lists &amp; Cards</div></a></li>
+										<li><a href="maps.html"><div><i class="icon-map-marker2"></i>Maps</div></a></li>
+										<li><a href="media-embeds.html"><div><i class="icon-play"></i>Media Embeds</div></a></li>
+										<li><a href="modal-popovers.html"><div><i class="icon-move"></i>Modal Boxes</div></a></li>
+										<li><a href="navigation.html"><div><i class="icon-align-justify2"></i>Navigations</div></a></li>
+										<li><a href="pagination-progress.html"><div><i class="icon-cogs"></i>Pagination</div></a></li>
+										<li><a href="pie-skills.html"><div><i class="icon-tasks"></i>Pies &amp; Skills</div></a></li>
+										<li><a href="component-range-slider.html"><div><i class="icon-line-move"></i>Range Slider</div></a></li>
+										<li><a href="component-ratings.html"><div><i class="icon-star3"></i>Star Ratings</div></a></li>
+									</ul>
+									<ul class="mega-menu-column col-5">
+										<li><a href="pricing.html"><div><i class="icon-dollar"></i>Pricing Boxes</div></a></li>
+										<li><a href="process-steps.html"><div><i class="icon-thumbs-up"></i>Process Steps</div></a></li>
+										<li><a href="promo-boxes.html"><div><i class="icon-rocket"></i>Promo Boxes</div></a></li>
+										<li><a href="quotes-blockquotes.html"><div><i class="icon-quote-left"></i>Blockquotes</div></a></li>
+										<li><a href="responsive.html"><div><i class="icon-laptop2"></i>Responsive</div></a></li>
+										<li><a href="sections.html"><div><i class="icon-folder-open"></i>Sections</div></a></li>
+										<li><a href="social-icons.html"><div><i class="icon-facebook2"></i>Social Icons</div></a></li>
+										<li><a href="component-select-picker.html"><div><i class="icon-select"></i>Select Picker</div></a></li>
+										<li><a href="component-select-box.html"><div><i class="icon-line-columns"></i>Select Boxes</div></a></li>
+									</ul>
+									<ul class="mega-menu-column col-5">
+										<li><a href="style-boxes.html"><div><i class="icon-exclamation-sign"></i>Alert Boxes</div></a></li>
+										<li><a href="styled-icons.html"><div><i class="icon-flag2"></i>Styled Icons</div></a></li>
+										<li><a href="tables.html"><div><i class="icon-table"></i>Tables</div></a></li>
+										<li><a href="tabs.html"><div><i class="icon-star3"></i>Tabs</div></a></li>
+										<li><a href="testimonials-twitter.html"><div><i class="icon-user4"></i>Testimonials</div></a></li>
+										<li><a href="thumbnails-slider.html"><div><i class="icon-camera3"></i>Thumbnails</div></a></li>
+										<li><a href="toggles-accordions.html"><div><i class="icon-ok-circle"></i>Toggles</div></a></li>
+										<li><a href="component-radios-switches.html"><div><i class="icon-line-square-check"></i>Radios &amp; Switches</div></a></li>
+										<li><a href="flip-cards.html"><div><i class="icon-refresh"></i>Flip Cards</div></a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+						<!-- Top Cart
+						============================================= -->
+						<div id="top-cart">
+							<a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
+							<div class="top-cart-content">
+								<div class="top-cart-title">
+									<h4>Shopping Cart</h4>
+								</div>
+								<div class="top-cart-items">
+									<div class="top-cart-item clearfix">
+										<div class="top-cart-item-image">
+											<a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+										</div>
+										<div class="top-cart-item-desc">
+											<a href="#">Blue Round-Neck Tshirt</a>
+											<span class="top-cart-item-price">$19.99</span>
+											<span class="top-cart-item-quantity">x 2</span>
+										</div>
+									</div>
+									<div class="top-cart-item clearfix">
+										<div class="top-cart-item-image">
+											<a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
+										</div>
+										<div class="top-cart-item-desc">
+											<a href="#">Light Blue Denim Dress</a>
+											<span class="top-cart-item-price">$24.99</span>
+											<span class="top-cart-item-quantity">x 3</span>
+										</div>
+									</div>
+								</div>
+								<div class="top-cart-action clearfix">
+									<span class="fleft top-checkout-price">$114.95</span>
+									<button class="button button-3d button-small nomargin fright">View Cart</button>
+								</div>
+							</div>
+						</div><!-- #top-cart end -->
+
+						<!-- Top Search
+						============================================= -->
+						<div id="top-search">
+							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+							<form action="search.html" method="get">
+								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+							</form>
+						</div><!-- #top-search end -->
+
+					</nav><!-- #primary-menu end -->
+
+				</div>
+
+			</div>
+
+		</header><!-- #header end -->
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element clearfix" style=" height: 700px; background: #FFF url('images/intro/new/intro-hero.jpg') no-repeat center bottom / 100% auto">
+
+			<div class="container">
+				<div class=" center">
+					<div class="row">
+						<div class="col-md-12">
+
+							<div class="heading-block mb-0 topmargin-lg nobottomborder">
+								<h1 class="nott mb-4 divcenter" style="max-width: 900px; letter-spacing: -2px !important;">
+									<span class="text-rotater nocolor" data-separator="|" data-rotate="fadeIn" data-speed="1250">
+										<span class="t-rotate uppercase" style="font-size: 64px;">Corporate|Portfolio|Business|Real Estate|Medical|Construction|SEO|App Landing|One-Page|Travel|e-Commerce|Articles|Course|Hosting|Gym|Photography|Blog|Magazine|Resume|Restaurant|Cafe|Spa|Wedding|Ajax|Media Agency|Shop|Events|Rental|News|Music|Car Listing|Barber|Pets</span>
+									</span>
+									<small class="d-block uppercase ls3 h5">You Name it. We Have it.</small>
+								</h1>
+
+								<span class="ls0" style="color: #777; font-size: 17px;">The <strong>Best Selling</strong> Multi-Purpose &amp; Powerful Bootstrap 4.x based Template with 900+ Niche, Multi-Page &amp; One-Page Layouts with 1000+ UI Features.</span>
+
+								<a href="#" data-scrollto="#section-demos" class="btn button-rounded bgcolor text-white shadow-sm t500 mt-2 mt-sm-4" data-offset="100" data-easing="easeInOutExpo" data-speed="1250" style="padding: 10px 22px"><i class="icon-line-stack-2" style="position: relative; top: 1px; margin-right: 5px;"></i> View Demos</a>
+
+								<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" class="btn button-rounded shadow-sm t600 text-white ml-2 mt-2 mt-sm-4" data-lightbox="iframe" style="padding: 10px 22px; background: #EEE url(images/intro/new/button.gif) center center / cover;"><i class="icon-play-circle mr-1" style="position: relative; top: 1px; margin-right: 5px;"></i> Watch Video</a>
+
+								<ul class="list-inline mt-4">
+									<li class="list-inline-item text-black-50 mr-3" style="font-size: 13px;"><i class="icon-line2-refresh" style="position: relative; top: 1px; margin-right: 2px;"></i> Lifetime Free Updates</li>
+									<li class="list-inline-item text-black-50 mr-3" style="font-size: 13px;"><i class="icon-line2-social-youtube" style="position: relative; top: 1px; margin-right: 2px;"></i> Walkthrough Videos</li>
+									<li class="list-inline-item text-black-50 mr-3" style="font-size: 13px;"><i class="icon-line2-layers" style="position: relative; top: 1px; margin-right: 2px;"></i> PSD Files Included</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap p-0">
+
+				<!-- Page Sub Menu
+				============================================= -->
+				<div id="page-menu">
+					<div id="page-menu-wrap">
+						<div class="container-fluid px-4 clearfix">
+
+							<div class="menu-title">Explore <span>CANVAS</span></div>
+
+							<nav class="one-page-menu" data-offset="100">
+								<ul>
+									<li><a href="#" data-href="#section-niche" data-offset="120"><div>Niche Demos</div></a></li>
+									<li><a href="#" data-href="#section-multipage" data-offset="120"><div>Multi-Page</div></a></li>
+									<li><a href="#" data-href="#section-onepage"><div>One-Page</div></a></li>
+									<li><a href="#" data-href="#section-forms" data-offset="120"><div>Forms</div></a></li>
+									<li><a href="#" data-href="#section-shortcodes"><div>Shortcodes</div></a></li>
+									<li><a href="#" data-href="#section-features"><div>Features</div></a></li>
+									<li><a href="#" data-href="#section-purchase"><div>Purchase</div></a></li>
+								</ul>
+							</nav>
+
+							<div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+
+						</div>
+					</div>
+				</div><!-- #page-menu end -->
+
+				<div id="section-demos" class="section nobg mb-0 clearfix" style="padding: 80px 0 100px;">
+					<div class="container clearfix">
+
+						<div class="heading-block center nobottomborder bottommargin-lg clearfix">
+							<h2 class="nott mb-4" style="font-size: 44px; line-height: 1.2; letter-spacing: -1px;">What <span>You</span> Get?</h2>
+							<span style="font-size: 18px; letter-spacing: 0; max-width: 600px; font-weight: 400; color: #888;">Best-Selling & Most Trusted HTML5 Template.<br>Experience the Ever-Growing Feature Rich Template since 2014.</span>
+						</div>
+
+						<div class="row justify-content-around clearfix">
+
+							<div class="col-sm-6 p-3 mb-0 mb-lg-4">
+								<div class="row align-items-center">
+									<div class="col-lg-6">
+										<div class="feature-box media-box">
+											<div class="fbox-media mb-lg-0">
+												<img class="shadow rounded" src="images/intro/new/niche.jpg" alt="Why choose Us?">
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<h3 class="mb-2" style="font-size: 22px;">Niche Demos</h3>
+										<div class="mb-3" style="color: #999">30+ Structured Premium Demos for Every Category.</div>
+										<a href="#" data-scrollto="#section-niche" data-offset="120" class="more-link">Browse Demos <i class="icon-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 p-3 mb-0 mb-lg-4">
+								<div class="row align-items-center">
+									<div class="col-lg-6">
+										<div class="feature-box media-box">
+											<div class="fbox-media mb-lg-0">
+												<img class="shadow rounded" src="images/intro/new/multipages.jpg" alt="Why choose Us?">
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<h3 class="mb-2" style="font-size: 22px;">Multi-Page Layouts</h3>
+										<div class="mb-3" style="color: #999">Classic Demos with a Lot of Homepages Options.</div>
+										<a href="#" data-scrollto="#section-multipage" data-offset="120" class="more-link">Browse Multi-Pages <i class="icon-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 p-3">
+								<div class="row align-items-center">
+									<div class="col-lg-6">
+										<div class="feature-box media-box">
+											<div class="fbox-media mb-lg-0">
+												<img class="shadow rounded" src="images/intro/new/onepages.jpg" alt="Why choose Us?">
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<h3 class="mb-2" style="font-size: 22px;">One-Page Demos</h3>
+										<div class="mb-3" style="color: #999">45+ One-Page Demos for a Quick &amp; Effective Landing Page.</div>
+										<a href="#" data-scrollto="#section-onepage" data-offset="80" class="more-link">Browse One-Pages <i class="icon-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 p-3">
+								<div class="row align-items-center">
+									<div class="col-lg-6">
+										<div class="feature-box media-box">
+											<div class="fbox-media mb-lg-0">
+												<img class="shadow rounded" src="images/intro/new/rev-slider.jpg" alt="Why choose Us?">
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<h3 class="mb-2" style="font-size: 22px;">Revolution Slider Templates</h3>
+										<div class="mb-3" style="color: #999">120+ Premium Templates to Kickstart your Hero/Slider Section.</div>
+										<a href="#" data-scrollto="#section-hero" data-offset="100" class="more-link">Browse More <i class="icon-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section center mt-0 clearfix" style="padding: 70px 0; background-color: #F2F4F7">
+					<div class="container clearfix">
+
+						<div class="row mt-5 clearfix">
+
+							<div class="col-md-3 mb-5">
+								<div class="counter color" style="line-height: 1.1;"><span data-from="999" data-to="40000" data-refresh-interval="50" data-speed="1000"></span>+</div>
+								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">Happy Customers</span></h3>
+							</div>
+
+							<div class="col-md-3 mb-5">
+								<div class="counter color" style="line-height: 1.1;"><span data-from="10" data-to="900" data-refresh-interval="10" data-speed="1000"></span>+</div>
+								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">Awesome Example Templates</span></h3>
+							</div>
+
+							<div class="col-md-3 mb-5">
+								<div class="counter color" style="line-height: 1.1;"><span data-from="0" data-to="30" data-refresh-interval="100" data-speed="1000"></span>+</div>
+								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">Beautiful Niche Demos</span></h3>
+							</div>
+
+							<div class="col-md-3 mb-5">
+								<div class="counter color" style="line-height: 1.1;"><span data-from="3" data-to="45" data-refresh-interval="40" data-speed="900"></span>+</div>
+								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">One-Page Demos</span></h3>
+							</div>
+
+							<div class="col-md-3 mb-4">
+								<div class="counter color" style="line-height: 1.1;"><span data-from="3" data-to="120" data-refresh-interval="30" data-speed="1100"></span>+</div>
+								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">Revolution Slider Layouts</span></h3>
+							</div>
+
+							<div class="col-md-3 mb-4">
+								<div class="counter color" style="line-height: 1.1;"><span data-from="2" data-to="1000" data-refresh-interval="40" data-speed="1200"></span>+</div>
+								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">UI Features &amp; Shortcodes</span></h3>
+							</div>
+
+							<div class="col-md-3 mb-4">
+								<div class="counter color" style="line-height: 1.1;"><span data-from="3" data-to="20" data-refresh-interval="40" data-speed="1200"></span>+</div>
+								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">Headers Styles</span></h3>
+							</div>
+
+							<div class="col-md-3 mb-4">
+								<div class="counter color" style="line-height: 1.1;"><span data-from="1" data-to="100" data-refresh-interval="40" data-speed="1200"></span>%</div>
+								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">Responsive & Customizable</span></h3>
+							</div>
+
+							<span class="font-italic col-12 mt-2" style="font-size: 15px;">Lifetime Free Updates + Much More..</span>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div id="section-niche" class="section page-section center nobg mb-0 clearfix">
+					<div class="px-5 container-fluid" style="max-width: 1600px">
+
+						<div class="heading-block center nobottomborder clearfix">
+							<h2 class="nott" style="font-size: 44px; line-height: 1.2; letter-spacing: -1px;"><span>Niche</span> Demos</h2>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="row mt-5 clearfix">
+
+							<!-- Classic -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="index.html" target="_blank">
+											<img src="images/intro/niche/new/classic.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="index.html" target="_blank">Classic</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Real Estate -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<div class="fslider flex-thumb-grid grid-3" data-arrows="false" data-thumbs="true" data-pause="3500">
+											<div class="flexslider">
+												<div class="slider-wrap">
+													<div class="slide" data-thumb="images/intro/niche/new/real-estate1-thumb.jpg">
+														<a href="demo-real-estate.html" target="_blank">
+															<img src="images/intro/niche/new/real-estate1.jpg" alt="Real Estate Niche Demo">
+															<div class="flex-caption slider-caption-bg">Real Estate 1</div>
+														</a>
+													</div>
+													<div class="slide" data-thumb="images/intro/niche/new/real-estate2-thumb.jpg">
+														<a href="demo-real-estate-2.html" target="_blank">
+															<img src="images/intro/niche/new/real-estate2.jpg" alt="Real Estate Niche Demo">
+															<div class="flex-caption slider-caption-bg">Real Estate 2</div>
+														</a>
+													</div>
+													<div class="slide" data-thumb="images/intro/niche/new/real-estate3-thumb.jpg">
+														<a href="demo-real-estate-3.html" target="_blank">
+															<img src="images/intro/niche/new/real-estate3.jpg" alt="Real Estate Niche Demo">
+															<div class="flex-caption slider-caption-bg">Real Estate 3</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-real-estate.html">Real Estate</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- CoWorking -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-coworking.html" target="_blank">
+											<img src="images/intro/niche/new/coworking.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-coworking.html" target="_blank">CoWorking<span class="badge bgcolor text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Recipes -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-recipes.html" target="_blank">
+											<img src="images/intro/niche/new/recipes.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-recipes.html" target="_blank">Recipes<span class="badge bgcolor text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Movers -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-movers.html" target="_blank">
+											<img src="images/intro/niche/new/movers.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-movers.html" target="_blank">Movers<span class="badge bgcolor text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Conference -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-conference.html" target="_blank">
+											<img src="images/intro/niche/new/conference.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-conference.html" target="_blank">Conference<span class="badge bgcolor text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- non-profit -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-nonprofit.html" target="_blank">
+											<img src="images/intro/niche/new/nonprofit.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-nonprofit.html" target="_blank">Non-Profit<span class="badge bgcolor text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Seo -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-seo.html" target="_blank">
+											<img src="images/intro/niche/new/seo.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-seo.html" target="_blank">SEO</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- article -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-articles.html" target="_blank">
+											<img src="images/intro/niche/new/article.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-articles.html" target="_blank">Articles</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- course -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-course.html" target="_blank">
+											<img src="images/intro/niche/new/course.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-course.html" target="_blank">Course</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- shop -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-shop.html" target="_blank">
+											<img src="images/intro/niche/new/shop.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-shop.html" target="_blank">Shop</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- News -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-news.html" target="_blank">
+											<img src="images/intro/niche/new/news.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-news.html" target="_blank">News/Magazine</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Hosting -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-hosting.html" target="_blank">
+											<img src="images/intro/niche/new/hosting.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-hosting.html" target="_blank">Hosting</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Bike -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-bike.html" target="_blank">
+											<img src="images/intro/niche/new/bike.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-bike.html" target="_blank">Bike</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Photographer -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-photographer.html" target="_blank">
+											<img src="images/intro/niche/new/photographer.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-photographer.html" target="_blank">Photographer</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Headphones -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-headphones.html" target="_blank">
+											<img src="images/intro/niche/new/headphones.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-headphones.html" target="_blank">Headphones</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Gym -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-gym.html" target="_blank">
+											<img src="images/intro/niche/new/gym.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-gym.html" target="_blank">Gym</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Modern Blog -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-modern-blog.html" target="_blank">
+											<img src="images/intro/niche/new/modern-blog.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-modern-blog.html" target="_blank">Modern Blog</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Music -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-music.html" target="_blank">
+											<img src="images/intro/niche/new/music.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-music.html" target="_blank">Music</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Business -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-business.html" target="_blank">
+											<img src="images/intro/niche/new/business.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-business.html" target="_blank">Business</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Car -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-car.html" target="_blank">
+											<img src="images/intro/niche/new/car.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-car.html" target="_blank">Car</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Construction -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-construction.html" target="_blank">
+											<img src="images/intro/niche/new/construction.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-construction.html" target="_blank">Construction</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Travel -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-travel.html" target="_blank">
+											<img src="images/intro/niche/new/travel.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-travel.html" target="_blank">Travel</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Medical -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-medical.html" target="_blank">
+											<img src="images/intro/niche/new/medical.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-medical.html" target="_blank">Medical</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- App Landing -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-app-landing.html" target="_blank">
+											<img src="images/intro/niche/new/app-landing.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-app-landing.html" target="_blank">App Landing</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Restaurant -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-restaurant.html" target="_blank">
+											<img src="images/intro/niche/new/restaurant.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-restaurant.html" target="_blank">Restaurant</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Barber -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-barber.html" target="_blank">
+											<img src="images/intro/niche/new/barber.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-barber.html" target="_blank">Barber</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- eCommerce -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-ecommerce.html" target="_blank">
+											<img src="images/intro/niche/new/ecommerce.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-ecommerce.html" target="_blank">eCommerce</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Pet -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image">
+										<a href="demo-pet.html" target="_blank">
+											<img src="images/intro/niche/new/pet.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-pet.html" target="_blank">Pet</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Resume -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-resume.html" target="_blank">
+											<img src="images/intro/niche/new/resume.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-resume.html" target="_blank">Resume</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Photography -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-photography.html" target="_blank">
+											<img src="images/intro/niche/new/photography.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-photography.html" target="_blank">Photography</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Interior Design -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-interior-design.html" target="_blank">
+											<img src="images/intro/niche/new/interior-design.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-interior-design.html" target="_blank">Interior Design</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Writer -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-writer.html" target="_blank">
+											<img src="images/intro/niche/new/writer.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-writer.html" target="_blank">Writer</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cafe -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-cafe.html" target="_blank">
+											<img src="images/intro/niche/new/cafe.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-cafe.html" target="_blank">Cafe</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Spa -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-spa.html" target="_blank">
+											<img src="images/intro/niche/new/spa.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-spa.html" target="_blank">Spa</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Media Agency -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-media-agency.html" target="_blank">
+											<img src="images/intro/niche/new/media-agency.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-media-agency.html" target="_blank">Media Agency</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Agency -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<a href="demo-agency.html" target="_blank">
+											<img src="images/intro/niche/new/agency.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-agency.html" target="_blank">Agency</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- xmas -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg snow">
+										<a href="demo-xmas.html" target="_blank">
+											<img src="images/intro/niche/new/xmas.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3><a href="demo-xmas.html" target="_blank">xmas</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- more -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio p-2">
+									<div class="portfolio-image shadow-lg">
+										<img src="images/intro/niche/new/more.jpg" alt="Live Preview">
+									</div>
+									<div class="portfolio-desc center pt-4 nobottompadding">
+										<h3>Coming Soon!</h3>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section mt-0 clearfix">
+					<div class="heading-block center nobottomborder nobottommargin">
+						<h2 class="nott" style="font-size: 36px;">Loved by <span>40000+</span> Happy Customers</h2>
+						<span>Powered by Top-Notch Support <span class="font-secondary">&amp;</span> Stellar <a href="#" data-scrollto="#section-testimonials" data-easing="easeInOutExpo" data-speed="1250">Customer Reviews <i class="icon-angle-right" style="position: relative; top: 2px; margin-left: 2px;"></i></a></span>
+					</div>
+				</div>
+
+				<div id="section-multipage" class="section page-section center nobg mb-0 clearfix">
+					<div class="px-5 container-fluid" style="max-width: 1600px">
+
+						<div class="heading-block center nobottomborder clearfix">
+							<h2 class="nott" style="font-size: 36px; line-height: 1.2; letter-spacing: -1px;"><span>Multi</span>-Page Demos</h2>
+						</div>
+
+						<div class="clear"></div>
+
+						<div id="intro-multipages-container" class="row clearfix">
+
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-corporate.html" target="_blank">
+											<img src="images/intro/multipage/homepage2.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-corporate.html" target="_blank">Corporate 1</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-corporate-2.html" target="_blank">
+											<img src="images/intro/multipage/homepage3.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-corporate-2.html" target="_blank">Corporate 2</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-corporate-3.html" target="_blank">
+											<img src="images/intro/multipage/homepage30.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-corporate-3.html" target="_blank">Corporate 3</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-corporate-4.html" target="_blank">
+											<img src="images/intro/multipage/homepage4.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-corporate-4.html" target="_blank">Corporate 4</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-portfolio-2.html" target="_blank">
+											<img src="images/intro/multipage/homepage5.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-portfolio-2.html" target="_blank">Portfolio 1</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-intro-item w-100 d-none d-lg-block"></div>
+
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-portfolio-3.html" target="_blank">
+											<img src="images/intro/multipage/homepage6.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-portfolio-3.html" target="_blank">Portfolio 2</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-portfolio-4.html" target="_blank">
+											<img src="images/intro/multipage/homepage7.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-portfolio-4.html" target="_blank">Portfolio 3</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-blog.html" target="_blank">
+											<img src="images/intro/multipage/homepage8.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-blog.html" target="_blank">Home Blog</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-shop.html" target="_blank">
+											<img src="images/intro/multipage/homepage9.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-shop.html" target="_blank">eCommerce 1</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="index-shop-2.html" target="_blank">
+											<img src="images/intro/multipage/homepage10.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="index-shop-2.html" target="_blank">eCommerce 2</a></h3>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="page-load-status">
+							<div class="css3-spinner infinite-scroll-request">
+								<div class="css3-spinner-ball-pulse-sync">
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="center mb-5">
+							<a href="intro-multipages-2.html" class="button button-rounded button-3d load-next-multipages">Load more</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="row align-items-stretch">
+					<div class="col-lg-3 col-md-6 center col-padding" style="background-color: #E2E2E2;">
+						<div>
+							<i class="i-plain i-xlarge divcenter bottommargin-sm icon-et-pictures"></i>
+							<div class="counter"><span data-from="10" data-to="165" data-refresh-interval="50" data-speed="2000"></span>+</div>
+							<h5>Portfolio Layouts</h5>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 center col-padding" style="background-color: #E9E9E9;">
+						<div>
+							<i class="i-plain i-xlarge divcenter bottommargin-sm icon-et-pencil"></i>
+							<div class="counter"><span data-from="10" data-to="45" data-refresh-interval="50" data-speed="2500"></span>+</div>
+							<h5>Blog Templates</h5>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 center col-padding" style="background-color: #EEE;">
+						<div>
+							<i class="i-plain i-xlarge divcenter bottommargin-sm icon-et-puzzle"></i>
+							<div class="counter"><span data-from="10" data-to="50" data-refresh-interval="25" data-speed="3000"></span>+</div>
+							<h5>Shortcodes</h5>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 center col-padding" style="background-color: #F2F2F2;">
+						<div>
+							<i class="i-plain i-xlarge divcenter bottommargin-sm icon-et-document"></i>
+							<div class="counter"><span data-from="10" data-to="100" data-refresh-interval="30" data-speed="2700"></span>+</div>
+							<h5>PSD Files</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="section dark notopmargin nobottommargin clearfix">
+					<div class="container clearfix">
+						<div class="heading-block center nobottomborder nobottommargin">
+							<h3 class="t500 nott" style="font-size: 32px;">More than <span class="t700 nocolor">900+</span> Templates to minimize your Development Time!</h3>
+						</div>
+					</div>
+				</div>
+
+				<div id="section-onepage" class="section page-section center mt-0 clearfix">
+					<div class="px-5 container-fluid" style="max-width: 1600px">
+
+						<div class="heading-block center mt-5 nobottomborder clearfix">
+							<h2 class="nott" style="font-size: 36px; line-height: 1.2; letter-spacing: -1px;"><span>One</span>-Page Demos</h2>
+						</div>
+
+						<div class="clear"></div>
+
+						<div id="intro-onepages-container" class="row clearfix">
+
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/index.html" target="_blank">
+											<img src="images/intro/onepage/homepage1.jpg" alt="Default">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/index.html" target="_blank">Default</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-apartment.html" target="_blank">
+											<img src="images/intro/onepage/apartment.jpg" alt="Default">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-apartment.html" target="_blank">Apartment</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-outdoors.html" target="_blank">
+											<img src="images/intro/onepage/outdoors.jpg" alt="Default">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-outdoors.html" target="_blank">Outdoors</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-frame.html" target="_blank">
+											<img src="images/intro/onepage/frame.jpg" alt="Default">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-frame.html" target="_blank">Frame</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-subscription-section.html" target="_blank">
+											<img src="images/intro/onepage/subscription.jpg" alt="Default">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-subscription-section.html" target="_blank">Subscription Section</a></h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-intro-item w-100 d-none d-lg-block"></div>
+
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-holiday.html" target="_blank">
+											<img src="images/intro/onepage/homepage42.jpg" alt="Holiday">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-holiday.html" target="_blank">Holiday</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-personal.html" target="_blank">
+											<img src="images/intro/onepage/homepage44.jpg" alt="Personal">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-personal.html" target="_blank">Personal</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-carousel.html" target="_blank">
+											<img src="images/intro/onepage/homepage43.jpg" alt="Services">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-carousel.html" target="_blank">Services</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-pricing.html" target="_blank">
+											<img src="images/intro/onepage/homepage45.jpg" alt="Pricing">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-pricing.html" target="_blank">Pricing</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg col-md-4 col-sm-6 col-12 mb-5">
+								<div class="iportfolio">
+									<div class="portfolio-image img-thumbnail">
+										<a href="one-page/op-subscription.html" target="_blank">
+											<img src="images/intro/onepage/homepage31.jpg" alt="Simple Subscription">
+										</a>
+									</div>
+									<div class="portfolio-desc center nobottompadding">
+										<h3><a href="one-page/op-subscription.html" target="_blank">Subscription Page</a></h3>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="page-load-status">
+							<div class="css3-spinner infinite-scroll-request">
+								<div class="css3-spinner-ball-pulse-sync">
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="center">
+							<a href="intro-onepages-2.html" class="button button-rounded button-3d load-next-onepages mb-5">Load more</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="section-forms" class="section page-section nobg my-0">
+					<div class="container">
+
+						<div class="heading-block center nobottomborder clearfix">
+							<h2 class="nott" style="font-size: 36px; line-height: 1.2; letter-spacing: -1px;">Canvas <span>Forms</span></h2>
+							<span>The Ultimate Form Processor</span>
+						</div>
+
+						<video class="mx-auto topmargin-lg bottommargin-lg" poster="images/intro/new/canvas-forms-processor-poster.jpg" preload="auto" loop autoplay muted style="display: block; width: 720px; max-width: 100%;">
+							<source src='images/intro/new/canvas-forms-processor.mp4' type='video/mp4' />
+						</video>
+
+						<div class="row">
+							<div class="col-lg-4 px-4 py-3">
+								<i class="icon-wpforms color ml-0 mb-4 i-xlarge i-plain d-block fnone"></i>
+								<h4 class="mb-2">Any Form<span>.</span> Any Field<span>.</span></h4>
+								<p class="text-muted">Add any Field to your Custom Form. Canvas's inbuilt Forms Processor will handle the rest. You will never have to touch any PHP Codes.</p>
+							</div>
+							<div class="col-lg-4 px-4 py-3">
+								<i class="icon-infinity color ml-0 mb-4 i-xlarge i-plain d-block fnone"></i>
+								<h4 class="mb-2">Unlimited Customizations</h4>
+								<p class="text-muted">Customize anything within the Form, the Fields, the Loaders or the Messages. You now have complete control over what you want to display.</p>
+							</div>
+							<div class="col-lg-4 px-4 py-3">
+								<i class="icon-email color ml-0 mb-4 i-xlarge i-plain d-block fnone"></i>
+								<h4 class="mb-2">Email Templates</h4>
+								<p class="text-muted">For the First Time ever, Canvas supports Email Templates which makes your Form Responses super easy to read and organize.</p>
+							</div>
+							<div class="col-lg-4 px-4 py-3">
+								<i class="icon-user-shield color ml-0 mb-4 i-xlarge i-plain d-block fnone"></i>
+								<h4 class="mb-2">reCaptcha & Bot Protection</h4>
+								<p class="text-muted">All the Forms are supported by Bot Protection and Optional reCaptcha Protection on top of the very secure PHPMailer Engine.</p>
+							</div>
+							<div class="col-lg-4 px-4 py-3">
+								<i class="icon-plug color ml-0 mb-4 i-xlarge i-plain d-block fnone"></i>
+								<h4 class="mb-2">Component Support</h4>
+								<p class="text-muted">All the Components included now works with Canvas Forms. Datepicker, Range Slider, File Uploads etc. all just work fine.</p>
+							</div>
+							<div class="col-lg-4 px-4 py-3">
+								<i class="icon-mail-bulk color ml-0 mb-4 i-xlarge i-plain d-block fnone"></i>
+								<h4 class="mb-2">Auto-Responder &amp; Personalization</h4>
+								<p class="text-muted">Send Auto-Responders to your Form Submitters with Automatic Personalization. Like "<em>Hey <strong>John</strong>, Thanks for your Message!</em>".</p>
+							</div>
+						</div>
+
+						<div class="center my-5">
+							<a href="forms.html" target="_blank" class="button button-rounded button-dark button-xlarge">Explore Forms</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="section-shortcodes" class="ohidden page-section w-100">
+
+					<div class="section m-0 bgcolor center">
+						<h2 class="mb-0 text-white">Shortcodes &amp; Components</h2>
+					</div>
+
+					<div class="row intro-grid align-items-center align-items-stretch">
+
+						<a href="animations.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/animation.png" class="mb-3" alt="Animations">
+								<h3>Animations</h3>
+							</div>
+						</a>
+						<a href="style-boxes.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/alertboxes.png" class="mb-3" alt="Alert Boxes">
+								<h3>Alert Boxes</h3>
+							</div>
+						</a>
+						<a href="buttons.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/button.png" class="mb-3" alt="Buttons">
+								<h3>Buttons</h3>
+							</div>
+						</a>
+						<a href="quotes-blockquotes.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/blockquotes.png" class="mb-3" alt="Blockquotes">
+								<h3>Blockqoutes</h3>
+							</div>
+						</a>
+						<a href="promo-boxes.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/calltoaction.png" class="mb-3" alt="Call To Action">
+								<h3>Call To Action</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="carousel.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/carousel.png" class="mb-3" alt="Carousel">
+								<h3>Carousel</h3>
+							</div>
+						</a>
+						<a href="charts.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/chart.png" class="mb-3" alt="Charts">
+								<h3>Charts</h3>
+							</div>
+						</a>
+						<a href="clients.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/clients.png" class="mb-3" alt="Clients">
+								<h3>Clients</h3>
+							</div>
+						</a>
+						<a href="columns-grids.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/columns.png" class="mb-3" alt="Column Grids">
+								<h3>Columns Grids</h3>
+							</div>
+						</a>
+						<a href="counters.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/counters.png" class="mb-3" alt="Counters">
+								<h3>Counters</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="component-datepicker.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/datepicker.png" class="mb-3" alt="Date-Time Picker">
+								<h3>Date-Time Picker</h3>
+							</div>
+						</a>
+						<a href="dividers.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/dividers.png" class="mb-3" alt="Dividers">
+								<h3>Dividers</h3>
+							</div>
+						</a>
+						<a href="widgets.html#dribbble" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/dribbble.png" class="mb-3" alt="Dribbble Shots">
+								<h3>Dribbble Shots</h3>
+							</div>
+						</a>
+						<a href="events-calendar.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/event-calendar.png" class="mb-3" alt="Event Calendar">
+								<h3>Event Calendar</h3>
+							</div>
+						</a>
+						<a href="faqs.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/faqs.png" class="mb-3" alt="FAQs">
+								<h3>FAQs</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="component-uploads.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/fileupload.png" class="mb-3" alt="File Uploads">
+								<h3>File Upload</h3>
+							</div>
+						</a>
+						<a href="flip-cards.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/flipcard.png" class="mb-3" alt="Flip-Cards">
+								<h3>Flip-Cards</h3>
+							</div>
+						</a>
+						<a href="forms.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/forms.png" class="mb-3" alt="Forms">
+								<h3>Forms</h3>
+							</div>
+						</a>
+						<a href="gallery.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/galleries.png" class="mb-3" alt="Galleries">
+								<h3>Galleries</h3>
+							</div>
+						</a>
+						<a href="https://fonts.google.com" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/google-fonts.png" class="mb-3" alt="Google Fonts">
+								<h3>Google Fonts</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="headings-dropcaps.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/headings.png" class="mb-3" alt="Headings">
+								<h3>Headings</h3>
+							</div>
+						</a>
+						<a href="icons.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/icons.png" class="mb-3" alt="Icons">
+								<h3>Icons</h3>
+							</div>
+						</a>
+						<a href="demo-hosting.html#hotspot-img" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/image-hotspot.png" class="mb-3" alt="Image Hotspot">
+								<h3>Image Hotspot</h3>
+							</div>
+						</a>
+						<a href="widgets.html#instagram" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/instagram.png" class="mb-3" alt="Instagram Shots">
+								<h3>Instagram Shots</h3>
+							</div>
+						</a>
+						<a href="lists-cards.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/infobox.png" class="mb-3" alt="Info Boxes &amp; Cards">
+								<h3>Info Boxes &amp; Cards</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="labels-badges.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/labels.png" class="mb-3" alt="Labels &amp; Badges">
+								<h3>Labels &amp; Badges</h3>
+							</div>
+						</a>
+						<a href="lightbox.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/lightbox.png" class="mb-3" alt="Lightbox">
+								<h3>Lightbox</h3>
+							</div>
+						</a>
+						<a href="maps.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/map.png" class="mb-3" alt="Maps">
+								<h3>Maps</h3>
+							</div>
+						</a>
+						<a href="media-embeds.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/mediaembed.png" class="mb-3" alt="Media Embeds">
+								<h3>Media Embeds</h3>
+							</div>
+						</a>
+						<a href="modal-popovers.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/modal.png" class="mb-3" alt="Modals">
+								<h3>Modals</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="navigation.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/navigation.png" class="mb-3" alt="Navigations">
+								<h3>Navigations</h3>
+							</div>
+						</a>
+						<a href="index-parallax.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/parallax.png" class="mb-3" alt="Parallax">
+								<h3>Parallax</h3>
+							</div>
+						</a>
+						<a href="pagination-progress.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/pagination.png" class="mb-3" alt="Pagination">
+								<h3>Pagination</h3>
+							</div>
+						</a>
+						<a href="page-submenu.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/submenu.png" class="mb-3" alt="Page Sub-Menu">
+								<h3>Page Sub-Menu</h3>
+							</div>
+						</a>
+						<a href="pie-skills.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/pie.png" class="mb-3" alt="Pies &amp; Skills">
+								<h3>Pies &amp; Skills</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="pagination-progress.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/progress-bars.png" class="mb-3" alt="Progress Bars">
+								<h3>Progress Bars</h3>
+							</div>
+						</a>
+						<a href="promo-boxes.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/promo.png" class="mb-3" alt="Promo Boxes">
+								<h3>Promo Boxes</h3>
+							</div>
+						</a>
+						<a href="pricing.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/pricing.png" class="mb-3" alt="Pricing Tables">
+								<h3>Pricing Table</h3>
+							</div>
+						</a>
+						<a href="demo-bike.html#section-price" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/price-calculator.png" class="mb-3" alt="Price Calculator">
+								<h3>Price Calculator</h3>
+							</div>
+						</a>
+						<a href="process-steps.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/process-steps.png" class="mb-3" alt="Process Steps">
+								<h3>Process Steps</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="portfolio.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/portfolio.png" class="mb-3" alt="Portfolio Block">
+								<h3>Portfolio Block</h3>
+							</div>
+						</a>
+						<a href="blog-grid.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/posts.png" class="mb-3" alt="Posts">
+								<h3>Posts</h3>
+							</div>
+						</a>
+						<a href="component-radios-switches.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/switches.png" class="mb-3" alt="Radio &amp; Switches">
+								<h3>Radio &amp; Switches</h3>
+							</div>
+						</a>
+						<a href="component-range-slider.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/range.png" class="mb-3" alt="Range Slider">
+								<h3>Range Slider</h3>
+							</div>
+						</a>
+						<a href="component-ratings.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/rating.png" class="mb-3" alt="Ratings">
+								<h3>Ratings</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="responsive.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/responsive.png" class="mb-3" alt="Resposniveness">
+								<h3>Responsive</h3>
+							</div>
+						</a>
+						<a href="sections.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/sections.png" class="mb-3" alt="Sections">
+								<h3>Sections</h3>
+							</div>
+						</a>
+						<a href="component-select-picker.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/selectpicker.png" class="mb-3" alt="Select Picker">
+								<h3>Select Pickers</h3>
+							</div>
+						</a>
+						<a href="component-select-box.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/selectboxes.png" class="mb-3" alt="Select Boxes">
+								<h3>Select Boxes</h3>
+							</div>
+						</a>
+						<a href="side-panel.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/side-panel.png" class="mb-3" alt="Side Panel">
+								<h3>Side Panel</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="shop.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/shop-product.png" class="mb-3" alt="Shop Products">
+								<h3>Shop/Products</h3>
+							</div>
+						</a>
+						<a href="sticky-sidebar.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/sticky-element.png" class="mb-3" alt="Sticky Elements">
+								<h3>Sticky Elements</h3>
+							</div>
+						</a>
+						<a href="social-icons.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/social.png" class="mb-3" alt="Social Icons">
+								<h3>Social Icons</h3>
+							</div>
+						</a>
+						<a href="tables.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/tables.png" class="mb-3" alt="Tables">
+								<h3>Tables</h3>
+							</div>
+						</a>
+						<a href="tabs.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/tabs.png" class="mb-3" alt="Tabs">
+								<h3>Tabs</h3>
+							</div>
+						</a>
+						<div class="w-100 d-none d-lg-block d-xl-none"></div>
+						<a href="one-page/op-tr-blank.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/text-rotator.png" class="mb-3" alt="Text Rotator">
+								<h3>Text Rotator</h3>
+							</div>
+						</a>
+						<a href="testimonials-twitter.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/testimonials.png" class="mb-3" alt="Testimonials">
+								<h3>Testimonials</h3>
+							</div>
+						</a>
+						<a href="modal-popovers.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/tooltip.png" class="mb-3" alt="Tooltips">
+								<h3>Tooltips</h3>
+							</div>
+						</a>
+						<a href="widgets.html#twitter" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/twitter.png" class="mb-3" alt="Twitter Feeds">
+								<h3>Twitter Feed</h3>
+							</div>
+						</a>
+						<a href="media-embeds.html" target="_blank" class="col-xl-2 col-lg col-md-3 col-sm-4 col-6">
+							<div class="grid-section-inner align-items-center justify-content-center">
+								<img src="images/intro/targets/shortcodes/videos.png" class="mb-3" alt="Video Media Embeds">
+								<h3>Videos</h3>
+							</div>
+						</a>
+
+					</div>
+
+					<div class="section m-0 bg-dark center">
+						<h2 class="mb-0 text-light t500">With more than <span class="t700 nocolor">1000+</span> UI Features included</h2>
+					</div>
+
+				</div>
+
+				<div id="section-features" class="section page-section m-0 clearfix" style="padding: 100px 0 80px; overflow: inherit;">
+					<div class="container-fluid px-5" style="max-width: 1600px">
+
+						<h2 class="center bottommargin-lg">See what's included in <span class="t700">Canvas</span>:</h2>
+
+						<div class="row tab-hover">
+							<div class="col-md-3">
+								<div class="nav sticky-nav flex-md-column justify-content-around justify-content-lg-start">
+									<a class="nav-link active" href="#intro-features-tab">Features</a>
+									<a class="nav-link" href="#intro-headers-tab">Headers</a>
+									<a class="nav-link" href="#intro-portfolios-tab">Portfolios</a>
+									<a class="nav-link" href="#intro-blogs-tab">Blogs</a>
+									<a class="nav-link" href="#intro-shops-tab">Shops</a>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="intro-showcase-section" id="intro-features-tab">
+									<div class="d-flex flex-wrap">
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/retina.png" alt="Retina Ready" height="60">
+											<h3>Retina Ready</h3>
+										</div>
+
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/sliders.png" alt="" height="60">
+											<h3>Premium Sliders</h3>
+										</div>
+
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/side-panel.png" alt="" height="60">
+											<h3>Side Panels</h3>
+										</div>
+
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/headers.png" alt="" height="60">
+											<h3>Unique Headers</h3>
+										</div>
+
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/responsive.png" alt="" height="60">
+											<h3>100% Responsive</h3>
+										</div>
+
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/widgets.png" alt="" height="60">
+											<h3>Functional Widgets</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/menu.png" alt="" height="60">
+											<h3>12+ Menu Styles</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/ajax.png" alt="" height="60">
+											<h3>Ajax Form & Portfolio</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/footer.png" alt="" height="60">
+											<h3>9+ Footers Styles</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/rtl.png" alt="" height="60">
+											<h3>RTL Available</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/templates.png" alt="" height="60">
+											<h3>900+ Templates</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/parallax.png" alt="" height="60">
+											<h3>Parallax Integration</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/wide-boxed.png" alt="" height="60">
+											<h3>Wide &amp; Boxed Layout</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/color.png" alt="" height="60">
+											<h3>Unlimited Colors</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/seo.png" alt="" height="60">
+											<h3>SEO Optimized</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/font.png" alt="" height="60">
+											<h3>Google Fonts</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/plugins.png" alt="" height="60">
+											<h3>Premium Plugins</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/updates.png" alt="" height="60">
+											<h3>Free Updates</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/alternate-logo.png" alt="" height="60">
+											<h3>Alt. Logo for Mobile</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/ecommerce.png" alt="" height="60">
+											<h3>Ecommerce Templates</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/megamenu.png" alt="" height="60">
+											<h3>Mega Menu</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/lightbox.png" alt="" height="60">
+											<h3>Lightbox Integration</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/videos.png" alt="" height="60">
+											<h3>Tutorial Videos</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/documentation.png" alt="" height="60">
+											<h3>Documentation</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/charts.png" alt="" height="60">
+											<h3>Chart Variations</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/modal.png" alt="" height="60">
+											<h3>Modal Popover</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/loader.png" alt="" height="60">
+											<h3>14+ Page Loaders</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/bootstrap4.png" alt="" height="60">
+											<h3>Bootstrap 4.x</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/dark.png" alt="" height="60">
+											<h3>Dark Version</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/less.png" alt="" height="60">
+											<h3>Less, Sass Available</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/event-calendar.png" alt="" height="60">
+											<h3>Event Calendar</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/range-slider.png" alt="" height="60">
+											<h3>Range Slider</h3>
+										</div>
+										<div class="w-20 px-2 center mb-4">
+											<img src="images/intro/targets/features/sticky-sidebar.png" alt="" height="60">
+											<h3>Sticky Sidebar</h3>
+										</div>
+									</div>
+								</div>
+								<div class="intro-showcase-section" id="intro-headers-tab">
+									<div class="row">
+										<a href="header-light.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/1.png" alt="" width="100">
+											<h3 class="mt-2 t500">Classic</h3>
+										</a>
+										<a href="header-dark.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/25.png" alt="" width="100">
+											<h3 class="mt-2 t500">Dark</h3>
+										</a>
+										<a href="index-restaurant.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/2.png" alt="" width="100">
+											<h3 class="mt-2 t500">Bottom</h3>
+										</a>
+										<a href="one-page/op-apartment.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/3.png" alt="" width="100">
+											<h3 class="mt-2 t500">Left Aligned</h3>
+										</a>
+										<a href="index-corporate-4.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/4.png" alt="" width="100">
+											<h3 class="mt-2 t500">Transparent</h3>
+										</a>
+										<a href="demo-car.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/21.png" alt="" width="100">
+											<h3 class="mt-2 t500">Right Logo</h3>
+										</a>
+										<a href="header-semi-transparent.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/26.png" alt="" width="100">
+											<h3 class="mt-2 t500">Semi Transparent</h3>
+										</a>
+										<a href="index-parallax.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/6.png" alt="" width="100">
+											<h3 class="mt-2 t500">Bottom Transparent</h3>
+										</a>
+										<a href="index-shop.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/5.png" alt="" width="100">
+											<h3 class="mt-2 t500">Top-Bar</h3>
+										</a>
+										<a href="index-magazine-3.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/7.png" alt="" width="100">
+											<h3 class="mt-2 t500">Left Bottom</h3>
+										</a>
+										<a href="demo-construction.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/8.png" alt="" width="100">
+											<h3 class="mt-2 t500">Bottom Extras</h3>
+										</a>
+										<a href="index-blog.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/9.png" alt="" width="100">
+											<h3 class="mt-2 t500">Center Bottom</h3>
+										</a>
+										<a href="demo-real-estate.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/10.png" alt="" width="100">
+											<h3 class="mt-2 t500">Transparent Top-Bar</h3>
+										</a>
+										<a href="demo-app-landing.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/11.png" alt="" width="100">
+											<h3 class="mt-2 t500">Center</h3>
+										</a>
+										<a href="demo-course.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/20.png" alt="" width="100">
+											<h3 class="mt-2 t500">Flex Bottom</h3>
+										</a>
+										<a href="demo-ecommerce.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/22.png" alt="" width="100">
+											<h3 class="mt-2 t500">Bordered</h3>
+										</a>
+										<a href="demo-bike.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/12.png" alt="" width="100">
+											<h3 class="mt-2 t500">Modern</h3>
+										</a>
+										<a href="demo-resume.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/23.png" alt="" width="100">
+											<h3 class="mt-2 t500">With Icons</h3>
+										</a>
+										<a href="demo-barber.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/24.png" alt="" width="100">
+											<h3 class="mt-2 t500">Section Center</h3>
+										</a>
+										<a href="one-page/op-side-header.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/13.png" alt="" width="100">
+											<h3 class="mt-2 t500">Left Sidebar</h3>
+										</a>
+										<a href="header-side-right.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/14.png" alt="" width="100">
+											<h3 class="mt-2 t500">Right Sidebar</h3>
+										</a>
+										<a href="header-side-right-open.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/15.png" alt="" width="100">
+											<h3 class="mt-2 t500">Push Open</h3>
+										</a>
+										<a href="header-floating.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/16.png" alt="" width="100">
+											<h3 class="mt-2 t500">Floating</h3>
+										</a>
+										<a href="one-page/op-frame.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/17.png" alt="" width="100">
+											<h3 class="mt-2 t500">Framed</h3>
+										</a>
+										<a href="menu-10.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/18.png" alt="" width="100">
+											<h3 class="mt-2 t500">Overlay</h3>
+										</a>
+										<a href="static-sticky.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/27.png" alt="" width="100">
+											<h3 class="mt-2 t500">Static Sticky</h3>
+										</a>
+										<a href="responsive-sticky.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/28.png" alt="" width="100">
+											<h3 class="mt-2 t500">Responsive Sticky</h3>
+										</a>
+										<a href="logo-changer.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/1.png" alt="" width="100">
+											<h3 class="mt-2 t500">Sticky Different Logo</h3>
+										</a>
+										<a href="alternate-mobile-menu.html" class="col-md-2 col-3 center mb-4" target="_blank">
+											<img src="images/intro/targets/headers/29.png" alt="" width="100">
+											<h3 class="mt-2 t500">Alternate Mobile Menu</h3>
+										</a>
+									</div>
+								</div>
+								<div class="intro-showcase-section" id="intro-portfolios-tab">
+									<div class="row mb-5">
+										<div class="col-md-4">
+											<a href="portfolio-mixed-masonry.html"><img class="shadow rounded" src="images/intro/targets/portfolio/4.jpg" alt=""></a>
+											<a href="portfolio-single-thumbs-fullwidth.html" class="mt-4 d-block"><img class="shadow rounded" src="images/intro/targets/portfolio/7.jpg" alt=""></a>
+										</div>
+										<div class="col-md-4">
+											<a href="portfolio-ajax.html" class="d-block"><img class="shadow rounded" src="images/intro/targets/portfolio/2.jpg" alt=""></a>
+											<a href="portfolio.html" class="mt-4 d-block"><img class="shadow rounded" src="images/intro/targets/portfolio/5.jpg" alt=""></a>
+										</div>
+										<div class="col-md-4">
+											<a href="portfolio-1.html" class="mb-4 d-block"><img class="shadow rounded" src="images/intro/targets/portfolio/3.jpg" alt=""></a>
+											<a href="portfolio-3-masonry.html" class="my-4 d-block"><img class="shadow rounded" src="images/intro/targets/portfolio/6.jpg" alt=""></a>
+											<a href="portfolio.html" class="btn button-rounded bgcolor text-white shadow-sm t500 btn-block m-0" style="padding: 10px 22px">Browse More <i class="icon-line-arrow-right position-relative" style="top: 1px"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="intro-showcase-section" id="intro-blogs-tab">
+									<div class="row mb-5">
+										<div class="col-md-9">
+											<img class="shadow rounded" src="images/intro/targets/blogs/1.jpg" alt="">
+										</div>
+										<div class="col-md-3">
+											<a href="blog-masonry-full.html" class="mb-4 d-block"><img class="shadow rounded" src="images/intro/targets/blogs/2.jpg" alt=""></a>
+											<a href="demo-modern-blog.html" class="d-block mb-4"><img class="shadow rounded" src="images/intro/targets/blogs/3.jpg" alt=""></a>
+											<a href="blog.html" class="btn button-rounded bgcolor text-white shadow-sm t500 btn-block m-0" style="padding: 10px 22px">Browse More <i class="icon-line-arrow-right position-relative" style="top: 1px"></i></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="intro-showcase-section" id="intro-shops-tab">
+									<div class="row mb-5">
+										<div class="col-md-9">
+											<a href="demo-shop.html"><img class="shadow rounded" src="images/intro/targets/shops/1.jpg" alt=""></a>
+										</div>
+										<div class="col-md-3">
+											<a href="demo-ecommerce.html" class="mb-4 d-block"><img class="shadow rounded" src="images/intro/targets/shops/2.jpg" alt=""></a>
+											<a href="shop-3.html" class="d-block mb-4"><img class="shadow rounded" src="images/intro/targets/shops/3.jpg" alt=""></a>
+											<a href="shop.html" class="btn button-rounded bgcolor text-white shadow-sm t500 btn-block m-0" style="padding: 10px 22px">Browse More <i class="icon-line-arrow-right position-relative" style="top: 1px"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="section-hero" class="section parallax page-section nomargin" style="padding: 150px 0; background-color: #F9F9F9; background-image: url('images/intro/new/rev-intro.jpg'); background-size: cover;" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
+					<div class="container clearfix">
+						<div class="row clearfix">
+							<div class="col-lg-5 offset-lg-7 col-md-10">
+								<div class="emphasis-title">
+									<span class="before-heading" style="font-size: 24px;"><em>Get Started with</em></span>
+									<h2 class="capitalize t600" style="font-size: 54px;">120+ Revolution Slider Hero Templates.</h2>
+								</div>
+								<a href="rs-demos.html" target="_blank" class="button button-circle button-border button-large button-black button-fill nomargin tright"><span>Browse Now <i class="icon-line-arrow-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+					<div class="video-wrap d-xl-none d-lg-none">
+						<div class="video-overlay" style="background: rgba(255,255,255,0.9);"></div>
+					</div>
+				</div>
+
+				<div id="section-testimonials" class="section page-section nobg clearfix">
+					<div class="container clearfix">
+
+						<div class="heading-block bottommargin center nobottomborder">
+							<h2 class="nott" style="font-size: 40px; line-height: 1.2; letter-spacing: -1px;">Customer <span>Ratings</span> <span class="font-secondary nocolor">&amp;</span> <span>Reviews</span></h2>
+						</div>
+
+						<div class="row grid-container clearfix">
+
+							<div class="col-lg-4 col-md-6 col-12 mt-2 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">Great support, great documentation and you guys done a fantastic job in commenting everything, makes it very easy to customize, so thank you.</p>
+										<div class="testi-meta">
+											SmileyDot
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 mt-2 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">I wish that I could choose more than one reason for my 5-star rating! The Design is great, the features are fantastic, the documentation top-notch, and from what I've read in the support forum the customer support is great. This is a great template.</p>
+										<div class="testi-meta">
+											georgewhoffman
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 mt-2 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">Excellent Template really versatile and well documented. Makes anyone look like a design professional.</p>
+										<div class="testi-meta">
+											georgeuser077
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">This is the most robust template I've ever worked with. So much can be done with this multi-purpose package. Regular updates and enhancements add tremendous value.</p>
+										<div class="testi-meta">
+											rmandaro
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">I've been using Canvas for months now and it has exceeded my expectations. Their support has been great too.</p>
+										<div class="testi-meta">
+											kwelch2
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">I like Canvas because of all the features and their variations, such as the Portfolio. I can do so many different things with this theme, and I am already using it for my fourth website.</p>
+										<div class="testi-meta">
+											vanhove
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">It has almost everything. Have a feature in mind? Just search for it in this theme, you will definitely find it. Amazing support as well.</p>
+										<div class="testi-meta">
+											varunD
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">Great customer support. It is amazing to be on top of these many comments and they are doing it very well. It is a great addon on top of their amazing template. Thank you.</p>
+										<div class="testi-meta">
+											PrintAndWeb
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">WOW! Unbelievable amount of features. Extremely well documented. SUPER easy to customize... there's just so much to say... it's awesome!!!!!!!</p>
+										<div class="testi-meta">
+											ktpher
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">It is very convenient that i can make a lot of pages from my site with uniform design. Code perfectly described in the documentation. Excellent professional and modern design.</p>
+										<div class="testi-meta">
+											MoshkovEV
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">The template is very useful if you want to work on Prototyping of any project before you start!!</p>
+										<div class="testi-meta">
+											creintech
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">Great Design, Features and Latest Update is Fantastic!</p>
+										<div class="testi-meta">
+											pauldowling
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">Fast response, whole lot of features, updates are always there. Keep up the good work! Really glad I bought it.</p>
+										<div class="testi-meta">
+											gunpla
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">This template lives up to its name, truly a 'Canvas' for your ideas. The versatility and design are truly exceptional, not to mention the great Support SemiColonWeb provides on its comments section. Keep up the great work!</p>
+										<div class="testi-meta">
+											ModularCollective
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12 bottommargin-sm">
+								<div class="testimonial">
+									<div class="testi-content">
+										<p class="bottommargin-sm font-secondary">This is excellent! A most amazing suite of fully customisable options which at times almost presents too much choice! Ace!</p>
+										<div class="testi-meta">
+											jcarlisle1966
+											<span>ThemeForest user</span>
+											<div class="testimonials-rating">
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+												<i class="icon-star3"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row align-items-stretch mx-0 intro-support-block clearfix">
+					<div class="col-md-4 nopadding center">
+						<div class="clearfix">
+							<a href="https://support.semicolonweb.com/forums/forum/canvas-html/" class="col-padding" target="_blank">
+								<i class="icon-et-happy i-plain i-large nomargin inline-block"></i>
+								<span class="t500">Dedicated Support</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 nopadding center">
+						<div class="clearfix">
+							<a href="https://support.semicolonweb.com/canvas-html-documentation/" class="col-padding" target="_blank">
+								<i class="icon-et-book-open i-plain i-large nomargin inline-block"></i>
+								<span class="t500">Extensive Documentation</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 nopadding center">
+						<div class="clearfix">
+							<a href="https://www.youtube.com/user/shank20121/videos" class="col-padding" target="_blank">
+								<i class="icon-et-video i-plain i-large nomargin inline-block"></i>
+								<span class="t500">Walkthrough Videos</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="section-purchase" class="section nomargin center dark page-section" style="padding: 150px 0; background: url('images/intro/bg.jpg') no-repeat center center; background-size: cover;">
+					<div class="container clearfix">
+						<div class="emphasis-title bottommargin-lg">
+							<h2 class="ls1 font-secondary t700" style="font-style: italic; font-size: 56px; line-height: 1.7;">Start Creating Beautiful Websites<br>Purchase <span style="border-bottom: 3px solid #EEE; color: #FFF;">Canvas</span> for $16 only!</h2>
+						</div>
+						<a href="https://themeforest.net/item/canvas-the-multipurpose-html5-template/9228123?ref=SemiColonWeb&license=regular&open_purchase_for_item_id=9228123&purchasable=source" class="button button-circle button-xlarge button-reveal tright ls0 nomargin" style="padding-left: 60px;padding-right: 60px;"><span>Purchase License</span><i class="icon-line-arrow-right"></i></a>
+					</div>
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container center clearfix">
+
+					Copyrights &copy; 2016 All Rights Reserved by SemiColonWeb<br>
+					<div class="copyright-links"><a href="https://themeforest.net/user/semicolonweb/portfolio?ref=SemiColonWeb" target="_blank">Portfolio</a> / <a href="https://support.semicolonweb.com" target="_blank">Support</a></div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+	<script>
+		$(function(){
+			$('.intro-showcase-section').hide();
+			$('.intro-showcase-section').eq(0).show();
+			// Navbar on hover
+			$('.tab-hover').find('.nav-link').on( 'click', function(e) {
+				var target = $(this).attr('href');
+
+				$('.tab-hover').find('.nav-link').removeClass('active');
+				$(this).addClass('active');
+
+				$('.intro-showcase-section').hide();
+				$(target).stop(true).fadeIn();
+
+				e.stopPropagation();
+				e.preventDefault();
+			});
+		});
+
+		jQuery(window).on( 'load', function(){
+
+			var $container = $('#intro-multipages-container'),
+				$container2 = $('#intro-onepages-container');
+
+			$container.infiniteScroll({
+				path: '.load-next-multipages',
+				button: '.load-next-multipages',
+				scrollThreshold: false,
+				history: false,
+				status: '.page-load-status'
+			});
+
+			$container2.infiniteScroll({
+				path: '.load-next-onepages',
+				button: '.load-next-onepages',
+				scrollThreshold: false,
+				history: false,
+				status: '.page-load-status'
+			});
+
+			$container.on( 'load.infiniteScroll', function( event, response, path ) {
+				var $items = $( response ).find('.grid-intro-item ');
+				// append items after images loaded
+				$items.imagesLoaded( function() {
+					$container.append( $items );
+				});
+			});
+
+			$container2.on( 'load.infiniteScroll', function( event, response, path ) {
+				var $items = $( response ).find('.grid-intro-item ');
+				// append items after images loaded
+				$items.imagesLoaded( function() {
+					$container2.append( $items );
+				});
+			});
+
+		});
+	</script>
+
+</body>
+</html>

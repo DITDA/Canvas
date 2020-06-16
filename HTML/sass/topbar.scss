@@ -1,0 +1,279 @@
+
+/* ----------------------------------------------------------------
+
+	topbar.scss
+
+-----------------------------------------------------------------*/
+
+
+#top-bar {
+	position: relative;
+	border-bottom: 1px solid $line-color;
+	height: $topbar-height;
+	line-height: $topbar-line-height;
+	font-size: ($topbar-font-size + 1);
+	background-color: $topbar-bg;
+
+	@include media-breakpoint-down(sm) { height: auto; }
+
+	&.dark,
+	.dark & {
+		background-color: $body-bg-dark;
+		border-bottom-color: $line-dark;
+	}
+
+	.col_half {
+		width: auto;
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Links
+-----------------------------------------------------------------*/
+
+
+.top-links {
+	position: relative;
+	float: left;
+
+	ul {
+		margin: 0;
+		list-style: none;
+		li {
+			float: left;
+			position: relative;
+			height: $topbar-line-height;
+			border-left: 1px solid #EEE;
+			.dark & { border-left-color: $line-dark; }
+		}
+		li:first-child,
+		ul li {
+			border-left: 0 !important;
+		}
+	}
+
+	li {
+		> a {
+			display: block;
+			padding: 0 12px;
+			font-size: $topbar-font-size;
+			font-weight: $topbar-font-weight;
+			text-transform: $topbar-font-transform;
+			height: $topbar-line-height;
+			color: $topbar-font-color;
+			.dark & { color: lighten($body-bg-dark, 44.71%); }
+		}
+		i { vertical-align: top;}
+		i.icon-angle-down {
+			margin: 0 0 0 5px !important;
+		}
+		i:first-child {
+			margin-right: 2px;
+		}
+		&.full-icon i {
+			top: 2px;
+			font-size: 14px;
+			margin: 0;
+		}
+		&:hover {
+			background-color: #EEE;
+			.dark & {
+				background-color: darken($body-bg-dark, 1.96%);
+				text-shadow: 1px 1px 1px rgba(black,0.2);
+			}
+
+			ul,
+			div.top-link-section {
+				pointer-events: auto;
+			}
+		}
+	}
+
+	ul {
+		ul,
+		div.top-link-section {
+			display: none;
+			pointer-events: none;
+			position: absolute;
+			z-index: 210;
+			line-height: 1.5;
+			background: #FFF;
+			border: 0;
+			top: $topbar-line-height;
+			left: 0;
+			width: 140px;
+			margin: 0;
+			border-top: 1px solid $theme-color;
+			border-bottom: 1px solid #EEE;
+			@include box-shadow(0 0 5px -1px rgba(0,0,0,0.2));
+			@include media-breakpoint-down(sm) { text-align: left; }
+			.dark & {
+				background: darken($body-bg-dark, 1.96%);
+				border-bottom: none;
+			}
+		}
+
+		ul {
+			li {
+				float: none;
+				height: 36px;
+				border-top: 1px solid #F5F5F5;
+				border-left: 1px solid #EEE;
+
+				&:hover {
+					background-color: #F9F9F9;
+				}
+
+				&:first-child {
+					border-top: none !important;
+					border-left: 1px solid #EEE;
+				}
+				.dark & {
+					border-top: 1px solid lighten($body-bg-dark, 4.71%);
+					border-left: 1px solid lighten($body-bg-dark, 4.71%);
+					&:hover { background-color: $body-bg-dark; }
+					&:first-child { border-left: 1px solid lighten($body-bg-dark, 4.71%); }
+				}
+			}
+
+			a {
+				height: 36px;
+				line-height: 36px;
+				font-size: 12px;
+			}
+
+			img {
+				display: inline-block;
+				position: relative;
+				top: -1px;
+				width: 16px;
+				height: 16px;
+				margin-right: 4px;
+			}
+
+			&.top-demo-lang img {
+				top: 4px;
+				width: 16px;
+				height: 16px;
+			}
+		}
+
+		div.top-link-section {
+			padding: 25px;
+			left: 0;
+			width: 280px;
+			@include media-breakpoint-down(sm) {
+				left: auto;
+				right: 0;
+				padding: 20px 15px;
+			}
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		float: none;
+		& > ul {
+			text-align: center;
+			& > li {
+				display: inline-block;
+				margin-right: -4px;
+				float: none;
+			}
+		}
+	}
+}
+
+.fright .top-links ul div.top-link-section,
+.top-links.fright ul div.top-link-section {
+	left: auto;
+	right: 0;
+}
+
+
+/* ----------------------------------------------------------------
+	Top Social
+-----------------------------------------------------------------*/
+
+#top-social,
+#top-social ul { margin: 0; }
+
+#top-social {
+	li,
+	li a,
+	li .ts-icon,
+	li .ts-text {
+		display: block;
+		position: relative;
+		float: left;
+		width: auto;
+		overflow: hidden;
+		height: $topbar-line-height;
+		line-height: $topbar-line-height;
+	}
+
+	li {
+		border-left: 1px solid #EEE;
+		.dark & { border-left: 1px solid rgba($white,0.1); }
+
+		&:first-child {
+			border-left: 0 !important;
+		}
+
+		a {
+			float: none;
+			width: 40px;
+			font-weight: bold;
+			color: #666;
+			.dark & { color: darken($text-color-dark, 20%); }
+			@include transition(color .3s ease-in-out, background-color .3s ease-in-out, width .3s ease-in-out);
+			&:hover {
+				color: #FFF !important;
+				text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+			}
+		}
+
+		.ts-icon {
+			width: 40px;
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		@if $top-social-hidden-sm == true {
+			display: none !important;
+		} @else {
+			display: flex;
+			justify-content: center;
+			margin: 0;
+			border-top: 1px solid #EEE;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Login
+-----------------------------------------------------------------*/
+
+#top-login {
+	margin-bottom: 0;
+	.checkbox { margin-bottom: 10px; }
+	.form-control { position: relative;}
+	.form-control:focus { border-color: #CCC; }
+	.input-group#top-login-username { margin-bottom: -1px; }
+	#top-login-username input,
+	#top-login-username .input-group-addon {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	.input-group#top-login-password { margin-bottom: 10px;}
+	#top-login-password input,
+	#top-login-password .input-group-addon {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}

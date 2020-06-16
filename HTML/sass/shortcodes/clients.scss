@@ -1,0 +1,98 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: clients.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Clients
+-----------------------------------------------------------------*/
+
+
+.clients-grid,
+.testimonials-grid {
+	list-style: none;
+	overflow: hidden;
+	li {
+		float: left;
+		position: relative;
+		width: 100% / $clients-grid-deafult-grid;
+		@include media-breakpoint-down(sm) {
+			width: 100% / $clients-grid-display-sm;
+		}
+		padding: $clients-grid-padding 0;
+		-webkit-backface-visibility: hidden;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+		}
+	}
+}
+
+.clients-grid li a img { width: 100%; }
+
+
+.clients-grid li:before,
+.testimonials-grid li:before {
+	height: 100%;
+	top: 0;
+	left: -$clients-grid-border-size;
+	border-left: $clients-grid-border-size $clients-grid-border-style $clients-grid-border-color;
+	.dark & {
+		border-left-color: rgba($white,0.15);
+	}
+}
+
+.clients-grid li:after,
+.testimonials-grid li:after {
+	width: 100%;
+	height: 0;
+	top: auto;
+	left: 0;
+	bottom: -$clients-grid-border-size;
+	border-bottom: $clients-grid-border-size $clients-grid-border-style $clients-grid-border-color;
+	.dark & {
+		border-bottom-color: rgba($white,0.15);
+	}
+}
+
+.clients-grid {
+	li {
+		a,
+		img {
+			display: block;
+			width: 75%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		a {
+			opacity: $clients-img-opacity;
+			&:hover {
+				opacity: 1;
+			}
+			body:not(.device-touch) & {
+				@include transition(all .5s ease);
+			}
+		}
+	}
+	@include grid-size($clients-grid-total-columns, li);
+	@include media-breakpoint-down(sm) {
+		@for $grid-img from 1 through $clients-grid-total-columns {
+			@at-root.grid-#{$grid-img}#{&} li {
+				width: 100% / $clients-grid-display-sm;
+			}
+		}
+	}
+	&.grid-2 {
+		li {
+			padding: round($clients-grid-padding * 1.25) 0;
+			@include media-breakpoint-down(sm) {
+				width: 50%;
+			}
+		}
+	}
+}

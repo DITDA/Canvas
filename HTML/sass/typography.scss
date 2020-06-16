@@ -1,0 +1,163 @@
+
+/*-----------------------------------------------------------------------------------
+	typography.scss
+-----------------------------------------------------------------------------------*/
+
+
+dl, dt, dd, ol, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	font-size: 0px;
+	height: 0px;
+	line-height: 0;
+	width: 100%;
+	overflow:hidden;
+}
+
+::selection {
+	background: $theme-color;
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: $theme-color; /* Firefox */
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-webkit-selection {
+	background: $theme-color; /* Safari */
+	color: #FFF;
+	text-shadow: none;
+}
+
+:active,
+:focus { outline: none !important; }
+
+
+/* ----------------------------------------------------------------
+	Typography
+-----------------------------------------------------------------*/
+
+
+body {
+	line-height: $line-height-base;
+	color: $body-color;
+	font-size: $font-size-base;
+	font-family: $body-font;
+	@include media-breakpoint-down(sm) { padding: 0 !important; }
+}
+
+a {
+	text-decoration: none !important;
+	color: $theme-color;
+	&:hover {
+		color: #222;
+		.dark & { color: $text-color-dark; }
+	}
+	img {
+		border: none;
+	}
+}
+
+img { max-width: 100%; }
+iframe { border: none !important; }
+
+
+/* ----------------------------------------------------------------
+	Basic Layout Styles
+-----------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $heading-color;
+	font-weight: 600;
+	line-height: $line-height-base;
+	margin: 0 0 30px 0;
+	font-family: $heading-font;
+	.dark & { color: $text-color-dark; }
+}
+
+.dark {color: $text-color-dark; }
+
+h5,
+h6 { margin-bottom: 20px; }
+
+h1 {
+	font-size: $font-size-h1;
+	@include media-breakpoint-down(sm) { font-size: round($font-size-h1 / 1.3); }
+}
+h2 {
+	font-size: $font-size-h2;
+	@include media-breakpoint-down(sm) { font-size: round($font-size-h2 / 1.25); }
+}
+h3 {
+	font-size: $font-size-h3;
+	@include media-breakpoint-down(sm) { font-size: round($font-size-h3 / 1.2); }
+}
+h4 {
+	font-size: $font-size-h4;
+	@include media-breakpoint-down(sm) { font-size: round($font-size-h4 / 1.13); }
+}
+
+h4 { font-weight: 600; }
+
+h5,
+h6 { font-weight: bold; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	> span:not(.nocolor) {
+		color: $theme-color;
+	}
+}
+
+p,
+pre,
+ul,
+ol,
+dl,
+dd,
+blockquote,
+address,
+table,
+fieldset,
+form { margin-bottom: 30px; }
+
+small { font-family: $body-font; }
+
+.dark fieldset { border-color: rgba($white,0.1); }
+#wrapper {
+	position: relative;
+	float: none;
+	margin: 0 auto;
+	width: map-get($grid-breakpoints, "xl") + 20; //1220px
+	background-color: $body-bg;
+
+	@include media-breakpoint-only(lg) {
+		width: map-get($grid-breakpoints, "lg") + 8; //1000px
+	}
+	@include box-shadow(0 0 10px rgba(0,0,0,0.1));
+
+	@include media-breakpoint-down(md) {
+		width: 100%;
+		margin: 0;
+		box-shadow: none;
+	}
+	@include media-breakpoint-down(sm) { width: 100% !important; }
+	.dark & { background-color: $body-bg-dark; }
+}

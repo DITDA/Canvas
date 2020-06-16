@@ -1,0 +1,324 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: promo.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Promo Boxes
+-----------------------------------------------------------------*/
+
+.promo {
+	position: relative;
+	padding: $promo-padding-width $promo-padding-height $promo-padding-width 0;
+	@include media-breakpoint-down(md) {
+		&:not(.promo-full) {
+			padding: $promo-padding-width round($promo-padding-width / 1.5) !important;
+		}
+	}
+	h3 {
+		font-weight: bold;
+		margin-bottom: 0;
+		font-size: $promo-font-size;
+		@include media-breakpoint-down(lg) {
+			font-size: round($promo-font-size / 1.2);
+		}
+		color: $promo-light-text-color;
+	}
+	a {
+		&.button {
+			position: absolute;
+			top: 50%;
+			margin: 0;
+			margin-top: -18px;
+			left: auto;
+			right: 0;
+			@include media-breakpoint-down(md) {
+				position: relative !important;
+				top: 0 !important;
+				margin: 20px 0 0 !important;
+				left: 0 !important;
+				right: 0;
+			}
+		}
+	}
+	> span,
+	> .container > span {
+		display: block;
+		color: $promo-light-text-color;
+		font-weight: 300;
+		font-size: $promo-span-font-size;
+		@include media-breakpoint-down(lg) {
+			font-size: round($promo-span-font-size / 1.06);
+		}
+		margin-top: 6px;
+		.dark & {
+			color: rgba($white,0.8);
+		}
+	}
+	a {
+		&.button {
+			&-mini {margin-top: -12px; }
+			&-small {margin-top: -15px; }
+			&-large {margin-top: -22px; }
+			&-xlarge {margin-top: -25px; }
+			&-desc {margin-top: -40px; }
+		}
+	}
+}
+
+/* Promo Uppercase
+-----------------------------------------------------------------*/
+@if $promo-uppercase == true {
+	.promo-uppercase {
+		text-transform: uppercase;
+		h3 {
+			font-size: 22px;
+			@include media-breakpoint-down(lg) {
+				font-size: 19px;
+			}
+		}
+		> span,
+		> .container > span {
+			font-size: 15px;
+			@include media-breakpoint-down(lg) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+/* Promo - with Border
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-border {
+		border: $promo-border;
+		@include border-radius(3px);
+		padding-left: 30px;
+		.dark & {
+			border-color: rgba($white,0.08);
+		}
+		a {
+			&.button {
+				right: 30px;
+			}
+		}
+	}
+}
+
+/* Promo - Light
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-light {
+		background-color: $promo-light;
+		@include border-radius(3px);
+		padding-left: 30px;
+		.dark & { background-color: rgba($white,0.1); }
+		a {
+			&.button {
+				right: 30px;
+			}
+		}
+	}
+}
+
+/* Promo - Dark
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-dark {
+		border: 0 !important;
+		background-color: $promo-dark;
+		padding: $promo-padding-width $promo-padding-height $promo-padding-width $promo-padding-width;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+		@include border-radius(3px);
+		@at-root.dark #{&}:not(.promo-flat) { background-color: rgba(0,0,0,0.3); }
+		h3 {
+			color: $promo-dark-text-color;
+			@include media-breakpoint-down(md) {
+				line-height: 1.6;
+			}
+		}
+		a {
+			&.button {
+				right: 30px;
+			}
+		}
+		> h3 span,
+		> .container > h3 span {
+			padding: 2px 8px;
+			@include border-radius(3px);
+			background-color: rgba($black-color,$promo-span-dark-bg-opacity);
+			color: $promo-dark-text-color;
+			font-weight: 400;
+		}
+		 > span,
+		> .container > span {
+			color: darken($promo-dark-text-color, 20%);
+			margin-top: 8px;
+		}
+	}
+}
+
+
+/* Promo - Flat
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-flat {
+		background-color: $theme-color;
+		a {
+			&.button {
+				&:not(.button-border) {
+					background-color: rgba($black-color,0.2);
+					color: $promo-dark-text-color;
+				}
+				&:hover {
+					background-color: $promo-dark-text-color;
+					border-color: $promo-dark-text-color;
+					color: $text-color;
+					text-shadow: none;
+				}
+			}
+		}
+		> span,
+		.promo.promo-flat > .container > span {
+			color: rgba($white,$promo-span-bg-opacity);
+		}
+
+	}
+}
+
+/* Promo - 100% Full Width
+-----------------------------------------------------------------*/
+
+.promo-full {
+	@include border-radius(3px !important);
+	border-left: 0 !important;
+	border-right: 0 !important;
+	padding: 40px 0 !important;
+	a {
+		&.button {
+			right: 15px !important;
+		}
+	}
+	&.promo-right {
+		a {
+			&.button {
+				right: auto !important;
+				left: 15px !important;
+			}
+		}
+	}
+}
+
+
+/* Promo - Parallax
+-----------------------------------------------------------------*/
+
+.promo {
+	&.parallax {
+		padding: 80px 0 !important;
+	}
+}
+
+
+/* Promo - Right Align
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-right {
+		text-align: right;
+		padding: 30px 0 30px 200px;
+		a {
+			&.button {
+				left: 0;
+				right: auto;
+			}
+		}
+	}
+}
+
+/* Promo - with Border & Right Align
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-right.promo-border,
+	&.promo-dark.promo-right {
+		&:not(.promo-mini) {
+			padding-right: 30px;
+		}
+		a.button {
+			left: 30px;
+		}
+	}
+}
+
+/* Promo - Center Align
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-center {
+		text-align: center;
+		padding: 30px 20px;
+		a {
+			&.button {
+				position: relative;
+				top: 0;
+				margin: 20px 0 0;
+				left: 0 !important;
+				right: 0;
+			}
+		}
+	}
+}
+
+/* Promo - Mini
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-mini {
+		text-align: left;
+		padding: 20px 25px;
+		h3 {
+			font-size: 20px;
+			line-height: 1.5;
+		}
+		&.promo-uppercase {
+			h3 {
+				font-size: 18px;
+			}
+		}
+		&.promo-dark {
+			h3 {
+				line-height: 1.7;
+			}
+		}
+		a {
+			&.button {
+				position: relative;
+				top: 0;
+				margin: 20px 0 0;
+				left: 0 !important;
+				right: 0;
+			}
+		}
+	}
+}
+
+/* Promo - Mini - Center & Right Align
+-----------------------------------------------------------------*/
+
+.promo {
+	&.promo-mini {
+		&.promo-center {
+			text-align: center;
+		}
+		&.promo-right {
+			text-align: right;
+		}
+	}
+}

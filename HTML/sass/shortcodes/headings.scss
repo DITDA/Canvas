@@ -1,0 +1,376 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: headings.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Heading Styles
+-----------------------------------------------------------------*/
+
+
+/* Block Titles
+-----------------------------------------------------------------*/
+.title-block {
+	padding: 2px 0 3px $title-block-padding;
+	border-left: $title-block-border solid $title-block-border-color;
+	margin-bottom: 30px;
+
+	@include media-breakpoint-down(sm) {
+		padding: 2px 0 3px round($title-block-padding / 1.33);
+		border-left-width: $title-block-border-sm;
+	}
+
+	&-right {
+		padding: 2px $title-block-padding 3px 0;
+		border-left: 0;
+		border-right: $title-block-border solid $title-block-border-color;
+		text-align: right;
+		@include media-breakpoint-down(sm) {
+			padding: 2px round($title-block-padding / 1.33) 3px 0;
+			border-right-width: $title-block-border-sm;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin-bottom: 0;
+		color: $title-block-color;
+
+		> span:not(.nocolor) { color: $title-block-highlighted-color; }
+	}
+
+	> span {
+		display: block;
+		margin-top: 4px;
+		color: darken($text-color, 6.67);
+		font-weight: 300;
+
+		.dark & { color: darken($text-color-dark, 33.33%); }
+	}
+
+	h1 + span {
+		font-size: round($font-size-h1 / 1.64);
+		@include media-breakpoint-down(sm) { font-size: round($font-size-h1 / 2); }
+	}
+
+	h2 + span {
+		font-size: round($font-size-h2 / 1.6);
+		@include media-breakpoint-down(sm) { font-size: round($font-size-h2 / 1.77); }
+	}
+
+	h3 + span {
+		font-size: round($font-size-h3 / 1.41);
+		@include media-breakpoint-down(sm) { font-size: round($font-size-h3 / 1.6); }
+	}
+
+	h4 + span {
+		font-size: round($font-size-h4 / 1.2);
+		@include media-breakpoint-down(sm) { font-size: round($font-size-h4 / 1.39); }
+		margin-top: 3px;
+	}
+}
+
+
+/* Heading Block - with Subtitle
+-----------------------------------------------------------------*/
+
+.heading-block {
+	margin-bottom: 50px;
+	@at-root .dark &:not(.not-dark) { text-shadow: 1px 1px 1px rgba($black,0.1); }
+}
+
+.heading-block {
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin-bottom: 0;
+		font-weight: $heading-block-font-weight;
+		text-transform: $heading-block-font-transform;
+		letter-spacing: $heading-block-font-spacing;
+		color: $heading-block-font-color;
+		> span:not(.nocolor) {
+			color: $title-block-highlighted-color; }
+		@at-root #{selector-append(".dark :not(.not-dark)", &)} { color: #FFF; }
+		@at-root #{selector-append(".dark .not-dark", &)} { color: $heading-block-font-color; }
+	}
+}
+
+
+.emphasis-title {
+	@at-root.dark :not(.not-dark)#{&} { color: $heading-block-font-color; }
+	h1,
+	h2 {
+		margin-bottom: 0;
+		font-weight: 400;
+		letter-spacing: 0;
+		text-transform: none;
+		color: $heading-block-font-color;
+		@at-root  #{selector-append(".dark :not(.not-dark)", &)} { color: #FFF; }
+		> span:not(.nocolor) { color: $title-block-highlighted-color; }
+		@at-root #{selector-append(".dark .not-dark", &)} { color: $heading-block-font-color; }
+	}
+}
+
+
+.heading-block {
+	h1 {
+		font-size: $heading-block-font-size-h1;
+		@include media-breakpoint-down(sm) {
+			font-size: $heading-block-font-size-h2;
+		}
+	}
+	h2 {
+		font-size: $heading-block-font-size-h2;
+		@include media-breakpoint-down(sm) {
+			font-size: $heading-block-font-size-h3;
+		}
+	}
+	h3 {
+		font-size: $heading-block-font-size-h3;
+		@include media-breakpoint-down(sm) {
+			font-size: round($heading-block-font-size-h3 / 1.18);
+		}
+	}
+	h4 {
+		font-size: $heading-block-font-size-h4;
+		font-weight: $heading-block-font-weight;
+		@include media-breakpoint-down(sm) {
+			font-size: round($heading-block-font-size-h4 / 1.05);
+		}
+	}
+
+	> span {
+		&:not(.before-heading) {
+			display: block;
+			margin-top: 10px;
+			font-weight: 300;
+			color: lighten($text-color, 20.00);
+		}
+		@at-root.dark :not(.not-dark)#{&} { color: $text-color-dark; }
+	}
+
+	.before-heading {
+		margin-bottom: 7px;
+	}
+}
+
+.heading-block.center,
+.heading-block.title-center,
+.center .heading-block {
+	> span {
+		max-width: $heading-block-center-container;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.heading-block {
+	h1 + span {
+		font-size: round($heading-block-font-size-h1 / 1.33);
+		@include media-breakpoint-down(sm) {
+			font-size: round($heading-block-font-size-h1 / 1.6);
+		}
+	}
+	h2 + span {
+		font-size: round($heading-block-font-size-h2 / 1.35);
+		@include media-breakpoint-down(sm) {
+			font-size: round($heading-block-font-size-h2 / 1.67);
+		}
+	}
+	h3 + span {
+		font-size: round($heading-block-font-size-h3 / 1.3);
+		@include media-breakpoint-down(sm) {
+			font-size: round($heading-block-font-size-h3 / 1.53);
+		}
+	}
+
+	h4 + span {
+		font-size: round($heading-block-font-size-h4 / 1.1);
+		@include media-breakpoint-down(sm) {
+			font-size: round($heading-block-font-size-h4 / 1.18);
+		}
+	}
+
+	~ p:not(.lead) { font-size: round($font-size-body * 1.07); }
+
+	&:after {
+		content: '';
+		display: block;
+		margin-top: 30px;
+		width: $title-block-border-size;
+		border-top: $heading-block-border;
+
+		@at-root.dark :not(.not-dark)#{&} { border-top-color: rgba($white,0.4); }
+	}
+}
+
+.center .heading-block,
+.heading-block.center,
+.heading-block.title-center {
+	&:after {
+		margin: 30px auto 0;
+	}
+}
+
+.heading-block.noborder,
+.heading-block.nobottomborder {
+	&:after {
+		display: none;
+	}
+}
+
+.tright .heading-block,
+.heading-block.tright,
+.heading-block.title-right { direction: rtl; }
+
+.heading-block.border-color {
+	&:after {
+		border-color: $theme-color;
+	}
+}
+
+
+/* Emphasis Title
+-----------------------------------------------------------------*/
+
+.emphasis-title {
+	margin: 0 0 50px;
+
+	h1,
+	h2 {
+		font-size: $emphasis-title-font-size;
+		letter-spacing: -2px;
+
+		@include media-breakpoint-down(sm) { font-size: round($emphasis-title-font-size / 1.45); }
+		@include media-breakpoint-down(xs) { font-size: round($emphasis-title-font-size / 1.6); }
+
+		strong {
+			font-weight: $heading-block-font-weight;
+		}
+	}
+}
+
+
+/* Justify Border Title
+-----------------------------------------------------------------*/
+
+.fancy-title {
+	position: relative;
+	margin-bottom: 30px;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		position: relative;
+		display: inline-block;
+		background-color: $fancy-title-bg;
+		padding-right: $fancy-title-padding;
+		margin-bottom: 0;
+		color: $title-block-color;
+		> span:not(.nocolor) { color: $title-block-highlighted-color; }
+		.dark & { background-color: $body-bg-dark; }
+	}
+
+	h4,
+	h5,
+	h6 {
+		padding-right: round($fancy-title-padding / 1.5);
+	}
+
+	&.title-double-border,
+	&.title-border,
+	&.title-border-color {
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 0;
+			border-top: ($fancy-title-border-size * 3) double darken($fancy-title-border-color, 3.53%);
+			left: auto;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			.dark & { border-top-color: rgba($white,0.15); }
+
+		}
+	}
+
+	&.title-border {
+		&:before {
+			border-top: $fancy-title-border-size solid $fancy-title-border-color;
+		}
+	}
+
+	&.title-border-color {
+		&:before {
+			border-top: $fancy-title-border-size solid $fancy-title-colored-border;
+		}
+	}
+}
+
+
+/* Fancy Title - Center Align
+-----------------------------------------------------------------*/
+
+.title-center,
+.title-right {
+	text-align: center;
+
+	h1,
+	h2,
+	h3 {
+		padding: 0 $fancy-title-padding;
+	}
+
+	h4,
+	h5,
+	h6 {
+		padding: 0 round($fancy-title-padding / 1.5);
+	}
+}
+
+
+/* Fancy Title - Right Align
+-----------------------------------------------------------------*/
+
+.title-right { text-align: right; }
+
+
+/* Fancy Title - Bottom Short Border
+-----------------------------------------------------------------*/
+
+.fancy-title {
+	&.title-bottom-border {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			display: block;
+			background: transparent;
+			padding: 0 0 round($fancy-title-padding / 1.5);
+			border-bottom: ($fancy-title-border-size * 3) solid $title-block-border-color;
+		}
+	}
+	&.title-dotted-border { background: url("#{$fancy-title-dotted-border}") repeat-x center; }
+}
+
+
+/* Sub Heading
+-----------------------------------------------------------------*/
+
+.before-heading {
+	display: block;
+	margin: 0 0 5px;
+	font: $before-heading-font;
+	color: lighten($heading-block-font-color, 40%);
+}

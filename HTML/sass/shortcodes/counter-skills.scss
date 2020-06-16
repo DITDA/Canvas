@@ -1,0 +1,193 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: counter-skills.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Counter
+-----------------------------------------------------------------*/
+
+
+.counter {
+	font-size: $counter-font-size;
+	font-weight: $counter-font-wight;
+	font-family: $counter-font-family;
+	@at-root .dark { text-shadow: 1px 1px 1px rgba($black,0.1); }
+
+	+ h5 {
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-top: 10px;
+		font-size: $counter-caption-size;
+	}
+
+	&#{&}-small {
+		font-size: $counter-sm-font-size;
+		+ h5 {
+			font-size: $counter-sm-caption-size;
+		}
+	}
+
+	&#{&}-large {
+		font-size: $counter-lg-font-size;
+		+ h5 {
+			font-size: $counter-lg-caption-size;
+			font-weight: 300;
+		}
+	}
+
+	&#{&}-xlarge {
+		font-size: $counter-xl-font-size;;
+		font-weight: 400;
+		@extend .counter-large;
+	}
+
+	&#{&}-inherit {
+		font-size: inherit;
+		font-weight: inherit;
+	}
+
+	&#{&}-lined {
+		+ h5 {
+			&:before {
+				display: block;
+				position: relative;
+				margin: 20px auto 25px auto;
+				content: '';
+				width: $counter-lined-width;
+				border-top: $counter-lined-size;
+				opacity: 0.9;
+				.dark & { border-color: lighten($body-bg-dark, 71.37); }
+			}
+		}
+	}
+}
+
+.widget .counter + h5 { opacity: 0.7; }
+
+
+/* ----------------------------------------------------------------
+	Animated Rounded Skills
+-----------------------------------------------------------------*/
+
+
+.rounded-skill {
+	display: inline-block;
+	margin: 0 15px 15px;
+	position: relative;
+	text-align: center;
+	font-size: $rounded-skills-font-size;
+	font-weight: bold;
+	color: $rounded-skills-font-color;
+
+	.dark & { color: $text-color-dark; }
+
+	i { font-size: $rounded-skills-icon-size; }
+
+	+ h5 { margin-bottom: 0; }
+
+	canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	body:not(.device-touch) & {
+		@include transition(opacity .4s ease);
+	}
+
+}
+
+
+/* ----------------------------------------------------------------
+	Skills Bar
+-----------------------------------------------------------------*/
+
+
+.skills {
+	margin: 0;
+	list-style: none;
+	padding-top: 25px;
+
+	li {
+		position: relative;
+		margin-top: $progress-skills-margin-gutters;
+		height: $progress-skills-height;
+		background-color: $progress-skills-empty-color;
+		box-shadow: inset 0 1px 2px rgba(black,0.1);
+		@include border-radius($progress-skills-radius);
+
+		.dark & { background-color: rgba($white,0.15); }
+
+		&:first-child { margin-top: 0; }
+
+		.progress {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: $progress-skills-progress-color;
+			overflow: visible !important;
+			@include border-radius($progress-skills-radius);
+			@include transition(width $progress-skills-transition);
+		}
+
+		.progress-percent {
+			position: absolute;
+			top: - (round($progress-skills-percent-padding * 2) + 23);
+			right: 0;
+			background-color: $progress-skills-percent-bgcolor;
+			color: $progress-skills-percent-color;
+			text-shadow: 1px 1px 1px rgba(black,0.2);
+			height: auto;
+			padding: $progress-skills-percent-padding;
+			font-size: $progress-skills-percent-size;
+			@include border-radius($progress-skills-radius);
+
+			.dark & {
+				background-color: lighten($body-bg-dark, 8.63);
+			}
+
+			.counter {
+				font-weight: 400;
+				font-family: $progress-skills-counter-font;
+			}
+
+			&:before {
+				top: 100%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-top-color: $progress-skills-percent-bgcolor;
+				left: 50%;
+				border-width:  5px;
+				margin-left: -5px;
+				.dark & {
+					border-top-color: lighten($body-bg-dark, 8.63);
+				}
+			}
+		}
+
+		> span {
+			position: absolute;
+			z-index: 1;
+			top: -23px;
+			left: 0;
+			line-height: 20px;
+			font-size: $progress-skills-Font-size;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $progress-skills-counter-font-color;
+			.dark & {
+				color: darken($text-color-dark, 13.33);
+			}
+		}
+	}
+}

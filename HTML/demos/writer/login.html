@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Lato:300,400,600,700|Parisienne" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../../css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="../../one-page/onepage.css" type="text/css" />
+
+	<!-- Writer Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="writer.css" type="text/css" />
+	<!-- / -->
+
+	<link rel="stylesheet" href="../../css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/magnific-popup.css" type="text/css" />
+
+	<!-- Writer Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="css/colors.css" type="text/css" />
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+	<!-- / -->
+
+	<link rel="stylesheet" href="../../css/responsive.css" type="text/css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Log in - Writer | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap nopadding">
+
+				<div class="section nopadding move-bg nomargin" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('images/login.jpg') center center no-repeat; background-size: cover;"></div>
+
+				<div class="section nobg full-screen force-full-screen nopadding nomargin">
+					<div class="container-fluid vertical-middle divcenter clearfix">
+
+						<div class="center">
+							<a href="index.html"><img src="images/logo@2x.png" height="70" alt="Canvas Logo"></a>
+						</div>
+
+						<div class="card divcenter dark rounded border border-dark shadow-lg" style="max-width: 540px; background-color: rgba(30,30,30,0.9)">
+							<div class="card-body divcenter py-5" style="max-width: 70%;">
+
+								<a href="#" class="button button-large button-rounded btn-block si-colored si-facebook nott t400 ls0 center nomargin"><i class="icon-facebook-sign"></i> Log in with Facebook</a>
+
+								<div class="divider divider-center"><span class="position-relative" style="top: -2px">OR</span></div>
+
+								<form id="login-form" name="login-form" class="nobottommargin row" action="#" method="post">
+
+									<div class="col-12">
+										<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username" />
+									</div>
+
+									<div class="col-12 mt-4">
+										<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" placeholder="Password" />
+									</div>
+
+									<div class="col-12">
+										<a href="#" class="fright text-dark t300 mt-2">Forgot Password?</a>
+									</div>
+
+									<div class="col-12 mt-4">
+										<button class="button button-rounded btn-block nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+									</div>
+								</form>
+							</div>
+							<div class="card-footer py-4 center">
+								<p class="mb-0">Don't have an account? <a href="#"><u>Sign up</u></a></p>
+							</div>
+						</div>
+
+						<div class="center dark mt-3"><small>Copyrights &copy; All Rights Reserved by Canvas Inc.</small></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/plugins.js"></script>
+	<script src="js/hover3d.js" ></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="../../js/functions.js"></script>
+
+	<script>
+
+		jQuery(document).ready( function(){
+
+			if( !jQuery('body').hasClass('device-touch') ) {
+
+				var lFollowX = 0,
+					lFollowY = 0,
+					x = 0,
+					y = 0,
+					friction = 1 / 30;
+
+				function moveBackground() {
+					x += (lFollowX - x) * friction;
+					y += (lFollowY - y) * friction;
+
+					translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+					jQuery('.move-bg').css({
+						'-webit-transform': translate,
+						'-moz-transform': translate,
+						'transform': translate
+					});
+
+					window.requestAnimationFrame(moveBackground);
+				}
+
+				jQuery(window).on('mousemove click', function(e) {
+
+					var lMouseX = Math.max(-100, Math.min(100, jQuery(window).width() / 2 - e.clientX));
+					var lMouseY = Math.max(-100, Math.min(100, jQuery(window).height() / 2 - e.clientY));
+					lFollowX = (10 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+					lFollowY = (10 * lMouseY) / 100;
+
+				});
+
+				moveBackground();
+
+			}
+
+		});
+
+	</script>
+
+</body>
+</html>

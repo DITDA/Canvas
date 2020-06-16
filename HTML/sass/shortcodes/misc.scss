@@ -1,0 +1,881 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: misc.scss
+
+-----------------------------------------------------------------------------------*/
+
+@include media-breakpoint-down(lg) {
+	canvas {
+		max-width: 100%;
+		height: auto !important;
+	}
+}
+
+
+/* Infinity Scroll - Message Style
+-----------------------------------------------------------------*/
+
+#infscr-loading,
+#portfolio-ajax-loader {
+	position: fixed;
+	z-index: 20;
+	top: 50%;
+	left: 50%;
+	width: 48px;
+	height: 48px;
+	margin: -24px 0 0 -24px;
+	background-color: rgba(0,0,0,0.7);
+	@include border-radius(3px);
+	line-height: 48px;
+	font-size: 24px;
+	color: #FFF;
+	text-align: center;
+}
+
+#infscr-loading,
+#portfolio-ajax-loader {
+	 img {
+		display: none;
+		width: 24px;
+		height: 24px;
+		margin: 12px;
+	 }
+}
+
+#portfolio-ajax-loader {
+	display: none;
+	img {
+		display: block;
+	}
+}
+
+.page-load-status {
+	position: relative;
+	display: none;
+	padding: 30px 0;
+	.css3-spinner {
+		position: absolute;
+		z-index: auto;
+		background-color: transparent !important;
+	}
+	.css3-spinner-ball-pulse-sync > div { background-color: #333; }
+}
+
+/* ----------------------------------------------------------------
+	Forms
+-----------------------------------------------------------------*/
+
+.sm-form-control {
+	display: block;
+	width: 100%;
+	min-height: 38px;
+	padding: $sm-form-padding;
+	font-size: $sm-form-font-size;
+	line-height: 1.42;
+	color: $sm-form-color;
+	background-color: $sm-form-background;
+	background-image: none;
+	border: $sm-form-border solid $sm-form-border-color;
+	@include border-radius($sm-form-border-radius !important);
+	@include transition(border-color ease-in-out .15s);
+
+	&:focus {
+		border-color: $sm-form-focus-color;
+		outline: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	@include placeholder {
+		color: $sm-form-placeholder;
+		opacity: 1;
+	}
+}
+
+.sm-form-control[disabled],
+.sm-form-control[readonly],
+fieldset[disabled] .sm-form-control {
+  cursor: not-allowed;
+  background-color: darken($body-bg, 6.67);
+  opacity: 1;
+}
+
+.form-control { @include border-radius($bs-form-control-radius); }
+
+.form-control:active,
+.form-control:focus {
+	border-color: $sm-form-placeholder;
+	box-shadow: none;
+}
+
+label {
+	display: inline-block;
+	font-size: $sm-form-label-size;
+	font-weight: $sm-form-label-weight;
+	font-family: $heading-font;
+	text-transform: $sm-form-label-transform;
+	letter-spacing: $sm-form-label-spacing;
+	color: $sm-form-label-color;
+	margin-bottom: $sm-form-label-mb;
+	cursor: pointer;
+	.dark & {
+		color: darken($text-color-dark, 20%);
+	}
+
+	&.label-muted {
+		color: $sm-form-placeholder;
+		font-weight: normal;
+		margin-right: 5px;
+		.dark & {
+			color: darken($text-color-dark, 46.67);
+		}
+	}
+}
+
+form {
+	.col_full,
+	.col_half,
+	.col_one_third,
+	.col_two_third,
+	.col_three_fourth,
+	.col_one_fourth,
+	.col_one_fifth,
+	.col_two_fifth,
+	.col_three_fifth,
+	.col_four_fifth,
+	.col_one_sixth,
+	.col_five_sixth {
+		margin-bottom: round($margin-base / 2);
+		@include media-breakpoint-down(sm) {
+			margin-bottom: round($margin-base / 2) !important;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Contact Form
+-----------------------------------------------------------------*/
+
+
+#contact-form-overlay,
+#contact-form-overlay-mini {
+	position: relative;
+	max-width: 800px;
+	background-color: $body-bg;
+	padding: 40px;
+	margin: 0 auto;
+	z-index: 10;
+	@include border-radius(4px);
+	box-shadow: 0 1px 10px rgba(0,0,0,0.15);
+
+	.dark & {
+		background-color: $body-bg-dark;
+	}
+}
+
+#contact-form-overlay-mini {
+	float: right;
+	width: 380px;
+	margin: 0;
+	@include media-breakpoint-down(md) {
+		float: none;
+		width: auto;
+		max-width: 380px;
+		margin: 0 auto;
+	}
+}
+
+label.error {
+	margin-top: 5px;
+	color: $sm-form-label-error;
+	font-weight: 400;
+}
+
+label.error { display: none !important; }
+
+.show-error-msg + label.error { display: block !important; }
+
+.form-control,
+.sm-form-control {
+	&.error {
+		border-color: $sm-form-label-error;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Google Maps
+-----------------------------------------------------------------*/
+
+
+#google-map {
+	position: relative;
+	width: 100%;
+	height: 450px;
+}
+
+.gmap img { max-width: none !important; }
+
+.gm-style .gm-style-iw h3 span {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+#map-overlay {
+	position: relative;
+	padding: 100px 0;
+
+	#google-map {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Google Custom Search
+-----------------------------------------------------------------*/
+
+
+#content {
+	.cse .gsc-control-cse,
+	.gsc-control-cse,
+	.gsc-above-wrapper-area,
+	.gsc-adBlock,
+	.gsc-thumbnail-inside,
+	.gsc-url-top,
+	.gsc-table-result,
+	.gsc-webResult,
+	.gsc-result {
+		padding: 0 !important;
+	}
+
+	.gsc-selected-option-container {
+		width: auto !important;
+	}
+
+	.gsc-result-info {
+		padding-left: 0 !important;
+	}
+
+	.gsc-above-wrapper-area-container,
+	.gsc-table-result {
+		margin-bottom: 10px;
+	}
+
+	.gcsc-branding {
+		display: none;
+	}
+
+	.gsc-results,
+	.gsc-webResult {
+		width: 100% !important;
+	}
+
+	.gs-no-results-result .gs-snippet,
+	.gs-error-result .gs-snippet {
+		margin: 0 !important;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Quotes & Blockquotes
+-----------------------------------------------------------------*/
+
+
+blockquote {
+	p {
+		margin-bottom: 15px;
+	}
+	&.pull-left {
+		max-width: 300px;
+		margin: 5px 20px 10px 0;
+		padding-right: 0;
+	}
+	&.pull-right {
+		max-width: 300px;
+		margin: 5px 0 10px 20px;
+		padding-left: 0;
+	}
+}
+
+.quote {
+	border: none !important;
+	position: relative;
+	p {
+		position: relative;
+	}
+	&:before {
+		font-family: 'font-icons';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		content: "\e7ad";
+		position: absolute;
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		font-size: 42px;
+		top: 0;
+		left: 0;
+		color: darken($body-bg, 6.67);
+		.dark & { color: rgba($white,0.1); }
+	}
+	&.blockquote-reverse {
+		&:before {
+			content: "\e7ae";
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Dropcaps & Highlights
+-----------------------------------------------------------------*/
+
+
+.dropcap {
+	float: left;
+	font-size: 42px;
+	line-height: 1;
+	margin: 0 5px 0 0;
+	text-transform: uppercase;
+}
+
+.highlight {
+	padding: 2px 5px;
+	background-color: #444;
+	color: #FFF;
+	@include border-radius(2px);
+	.dark & { background-color: rgba($black,0.2); }
+}
+
+
+/* ----------------------------------------------------------------
+	Magazine Specific Classes
+-----------------------------------------------------------------*/
+
+.top-advert {
+	float: right;
+	padding: 5px;
+	border-left: 1px solid darken($body-bg, 6.67);
+	border-right: 1px solid darken($body-bg, 6.67);
+	.dark & {
+		border-left-color: rgba($white,0.1);
+		border-right-color: rgba($white,0.1);
+	}
+	a,
+	img {
+		display: block;
+	}
+}
+
+.bnews-title {
+	display: block;
+	float: left;
+	margin-top: 2px;
+	padding-top: .3em;
+	text-transform: uppercase;
+	@include media-breakpoint-down(md) {
+		float: none;
+		display: inline-block;
+	}
+}
+
+.bnews-slider {
+	float: left;
+	width: 970px;
+	margin-left: 20px;
+	min-height: 0;
+
+	@include media-breakpoint-only(lg) { width: 817px; }
+
+	@include media-breakpoint-down(md) {
+		float: none;
+		margin: 10px 0 0;
+		width: 100%;
+	}
+}
+
+/* ----------------------------------------------------------------
+	Text Rotater
+-----------------------------------------------------------------*/
+
+.text-rotater {
+	& > .t-rotate {
+		& > .animated {
+			display: inline-block;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+	Go To Top
+-----------------------------------------------------------------*/
+
+
+#gotoTop {
+	display: none;
+	z-index: 299;
+	position: fixed;
+	width: $gotoTop-size;
+	height: $gotoTop-size;
+	background-color: $gotoTop-bg;
+	font-size: $gotoTop-icon-size;
+	line-height: $gotoTop-size - 2;
+	text-align: center;
+	color: $gotoTop-icon-color;
+	top: auto;
+	left: auto;
+	cursor: pointer;
+	@include align-position($gotoTop-position-boxed);
+	@include border-radius($gotoTop-border-radius);
+	&:hover {
+		background-color: $gotoTop-hover-color;
+	}
+	@include media-breakpoint-down(sm) {
+		@if $gotoTop-hidden-sm == true {
+			display: none !important;
+		} @else {
+			display: block !important;
+		}
+	}
+}
+
+body {
+	&:not(.device-touch) {
+		#gotoTop {
+			@include transition(background-color .2s linear);
+		}
+	}
+}
+
+.stretched {
+	#gotoTop {
+		@include align-position($gotoTop-position);
+	}
+}
+
+/* ----------------------------------------------------------------
+	Error 404
+-----------------------------------------------------------------*/
+
+.error404 {
+	display: block;
+	font-size: 216px;
+	font-weight: 700;
+	color: darken($body-bg, 13.33);
+	line-height: 1.35;
+	letter-spacing: 4px;
+	@include media-breakpoint-down(md) { font-size: 180px; }
+	@include media-breakpoint-only(sm) { font-size: 160px; }
+	@include media-breakpoint-down(xs) { font-size: 120px; }
+	.dark & { color: rgba($white,0.15); }
+}
+.error404-wrap {
+	.container {
+		z-index: 7;
+	}
+	.error404 {
+		line-height: 0.9;
+		margin-bottom: 40px;
+		font-weight: bold;
+		font-size: 244px;
+		color: #FFF !important;
+		opacity: 0.2;
+		text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+	}
+	.heading-block {
+		h4 {
+			font-weight: 300;
+			margin-bottom: 8px;
+		}
+		span {
+			font-size: 17px;
+		}
+	}
+	form {
+		max-width: 500px;
+	}
+	@at-root.dark#{&} .form-control {
+		@include placeholder { color: darken($text-color-dark, 40%); }
+	}
+}
+
+/* ----------------------------------------------------------------
+	Landing Pages
+-----------------------------------------------------------------*/
+
+.landing-wide-form {
+	background: rgba(0,0,0,0.3);
+	padding: 30px;
+	@include border-radius(3px);
+}
+
+.landing-form-overlay {
+	position: absolute;
+	z-index: 10;
+	top: auto;
+	left: auto;
+	right: 0;
+	bottom: -154px;
+	background-color: rgba(0,0,0,0.6);
+	@include border-radius(3px 3px 0 0);
+	@include media-breakpoint-only(lg) { bottom: -142px; }
+	@include media-breakpoint-down(md) {
+		position: absolute;
+		width: 100%;
+		max-width: 400px;
+		right: auto;
+		left: 50%;
+		margin-left: -200px;
+		bottom: 0;
+	}
+	@include media-breakpoint-down(xs) { margin-left: -155px; }
+}
+
+.landing-video {
+	z-index: 1;
+	width: 560px;
+	height: 315px;
+	margin: 22px 0 0 95px;
+	overflow: hidden;
+	@include media-breakpoint-only(lg) {
+		width: 465px;
+		height: 262px;
+		margin: 19px 0 0 75px;
+	}
+	@include media-breakpoint-only(md) {
+		width: 352px;
+		height: 199px;
+		margin: 14px 0 0 60px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		position: relative;
+		top: 14px;
+		width: 76%;
+		height: auto;
+		margin: 19px auto 0;
+	}
+}
+
+.landing-promo {
+	h3 {
+		font-size: 26px;
+	}
+}
+
+.landing-promo {
+	> .container {
+		> span {
+			font-size: 17px;
+		}
+	}
+}
+
+@include media-breakpoint-only(lg) {
+	.col_one_third {
+		.landing-wide-form {
+			padding: 36px 30px;
+			.heading-block {
+				h2 { font-size: 32px; }
+				span { font-size: 17px; }
+			}
+		}
+	}
+}
+/* ----------------------------------------------------------------
+	Preloaders
+-----------------------------------------------------------------*/
+
+.preloader,
+.preloader2,
+.form-process {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: $body-bg;
+	@include background-image($preloader-image-path, $preloader-image, $preloader-fallback-extension, 24px 24px, true, true);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.preloader2 { background-color: transparent; }
+.form-process {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	background-color: $form-processor-bg;
+}
+
+.dark {
+	.preloader { background-color: rgba($black,0.2); }
+	.form-process { background-color: transparent; }
+}
+
+/* ----------------------------------------------------------------
+	Toastr Notifications
+-----------------------------------------------------------------*/
+
+
+.toast-title {
+	font-weight: bold;
+}
+.toast-message {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	a,
+	label {
+		color: #ffffff;
+	}
+	a {
+		&:hover {
+			color: #cccccc;
+			text-decoration: none;
+		}
+	}
+}
+
+.toast-close-button {
+	position: relative;
+	right: -0.3em;
+	top: -0.3em;
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	-webkit-text-shadow: 0 1px 0 #ffffff;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.8;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	filter: alpha(opacity=80);
+	line-height: 1;
+	&:hover,
+	&:focus {
+		color: #000000;
+		text-decoration: none;
+		cursor: pointer;
+		opacity: 0.4;
+		-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+		filter: alpha(opacity=40);
+	}
+}
+
+.rtl .toast-close-button {
+	left: -0.3em;
+	float: left;
+	right: 0.3em;
+}
+/*Additional properties for button version
+ iOS requires the button element instead of an anchor tag.
+ If you want the anchor version, it requires `href="#"`.*/
+
+button {
+	&.toast-close-button {
+		padding: 0;
+		cursor: pointer;
+		background: transparent;
+		border: 0;
+		-webkit-appearance: none;
+	}
+}
+
+.toast-top-full-width {
+	top: $toastr-position-gutter;
+	right: 0;
+	width: 100%;
+}
+.toast-bottom-full-width {
+	bottom: $toastr-position-gutter;
+	right: 0;
+	width: 100%;
+}
+.toast-top-left {
+	top: $toastr-position-gutter;
+	left: $toastr-position-gutter;
+}
+.toast-top-right {
+	top: $toastr-position-gutter;
+	right: $toastr-position-gutter;
+}
+.toast-bottom-right {
+	right: $toastr-position-gutter;
+	bottom: $toastr-position-gutter;
+}
+.toast-bottom-left {
+	bottom: $toastr-position-gutter;
+	left: $toastr-position-gutter;
+}
+#toast-container {
+	position: fixed;
+	z-index: 999999;
+	pointer-events: none;
+	/*overrides*/
+	* {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	& > div {
+		position: relative;
+		pointer-events: auto;
+		overflow: hidden;
+		margin: 0 0 6px;
+		padding: 20px 25px;
+		width: 300px;
+		@include border-radius(3px);
+		background-repeat: no-repeat;
+		-moz-box-shadow: 0 0 12px #999999;
+		-webkit-box-shadow: 0 0 12px #999999;
+		box-shadow: 0 0 12px #999999;
+		color: #FFFFFF;
+		opacity: 0.8;
+		-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		filter: alpha(opacity=80);
+	}
+	> div.rtl { direction: rtl; }
+	> div:hover {
+		-moz-box-shadow: 0 0 12px #000000;
+		-webkit-box-shadow: 0 0 12px #000000;
+		box-shadow: 0 0 12px #000000;
+		opacity: 1;
+		-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		filter: alpha(opacity=100);
+		cursor: pointer;
+	}
+	&.toast-top-center > div,
+	&.toast-bottom-center > div {
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&.toast-top-full-width > div,
+	&.toast-bottom-full-width > div {
+		width: 96%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.toast {
+	background-color: lighten($black-color, 1.18%);
+}
+.toast-success {
+	background-color: $success;
+}
+.toast-error {
+	background-color: $danger;
+}
+.toast-info {
+	background-color: $info;
+}
+.toast-warning {
+	background-color: $warning;
+}
+
+.toast-progress {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 4px;
+	background-color: $black-color;
+	opacity: 0.4;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+	filter: alpha(opacity=40);
+}
+/*Responsive Design*/
+@media all and (max-width: 240px) {
+	#toast-container > div {
+		padding: 10px 15px;
+		width: 11em;
+	}
+	#toast-container .toast-close-button {
+		right: -0.2em;
+		top: -0.2em;
+	}
+	#toast-container .rtl .toast-close-button {
+		left: -0.2em;
+		right: 0.2em;
+	}
+}
+@media all and (min-width: 241px) and (max-width: 480px) {
+	#toast-container > div {
+		padding: 10px 15px;
+		width: 18em;
+	}
+	#toast-container .toast-close-button {
+		right: -0.2em;
+		top: -0.2em;
+	}
+	#toast-container .rtl .toast-close-button {
+		left: -0.2em;
+		right: 0.2em;
+	}
+}
+@media all and (min-width: 481px) and (max-width: 768px) {
+	#toast-container > div {
+		padding: 15px 20px;
+		width: 25em;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Wedding
+-----------------------------------------------------------------*/
+
+
+.wedding-head {
+	position: relative;
+	line-height: 1;
+	font-size: 80px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+	@include media-breakpoint-down(md) { font-size: 60px; }
+	@include media-breakpoint-down(sm) { font-size: 48px; }
+	.first-name,
+	.last-name,
+	.and {
+		display: inline-block;
+		margin-right: 15px;
+		font-weight: bold;
+		text-align: right;
+		text-transform: uppercase;
+		font-family: $heading-font;
+		letter-spacing: 2px;
+		@include media-breakpoint-down(sm) {
+			display: block;
+			margin: 0 0 15px;
+			text-align: center;
+		}
+	}
+	.last-name {
+		margin: 0 0 0 15px;
+		text-align: left;
+	}
+	.first-name span,
+	.last-name span {
+		display: block;
+		margin-top: 10px;
+		font-size: 56px;
+		font-weight: 400;
+		font-style: italic;
+		font-family: $secondary-font;
+		text-transform: none;
+		@include media-breakpoint-down(md) { font-size: 40px; }
+		@include media-breakpoint-down(sm) { font-size: 36px; }
+	}
+	.and {
+		margin: 0;
+		font-size: 200px;
+		font-family: 'Times New Roman', serif;
+		@include media-breakpoint-down(md) { font-size: 144px; }
+		@include media-breakpoint-down(sm) { font-size: 120px; }
+	}
+}

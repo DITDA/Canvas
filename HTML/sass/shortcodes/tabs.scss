@@ -1,0 +1,432 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: tabs.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Tabs
+-----------------------------------------------------------------*/
+
+.tabs {
+	position: relative;
+	margin: 0 0 30px 0;
+}
+
+ul {
+	&.tab-nav {
+		margin: 0;
+		border-bottom: $tabs-border-bottom solid $tabs-border-color;
+		list-style: none;
+		.dark & { border-color: lighten($body-bg-dark, 6.67); }
+		li {
+			float: left;
+			border: $tabs-border-width solid $tabs-border-color;
+			border-bottom: 0;
+			border-left: 0;
+			height: $tab-height + $tabs-border-width;
+			text-align: center;
+			&:first-child {
+				margin-left: $tab-padding-width;
+				border-left: $tabs-border-width solid $tabs-border-color;
+				.dark & { border-left-color: lighten($body-bg-dark, 6.67); }
+			}
+			.dark & { border-color: lighten($body-bg-dark, 6.67); }
+			a {
+				display: block;
+				padding: 0 $tab-padding-width;
+				color: $tab-base-color;
+				height: $tab-height;
+				line-height: $tab-height;
+				background-color: $tabs-bg-color;
+				font-size: $tabs-font-size;
+				font-weight: bold;
+				.dark & {
+					color: darken($text-color-dark, 6.67%);
+					background-color: rgba($black,0.15);
+				}
+			}
+			&.ui-tabs-active {
+				a {
+					position: relative;
+					top: 0;
+					height: $tab-height + $tabs-border-width;
+					background-color: $tabs-active-bg-color;
+					.dark & { background-color: $body-bg-dark; }
+				}
+			}
+		}
+	}
+}
+
+/* Tabs - Alternate Nav
+-----------------------------------------------------------------*/
+
+.tabs {
+	&.tabs-alt {
+		ul.tab-nav li {
+			border-color: transparent;
+			&:first-child { border-left: 0; }
+			a {
+				background-color: $body-bg;
+				.dark & { background-color: $body-bg-dark; }
+			}
+			&.ui-tabs-active a {
+				border: $tabs-border-width solid $tabs-border-color;
+				border-bottom: 0;
+				.dark & { border-color: lighten($body-bg-dark, 6.67); }
+			}
+		}
+	}
+}
+
+/* Tabs - Top Border
+-----------------------------------------------------------------*/
+
+.tabs {
+	&.tabs-tb {
+		ul.tab-nav {
+			li.ui-tabs-active a {
+				top: - round($tabs-border-width - $tabs-tb-border-width) - 1;
+				height: round($tab-height + $tabs-tb-border-width + 1);
+				line-height: round($tab-height - $tabs-tb-border-width);
+				border-top: $tabs-tb-border-width solid $theme-color;
+			}
+		}
+	}
+	&.tabs-alt {
+		&.tabs-tb {
+			ul.tab-nav {
+				li.ui-tabs-active a { height: round($tab-height + $tabs-tb-border-width + 1); }
+			}
+		}
+	}
+}
+
+/* Tabs - Bottom Border
+-----------------------------------------------------------------*/
+
+.tabs {
+	&.tabs-bb {
+		ul.tab-nav {
+			li {
+				border: 0;
+				margin: 0;
+				a {
+					background-color: transparent;
+					border-bottom: $tabs-tb-border-width solid transparent;
+				}
+				&.ui-tabs-active a {
+					border-bottom: $tabs-tb-border-width solid $theme-color;
+					top: - round($tabs-border-width - $tabs-tb-border-width) - round($tabs-tb-border-width / 2);
+					height: round($tab-height + $tabs-tb-border-width + 2);
+					line-height: round($tab-height + $tabs-tb-border-width + 2);
+				}
+			}
+		}
+	}
+}
+
+/* Tabs - Navigation Style 2
+-----------------------------------------------------------------*/
+
+ul {
+	&.tab-nav {
+		&.tab-nav2 {
+			border-bottom: 0;
+			li {
+				border: 0;
+				margin-left: 10px;
+				&:first-child {
+					margin-left: 0;
+					border-left: 0;
+				}
+				a {
+					background-color: $tabs-bg-color;
+					@include border-radius(2px);
+					box-shadow: inset 0 1px 2px rgba($black, 0.1);
+
+					.dark & { background-color: rgba($black,0.2); }
+				}
+				&.ui-state-active {
+					a {
+						top: 0;
+						background-color: $theme-color;
+						color: #FFF;
+						.dark & { background-color: $theme-color; }
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Tabs - Content Area
+-----------------------------------------------------------------*/
+
+.tab-container {
+	position: relative;
+	padding: 20px 0 0;
+	@include media-breakpoint-down(sm) {
+		padding: 0 !important;
+	}
+}
+
+ul {
+	&.tab-nav {
+		li {
+			a {
+				i {
+					position: relative;
+					top: 1px;
+					font-size: $tabs-font-size;
+					margin-right: 3px;
+				}
+			}
+		}
+	}
+}
+
+/* Tabs - Bordered
+-----------------------------------------------------------------*/
+
+.tabs-bordered {
+	ul {
+		&.tab-nav {
+			li {
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.tab-container {
+		border: $tabs-border-bottom solid $tabs-border-color;
+		border-top: 0;
+		padding: 20px;
+		.dark & { border-color: lighten($body-bg-dark, 6.67); }
+	}
+}
+
+/* Tabs - Side Tabs
+-----------------------------------------------------------------*/
+
+.side-tabs {
+	ul {
+		&.tab-nav {
+			float: left;
+			width: $side-tab-width;
+			padding: 20px 0;
+			border-bottom: 0;
+			border-right: $tabs-border-width solid $tabs-border-color;
+			.dark & { border-right-color: lighten($body-bg-dark, 6.67); }
+			li {
+				float: none;
+				border: $tabs-border-width solid $tabs-border-color;
+				border-right: 0;
+				border-top: 0;
+				height: auto;
+				text-align: left;
+				.dark & { border-color: lighten($body-bg-dark, 6.67); }
+				&:first-child {
+					margin-left: 0;
+					border-top: $tabs-border-width solid $tabs-border-color;
+					border-left: $tabs-border-width solid $tabs-border-color;
+					.dark & {
+						border-top-color: lighten($body-bg-dark, 6.67);
+						border-left-color: lighten($body-bg-dark, 6.67);
+					}
+				}
+				a {
+					height: auto;
+					line-height: $tab-height + round($tabs-border-width * 2);
+				}
+				&.ui-tabs-active {
+					a {
+						top: 0;
+						right: -$tabs-border-width;
+					}
+				}
+			}
+		}
+	}
+	.tab-container {
+		overflow: hidden;
+		padding: 15px 0 0 $side-tab-padding-left;
+	}
+}
+
+/* Tabs - Side Tabs & Nav Style 2
+-----------------------------------------------------------------*/
+
+.side-tabs {
+	ul {
+		&.tab-nav {
+			&.tab-nav2 {
+				border: 0;
+				li {
+					border: 0;
+					margin: 6px 0 0;
+					&:first-child {
+						margin-top: 0;
+					}
+					a {
+						box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+					}
+					&.ui-state-active {
+						a {
+							right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Tabs - Side Tabs & Bordered
+-----------------------------------------------------------------*/
+
+.tabs-bordered {
+	&.side-tabs {
+		ul {
+			&.tab-nav {
+				position: relative;
+				padding: 0;
+				z-index: 2;
+				margin-right: -$tabs-border-width;
+				li {
+					a {
+						height: auto;
+						line-height: $tab-height + round($tabs-border-width * 2);
+					}
+					&.ui-tabs-active {
+						a {
+							right: -$tabs-border-width;
+							border-right: $tabs-border-width solid $body-bg;
+
+							.dark & { border-right-color: $body-bg-dark; }
+						}
+					}
+				}
+			}
+		}
+		.tab-container {
+			overflow: hidden;
+			padding: 20px;
+			border-top: $tabs-border-width solid $tabs-border-color;
+			.dark & { border-top-color: lighten($body-bg-dark, 6.67); }
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+	Side Navigation
+-----------------------------------------------------------------*/
+
+
+.sidenav {
+	width: 100%;
+	padding: 0;
+	background-color: $body-bg;
+	border-radius: $sidenav-radius;
+
+	.dark & { background-color: rgba($black,0.2); }
+}
+
+.sidenav li { list-style-type: none; }
+
+.sidenav li a {
+	display: block;
+	position: relative;
+	margin: 0 0 (-$sidenav-border);
+	padding: $sidenav-padding-height ($sidenav-padding-width + $sidenav-icon-margin) $sidenav-padding-height $sidenav-padding-width;
+	font-size: $sidenav-font-size;
+	border: $sidenav-border solid $sidenav-border-color;
+	border-right-width: round($sidenav-border + 1);
+	color: $sidenav-font-color;
+
+	.dark & {
+		border-color: lighten($body-bg-dark, 6.67);
+		color: darken($text-color-dark, 20%);
+	}
+}
+
+.sidenav > li:first-child > a { border-radius: $sidenav-radius $sidenav-radius 0 0; }
+
+.sidenav > li:last-child > a {
+	border-radius: 0 0 $sidenav-radius $sidenav-radius;
+	border-bottom-width: round($sidenav-border + 1);
+}
+
+.sidenav > .ui-tabs-active > a,
+.sidenav > .ui-tabs-active > a:hover {
+	position: relative;
+	z-index: 2;
+	border-color: rgba(0,0,0,0.1) !important;
+	color: #FFF !important;
+	font-weight: 700;
+	background-color: $theme-color !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.sidenav li ul { display: none; }
+
+.sidenav li.ui-tabs-active ul { display: block; }
+
+.sidenav li li a {
+	padding: round($sidenav-padding-height / 2) round($sidenav-padding-width * 1.43) round($sidenav-padding-height / 2) round($sidenav-padding-width * 2.5);
+	font-size: 14px;
+	border-top: none;
+	border-bottom: none;
+}
+
+.sidenav li li:first-child a { padding-top: 20px; }
+
+.sidenav li li:last-child a { padding-bottom: 20px; }
+
+.sidenav li i {
+	position: relative;
+	top: 1px;
+	margin-right: $sidenav-icon-margin;
+	font-size: $sidenav-font-size;
+	text-align: center;
+	width: $sidenav-font-size + 2;
+}
+
+/* Chevrons */
+.sidenav .icon-chevron-right {
+	position: absolute;
+	width: $sidenav-font-size;
+	height: $sidenav-font-size;
+	top: 50%;
+	left: auto;
+	right: $sidenav-icon-margin;
+	margin-top: - round(($sidenav-font-size + 2) / 2);
+	margin-right: 0;
+	opacity: .4;
+	font-size: $sidenav-font-size - 2 !important;
+}
+
+.sidenav > li > a:hover {
+	background-color: darken($body-bg, 3.92%);
+
+	.dark & {
+		background-color: rgba($black,0.3);
+	}
+}
+
+.sidenav a:hover .icon-chevron-right { opacity: .5; }
+
+.sidenav .ui-tabs-active .icon-chevron-right,
+.sidenav .ui-tabs-active a:hover .icon-chevron-right { opacity: 1; }
+
+
+@include media-breakpoint-down(sm) {
+	.tabs-responsive {
+		.tab-container{
+			&:not(.accordion-border) { border: 0; }
+		}
+	}
+}

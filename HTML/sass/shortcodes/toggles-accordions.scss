@@ -1,0 +1,246 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: toggles-accordions.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Toggle
+-----------------------------------------------------------------*/
+
+.toggle {
+	display: block;
+	position: relative;
+	margin: 0 0 20px 0;
+
+	.togglet,
+	.toggleta {
+		display: block;
+		position: relative;
+		line-height: round($toggle-font-size * 1.5);
+		padding: 0 0 0 $toggle-padding-left;
+		margin: 0;
+		font-size: $toggle-font-size;
+		font-weight: 700;
+		color: $toggle-title-color;
+		cursor: pointer;
+		.dark & {
+			color: darken($text-color-dark, 13.33%);
+		}
+	}
+	.togglet i {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $toggle-font-size;
+		text-align: center;
+		font-size: $toggle-font-size;
+		line-height: round($toggle-font-size * 1.5);
+		color: $toggle-icon-color-open;
+		font-family: $toggle-accordion-icons-ff;
+	}
+	.toggleta { font-weight: bold; }
+
+	.togglet i.toggle-open,
+	.toggleta i.toggle-closed { display: none; }
+
+	.toggleta i.toggle-open {
+		display: block;
+		color: $toggle-icon-color-closed;
+	}
+
+	.togglet i.toggle-open::before { content: $toggle-accordion-icons-open; }
+	.togglet i.toggle-closed::before { content: $toggle-accordion-icons-closed; }
+
+	.togglec {
+		display: block;
+		position: relative;
+		padding: 10px 0 0 $toggle-padding-left;
+	}
+}
+
+/* Toggle - with Title Background
+-----------------------------------------------------------------*/
+
+.toggle {
+	&.toggle-bg {
+		.togglet,
+		.toggleta {
+			background-color: $toggle-bg-color;
+			line-height: round($toggle-font-size * 2.75);
+			padding: 0 0 0 $toggle-bg-padding-left;
+			@include border-radius($toggle-border-radius);
+			.dark & {
+				background-color: rgba($black,0.2);
+			}
+		}
+		.togglet {
+			i {
+				left: 14px;
+				line-height: round($toggle-font-size * 2.75);
+			}
+		}
+		.togglec {
+			padding: 12px 0 0 $toggle-bg-padding-left;
+		}
+	}
+}
+
+/* Toggle - Bordered
+-----------------------------------------------------------------*/
+
+.toggle {
+	&.toggle-border {
+		border: $toggle-border-size solid $toggle-border-color;
+		@include border-radius($toggle-border-radius);
+		.dark & { border-color: rgba($white,0.15); }
+		.togglet {
+			i {
+				left: 14px;
+				line-height: round($toggle-font-size * 2.75);
+			}
+		}
+		.togglec {
+			padding: 0 round($toggle-bg-padding-left * .417) round($toggle-bg-padding-left * .417) $toggle-bg-padding-left;
+		}
+		.togglet,
+		.toggleta {
+			line-height: round($toggle-font-size * 2.75);
+			padding: 0 round($toggle-bg-padding-left * .417) 0 $toggle-bg-padding-left;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Accordions
+-----------------------------------------------------------------*/
+
+.accordion {
+	margin-bottom: 20px;
+}
+.acctitle,
+.acctitlec {
+	display: block;
+	position: relative;
+	line-height: round($accordion-font-size * 1.71);
+	margin: 0;
+	font-size: $accordion-font-size;
+	font-weight: bold;
+	color: $accordion-title-color;
+	cursor: pointer;
+	border-top: $accordion-border-size dotted $accordion-border-color;
+	padding: $accordion-padding-height 0 $accordion-padding-height $accordion-padding-left;
+	.dark & {
+			color: darken($text-color-dark, 13.33%);
+			border-top-color: rgba($white,0.15);
+	}
+}
+.acctitlec {
+	cursor: auto;
+}
+.acctitle {
+	&:first-child {
+		border-top: none;
+	}
+	i {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $accordion-font-size;
+		text-align: center;
+		font-size: $accordion-font-size;
+		line-height: round($accordion-font-size * 1.71) + ($accordion-padding-height * 2);
+		color: $toggle-icon-color-open;
+	}
+}
+.acctitle i.acc-open,
+.acctitlec i.acc-closed { display: none; }
+
+.acctitlec i.acc-open {
+	display: block;
+	color: $toggle-icon-color-closed;
+}
+
+.acc_content {
+	position: relative;
+	padding: 0 0 ($accordion-padding-height + 5px) $accordion-padding-left;
+}
+
+
+/* Accordion - with Title Background
+-----------------------------------------------------------------*/
+
+.accordion {
+	&.accordion-bg {
+		.acctitle,
+		.acctitlec {
+			background-color: $toggle-bg-color;
+			line-height: round($accordion-font-size * 3.15); //44px
+			padding: 0 0 0 $accordion-bg-padding-left; //36px
+			margin-bottom: 5px;
+			border-top: 0;
+			.dark & { background-color: rgba($black,0.2); }
+		}
+		.acctitle {
+			i {
+				left: 14px;
+				line-height: round($accordion-font-size * 3.15);
+			}
+		}
+		.acc_content {
+			padding: 10px 0 15px $accordion-bg-padding-left;
+		}
+	}
+}
+
+/* Accordion - Bordered
+-----------------------------------------------------------------*/
+
+.accordion {
+	&.accordion-border {
+		border: $accordion-border-size solid $accordion-border-color;
+		@include border-radius($toggle-border-radius);
+		.dark & { border-color: rgba($white,0.1); }
+		.acctitle,
+		.acctitlec {
+			border-color: darken($accordion-border-color, 6.67%);
+			line-height: round($accordion-font-size * 3.15);
+			padding: 0 15px 0 $accordion-bg-padding-left;
+			.dark & { border-color: rgba($white,0.15); }
+		}
+		.acctitle {
+			i {
+				left: 14px;
+				line-height: round($accordion-font-size * 3.15);
+			}
+		}
+		.acc_content {
+			padding: 0 round($toggle-bg-padding-left * .417) round($toggle-bg-padding-left * .417) round($toggle-bg-padding-left * .417) round($toggle-bg-padding-left * .417) $accordion-bg-padding-left;
+		}
+	}
+}
+
+
+/* Accordion - Large
+-----------------------------------------------------------------*/
+
+.accordion {
+	&.accordion-lg {
+		.acctitle {
+			font-size: $accordion-lg-font-size;
+			line-height: ($accordion-lg-font-size * 1.91);
+			padding-left: $toggle-lg-padding-left;
+			font-weight: 400;
+			i {
+				width: $accordion-lg-font-size;
+				font-size: $accordion-lg-font-size;
+				line-height: round($accordion-lg-font-size * 1.9) + ($accordion-padding-height * 2); //64px;
+			}
+		}
+		.acc_content {
+			padding: $accordion-padding-height 0 30px $toggle-lg-padding-left;
+		}
+	}
+}

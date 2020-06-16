@@ -1,0 +1,149 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: overlays.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Overlays
+-----------------------------------------------------------------*/
+
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.overlay .overlay-wrap,
+.text-overlay {
+	opacity: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: $overlay-bg;
+	body:not(.device-touch) & {
+		@include transition(all .3s ease-in-out);
+	}
+}
+
+.overlay {
+	.overlay-wrap i {
+		position: absolute;
+		font-size: $overlay-icon;
+		line-height: 1;
+		width: $overlay-icon;
+		height: $overlay-icon;
+		text-align: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: $overlay-icon-color;
+	}
+
+	&:hover {
+		.overlay-wrap,
+		.text-overlay {
+			opacity: 1;
+		}
+	}
+}
+
+.text-overlay {
+	position: absolute;
+	opacity: $overlay-text-opacity;
+	top: auto;
+	bottom: 0;
+	height: auto;
+	padding: $overlay-text-padding;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	background-color: transparent;
+	@include gradient-y($overlay-text-bg-start-color, $overlay-text-bg-end-color);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+	backface-visibility: hidden;
+}
+
+.text-overlay-title {
+	h2,
+	h3,
+	h4 {
+		margin: 0;
+		color: $overlay-text-title-color;
+	}
+
+	h2 {
+		font-size: $overlay-text-font-size;
+	}
+
+	h3 {
+		font-size: round($overlay-text-font-size * .6);
+		font-weight: 600;
+	}
+
+	h2,
+	h3,
+	h4 {
+		max-width: 100%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
+
+.text-overlay-meta {
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	color: $overlay-text-meta-color;
+	font-size: round($overlay-text-font-size * .46);
+
+	span {
+		i {
+			position: relative;
+			top: 1px;
+			font-size: round($overlay-text-font-size * .5);
+		}
+	}
+}
+
+/* News Carousel Overlays
+-----------------------------------------------------------------*/
+
+.news-carousel {
+	.text-overlay {
+		padding: 40px 30px 25px;
+	}
+
+	.text-overlay-title {
+		margin: 15px 0 10px;
+
+		h2,
+		h3,
+		h4 {
+			line-height: 1.2;
+			text-overflow: none;
+			white-space: normal;
+		}
+	}
+
+	.text-overlay-meta {
+		font-size: round($overlay-text-font-size * .5);
+	}
+
+	.rounded-skill {
+		position: absolute;
+		margin: 0 !important;
+		top: 30px;
+		right: 30px;
+		color: #FFF;
+		font-weight: 700;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.overlay { display: none; }
+	}
+}

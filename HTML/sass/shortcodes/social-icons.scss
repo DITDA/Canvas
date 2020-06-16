@@ -1,0 +1,226 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: social-icons.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Social Icons
+-----------------------------------------------------------------*/
+
+
+.social-icon {
+	margin: 0 $social-margins $social-margins 0;
+	width: $social-icon-size;
+	height: $social-icon-size;
+	font-size: $social-icon-font-size;
+	line-height: round($social-icon-size - round($social-icon-border * 2)) !important;
+	color: $social-icon-color;
+	text-shadow: none;
+	border: $social-icon-border solid $social-icon-border-color;
+	@include border-radius($social-icon-rounded);
+	overflow: hidden;
+
+	.dark & {
+		color: darken($text-color-dark, 6.67%) !important;
+		border-color: darken($text-color-dark, 6.67%);
+	}
+}
+
+
+/* Social Icons - Rounded
+-----------------------------------------------------------------*/
+
+.si-rounded { @include border-radius(50%); }
+
+/* Social Icons - Borderless
+-----------------------------------------------------------------*/
+
+.si-borderless {
+	border-color: transparent !important;
+	.dark #footer &.social-icon,
+	#footer.dark &.social-icon {color: #555 !important; }
+}
+
+/* Social Icons - Dark
+-----------------------------------------------------------------*/
+
+.si-dark {
+	background-color: $social-icon-dark-color;
+	color: #FFF !important;
+	border-color: transparent;
+	.dark & {
+		background-color: rgba($black,0.2);
+		border-color: transparent;
+	}
+}
+
+/* Social Icons - Light
+-----------------------------------------------------------------*/
+
+.si-light {
+	background-color: rgba(black,$social-icon-light-color);
+	color: $social-icon-color !important;
+	border-color: transparent;
+	.dark & {
+		background-color: rgba($white,0.1);
+		color: $text-color-dark !important;
+		border-color: transparent;
+	}
+}
+
+/* Social Icons - Colored
+-----------------------------------------------------------------*/
+
+.si-colored {
+	border-color: transparent !important;
+	i { color: #FFF; }
+}
+
+/* Social Icons - Large
+-----------------------------------------------------------------*/
+
+.social-icon {
+	&.si-large {
+		margin: 0 ($social-margins * 2) ($social-margins * 2) 0;
+		width: $social-icon-lg-size;
+		height: $social-icon-lg-size;
+		font-size: $social-icon-lg-font-size;
+		line-height: round($social-icon-lg-size - round($social-icon-border * 2)) !important;
+	}
+}
+
+/* Social Icons - Small
+-----------------------------------------------------------------*/
+
+.social-icon {
+	&.si-small {
+		width: $social-icon-sm-size;
+		height: $social-icon-sm-size;
+		font-size: $social-icon-sm-font-size;
+		line-height: round($social-icon-sm-size - round($social-icon-border * 2)) !important;
+	}
+	i {
+		display: block;
+		position: relative;
+		body:not(.device-touch) & {
+			@include transition(all .3s ease);
+		}
+	}
+}
+
+.social-icon {
+	i {
+		&:last-child {
+			color: #FFF !important;
+			.dark & { color: #FFF !important; }
+		}
+	}
+	&:hover {
+		color: $social-icon-color;
+		border-color: transparent;
+		.dark & {
+			color: #FFF !important;
+			border-color: transparent;
+		}
+		i {
+			&:first-child {
+				margin-top: - round($social-icon-size - round($social-icon-border * 2));
+			}
+		}
+	}
+	&.si-large {
+		&:hover {
+			i {
+				&:first-child {
+					margin-top: - round($social-icon-lg-size - round($social-icon-border * 2));
+				}
+			}
+		}
+	}
+	&.si-small {
+		&:hover {
+			i {
+				&:first-child {
+					margin-top: - round($social-icon-sm-size - round($social-icon-border * 2))
+				}
+			}
+		}
+	}
+}
+.si-colored {
+	&.social-icon {
+		border-color: transparent;
+	}
+}
+
+/* Social Icons - Sticky
+-----------------------------------------------------------------*/
+
+.si-sticky {
+	position: fixed;
+	top: 50%;
+	left: 5px;
+	width: 36px;
+	z-index: 100;
+	/* Social Icons - Sticky Right
+	-----------------------------------------------------------------*/
+	&.si-sticky-right {
+		left: auto;
+		right: 8px;
+	}
+}
+
+/* Social Icons - Share
+-----------------------------------------------------------------*/
+
+.si-share {
+	position: relative;
+	padding-left: 5px;
+	border-top: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include media-breakpoint-down(xs) { flex-direction: column; }
+	.dark & {
+		border-top-color: rgba($white,0.1);
+		border-bottom-color: rgba($white,0.1);
+	}
+	span {
+		line-height: 36px;
+		font-weight: bold;
+		font-size: 13px;
+	}
+	div {
+	    display: flex;
+	    justify-content: flex-end;
+		flex-basis: 0;
+	    flex-grow: 1;
+	    max-width: 100%;
+	    @include media-breakpoint-down(xs) { margin-top: 10px; }
+	}
+	.social-icon {
+		margin: -1px 0;
+		@include border-radius(0);
+		font-size: 15px;
+	}
+}
+
+
+
+/* Social Icons - bg-colors
+-----------------------------------------------------------------*/
+#{&}:hover.si-,
+.si-colored.si-#{&} {
+	@include si-color($bg:true);
+}
+
+/* Social Icons - colors
+-----------------------------------------------------------------*/
+.si-text-color {
+	@include si-color($color: true);
+	&:hover { color: $white; }
+}
+

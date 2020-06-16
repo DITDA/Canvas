@@ -1,0 +1,212 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: dividers.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Divider
+-----------------------------------------------------------------*/
+
+.divider {
+	position: relative;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	overflow: hidden;
+	margin: $divider-margins 0;
+	color: $divider-colors;
+	width: 100%;
+	.dark & { color: rgba($white,0.15); }
+
+	&-margin {
+		margin: ($divider-margins*2) 0;
+	}
+
+	&:after,
+	&-center:before,
+	&-center#{&}-short:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: $divider-icon-gutter;
+		height: 0;
+		transform: translateY(-50%);
+		border-top: $divider-border-size solid $divider-border-color;
+		.dark & { border-top-color: rgba($white,0.1); }
+	}
+
+	&-thick:after,
+	&-center#{&}-thick:before,
+	&-center#{&}-short#{&}-thick:before {
+		border-top-width: $divider-border-size * 3;
+	}
+
+	&-short:after {
+		width: $divider-short-width;
+	}
+
+	&-vshort:after {
+		width: round($divider-short-width / 2.5);
+	}
+
+	i {
+		position: relative;
+		width: $divider-icon-size;
+		height: $divider-icon-size;
+		line-height: 1;
+		font-size: $divider-icon-size !important;
+		text-align: center;
+	}
+
+	a {
+		position: relative;
+		display: inline-block;
+		color: inherit;
+		@include transition(all .3s ease);
+
+		&:hover {
+			color: $divider-icon-hover-color;
+		}
+	}
+
+	/* Divider - Icon Align Right
+	-----------------------------------------------------------------*/
+
+	&-right {
+		text-align: right;
+		justify-content: flex-end;
+
+		&:after {
+			left: auto;
+			right: $divider-icon-gutter;
+		}
+	}
+
+	/* Divider - Icon Align Center
+	-----------------------------------------------------------------*/
+
+	&-center,
+	&-center#{&}-short {
+		text-align: center;
+		justify-content: center;
+	}
+
+	&-center {
+		&:before, {
+			left: -50% !important;
+			right: 0;
+			margin-left: - round($divider-icon-gutter/ 1.5);
+		}
+
+		&:after {
+			left: 50% !important;
+			right: 0;
+			margin-left: round($divider-icon-gutter/ 1.5);
+		}
+
+		/* Short Divider - Icon Align Center
+		-----------------------------------------------------------------*/
+
+		&.divider-short {
+			&:before {
+				left: auto !important;
+				right: 50%;
+				margin-right: round($divider-icon-gutter/ 1.5);
+				width: round($divider-short-width / 2);
+			}
+
+			&:after {
+				left: 50% !important;
+				right: auto !important;
+				margin-left: round($divider-icon-gutter/ 1.5);
+				width: round($divider-short-width / 2);
+			}
+		}
+
+		&.divider-vshort {
+			&:before,
+			&:after { width: round($divider-short-width / 5); }
+		}
+	}
+
+	/* Divider - Rounded Icon
+	-----------------------------------------------------------------*/
+
+	&-rounded { color: $divider-rounded-color; }
+
+	&-rounded:after,
+	&-rounded#{&}-center:before,
+	&-rounded#{&}-short:before,
+	&-border:after,
+	&-border#{&}-center:before,
+	&-border#{&}-short:before { left: $divider-rounded-size; }
+
+	&-rounded,
+	&-border {
+		.dark & { color: darken($text-color-dark, 33.33%); }
+		i {
+			width: $divider-rounded-size;
+			height: $divider-rounded-size;
+			line-height: $divider-rounded-size;
+			background-color: $divider-rounded-background;
+			@include border-radius(50%);
+			.dark & { background-color: rgba($white,0.1); }
+		}
+	}
+
+	&-rounded i {
+		@function set-color($color) {
+		    @if (lightness($divider-rounded-background) > 40) {
+		      @return $divider-rounded-color;
+		    }
+		    @else {
+		      @return lighten($divider-colors, 86.67%);
+		    }
+		}
+		color: set-color($divider-rounded-background);
+	}
+
+	&-rounded,
+	&-border {
+		&.divider-right {
+			&:after {
+				left: auto;
+				right: $divider-rounded-size;
+			}
+		}
+	}
+
+
+	/* Divider - Rounded & Border
+	-----------------------------------------------------------------*/
+
+	&-border {
+		color: $divider-colors;
+
+		i {
+			line-height: round($divider-rounded-size - round($divider-border-size * 2));
+			background-color: transparent;
+			border: $divider-border-size solid $divider-border-color;
+			.dark & {
+				background-color: transparent;
+				border-color: rgba($white,0.15);
+			}
+		}
+	}
+
+
+	/* Divider - Line Only
+	-----------------------------------------------------------------*/
+
+	&-line {
+		&:before,
+		&:after {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+
+}
