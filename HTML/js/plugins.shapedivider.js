@@ -1,8 +1,6 @@
 window.scwShapeDividerPlugin = window.scwShapeDividerPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._shapeDividerInit = function( $shapeDividerEl ){
+window.SEMICOLON_shapeDividerInit = function( $shapeDividerEl ){
 
 	if( $shapeDividerEl.length < 1 ){
 		return true;

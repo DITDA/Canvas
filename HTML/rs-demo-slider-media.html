@@ -567,7 +567,7 @@
 															<a class="menu-link" href="page-title-center.html"><div>Center Align</div></a>
 														</li>
 														<li class="menu-item">
-															<a class="menu-link" href="page-titledark.html"><div>Dark Style</div></a>
+															<a class="menu-link" href="page-title-dark.html"><div>Dark Style</div></a>
 														</li>
 														<li class="menu-item">
 															<a class="menu-link" href="page-title-pattern.html"><div>BG Pattern</div></a>
@@ -1498,6 +1498,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -1960,9 +1961,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -1980,7 +1982,7 @@
 	<script>
 		var tpj=jQuery;
 		var revapi28;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		tpj(document).ready(function() {
 			if(tpj("#rev_slider_28_1").revolution == undefined){
@@ -2013,9 +2015,9 @@
 							hide_delay:200,
 							direction:"horizontal",
 							span:false,
-							position:"outer-bottom",
+							position:"outer-bottom-center",
 							space:0,
-							h_align:"left",
+							h_align:"center",
 							v_align:"bottom",
 							h_offset:0,
 							v_offset:0

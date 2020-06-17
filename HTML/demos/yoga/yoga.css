@@ -8,6 +8,29 @@
 	--themecolorrgba: 126, 150, 128;
 }
 
+/* Custom Header Size
+-----------------------------------------------------------------*/
+.header-size-custom #logo img {
+	height: 70px;
+}
+
+@media (min-width: 992px) {
+
+	.header-size-custom .header-wrap-clone {
+		height: calc( 70px + 1px );
+	}
+
+	#header.header-size-custom + .include-header {
+		margin-top: calc( -70px - 2px );
+	}
+
+	.header-size-custom .menu-container > .menu-item > .menu-link {
+		padding-top: 24px; /* (70px - 22px)/2 */
+		padding-bottom: 24px; /* (70px - 22px)/2 */
+	}
+
+}
+
 .bg-color {
 	background-color: var(--themecolor, #7E9680) !important;
 }
@@ -325,7 +348,7 @@
 	border-left: 0;
 	background-color: rgba(255, 255, 255, 0.1);
 	color: #888;
-	padding: 0 15px;
+	padding: 1rem;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }

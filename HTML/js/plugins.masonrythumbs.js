@@ -1,10 +1,6 @@
 window.scwMasonryThumbsPlugin = window.scwMasonryThumbsPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._masonryThumbsInit = function( $masonryThumbsEl ){
-
-	$masonryThumbsEl = $masonryThumbsEl.filter(':not(.customjs)');
+window.SEMICOLON_masonryThumbsInit = function( $masonryThumbsEl ){
 
 	if( $masonryThumbsEl.length < 1 ){
 		return true;

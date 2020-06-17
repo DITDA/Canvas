@@ -621,7 +621,7 @@
 															<a class="menu-link" href="page-title-center.html"><div>Center Align</div></a>
 														</li>
 														<li class="menu-item">
-															<a class="menu-link" href="page-titledark.html"><div>Dark Style</div></a>
+															<a class="menu-link" href="page-title-dark.html"><div>Dark Style</div></a>
 														</li>
 														<li class="menu-item">
 															<a class="menu-link" href="page-title-pattern.html"><div>BG Pattern</div></a>
@@ -1552,6 +1552,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Page Title
@@ -1601,182 +1602,198 @@
 
 							<!-- Portfolio Items
 							============================================= -->
-							<div id="portfolio" class="portfolio grid-container portfolio-1 portfolio-fullwidth">
+							<div id="portfolio" class="portfolio row grid-container gutter-20 gutter-sm-50" data-layout="fitRows">
 
-								<article class="portfolio-item pf-media pf-icons clearfix">
-									<div class="portfolio-image">
-										<a href="portfolio-single.html">
-											<img src="images/portfolio/1/full/1.jpg" alt="Open Imagination">
-										</a>
-										<div class="portfolio-overlay">
-											<a href="images/portfolio/full/1.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
-											<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
-										</div>
-									</div>
-									<div class="portfolio-desc">
-										<h3><a href="portfolio-single.html">Open Imagination</a></h3>
-										<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus.</p>
-										<ul class="iconlist">
-											<li><i class="icon-ok"></i> <strong>Created Using:</strong> PHP, HTML5, CSS3</li>
-											<li><i class="icon-ok"></i> <strong>Completed on:</strong> 12th January, 2021</li>
-											<li><i class="icon-ok"></i> <strong>By:</strong> John Doe</li>
-										</ul>
-										<a href="portfolio-single.html" class="button button-3d ml-0">Launch Project</a>
-									</div>
-								</article>
-
-								<article class="portfolio-item pf-illustrations clearfix">
-									<div class="portfolio-image">
-										<a href="portfolio-single.html">
-											<img src="images/portfolio/1/full/2.jpg" alt="Locked Steel Gate">
-										</a>
-										<div class="portfolio-overlay">
-											<a href="images/portfolio/full/2.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
-											<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
-										</div>
-									</div>
-									<div class="portfolio-desc">
-										<h3><a href="portfolio-single.html">Locked Steel Gate</a></h3>
-										<span><a href="#">Illustrations</a></span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus.</p>
-										<ul class="iconlist">
-											<li><i class="icon-ok"></i> <strong>Created Using:</strong> HTML5, CSS3, jQuery</li>
-											<li><i class="icon-ok"></i> <strong>Completed on:</strong> 14th February, 2021</li>
-											<li><i class="icon-ok"></i> <strong>By:</strong> Mary Jane</li>
-										</ul>
-										<a href="portfolio-single.html" class="button button-3d ml-0">Launch Project</a>
-									</div>
-								</article>
-
-								<article class="portfolio-item pf-graphics pf-uielements clearfix">
-									<div class="portfolio-image">
-										<a href="#">
-											<img src="images/portfolio/1/full/3.jpg" alt="Mac Sunglasses">
-										</a>
-										<div class="portfolio-overlay">
-											<a href="https://vimeo.com/89396394" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
-											<a href="portfolio-single-video.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
-										</div>
-									</div>
-									<div class="portfolio-desc">
-										<h3><a href="portfolio-single-video.html">Mac Sunglasses</a></h3>
-										<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus.</p>
-										<ul class="iconlist">
-											<li><i class="icon-ok"></i> <strong>Created Using:</strong> Wordpress, CSS3</li>
-											<li><i class="icon-ok"></i> <strong>Completed on:</strong> 21st February, 2021</li>
-											<li><i class="icon-ok"></i> <strong>By:</strong> Ricky Martin</li>
-										</ul>
-										<a href="portfolio-single-video.html" class="button button-3d ml-0">Launch Project</a>
-									</div>
-								</article>
-
-								<article class="portfolio-item pf-icons pf-illustrations clearfix">
-									<div class="portfolio-image">
-										<div class="fslider" data-arrows="false" data-speed="400" data-pause="4000">
-											<div class="flexslider">
-												<div class="slider-wrap">
-													<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/4.jpg" alt="Morning Dew"></a></div>
-													<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/4-1.jpg" alt="Morning Dew"></a></div>
+								<!-- Portfolio Item: Start -->
+								<article class="portfolio-item col-12 pf-media pf-icons">
+									<!-- Grid Inner: Start -->
+									<div class="grid-inner">
+										<!-- Image: Start -->
+										<div class="portfolio-image">
+											<a href="portfolio-single.html">
+												<img src="images/portfolio/1/full/1.jpg" alt="Open Imagination">
+											</a>
+											<!-- Overlay: Start -->
+											<div class="bg-overlay">
+												<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+													<!-- Decription: Start -->
+													<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+														<h3><a href="portfolio-single.html">Open Imagination</a></h3>
+														<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+													</div>
+													<!-- Description: End -->
+													<div class="d-flex">
+														<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
+														<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+													</div>
 												</div>
+												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+											</div>
+											<!-- Overlay: End -->
+										</div>
+										<!-- Image: End -->
+									</div>
+									<!-- Grid Inner: End -->
+								</article>
+								<!-- Portfolio Item: End -->
+
+								<article class="portfolio-item col-12 pf-illustrations">
+									<div class="grid-inner">
+										<div class="portfolio-image">
+											<a href="portfolio-single.html">
+												<img src="images/portfolio/1/full/2.jpg" alt="Locked Steel Gate">
+											</a>
+											<div class="bg-overlay">
+												<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+													<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+														<h3><a href="portfolio-single.html">Locked Steel Gate</a></h3>
+														<span><a href="#">Illustrations</a></span>
+													</div>
+
+													<div class="d-flex">
+														<a href="images/portfolio/full/2.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
+														<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+													</div>
+												</div>
+												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
 											</div>
 										</div>
-										<div class="portfolio-overlay" data-lightbox="gallery">
-											<a href="images/portfolio/full/4.jpg" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-											<a href="images/portfolio/full/4-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
-										</div>
-									</div>
-									<div class="portfolio-desc">
-										<h3><a href="portfolio-single-gallery.html">Morning Dew</a></h3>
-										<span><a href="#">Icons</a>, <a href="#">Illustrations</a></span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus.</p>
-										<ul class="iconlist">
-											<li><i class="icon-ok"></i> <strong>Created Using:</strong> jQuery, Ruby</li>
-											<li><i class="icon-ok"></i> <strong>Completed on:</strong> 3rd March, 2021</li>
-											<li><i class="icon-ok"></i> <strong>By:</strong> Corey Smith</li>
-										</ul>
-										<a href="portfolio-single-gallery.html" class="button button-3d ml-0">Launch Project</a>
 									</div>
 								</article>
 
-								<article class="portfolio-item pf-uielements pf-media clearfix">
-									<div class="portfolio-image">
-										<a href="portfolio-single.html">
-											<img src="images/portfolio/1/full/5.jpg" alt="Console Activity">
-										</a>
-										<div class="portfolio-overlay">
-											<a href="images/portfolio/full/5.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
-											<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
-										</div>
-									</div>
-									<div class="portfolio-desc">
-										<h3><a href="portfolio-single.html">Console Activity</a></h3>
-										<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus.</p>
-										<ul class="iconlist">
-											<li><i class="icon-ok"></i> <strong>Created Using:</strong> PHP, CSS3, MySQL</li>
-											<li><i class="icon-ok"></i> <strong>Completed on:</strong> 16th March, 2021</li>
-											<li><i class="icon-ok"></i> <strong>By:</strong> Emma Watson</li>
-										</ul>
-										<a href="portfolio-single.html" class="button button-3d ml-0">Launch Project</a>
-									</div>
-								</article>
+								<article class="portfolio-item col-12 pf-graphics pf-uielements">
+									<div class="grid-inner">
+										<div class="portfolio-image">
+											<a href="#">
+												<img src="images/portfolio/1/full/3.jpg" alt="Mac Sunglasses">
+											</a>
+											<div class="bg-overlay">
+												<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+													<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+														<h3><a href="portfolio-single-video.html">Mac Sunglasses</a></h3>
+														<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
+													</div>
 
-								<article class="portfolio-item pf-graphics pf-illustrations clearfix">
-									<div class="portfolio-image">
-										<div class="fslider" data-arrows="false">
-											<div class="flexslider">
-												<div class="slider-wrap">
-													<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/6.jpg" alt="Shake It"></a></div>
-													<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/6-1.jpg" alt="Shake It"></a></div>
-													<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/6-2.jpg" alt="Shake It"></a></div>
-													<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/6-3.jpg" alt="Shake It"></a></div>
+													<div class="d-flex">
+														<a href="https://vimeo.com/89396394" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350" data-lightbox="iframe"><i class="icon-line-play"></i></a>
+														<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+													</div>
 												</div>
+												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
 											</div>
 										</div>
-										<div class="portfolio-overlay" data-lightbox="gallery">
-											<a href="images/portfolio/full/6.jpg" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
-										</div>
-									</div>
-									<div class="portfolio-desc">
-										<h3><a href="portfolio-single-gallery.html">Shake It!</a></h3>
-										<span><a href="#">Illustrations</a>, <a href="#">Graphics</a></span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus.</p>
-										<ul class="iconlist">
-											<li><i class="icon-ok"></i> <strong>Created Using:</strong> PHP, HTML5, CSS3</li>
-											<li><i class="icon-ok"></i> <strong>Completed on:</strong> 24th March, 2021</li>
-											<li><i class="icon-ok"></i> <strong>By:</strong> Jane Doe</li>
-										</ul>
-										<a href="portfolio-single-gallery.html" class="button button-3d ml-0">Launch Project</a>
 									</div>
 								</article>
 
-								<article class="portfolio-item pf-uielements pf-icons clearfix">
-									<div class="portfolio-image">
-										<a href="portfolio-single-video.html">
-											<img src="images/portfolio/1/full/7.jpg" alt="Backpack Contents">
-										</a>
-										<div class="portfolio-overlay">
-											<a href="https://www.youtube.com/watch?v=kuceVNBTJio" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
-											<a href="portfolio-single-video.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+								<article class="portfolio-item col-12 pf-icons pf-illustrations">
+									<div class="grid-inner">
+										<div class="portfolio-image">
+											<div class="fslider" data-arrows="false" data-speed="400" data-pause="4000">
+												<div class="flexslider">
+													<div class="slider-wrap">
+														<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/4.jpg" alt="Morning Dew"></a></div>
+														<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/4-1.jpg" alt="Morning Dew"></a></div>
+													</div>
+												</div>
+											</div>
+											<div class="bg-overlay" data-lightbox="gallery">
+												<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+													<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+														<h3><a href="portfolio-single-gallery.html">Morning Dew</a></h3>
+														<span><a href="#">Icons</a>, <a href="#">Illustrations</a></span>
+													</div>
+
+													<div class="d-flex">
+														<a href="images/portfolio/full/4.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+														<a href="images/portfolio/full/4-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
+														<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+													</div>
+												</div>
+												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+											</div>
 										</div>
 									</div>
-									<div class="portfolio-desc">
-										<h3><a href="portfolio-single-video.html">Backpack Contents</a></h3>
-										<span><a href="#">UI Elements</a>, <a href="#">Icons</a></span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus.</p>
-										<ul class="iconlist">
-											<li><i class="icon-ok"></i> <strong>Created Using:</strong> HTML5, CSS3, jQuery</li>
-											<li><i class="icon-ok"></i> <strong>Completed on:</strong> 2nd April, 2021</li>
-											<li><i class="icon-ok"></i> <strong>By:</strong> John Doe</li>
-										</ul>
-										<a href="portfolio-single-video.html" class="button button-3d ml-0">Launch Project</a>
+								</article>
+
+								<article class="portfolio-item col-12 pf-uielements pf-media">
+									<div class="grid-inner">
+										<div class="portfolio-image">
+											<a href="portfolio-single.html">
+												<img src="images/portfolio/1/full/5.jpg" alt="Console Activity">
+											</a>
+											<div class="bg-overlay">
+												<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+													<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+														<h3><a href="portfolio-single.html">Console Activity</a></h3>
+														<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
+													</div>
+
+													<div class="d-flex">
+														<a href="images/portfolio/full/5.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
+														<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+													</div>
+												</div>
+												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+
+								<article class="portfolio-item col-12 pf-graphics pf-illustrations">
+									<div class="grid-inner">
+										<div class="portfolio-image">
+											<div class="fslider" data-arrows="false">
+												<div class="flexslider">
+													<div class="slider-wrap">
+														<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/6.jpg" alt="Shake It"></a></div>
+														<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/6-1.jpg" alt="Shake It"></a></div>
+														<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/6-2.jpg" alt="Shake It"></a></div>
+														<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/1/full/6-3.jpg" alt="Shake It"></a></div>
+													</div>
+												</div>
+											</div>
+											<div class="bg-overlay" data-lightbox="gallery">
+												<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+													<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+														<h3><a href="portfolio-single-gallery.html">Shake It!</a></h3>
+														<span><a href="#">Illustrations</a>, <a href="#">Graphics</a></span>
+													</div>
+
+													<div class="d-flex">
+														<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+														<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
+														<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
+														<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+														<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+													</div>
+												</div>
+												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+
+								<article class="portfolio-item col-12 pf-uielements pf-icons">
+									<div class="grid-inner">
+										<div class="portfolio-image">
+											<a href="portfolio-single-video.html">
+												<img src="images/portfolio/1/full/7.jpg" alt="Backpack Contents">
+											</a>
+											<div class="bg-overlay">
+												<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+													<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+														<h3><a href="portfolio-single-video.html">Backpack Contents</a></h3>
+														<span><a href="#">UI Elements</a>, <a href="#">Icons</a></span>
+													</div>
+
+													<div class="d-flex">
+														<a href="https://www.youtube.com/watch?v=kuceVNBTJio" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350" data-lightbox="iframe"><i class="icon-line-play"></i></a>
+														<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInUpSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+													</div>
+												</div>
+												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+											</div>
+										</div>
 									</div>
 								</article>
 
@@ -2197,9 +2214,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

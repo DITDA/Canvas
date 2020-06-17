@@ -40,10 +40,10 @@
 
 		<!-- Top Bar
 		============================================= -->
-		<div id="top-bar" class="dark py-3">
+		<div id="top-bar" class="dark">
 			<div class="container">
 
-				<div class="d-flex align-items-center justify-content-center flex-column flex-lg-row">
+				<div class="d-flex align-items-center justify-content-center flex-column flex-lg-row py-3 py-lg-0">
 					Back to the future of your Health: Introducing canvas Yoga. <div class="countdown countdown-inline mt-3 mt-lg-0 ml-lg-4 mb-0" data-year="2021" data-month="10" data-day="31"></div>
 				</div>
 
@@ -52,7 +52,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="border-full-header" data-logo-height="70" data-sticky-logo-height="70">
+		<header id="header" class="border-full-header header-size-custom" data-sticky-shrink="false">
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row justify-content-lg-between">
@@ -98,6 +98,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -930,9 +931,13 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+
+	<!-- For Countdown -->
+	<script src="js/components/moment.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

@@ -278,7 +278,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" data-menu-padding="15" data-sticky-menu-padding="15">
+		<header id="header" data-menu-padding="15" data-sticky-shrink="false">
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
@@ -381,6 +381,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Content
@@ -726,9 +727,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -751,7 +753,7 @@
 
 		var tpj=jQuery;
 		tpj.noConflict();
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		tpj(document).ready(function() {
 

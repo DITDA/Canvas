@@ -71,11 +71,7 @@ function relative_time(time_value) {
   }
 }
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._twitterFeedInit = function( $twitterFeedEl ){
-
-	$twitterFeedEl = $twitterFeedEl.filter(':not(.customjs)');
+window.SEMICOLON_twitterFeedInit = function( $twitterFeedEl ){
 
 	if( $twitterFeedEl.length < 1 ){
 		return true;

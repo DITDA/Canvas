@@ -7,6 +7,29 @@
 	--themecolor: #E83C3C;
 }
 
+/* Custom Header Size
+-----------------------------------------------------------------*/
+.header-size-custom #logo img {
+	height: 70px;
+}
+
+@media (min-width: 992px) {
+
+	.header-size-custom .header-wrap-clone {
+		height: calc( 70px + 1px );
+	}
+
+	#header.header-size-custom + .include-header {
+		margin-top: calc( -70px - 2px );
+	}
+
+	.header-size-custom .menu-container > .menu-item > .menu-link {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+}
+
 .bg1,
 #header,
 #header #header-wrap { background-color: var(--theme1); }

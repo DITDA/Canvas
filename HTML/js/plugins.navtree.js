@@ -1,8 +1,6 @@
 window.scwNavTreePlugin = window.scwNavTreePlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._navtreeInit = function( $navTreeEl ){
+window.SEMICOLON_navtreeInit = function( $navTreeEl ){
 
 	$navTreeEl = $navTreeEl.filter(':not(.customjs)');
 

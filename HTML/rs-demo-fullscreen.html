@@ -409,9 +409,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -432,7 +433,7 @@
 		******************************************/
 
 		var revapi;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		jQuery(document).ready(function() {
 			revapi = jQuery("#rev_slider").revolution({

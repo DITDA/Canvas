@@ -1,8 +1,6 @@
 window.scwTogglesPlugin = window.scwTogglesPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._togglesInit = function( $toggleEl ){
+window.SEMICOLON_togglesInit = function( $toggleEl ){
 
 	$toggleEl = $toggleEl.filter(':not(.customjs)');
 
@@ -18,7 +16,7 @@ SEMICOLON._togglesInit = function( $toggleEl ){
 		if( elState != 'open' ){
 			element.find('.toggle-content').hide();
 		} else {
-			element.addClass('toggle-active');
+			element.addClass('toggle-active').find('.toggle-content').slideDown( Number(elSpeed) );
 		}
 
 		element.find('.toggle-header').off( 'click' ).on( 'click', function(){

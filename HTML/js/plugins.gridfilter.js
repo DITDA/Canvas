@@ -1,8 +1,6 @@
 window.scwGridFilterPlugin = window.scwGridFilterPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._gridFilterInit = function( $gridFilterEl ){
+window.SEMICOLON_gridFilterInit = function( $gridFilterEl ){
 
 	$gridFilterEl = $gridFilterEl.filter(':not(.customjs)');
 

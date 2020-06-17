@@ -279,6 +279,10 @@ textarea.border-form-control {
 	nav.custom-hero-nav li.active a,
 	nav.custom-hero-nav li:hover a { color: #bF9456; }
 
+	#header:not(.sticky-header) {
+		pointer-events: none;
+	}
+
 	#header:not(.sticky-header) #header-wrap {
 		z-index: -1;
 		-webkit-transform: translateY(-100%);

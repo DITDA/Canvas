@@ -87,7 +87,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" data-sticky-shrink="false" data-menu-padding="25">
+		<header id="header" class="header-size-sm" data-sticky-shrink="false">
 			<div class="container">
 				<div class="header-row">
 
@@ -152,7 +152,7 @@
 						<nav class="primary-menu with-arrows">
 
 							<ul class="menu-container">
-								<li class="menu-item current"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-construction.html"><div>Home</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="demo-construction-services.html"><div>What we do</div></a>
 									<ul class="sub-menu-container">
 										<li class="menu-item"><a class="menu-link" href="#"><div>Housing Management</div></a></li>
@@ -174,7 +174,7 @@
 								<li class="menu-item"><a class="menu-link" href="demo-construction-investors.html"><div>Investors</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="demo-construction-blog.html"><div>News</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="demo-construction-careers.html"><div>Careers</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-construction-contact.html"><div>Contact</div></a></li>
+								<li class="menu-item current"><a class="menu-link" href="demo-construction-contact.html"><div>Contact</div></a></li>
 							</ul>
 
 						</nav><!-- #primary-menu end -->
@@ -186,6 +186,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<section class="gmap vh-40 vh-md-60" data-address="Melbourne, Australia" data-maptype="ROADMAP" data-zoom="13" data-scrollwheel="false" data-markers='[{ address: "Melbourne, Australia", html: "<div class=\"p-2\" style=\"width: 300px;\"><h4 class=\"mb-2\">Hi! We are <span>Envato!</span></h4><p class=\"mb-0\" style=\"font-size:1rem;\">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day.</p></div>", icon: { image: "demos/construction/images/marker.png", iconsize: [32, 39], iconanchor: [13,39] } }]'></section>
@@ -500,9 +501,11 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?key=YOUR-API-KEY"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

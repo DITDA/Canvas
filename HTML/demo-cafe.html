@@ -81,6 +81,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<section id="slider" class="slider-element include-header">
@@ -509,9 +510,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -532,7 +534,7 @@
 		var tpj = jQuery;
 
 		var revapi206;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 		tpj(document).ready(function() {
 			if (tpj("#rev_slider_206_1").revolution == undefined) {
 				revslider_showDoubleJqueryError("#rev_slider_206_1");

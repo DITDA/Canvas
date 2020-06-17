@@ -83,6 +83,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -769,9 +770,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-line-arrow-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -780,32 +782,28 @@
 	<!-- Custom Carousel JS File -->
 	<script>
 
-		jQuery(document).ready( function($){
+		var carouselRTL = false;
 
-			var carouselRTL = false;
+		if( $('body').hasClass('rtl') ) { carouselRTL = true; }
 
-			if( $('body').hasClass('rtl') ) { carouselRTL = true; }
-
-			$(window).on( 'pluginCarouselReady', function(){
-				$('#food-menu-carousel').owlCarousel({
-					animateIn: 'fadeIn',
-					animateOut: 'fadeOut',
-					items: 1,
-					mouseDrag: false,
-					dotsContainer: '#item-thumb',
-					rtl: carouselRTL
-				});
-
-				$('#dessert-menu-carousel').owlCarousel({
-					animateIn: 'fadeIn',
-					animateOut: 'fadeOut',
-					items: 1,
-					mouseDrag: false,
-					dotsContainer: '#item-thumb1',
-					rtl: carouselRTL
-				});
+		$(window).on( 'pluginCarouselReady', function(){
+			$('#food-menu-carousel').owlCarousel({
+				animateIn: 'fadeIn',
+				animateOut: 'fadeOut',
+				items: 1,
+				mouseDrag: false,
+				dotsContainer: '#item-thumb',
+				rtl: carouselRTL
 			});
 
+			$('#dessert-menu-carousel').owlCarousel({
+				animateIn: 'fadeIn',
+				animateOut: 'fadeOut',
+				items: 1,
+				mouseDrag: false,
+				dotsContainer: '#item-thumb1',
+				rtl: carouselRTL
+			});
 		});
 
 	</script>

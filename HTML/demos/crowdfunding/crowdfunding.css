@@ -13,6 +13,29 @@
 	text-rendering: optimizeLegibility;
 }
 
+/* Custom Header Size
+-----------------------------------------------------------------*/
+.header-size-custom #logo img {
+	height: 70px;
+}
+
+@media (min-width: 992px) {
+
+	.header-size-custom .header-wrap-clone {
+		height: calc( 70px + 1px );
+	}
+
+	#header.header-size-custom + .include-header {
+		margin-top: calc( -70px - 2px );
+	}
+
+	.header-size-custom .menu-container > .menu-item > .menu-link {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+}
+
 #header .button {
 	line-height: 33px;
 	-webkit-transition: all .4s ease;
@@ -285,11 +308,15 @@ body.top-search-open #header .button { opacity: 0; }
 		padding: 0 30px;
 	}
 
+	.top-search-form input {
+		border-bottom: 0 !important;
+	}
+
 	#header:not(.sticky-header) { border-bottom: 1px solid rgba(0,0,0,0.05); }
 
 	#top-account a { color: #333 }
 
-	#header .button { margin: 18px 10px; }
+	#header .button { margin: 0 10px; }
 
 	.heading-block h2 { font-size: 34px; }
 

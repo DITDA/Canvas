@@ -1,8 +1,6 @@
 window.scwAjaxFormPlugin = window.scwAjaxFormPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._ajaxFormInit = function( $ajaxForm ){
+window.SEMICOLON_ajaxFormInit = function( $ajaxForm ){
 
 	$ajaxForm = $ajaxForm.filter(':not(.customjs)');
 

@@ -1,8 +1,6 @@
 window.scwReadMorePlugin = window.scwReadMorePlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._readmoreInit = function( $readmoreEl ){
+window.SEMICOLON_readmoreInit = function( $readmoreEl ){
 
 	$readmoreEl = $readmoreEl.filter(':not(.customjs)');
 
@@ -31,7 +29,7 @@ SEMICOLON._readmoreInit = function( $readmoreEl ){
 			elMaskSize	= element.attr('data-readmore-masksize') || '100%';
 
 		if( elMaskD == 'true' ) {
-			elMask.css({ 'height': elMaskSize, 'background-image': 'linear-gradient( '+ SEMICOLON._HEXtoRGBA( elMaskColor, 0 ) +', '+ SEMICOLON._HEXtoRGBA( elMaskColor, 1 ) +' )' });
+			elMask.css({ 'height': elMaskSize, 'background-image': 'linear-gradient( '+ SEMICOLON_HEXtoRGBA( elMaskColor, 0 ) +', '+ SEMICOLON_HEXtoRGBA( elMaskColor, 1 ) +' )' });
 		} else {
 			elMask.addClass('d-none');
 		}
@@ -66,7 +64,7 @@ SEMICOLON._readmoreInit = function( $readmoreEl ){
 
 };
 
-SEMICOLON._HEXtoRGBA = function( hex, op ){
+window.SEMICOLON_HEXtoRGBA = function( hex, op ){
 	let c;
 	if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
 		c= hex.substring(1).split('');

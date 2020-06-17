@@ -328,8 +328,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
 
 /* Slider Caption
 -----------------------------------------------------------------*/
-.slider-caption,
-.flex-caption {
+.slider-caption {
   position: relative;
   display: -ms-flexbox;
   display: flex;

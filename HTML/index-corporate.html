@@ -591,7 +591,7 @@
 															<a class="menu-link" href="page-title-center.html"><div>Center Align</div></a>
 														</li>
 														<li class="menu-item">
-															<a class="menu-link" href="page-titledark.html"><div>Dark Style</div></a>
+															<a class="menu-link" href="page-title-dark.html"><div>Dark Style</div></a>
 														</li>
 														<li class="menu-item">
 															<a class="menu-link" href="page-title-pattern.html"><div>BG Pattern</div></a>
@@ -1522,6 +1522,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -2408,20 +2409,20 @@
 								</div>
 							</div>
 
-							<div class="well topmargin overflow-hidden">
+							<div class="card topmargin overflow-hidden">
+								<div class="card-body">
+									<h4>Opening Hours</h4>
 
-								<h4>Opening Hours</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit reprehenderit voluptates.</p>
 
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit reprehenderit voluptates.</p>
+									<ul class="iconlist mb-0">
+										<li><i class="icon-time color"></i> <strong>Mondays-Fridays:</strong> 10AM to 7PM</li>
+										<li><i class="icon-time color"></i> <strong>Saturdays:</strong> 11AM to 3PM</li>
+										<li><i class="icon-time text-danger"></i> <strong>Sundays:</strong> Closed</li>
+									</ul>
 
-								<ul class="iconlist mb-0">
-									<li><i class="icon-time color"></i> <strong>Mondays-Fridays:</strong> 10AM to 7PM</li>
-									<li><i class="icon-time color"></i> <strong>Saturdays:</strong> 11AM to 3PM</li>
-									<li><i class="icon-time text-danger"></i> <strong>Sundays:</strong> Closed</li>
-								</ul>
-
-								<i class="icon-time bgicon"></i>
-
+									<i class="icon-time bgicon"></i>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -2729,9 +2730,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -2754,7 +2756,7 @@
 
 		var tpj = jQuery;
 		var revapi202;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		tpj(document).ready(function() {
 			if (tpj("#rev_slider_579_1").revolution == undefined) {

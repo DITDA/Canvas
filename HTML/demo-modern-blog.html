@@ -44,7 +44,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="transparent-header" data-sticky-shrink="false" data-logo-height="80">
+		<header id="header" class="transparent-header header-size-md" data-sticky-shrink="false">
 			<div id="header-wrap">
 				<div class="container-fluid">
 					<div class="header-row">
@@ -75,6 +75,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -85,23 +86,35 @@
 					<div class="slider-wrap">
 						<!-- Slide 1 -->
 						<div class="slide text-center" style="background: url('demos/modern-blog/images/slider/1.jpg') center center; background-size: cover;">
-							<div class="flex-caption px-4 justify-content-end pb-5 dark">
-								<h3 class="mb-2 h1"><a href="#" class="text-white">Thing That Make You Love</a></h3>
-								<p class="h5">Credibly synthesize seamless</p>
+							<div class="bg-overlay">
+								<div class="bg-overlay-content align-items-end">
+									<div class="slide-caption px-4 pb-4 dark">
+										<h3 class="mb-2 h1"><a href="#" class="text-white">Thing That Make You Love</a></h3>
+										<p class="h5">Credibly synthesize seamless</p>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!-- Slide 2 -->
 						<div class="slide text-center" style="background: url('demos/modern-blog/images/slider/2.jpg') center center; background-size: cover;">
-							<div class="flex-caption px-4 justify-content-end pb-5 dark">
-								<h3 class="mb-2 h1"><a href="#" class="text-white">The Ultimate Guide To Fashion</a></h3>
-								<p class="h5">Monotonectally foster cross</p>
+							<div class="bg-overlay">
+								<div class="bg-overlay-content align-items-end">
+									<div class="slide-caption px-4 pb-4 dark">
+										<h3 class="mb-2 h1"><a href="#" class="text-white">The Ultimate Guide To Fashion</a></h3>
+										<p class="h5">Monotonectally foster cross</p>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!-- Slide 3 -->
 						<div class="slide text-center" style="background: url('demos/modern-blog/images/slider/3.jpg') center center; background-size: cover;">
-							<div class="flex-caption px-4 justify-content-end pb-5 dark">
-								<h3 class="mb-2 h1"><a href="#" class="text-white">Learn How We Made Fashion</a></h3>
-								<p class="h5">Intrinsicly embrace scalable</p>
+							<div class="bg-overlay">
+								<div class="bg-overlay-content align-items-end">
+									<div class="slide-caption px-4 pb-4 dark">
+										<h3 class="mb-2 h1"><a href="#" class="text-white">Learn How We Made Fashion</a></h3>
+										<p class="h5">Intrinsicly embrace scalable</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -485,9 +498,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up rounded-circle"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 	<script src="js/plugins.infinitescroll.js"></script>
 
 	<!-- Footer Scripts

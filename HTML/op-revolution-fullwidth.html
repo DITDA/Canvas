@@ -47,7 +47,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header transparent-header dark" data-sticky-class="not-dark" data-sticky-offset="full" data-sticky-offset-negative="200" data-logo-height="70" data-sticky-logo-height="70" data-menu-padding="24">
+		<header id="header" class="full-header transparent-header dark header-size-custom" data-sticky-shrink="false" data-sticky-class="not-dark" data-sticky-offset="full" data-sticky-offset-negative="200">
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
@@ -93,6 +93,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<section id="slider" class="slider-element slider-parallax revslider-wrap min-vh-0 include-header">
@@ -939,9 +940,11 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?key=YOUR-API-KEY"></script>
 
 	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
 	<script src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
@@ -963,7 +966,7 @@
 	<script>
 		var tpj=jQuery;
 		var revapi32;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		tpj(document).ready(function() {
 			if(tpj("#rev_slider_op-fw").revolution == undefined){

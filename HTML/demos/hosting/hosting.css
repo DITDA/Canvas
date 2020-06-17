@@ -52,8 +52,9 @@
 	background-color: #F9F9F9;
 }
 
-.section-domain .input-group-lg > .form-control,
-.section-domain .input-group-lg > .input-group-append > .btn { font-size: 1rem; }
+.section-domain .input-group-lg > .form-control {
+	font-size: 1.3125rem;
+}
 
 .before-heading {
 	font-style: normal;

@@ -1,8 +1,6 @@
 window.scwHoverAnimationPlugin = window.scwHoverAnimationPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._hoverAnimationInit = function( $hoverAnimationEl ){
+window.SEMICOLON_hoverAnimationInit = function( $hoverAnimationEl ){
 
 	$hoverAnimationEl = $hoverAnimationEl.filter(':not(.customjs)');
 

@@ -569,7 +569,7 @@
 															<a class="menu-link" href="page-title-center.html"><div>Center Align</div></a>
 														</li>
 														<li class="menu-item">
-															<a class="menu-link" href="page-titledark.html"><div>Dark Style</div></a>
+															<a class="menu-link" href="page-title-dark.html"><div>Dark Style</div></a>
 														</li>
 														<li class="menu-item">
 															<a class="menu-link" href="page-title-pattern.html"><div>BG Pattern</div></a>
@@ -1500,6 +1500,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 
@@ -2408,9 +2409,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -2436,7 +2438,7 @@
 	<script>
 		var revapi134,
 			tpj;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		(function() {
 			if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();

@@ -553,7 +553,7 @@
 															<a class="menu-link" href="page-title-center.html"><div>Center Align</div></a>
 														</li>
 														<li class="menu-item">
-															<a class="menu-link" href="page-titledark.html"><div>Dark Style</div></a>
+															<a class="menu-link" href="page-title-dark.html"><div>Dark Style</div></a>
 														</li>
 														<li class="menu-item">
 															<a class="menu-link" href="page-title-pattern.html"><div>BG Pattern</div></a>
@@ -1484,6 +1484,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<section id="slider" class="slider-element boxed-slider">
@@ -1494,27 +1495,43 @@
 					<div class="flexslider">
 						<div class="slider-wrap">
 							<div class="slide" data-thumb="images/slider/boxed/thumbs/2.jpg">
-								<a href="#">
+								<a href="#" class="d-block position-relative">
 									<img src="images/slider/boxed/2.jpg" alt="Slide 2">
-									<div class="flex-caption slider-caption-bg">Responsive Ready Design</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content justify-content-start align-items-end">
+											<div class="h3 font-weight-light py-2 px-3 bg-light text-dark ml-3 mb-3 rounded">Responsive Ready Design</div>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="slide" data-thumb="images/slider/boxed/thumbs/3.jpg">
-								<a href="#">
+								<a href="#" class="d-block position-relative">
 									<img src="images/slider/boxed/3.jpg" alt="Slide 3">
-									<div class="flex-caption slider-caption-bg slider-caption-bg-light slider-caption-top-left">Retina Graphics Display</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content justify-content-end align-items-end">
+											<div class="h3 font-weight-light py-2 px-3 bg-dark text-light mr-3 mb-3 rounded">Retina Graphics Display</div>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="slide" data-thumb="images/slider/boxed/thumbs/4.jpg">
-								<a href="#">
+								<a href="#" class="d-block position-relative">
 									<img src="images/slider/boxed/4.jpg" alt="Slide 4">
-									<div class="flex-caption slider-caption-bg slider-caption-top-right">Bootstrap 3+ Compatible</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content">
+											<div class="h3 font-weight-light py-2 px-3 bg-color text-light rounded">Bootstrap 4.x Compatible</div>
+										</div>
+									</div>
 								</a>
 							</div>
 							<div class="slide" data-thumb="images/slider/boxed/thumbs/5.jpg">
-								<a href="#">
+								<a href="#" class="d-block position-relative">
 									<img src="images/slider/boxed/5.jpg" alt="Slide 5">
-									<div class="flex-caption slider-caption-bg slider-caption-bg-light slider-caption-bottom-right">eCommerce Design Included</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content">
+											<div class="h3 font-weight-light py-2 px-3 bg-warning text-dark rounded">eCommerce Design Included</div>
+										</div>
+									</div>
 								</a>
 							</div>
 						</div>
@@ -1899,9 +1916,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

@@ -1547,6 +1547,7 @@ $autoplay = "on";
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -1871,9 +1872,10 @@ $autoplay = "on";
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -1885,7 +1887,7 @@ $autoplay = "on";
 
 	<script>
 		var revapi20;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		jQuery(document).ready(function() {
 			if(jQuery("#rev_slider").revolution == undefined){

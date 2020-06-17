@@ -71,11 +71,11 @@
 		<!-- Top Bar
 		============================================= -->
 		<div id="top-bar">
-			<div class="container clearfix">
+			<div class="container">
 
-				<div class="row justify-content-between">
+				<div class="row justify-content-between align-items-center">
 					<div class="col-12 col-md-auto">
-						<p class="mb-0"><strong>Call:</strong> 1800-547-2145 | <strong>Email:</strong> info@canvas.com</p>
+						<p class="mb-0 py-2 text-center text-md-left"><strong>Call:</strong> 1800-547-2145 | <strong>Email:</strong> info@canvas.com</p>
 					</div>
 
 					<div class="col-12 col-md-auto">
@@ -380,6 +380,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<section id="slider" class="slider-element slider-parallax revslider-wrap overflow-hidden clearfix">
@@ -570,29 +571,27 @@
 			<div class="content-wrap">
 				<div class="container clearfix">
 
-					<div class="row">
-						<div class="col-lg-8">
+					<div class="row align-items-stretch gutter-20 min-vh-60">
+						<div class="col-md-8">
 
-							<div class="row">
-								<div class="col-lg-6 pr-0" style="margin-bottom: 15px;">
-									<a href="#"><img src="images/shop/banners/2.jpg" alt="Image"></a>
+							<div class="row align-items-stretch gutter-20 h-100">
+								<div class="col-md-6 min-vh-25 min-vh-md-0">
+									<a href="#" class="grid-inner d-block h-100" style="background-image: url('images/shop/banners/2.jpg');"></a>
 								</div>
 
-								<div class="col-lg-6 pr-0" style="margin-bottom: 15px;">
-									<a href="#"><img src="images/shop/banners/8.jpg" alt="Image"></a>
+								<div class="col-md-6 min-vh-25 min-vh-md-0">
+									<a href="#" class="grid-inner d-block h-100" style="background-image: url('images/shop/banners/8.jpg'); background-position: right center;"></a>
 								</div>
 
-								<div class="w-100"></div>
-
-								<div class="col-lg-12 pr-0">
-									<a href="#"><img src="images/shop/banners/4.jpg" alt="Image"></a>
+								<div class="col-md-12 min-vh-25 min-vh-md-0 pb-md-0">
+									<a href="#" class="grid-inner d-block h-100" style="background-image: url('images/shop/banners/4.jpg');"></a>
 								</div>
 							</div>
 
 						</div>
 
-						<div class="col-lg-4">
-							<a href="#"><img src="images/shop/banners/9.jpg" alt="Image"></a>
+						<div class="col-md-4 min-vh-50">
+							<a href="#" class="grid-inner d-block h-100" style="background-image: url('images/shop/banners/9.jpg'); background-position: center top;"></a>
 						</div>
 					</div>
 
@@ -1461,9 +1460,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -1486,7 +1486,7 @@
 
 		var tpj=jQuery;
 		tpj.noConflict();
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		tpj(document).ready(function() {
 

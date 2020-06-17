@@ -35,7 +35,8 @@
 	<style>
 		.font-secondary { font-family: 'Playfair Display', serif !important; }
 
-		.slider-arrow-left, .slider-arrow-right{
+		.slider-arrow-left,
+		.slider-arrow-right{
 		    background: transparent;
 			position: relative;
 			top: auto;
@@ -80,7 +81,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header" data-logo-height="70" data-sticky-logo-height="70" data-menu-padding="24">
+		<header id="header" class="full-header header-size-custom" data-sticky-shrink="false">
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
@@ -126,13 +127,14 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<section id="slider" class="slider-element swiper_wrapper min-vh-0">
 			<div class="slider-inner">
 
 				<div class="swiper-container swiper-parent">
-					<div class="swiper-wrapper">
+					<div class="swiper-wrapper h-auto">
 
 						<!-- Slide 1 -->
 						<div class="swiper-slide bg-white">
@@ -928,9 +930,11 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?key=YOUR-API-KEY"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

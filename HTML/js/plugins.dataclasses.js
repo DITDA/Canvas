@@ -1,8 +1,6 @@
 window.scwDataClassesPlugin = window.scwDataClassesPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._dataClassesInit = function( $dataClassesEl ){
+window.SEMICOLON_dataClassesInit = function( $dataClassesEl ){
 
 	if( $dataClassesEl.length < 1 ){
 		return true;

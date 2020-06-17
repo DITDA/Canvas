@@ -559,7 +559,7 @@
 															<a class="menu-link" href="page-title-center.html"><div>Center Align</div></a>
 														</li>
 														<li class="menu-item">
-															<a class="menu-link" href="page-titledark.html"><div>Dark Style</div></a>
+															<a class="menu-link" href="page-title-dark.html"><div>Dark Style</div></a>
 														</li>
 														<li class="menu-item">
 															<a class="menu-link" href="page-title-pattern.html"><div>BG Pattern</div></a>
@@ -1490,6 +1490,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Page Title
@@ -1943,13 +1944,15 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Date & Time Picker JS -->
 	<script src="js/components/moment.js"></script>
 	<script src="js/components/timepicker.js"></script>
+	<script src="js/components/datepicker.js"></script>
 
 	<!-- Include Date Range Picker -->
 	<script src="js/components/daterangepicker.js"></script>
@@ -1960,56 +1963,54 @@
 
 	<script>
 		$(function() {
-			$(window).on( 'pluginDatePickerReady', function(){
-				$('.component-datepicker.default').datepicker({
-					autoclose: true,
-					startDate: "today",
-				});
-
-				$('.component-datepicker.today').datepicker({
-					autoclose: true,
-					startDate: "today",
-					todayHighlight: true
-				});
-
-				$('.component-datepicker.past-enabled').datepicker({
-					autoclose: true,
-				});
-
-				$('.component-datepicker.format').datepicker({
-					autoclose: true,
-					format: "dd-mm-yyyy",
-				});
-
-				$('.component-datepicker.autoclose').datepicker();
-
-				$('.component-datepicker.disabled-week').datepicker({
-					autoclose: true,
-					daysOfWeekDisabled: "0"
-				});
-
-				$('.component-datepicker.highlighted-week').datepicker({
-					autoclose: true,
-					daysOfWeekHighlighted: "0"
-				});
-
-				$('.component-datepicker.mnth').datepicker({
-					autoclose: true,
-					minViewMode: 1,
-					format: "mm/yy"
-				});
-
-				$('.component-datepicker.multidate').datepicker({
-					multidate: true,
-					multidateSeparator: " , "
-				});
-
-				$('.component-datepicker.input-daterange').datepicker({
-					autoclose: true
-				});
-
-				$('.component-datepicker.inline-calendar').datepicker();
+			$('.component-datepicker.default').datepicker({
+				autoclose: true,
+				startDate: "today",
 			});
+
+			$('.component-datepicker.today').datepicker({
+				autoclose: true,
+				startDate: "today",
+				todayHighlight: true
+			});
+
+			$('.component-datepicker.past-enabled').datepicker({
+				autoclose: true,
+			});
+
+			$('.component-datepicker.format').datepicker({
+				autoclose: true,
+				format: "dd-mm-yyyy",
+			});
+
+			$('.component-datepicker.autoclose').datepicker();
+
+			$('.component-datepicker.disabled-week').datepicker({
+				autoclose: true,
+				daysOfWeekDisabled: "0"
+			});
+
+			$('.component-datepicker.highlighted-week').datepicker({
+				autoclose: true,
+				daysOfWeekHighlighted: "0"
+			});
+
+			$('.component-datepicker.mnth').datepicker({
+				autoclose: true,
+				minViewMode: 1,
+				format: "mm/yy"
+			});
+
+			$('.component-datepicker.multidate').datepicker({
+				multidate: true,
+				multidateSeparator: " , "
+			});
+
+			$('.component-datepicker.input-daterange').datepicker({
+				autoclose: true
+			});
+
+			$('.component-datepicker.inline-calendar').datepicker();
 
 			$('.datetimepicker').datetimepicker({
 				showClose: true

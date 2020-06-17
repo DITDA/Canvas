@@ -130,6 +130,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -758,9 +759,13 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up rounded-circle"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+
+	<!-- For Countdown -->
+	<script src="js/components/moment.js"></script>
 
 	<!-- SLIDER REVOLUTION 5.x SCRIPTS
 	============================================= -->
@@ -778,7 +783,7 @@
 
 		var revapi139,
 			tpj;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 		(function() {
 			if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();
 

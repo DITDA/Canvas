@@ -47,6 +47,17 @@
   }
 }
 
+@media (max-width: 991.98px) {
+	.menu-item > .menu-link {
+		color: #FFF !important;
+	}
+}
+
+.menu-item.current > .menu-link,
+.menu-item:hover > .menu-link {
+	color: #FFF !important;
+}
+
 /* -- SVG CSS -- */
 .svg-separator {
 	position:absolute;
@@ -368,7 +379,7 @@ footer .list-unstyled li a,
 		transition: all 0.25s ease;
 	}
 
-	.menu-container > .menu-item.active > .menu-link::after,
+	.menu-container > .menu-item.current > .menu-link::after,
 	.menu-container > .menu-item:hover > .menu-link::after {
 		opacity: 1;
 		width: 100%;

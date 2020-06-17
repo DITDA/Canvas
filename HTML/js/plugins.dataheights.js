@@ -1,8 +1,6 @@
 window.scwDataHeightsPlugin = window.scwDataHeightsPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._dataHeightsInit = function( $dataHeightsEl ){
+window.SEMICOLON_dataHeightsInit = function( $dataHeightsEl ){
 
 	if( $dataHeightsEl.length < 1 ){
 		return true;

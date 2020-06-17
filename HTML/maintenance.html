@@ -32,14 +32,14 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header">
+		<header id="header" class="transparent-header full-header">
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
 
 						<!-- Logo
 						============================================= -->
-						<div id="logo" class="mx-auto">
+						<div id="logo" class="mx-auto border-0 px-0">
 							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
 							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
 						</div><!-- #logo end -->
@@ -47,52 +47,57 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Content
 		============================================= -->
-		<section id="content">
-			<div class="content-wrap">
-				<div class="container clearfix">
+		<section id="content" class="include-header">
+			<div class="content-wrap py-0">
+				<div class="container">
 
-					<div class="heading-block center border-bottom-0">
-						<h1>Site is Under Maintenance</h1>
-						<span>Please check back in sometime.</span>
-					</div>
-
-					<div class="row justify-content-center col-mb-50">
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-center fbox-light fbox-plain">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-warning-sign"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Why is the Site Down?</h3>
-									<p>The site is under maintenance probably because we are working to improve this website drastically.</p>
-								</div>
+					<div class="vh-100">
+						<div class="vertical-middle">
+							<div class="heading-block center border-bottom-0">
+								<h1>Site is Under Maintenance</h1>
+								<span>Please check back in sometime.</span>
 							</div>
-						</div>
 
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-center fbox-light fbox-plain">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-time"></i></a>
+							<div class="row justify-content-center col-mb-50">
+								<div class="col-sm-6 col-lg-4">
+									<div class="feature-box fbox-center fbox-light fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-warning-sign"></i></a>
+										</div>
+										<div class="fbox-content">
+											<h3>Why is the Site Down?</h3>
+											<p>The site is under maintenance probably because we are working to improve this website drastically.</p>
+										</div>
+									</div>
 								</div>
-								<div class="fbox-content">
-									<h3>What is the Downtime?</h3>
-									<p>We are usually back within 10-15 minutes but it definitely depends on the issue.</p>
-								</div>
-							</div>
-						</div>
 
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-center fbox-light fbox-plain">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-email3"></i></a>
+								<div class="col-sm-6 col-lg-4">
+									<div class="feature-box fbox-center fbox-light fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-time"></i></a>
+										</div>
+										<div class="fbox-content">
+											<h3>What is the Downtime?</h3>
+											<p>We are usually back within 10-15 minutes but it definitely depends on the issue.</p>
+										</div>
+									</div>
 								</div>
-								<div class="fbox-content">
-									<h3>Do you need Support?</h3>
-									<p>You may simply send us an Email at <a href="mailto:info@canvas.com">info@canvas.com</a> if you need urgent support.</p>
+
+								<div class="col-sm-6 col-lg-4">
+									<div class="feature-box fbox-center fbox-light fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-email3"></i></a>
+										</div>
+										<div class="fbox-content">
+											<h3>Do you need Support?</h3>
+											<p>You may simply send us an Email at <a href="mailto:info@canvas.com">info@canvas.com</a> if you need urgent support.</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -108,9 +113,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

@@ -1552,6 +1552,7 @@ $tweets = $twitter->get_public_photos( $twitter_account );
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -1976,9 +1977,10 @@ $tweets = $twitter->get_public_photos( $twitter_account );
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -1990,7 +1992,7 @@ $tweets = $twitter->get_public_photos( $twitter_account );
 
 	<script>
 		var revapi35;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		jQuery(document).ready(function() {
 			if(jQuery("#rev_slider").revolution == undefined){

@@ -123,7 +123,7 @@ h3.titular-title {
   width: 40px;
   border-top: 2px solid #444;
 }
-.center .heading-block::after, .text-center .heading-block::after, .heading-block.center::after, .heading-block.title-center::after {
+.center .heading-block::after, .text-center .heading-block::after, .heading-block.center::after, .heading-block.text-center::after {
   margin: 30px auto 0;
 }
 .text-right .heading-block, .heading-block.text-right, .heading-block.title-right {

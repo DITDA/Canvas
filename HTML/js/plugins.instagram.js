@@ -1,8 +1,6 @@
 window.scwInstagramPlugin = window.scwInstagramPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._instagramPhotosInit = function( $instagramPhotosEl ){
+window.SEMICOLON_instagramPhotosInit = function( $instagramPhotosEl ){
 
 	if( $instagramPhotosEl.length < 1 ){
 		return true;
@@ -17,13 +15,13 @@ SEMICOLON._instagramPhotosInit = function( $instagramPhotosEl ){
 			elLimit = 12;
 		}
 
-		SEMICOLON._getInstagramPhotos( element, elUsername, elLimit );
+		SEMICOLON_getInstagramPhotos( element, elUsername, elLimit );
 	});
 
 };
 
 
-SEMICOLON._getInstagramPhotos = function( element, username, limit, nextkey = '', images = false ) {
+window.SEMICOLON_getInstagramPhotos = function( element, username, limit, nextkey = '', images = false ) {
 
 	let newimages = '';
 
@@ -46,7 +44,7 @@ SEMICOLON._getInstagramPhotos = function( element, username, limit, nextkey = ''
 			}
 
 			if( images.length < limit ) {
-				images = SEMICOLON._getInstagramPhotos( element, username, limit, nextkey, images );
+				images = SEMICOLON_getInstagramPhotos( element, username, limit, nextkey, images );
 			}
 
 			if( images.length > 0 ) {

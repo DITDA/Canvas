@@ -4,9 +4,31 @@
 	Some of the CSS Codes have been modified from the Original
 	style.css File to match the Minimal Styling of this Module
 
-	Version: 6.0.1
+	Version: 6.0.2
 -----------------------------------------------------------------*/
 
+/* Custom Header Size
+-----------------------------------------------------------------*/
+.header-size-custom #logo img {
+	height: 70px;
+}
+
+@media (min-width: 992px) {
+
+	.header-size-custom .header-wrap-clone {
+		height: calc( 70px + 1px );
+	}
+
+	#header.header-size-custom + .include-header {
+		margin-top: calc( -70px - 2px );
+	}
+
+	.header-size-custom .menu-container > .menu-item > .menu-link {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+}
 
 @media (min-width: 992px) {
 
@@ -53,6 +75,11 @@
 		box-shadow: none;
 		border-bottom: 1px solid #F5F5F5 !important;
 		-webkit-backface-visibility: hidden;
+	}
+
+	.dark #header.sticky-header #header-wrap,
+	.dark #header.full-header.border-full-header.sticky-header #header-wrap {
+		border-bottom-color: rgba(255,255,255,0.1) !important;
 	}
 
 

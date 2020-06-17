@@ -135,8 +135,8 @@ body #side-panel.dark {
 		border-bottom-color: rgba(255,255,255,0.15);
 	}
 
-	#slider + #header.transparent-header.full-header #header-wrap,
-	#slider + #header.transparent-header.full-header #header-wrap {
+	#slider + .dark #header.transparent-header.full-header #header-wrap,
+	#slider + #header.transparent-header.full-header.dark #header-wrap {
 		border-top-color: rgba(255,255,255,0.15);
 	}
 
@@ -551,7 +551,7 @@ body #side-panel.dark {
 }
 
 .dark .portfolio-desc h3 a:hover {
-	color: #1ABC9C;
+	color: rgba(255,255,255,0.75);
 }
 
 .dark .portfolio-desc span,

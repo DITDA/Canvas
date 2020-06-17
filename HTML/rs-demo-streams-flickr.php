@@ -1550,6 +1550,7 @@ $photos = $flickr->get_public_photos($user_id,15);
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -1873,9 +1874,10 @@ $photos = $flickr->get_public_photos($user_id,15);
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -1887,7 +1889,7 @@ $photos = $flickr->get_public_photos($user_id,15);
 
 	<script>
 		var revapi23;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		jQuery(document).ready(function() {
 			if(jQuery("#rev_slider").revolution == undefined){

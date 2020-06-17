@@ -1,8 +1,6 @@
 window.scwSubscribeFormPlugin = window.scwSubscribeFormPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._subscribeFormInit = function( $subscribeForm ){
+window.SEMICOLON_subscribeFormInit = function( $subscribeForm ){
 
 	$subscribeForm = $subscribeForm.filter(':not(.customjs)');
 

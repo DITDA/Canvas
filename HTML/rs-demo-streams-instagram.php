@@ -1548,6 +1548,7 @@ $photos = $instagram->get_public_photos($search_user_id);
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -1885,9 +1886,10 @@ $photos = $instagram->get_public_photos($search_user_id);
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
@@ -1899,7 +1901,7 @@ $photos = $instagram->get_public_photos($search_user_id);
 
 	<script>
 		var revapi22;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 
 		jQuery(document).ready(function() {
 			if(jQuery("#rev_slider").revolution == undefined){

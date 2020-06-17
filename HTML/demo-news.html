@@ -55,7 +55,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" data-menu-padding="19" data-sticky-shrink="false">
+		<header id="header" class="header-size-sm" data-sticky-shrink="false">
 			<div class="container">
 				<div class="header-row justify-content-between">
 
@@ -461,6 +461,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -2622,9 +2623,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 	<script src="js/plugins.infinitescroll.js"></script>
 
 	<!-- Footer Scripts
@@ -2649,7 +2651,7 @@
 	<script>
 		var tpj=jQuery;
 		var revapi19;
-		var $ = jQuery.noConflict();
+		let $ = jQuery.noConflict();
 		tpj(document).ready(function() {
 			if(tpj("#rev_slider_19_1").revolution == undefined){
 				revslider_showDoubleJqueryError("#rev_slider_19_1");

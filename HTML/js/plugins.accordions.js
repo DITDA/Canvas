@@ -1,8 +1,6 @@
 window.scwAccordionsPlugin = window.scwAccordionsPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._accordionsInit = function( $accordionEl ){
+window.SEMICOLON_accordionsInit = function( $accordionEl ){
 
 	$accordionEl = $accordionEl.filter(':not(.customjs)');
 

@@ -2,6 +2,29 @@
 	Canvas: Car
 -----------------------------------------------------------------*/
 
+/* Custom Header Size
+-----------------------------------------------------------------*/
+.header-size-custom #logo img {
+	height: 50px;
+}
+
+@media (min-width: 992px) {
+
+	.header-size-custom .header-wrap-clone {
+		height: calc( 50px + 1px );
+	}
+
+	#header.header-size-custom + .include-header {
+		margin-top: calc( -50px - 2px );
+	}
+
+	.header-size-custom .menu-container > .menu-item > .menu-link {
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
+
+}
+
 /* Runing Car
 -----------------------------------------------------------------*/
 .running-car {

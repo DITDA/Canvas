@@ -1,8 +1,6 @@
 window.scwQuantityPlugin = window.scwQuantityPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._quantityInit = function( $quantityEl ){
+window.SEMICOLON_quantityInit = function( $quantityEl ){
 
 	$quantityEl = $quantityEl.filter(':not(.customjs)');
 

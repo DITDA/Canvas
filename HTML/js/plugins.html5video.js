@@ -1,8 +1,6 @@
 window.scwHtml5VideoPlugin = window.scwHtml5VideoPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._html5VideoInit = function( $html5Video ){
+window.SEMICOLON_html5VideoInit = function( $html5Video ){
 
 	if( $html5Video.length < 1 ){
 		return true;

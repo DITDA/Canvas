@@ -1,8 +1,6 @@
 window.scwProgressPlugin = window.scwProgressPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._progressInit = function( $progressEl ){
+window.SEMICOLON_progressInit = function( $progressEl ){
 
 	$progressEl = $progressEl.filter(':not(.customjs)');
 

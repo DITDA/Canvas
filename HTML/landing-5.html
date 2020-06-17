@@ -66,66 +66,68 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-element include-header" style="background: url(images/landing/landing2.jpg) center; overflow: visible;" data-height-xl="500" data-height-lg="500" data-height-md="600" data-height-sm="600" data-height-xs="600">
-			<div class="container">
+		<section id="slider" class="slider-element include-header min-vh-75" style="background: url(images/landing/landing2.jpg) center; overflow: visible;">
+			<div class="slider-inner flex-column justify-content-end">
+				<div class="container" style="z-index: 1;">
 
-				<div class="form-widget" data-loader="button">
+					<div class="row align-items-end justify-content-end h-100">
+						<div class="form-widget col-lg-4" data-loader="button">
+							<div class="form-result"></div>
 
-					<div class="form-result"></div>
-
-					<form action="include/form.php" method="post" class="landing-wide-form landing-form-overlay dark mb-0 w-50 clearfix">
-						<div class="row">
-							<div class="col-12 form-group mb-4">
-								<div class="heading-block mb-0 border-bottom-0">
-									<h2>Signup for FREE</h2>
-									<span>Get 30 Days Unlimited Access</span>
+							<form action="include/form.php" method="post" class="landing-wide-form dark mb-0">
+								<div class="row">
+									<div class="col-12 form-group mb-4">
+										<div class="heading-block mb-0 border-bottom-0">
+											<h2>Signup for FREE</h2>
+											<span>Get 30 Days Unlimited Access</span>
+										</div>
+									</div>
+									<div class="col-12 form-group">
+										<input type="text" name="template-landing5-name" class="form-control required form-control-lg not-dark" value="" placeholder="Your Name*">
+									</div>
+									<div class="col-12 form-group">
+										<input type="email" name="template-landing5-email" class="form-control required form-control-lg not-dark" value="" placeholder="Your Email*">
+									</div>
+									<div class="col-12 form-group">
+										<input type="password" name="template-landing5-password" class="form-control required form-control-lg not-dark" value="" placeholder="Choose Password*">
+									</div>
+									<div class="col-12 form-group">
+										<input type="password" name="template-landing5-repassword" class="form-control required form-control-lg not-dark" value="" placeholder="Confirm Password*">
+									</div>
+									<div class="col-12 form-group d-none">
+										<input type="text" id="template-landing5-botcheck" name="template-landing5-botcheck" value="" class="form-control" />
+									</div>
+									<div class="col-12 form-group mb-0">
+										<button class="btn btn-lg btn-danger btn-block m-0" value="submit" type="submit">START FREE TRIAL</button>
+									</div>
 								</div>
-							</div>
-							<div class="col-12 form-group">
-								<input type="text" name="template-landing5-name" class="form-control required form-control-lg not-dark" value="" placeholder="Your Name*">
-							</div>
-							<div class="col-12 form-group">
-								<input type="email" name="template-landing5-email" class="form-control required form-control-lg not-dark" value="" placeholder="Your Email*">
-							</div>
-							<div class="col-12 form-group">
-								<input type="password" name="template-landing5-password" class="form-control required form-control-lg not-dark" value="" placeholder="Choose Password*">
-							</div>
-							<div class="col-12 form-group">
-								<input type="password" name="template-landing5-repassword" class="form-control required form-control-lg not-dark" value="" placeholder="Confirm Password*">
-							</div>
-							<div class="col-12 form-group d-none">
-								<input type="text" id="template-landing5-botcheck" name="template-landing5-botcheck" value="" class="form-control" />
-							</div>
-							<div class="col-12 form-group">
-								<button class="btn btn-lg btn-danger btn-block m-0" value="submit" type="submit">START FREE TRIAL</button>
-							</div>
+								<input type="hidden" name="prefix" value="template-landing5-">
+							</form>
 						</div>
-						<input type="hidden" name="prefix" value="template-landing5-">
-					</form>
+					</div>
 
 				</div>
 
-			</div>
-		</section>
-
-		<!-- Content
-		============================================= -->
-		<section id="content">
-
-			<div class="content-wrap" style="overflow: visible;">
-
-				<div class="promo promo-dark promo-full landing-promo p-5 header-stick">
-					<div class="container clearfix">
+				<div class="promo promo-dark promo-full landing-promo p-5 position-relative position-lg-absolute w-100" style="top: auto; bottom: 0;">
+					<div class="container">
 						<div class="row align-items-center">
-							<div class="col-12 col-lg">
+							<div class="col-12 col-lg-8">
 								<h3>Beautiful Landing Page designs waiting for you inside <i class="icon-circle-arrow-right position-relative" style="top:2px;"></i></h3>
 								<span>You'll love our beautiful &amp; interactive builder that makes your build process easier &amp; fun.</span>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
 
 				<div class="container clearfix">
 
@@ -723,9 +725,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

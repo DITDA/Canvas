@@ -50,7 +50,7 @@
 		.dark .irs-bar { background-color: #CCC }
 		.dark .irs-grid-text { color: #EEE }
 
-		.flex-caption {
+		.slide-caption {
 			position: absolute;
 			opacity: 0;
 			max-width: none !important;
@@ -65,7 +65,7 @@
 
 		.flex-viewport { height: 100% !important; }
 
-		.flex-caption.slider-caption-bottom {
+		.slide-caption.slider-caption-bottom {
 			padding: 20px;
 			width: 100%;
 			min-width: 100%;
@@ -75,12 +75,12 @@
 			bottom: 0;
 		}
 
-		.flex-caption.slider-caption-bottom p {
+		.slide-caption.slider-caption-bottom p {
 			margin-bottom: 0;
 			font-size: 15px;
 		}
 
-		.slide.flex-active-slide .flex-caption {
+		.slide.flex-active-slide .slide-caption {
 			opacity: 1;
 			-webkit-transform: translateY(0);
 			-ms-transform: translateY(0);
@@ -88,7 +88,7 @@
 			transform: translateY(0);
 		}
 
-		.slide .flex-caption.card {
+		.slide .slide-caption.card {
 			width: auto !important;
 			height: auto !important;
 			top: 20px;
@@ -157,7 +157,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header" data-sticky-shrink="false" data-logo-height="50" data-menu-padding="14">
+		<header id="header" class="full-header header-size-custom" data-sticky-shrink="false">
 			<div id="header-wrap">
 				<div class="container-fluid">
 					<div class="header-row flex-lg-row-reverse">
@@ -224,6 +224,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Slider
@@ -237,8 +238,8 @@
 							<div class="flexslider h-100">
 								<div class="slider-wrap h-100">
 									<div class="slide h-100" style="background: url('demos/car/images/dealers/1.jpg') center center; background-size: cover;">
-										<div class="flex-caption bg-dark card shadow-sm"><div class="card-body font-weight-semibold py-1 px-2">2011</div></div>
-										<div class="flex-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
+										<div class="slide-caption bg-dark card shadow-sm ml-4"><div class="card-body font-weight-semibold py-1 px-2 text-light">2011</div></div>
+										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
 											<div class="w-75">
 												<h2 class="mb-1">Audi A6 Sportback</h2>
 												<p class="font-weight-light text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ullam blanditiis voluptas quam iste tenetur laboriosam consectetur dignissimos recusandae, incidunt veritatis fugit!</p>
@@ -247,8 +248,8 @@
 										</div>
 									</div>
 									<div class="slide h-100" style="background: url('demos/car/images/dealers/2.jpg') center center; background-size: cover;">
-										<div class="flex-caption bg-dark card shadow-sm"><div class="card-body font-weight-semibold py-1 px-2">2012</div></div>
-										<div class="flex-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
+										<div class="slide-caption bg-dark card shadow-sm ml-4"><div class="card-body font-weight-semibold py-1 px-2 text-light">2012</div></div>
+										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
 											<div class="w-75">
 												<h2 class="mb-1">Bentley Continental GT</h2>
 												<p class="font-weight-light text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ullam blanditiis voluptas quam iste tenetur laboriosam consectetur dignissimos recusandae, incidunt veritatis fugit!</p>
@@ -257,8 +258,8 @@
 										</div>
 									</div>
 									<div class="slide h-100" style="background: url('demos/car/images/dealers/3.jpg') center center; background-size: cover;">
-										<div class="flex-caption bg-dark card shadow-sm"><div class="card-body font-weight-semibold py-1 px-2">2013</div></div>
-										<div class="flex-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
+										<div class="slide-caption bg-dark card shadow-sm ml-4"><div class="card-body font-weight-semibold py-1 px-2 text-light">2013</div></div>
+										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
 											<div class="w-75">
 												<h2 class="mb-1">BMW Gran Turismo</h2>
 												<p class="font-weight-light text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ullam blanditiis voluptas quam iste tenetur laboriosam consectetur dignissimos recusandae, incidunt veritatis fugit!</p>
@@ -815,9 +816,10 @@
 	============================================= -->
 	<div id="contact-me" class="icon-line-mail side-panel-trigger bg-color"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Bootstrap Select Plugin -->
 	<script src="js/components/bs-select.js"></script>

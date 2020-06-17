@@ -571,7 +571,7 @@
 															<a class="menu-link" href="page-title-center.html"><div>Center Align</div></a>
 														</li>
 														<li class="menu-item">
-															<a class="menu-link" href="page-titledark.html"><div>Dark Style</div></a>
+															<a class="menu-link" href="page-title-dark.html"><div>Dark Style</div></a>
 														</li>
 														<li class="menu-item">
 															<a class="menu-link" href="page-title-pattern.html"><div>BG Pattern</div></a>
@@ -1502,6 +1502,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
 		<!-- Page Title
@@ -1999,9 +2000,10 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
+	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
 	<!-- Range Slider Plugin -->
 	<script src="js/components/rangeslider.min.js"></script>
@@ -2029,7 +2031,7 @@
 				elementRetina = $( 'input[name="website-cost-retina"]' ),
 				elementWebType = $( 'input[name="website-cost-type"]' ),
 				elementDesign = $( 'input[name="website-cost-design"]' ),
-				elementPAGES = $(".website-pages"),
+				elementPages = $(".website-pages"),
 				elementCMS = $("input[name='website-cost-cms']"),
 				elementGA = $("input[name='website-cost-google-analytics']"),
 				elementUrgent = $("input[name='website-cost-before-30-days']"),
@@ -2056,7 +2058,7 @@
 				calculatePrice( pricingResponsive, pricingRetina, pricingWebtype, pricingDesign, pricingPages, pricingCMS, pricingSEO, pricingGA, pricingUrgent );
 			});
 
-			elementPAGES.ionRangeSlider({
+			elementPages.ionRangeSlider({
 				min: 10,
 				max: 100,
 				from: 10,
@@ -2064,11 +2066,10 @@
 				max_postfix: "+",
 				onStart: function(data){
 					pricingPages = data.from;
-					console.log(data);
 				}
 			});
 
-			elementPAGES.on( 'change', function(){
+			elementPages.on( 'change', function(){
 				pricingPages = $(this).prop('value');
 				calculatePrice( pricingResponsive, pricingRetina, pricingWebtype, pricingDesign, pricingPages, pricingCMS, pricingSEO, pricingGA, pricingUrgent );
 			});
@@ -2086,7 +2087,6 @@
 				max_postfix: " Keywords",
 				onStart: function(data){
 					pricingSEO = data.from;
-					console.log(data);
 				}
 			});
 

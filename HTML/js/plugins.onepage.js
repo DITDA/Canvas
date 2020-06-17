@@ -1,7 +1,5 @@
 window.scwOnePageModulePlugin = window.scwOnePageModulePlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
 let $onePageMenu,
 	windowEl		= $(window),
 	windowWidth		= windowEl.width(),
@@ -10,7 +8,7 @@ let $onePageMenu,
 	locationHash	= location.hash,
 	onePageMenuActiveClass;
 
-SEMICOLON._onePageModule = function( $onePageMenuEl ){
+window.SEMICOLON_onePageModule = function( $onePageMenuEl ){
 
 	$onePageMenu = $onePageMenuEl.filter(':not(.customjs)');
 
@@ -42,7 +40,7 @@ SEMICOLON._onePageModule = function( $onePageMenuEl ){
 	}
 
 	windowEl.scrollEnd( function(){
-		SEMICOLON._onePageScroller();
+		SEMICOLON_onePageScroller();
 	}, 500 );
 
 	$onePageMenu.each( function(){
@@ -63,7 +61,7 @@ SEMICOLON._onePageModule = function( $onePageMenuEl ){
 			let linkEl			= $(this),
 				linkElAnchor	= linkEl.attr('data-href'),
 				linkElement		= $( linkElAnchor ),
-				linkElSettings	= SEMICOLON._onePageSettings( linkElAnchor, $('a[data-href="'+ linkElAnchor +'"]') );
+				linkElSettings	= SEMICOLON_onePageSettings( linkElAnchor, $('a[data-href="'+ linkElAnchor +'"]') );
 
 			if( linkElement.length > 0 ) {
 				setTimeout( function(){
@@ -108,12 +106,12 @@ SEMICOLON._onePageModule = function( $onePageMenuEl ){
 
 };
 
-SEMICOLON._onePageScroller = function(){
+window.SEMICOLON_onePageScroller = function(){
 	$onePageMenu.find('[data-href]').parent().removeClass( onePageMenuActiveClass );
-	$onePageMenu.find('[data-href="#' + SEMICOLON._onePageCurrentSection() + '"]').parent().addClass( onePageMenuActiveClass );
+	$onePageMenu.find('[data-href="#' + SEMICOLON_onePageCurrentSection() + '"]').parent().addClass( onePageMenuActiveClass );
 };
 
-SEMICOLON._onePageCurrentSection = function(){
+window.SEMICOLON_onePageCurrentSection = function(){
 	let currentOnePageSection;
 
 	if( typeof $pageSectionEl === 'undefined' ) {
@@ -134,7 +132,7 @@ SEMICOLON._onePageCurrentSection = function(){
 	return currentOnePageSection;
 };
 
-SEMICOLON._onePageSettings = function( hash, element ) {
+window.SEMICOLON_onePageSettings = function( hash, element ) {
 
 	if( hash === 'undefined' && element.length < 1 ) {
 		return true;

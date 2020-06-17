@@ -61,7 +61,7 @@
 
 .toggle-content,
 .accordion-content {
-  display: block;
+  display: none;
   position: relative;
   padding: 0.75rem 0;
 }

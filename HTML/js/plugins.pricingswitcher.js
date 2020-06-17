@@ -1,8 +1,6 @@
 window.scwPricingSwitcherPlugin = window.scwPricingSwitcherPlugin || {};
 
-var SEMICOLON = SEMICOLON || {};
-
-SEMICOLON._pricingSwitcherFn = function( checkbox, parent, pricing, defClass, actClass ) {
+window.SEMICOLON_pricingSwitcherFn = function( checkbox, parent, pricing, defClass, actClass ) {
 	parent.find('.pts-left,.pts-right').removeClass( actClass ).addClass( defClass );
 	pricing.find('.pts-switch-content-left,.pts-switch-content-right').addClass('d-none');
 
@@ -15,7 +13,7 @@ SEMICOLON._pricingSwitcherFn = function( checkbox, parent, pricing, defClass, ac
 	}
 };
 
-SEMICOLON._pricingSwitcherInit = function( $pricingSwitcherEl ){
+window.SEMICOLON_pricingSwitcherInit = function( $pricingSwitcherEl ){
 
 	$pricingSwitcherEl = $pricingSwitcherEl.filter(':not(.customjs)');
 
@@ -31,10 +29,10 @@ SEMICOLON._pricingSwitcherInit = function( $pricingSwitcherEl ){
 			elActClass	= $(this).attr('data-active-class') || 'font-weight-bold',
 			elPricing	= $( elParent.attr('data-container') );
 
-		SEMICOLON._pricingSwitcherFn( elCheck, elParent, elPricing, elDefClass, elActClass );
+		SEMICOLON_pricingSwitcherFn( elCheck, elParent, elPricing, elDefClass, elActClass );
 
 		elCheck.on( 'change', function(){
-			SEMICOLON._pricingSwitcherFn( elCheck, elParent, elPricing, elDefClass, elActClass );
+			SEMICOLON_pricingSwitcherFn( elCheck, elParent, elPricing, elDefClass, elActClass );
 		});
 	});
 
