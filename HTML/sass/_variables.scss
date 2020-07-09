@@ -101,8 +101,20 @@ $container-max-widths: (
 	xxl: 1320px
 );
 
-$spacers: (
-	6: ($spacer * 5)
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 5),
+  ),
+  $spacers
 );
 
 //-------------------- Font Families --------------------//
@@ -248,7 +260,8 @@ $page-title-center-mx-width:			700px;
 
 //-------------------- Sliders --------------------//
 // Flex Slider
-$fslider-dots-position:					top 14px right 10px; // Eg:top, right, bottom, left  ;
+$fslider-dots-position-top:				14px;
+$fslider-dots-position-right:			10px;
 $fslider-dots-size:						0.625rem;
 $fslider-dots-border:					1px solid $body-bg;
 $fslider-dots-border-radius:			50%;
@@ -380,7 +393,7 @@ $countdown-md-section:					0.875rem;
 $countdown-lg-size:						44px;
 $countdown-lg-section:					18px;
 
-$countdown-border:						 g1px dotted darken($body-bg, 26.67%);
+$countdown-border:						1px dotted darken($body-bg, 26.67%);
 
 $countdown-inline-space:				7px;
 
@@ -827,8 +840,9 @@ $gotoTop-size:							40px;
 $gotoTop-bg:							rgba($black, 0.3);
 $gotoTop-icon-size:						1.25rem;
 $gotoTop-icon-color:					$white;
-$gotoTop-position-boxed:		 		right 30px bottom 50px;
-$gotoTop-position:		 				right 30px bottom 30px;
+$gotoTop-position-boxed-right:		 	30px;
+$gotoTop-position-boxed-bottom:			50px;
+$gotoTop-position-botom:				30px;
 $gotoTop-border-radius:					2px;
 $gotoTop-hover-color:					$theme-color;
 
@@ -997,7 +1011,26 @@ $widget-icon:							'\e7a5';
 $widget-comment-icon:					'\e9b8';
 $widget-icon-font-family: 				'font-icons';
 
+
+//-------------------- Navtree --------------------//
+
+$nav-tree-font-size:					12px;
+$nav-tree-padding-left:					20px;
+
+
+//-------------------- Switch Toggle --------------------//
+
+$switch-toggle-bg:						darken($body-bg, 13.33);
+
+$switch-toggle-size:					30px;
+$switch-toggle-size-mini:				16px;
+$switch-toggle-size-lg: 				45px;
+$switch-toggle-size-xl: 				60px;
+
+$switch-toggle-active-bg:				$theme-color;
+
 //-------------------- Footers --------------------//
+
 
 $footer-bg:								darken($body-bg, 6.67%);
 $footer-bg-dark:						darken($body-bg-dark, 1.96%);

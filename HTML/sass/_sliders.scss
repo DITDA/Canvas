@@ -703,7 +703,8 @@ body:not(.stretched) .slider-parallax .slider-inner { left: auto; }
 	width: auto;
 	z-index: 10;
 	text-align: center;
-	@include align-position($fslider-dots-position);
+	top: $fslider-dots-position-top;
+	right: $fslider-dots-position-right;
 	margin: 0;
 }
 
@@ -757,19 +758,19 @@ body:not(.stretched) .slider-parallax .slider-inner { left: auto; }
 -----------------------------------------------------------------*/
 
 .control-offset-lg .flex-control-nav {
-	top: 24px;
-	right: 20px;
+	top: $fslider-dots-position-top + 10;
+	right: $fslider-dots-position-right + 10;
 }
 
 .control-pos-top-left .flex-control-nav,
 .control-pos-bottom-left .flex-control-nav {
-	left: 10px;
+	left: $fslider-dots-position-right;
 	right: auto;
 }
 
 .control-offset-lg.control-pos-top-left .flex-control-nav,
 .control-offset-lg.control-pos-bottom-left .flex-control-nav {
-	left: 20px;
+	left: $fslider-dots-position-right + 10;
 }
 
 .control-pos-bottom-right .flex-control-nav,
@@ -777,14 +778,14 @@ body:not(.stretched) .slider-parallax .slider-inner { left: auto; }
 .control-pos-bottom .flex-control-nav,
 .control-pos-bottom .flex-control-nav {
 	top: auto;
-	bottom: 14px;
+	bottom: $fslider-dots-position-top;
 }
 
 .control-offset-lg.control-pos-bottom-right .flex-control-nav,
 .control-offset-lg.control-pos-bottom-left .flex-control-nav,
 .control-offset-lg.control-pos-bottom .flex-control-nav,
 .control-offset-lg.control-pos-bottom .flex-control-nav {
-	bottom: 24px;
+	bottom: $fslider-dots-position-top + 10;
 }
 
 .control-pos-bottom .flex-control-nav,
@@ -811,11 +812,11 @@ body:not(.stretched) .slider-parallax .slider-inner { left: auto; }
 	top: 0;
 	left: 0;
 	right: 0;
-	margin: 2px -2px -2px 0;
+	margin: $fslider-thumbs-gutters -$fslider-thumbs-gutters -$fslider-thumbs-gutters 0;
 	height: auto;
 }
 
-.flex-control-nav.flex-control-thumbs li { margin: 0 2px 2px 0; }
+.flex-control-nav.flex-control-thumbs li { margin: 0 $fslider-thumbs-gutters $fslider-thumbs-gutters 0; }
 
 .flex-control-nav.flex-control-thumbs li img {
 	cursor: pointer;

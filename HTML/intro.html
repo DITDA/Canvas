@@ -301,6 +301,23 @@
 	-o-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+
+.p-generator-video::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    background-size: 12px 12px;
+    background-position: center;
+    transform: translate(-50%,-50%);
+    background-image: radial-gradient(#4772d9 14%,transparent 14%);
+    -webkit-mask-image: radial-gradient(rgba(0,0,0,1),rgba(0,0,0,0) 75%);
+    mask-image: radial-gradient(rgba(0,0,0,1),rgba(0,0,0,0) 75%);
+    z-index: -1;
+}
 </style>
 
 </head>
@@ -390,6 +407,9 @@
 									<ul class="sub-menu-container">
 										<li class="menu-item">
 											<a class="menu-link" href="intro.html#section-niche"><div>Niche Demos</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="intro.html#section-onepage"><div>One-Page Demos</div></a>
 										</li>
 										<li class="menu-item">
 											<a class="menu-link" href="index-corporate.html"><div>Home - Corporate</div></a>
@@ -762,6 +782,20 @@
 										</li>
 										<li class="menu-item">
 											<a class="menu-link" href="mega-menu.html"><div><i class="icon-line-columns"></i>Mega Menu</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item">
+													<a class="menu-link" href="mega-menu.html"><div>Widgetized</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="mega-menu-full.html"><div>Full-Width</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="mega-menu-tab.html"><div>Tabbed</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="mega-menu-side-tab.html"><div>Side-Tabs (onClick)</div></a>
+												</li>
+											</ul>
 										</li>
 										<li class="menu-item">
 											<a class="menu-link" href="forms.html"><div><i class="icon-wpforms"></i>Forms</div></a>
@@ -1575,6 +1609,15 @@
 												<li class="menu-item">
 													<a class="menu-link" href="shop-single-both-sidebar.html"><div>Both Sidebar</div></a>
 												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="shop-single-color.html"><div>Color Options</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="shop-single-sticky.html"><div>Sticky Aside</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="shop-single-list.html"><div>Feature List</div></a>
+												</li>
 											</ul>
 										</li>
 										<li class="menu-item">
@@ -1777,14 +1820,14 @@
 					<div class="col-md-12">
 
 						<div class="heading-block mb-0 topmargin-lg border-bottom-0">
-							<h1 class="nott mb-5 mx-auto" style="max-width: 900px; letter-spacing: -2px !important;">
+							<h1 class="nott mb-5 mx-auto" style="max-width: 1000px; letter-spacing: -2px !important;">
 								<span class="text-rotater nocolor" data-separator="|" data-rotate="fadeIn" data-speed="1500">
-									<span class="t-rotate text-uppercase" style="font-size: 64px;">Corporate|Portfolio|Business|Real Estate|Medical|Construction|Store|Burger|Yoga|Hostel|Beauty|Crowdfunding|CoWorking|Recipes|SEO|App Landing|One-Page|Travel|e-Commerce|Articles|Course|Packers &amp; Movers|Conference|Non-Profit|Hosting|Gym|Photography|Blog|Magazine|Resume|Restaurant|Cafe|Spa|Wedding|Ajax|Media Agency|Shop|Events|Rental|News|Music|Car Listing|Barber|Pets</span>
+									<span class="t-rotate text-uppercase" style="font-size: 64px;">Corporate|Portfolio|Business|Real Estate|Medical|Construction|Store|Freelancer|Burger|Yoga|Hostel|Beauty|Crowdfunding|CoWorking|Recipes|SEO|App Landing|One-Page|Travel|e-Commerce|Articles|Course|Packers &amp; Movers|Cleaner|Beauty Kit|Conference|Non-Profit|Hosting|Gym|Photography|Blog|Magazine|Resume|Restaurant|Cafe|Spa|Wedding|Ajax|Media Agency|Shop|Events|Rental|News|Music|Car Listing|Barber|Pets</span>
 								</span>
 								<small class="d-block text-uppercase ls3 h5 mt-3">Beautiful. Powerful. Customizable.</small>
 							</h1>
 
-							<span class="ls0 mb-5" style="color: #777; font-size: 17px;">The <strong>Best Selling</strong> Multi-Purpose &amp; Powerful Bootstrap 4 Template with 1000+ Niche, Multi-Page &amp; One-Page Layouts and 1200+ UI Features.</span>
+							<span class="ls0 mb-5" style="color: #777; font-size: 17px;">The <strong>Best Selling</strong> Multi-Purpose &amp; Powerful Bootstrap 4 based Template with 1000+ Niche, Multi-Page &amp; One-Page Layouts and 1200+ UI Features.</span>
 
 							<a href="#" data-scrollto="#section-demos" class="btn button-rounded bg-color text-white shadow-sm font-weight-medium mt-2 mt-sm-4" data-offset="100" data-easing="easeInOutExpo" data-speed="1250" style="padding: 10px 22px"><i class="icon-line-stack-2" style="position: relative; top: 1px; margin-right: 5px;"></i> View Demos</a>
 
@@ -1928,7 +1971,7 @@
 						<div class="row col-mb-50">
 
 							<div class="col-md-3">
-								<div class="counter color" style="line-height: 1.1;"><span data-from="999" data-to="52000" data-refresh-interval="50" data-speed="1000"></span>+</div>
+								<div class="counter color" style="line-height: 1.1;"><span data-from="999" data-to="53000" data-refresh-interval="50" data-speed="1000"></span>+</div>
 								<h3><span class="subtitle nocolor ls0" style="font-size: 14px;">Happy Customers</span></h3>
 							</div>
 
@@ -1988,7 +2031,7 @@
 							<!-- Classic -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="index.html" target="_blank">
 											<img src="images/intro/niche/new/classic.jpg" alt="Live Preview">
 										</a>
@@ -2002,7 +2045,7 @@
 							<!-- Yoga -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-yoga.html" target="_blank">
 											<img src="images/intro/niche/new/yoga.jpg" alt="Live Preview">
 										</a>
@@ -2013,10 +2056,52 @@
 								</div>
 							</div>
 
+							<!-- Freelancer -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+								<div class="portfolio-item p-2">
+									<div class="portfolio-image shadow-lg rounded">
+										<a href="demo-freelancer.html" target="_blank">
+											<img src="images/intro/niche/new/freelancer.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 pb-0">
+										<h3><a href="demo-freelancer.html" target="_blank">Freelancer<span class="badge bg-color text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cleaner -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+								<div class="portfolio-item p-2">
+									<div class="portfolio-image shadow-lg rounded">
+										<a href="demo-cleaner.html" target="_blank">
+											<img src="images/intro/niche/new/cleaner.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 pb-0">
+										<h3><a href="demo-cleaner.html" target="_blank">Cleaner<span class="badge bg-color text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Beauty Kit -->
+							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+								<div class="portfolio-item p-2">
+									<div class="portfolio-image shadow-lg rounded">
+										<a href="demo-beauty-kit.html" target="_blank">
+											<img src="images/intro/niche/new/beauty-kit.jpg" alt="Live Preview">
+										</a>
+									</div>
+									<div class="portfolio-desc center pt-4 pb-0">
+										<h3><a href="demo-beauty-kit.html" target="_blank">Beauty Kit<span class="badge bg-color text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+
 							<!-- Store -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-store.html" target="_blank">
 											<img src="images/intro/niche/new/store.jpg" alt="Live Preview">
 										</a>
@@ -2030,7 +2115,7 @@
 							<!-- Hostel -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-hostel.html" target="_blank">
 											<img src="images/intro/niche/new/hostel.jpg" alt="Live Preview">
 										</a>
@@ -2044,7 +2129,7 @@
 							<!-- Crowdfunding -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-crowdfunding.html" target="_blank">
 											<img src="images/intro/niche/new/crowdfunding.jpg" alt="Live Preview">
 										</a>
@@ -2058,7 +2143,7 @@
 							<!-- Burger -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-burger.html" target="_blank">
 											<img src="images/intro/niche/new/burger.png" alt="Live Preview">
 										</a>
@@ -2072,7 +2157,7 @@
 							<!-- Landing -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-landing.html" target="_blank">
 											<img src="images/intro/niche/new/landing.jpg" alt="Live Preview">
 										</a>
@@ -2086,7 +2171,7 @@
 							<!-- Beauty -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-beauty.html" target="_blank">
 											<img src="images/intro/niche/new/beauty.jpg" alt="Live Preview">
 										</a>
@@ -2100,7 +2185,7 @@
 							<!-- Real Estate -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<div class="fslider flex-thumb-grid grid-3" data-arrows="false" data-thumbs="true" data-pause="3500">
 											<div class="flexslider">
 												<div class="slider-wrap">
@@ -2132,7 +2217,7 @@
 							<!-- CoWorking -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-coworking.html" target="_blank">
 											<img src="images/intro/niche/new/coworking.jpg" alt="Live Preview">
 										</a>
@@ -2146,7 +2231,7 @@
 							<!-- Recipes -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-recipes.html" target="_blank">
 											<img src="images/intro/niche/new/recipes.jpg" alt="Live Preview">
 										</a>
@@ -2160,7 +2245,7 @@
 							<!-- Movers -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-movers.html" target="_blank">
 											<img src="images/intro/niche/new/movers.jpg" alt="Live Preview">
 										</a>
@@ -2174,7 +2259,7 @@
 							<!-- Conference -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-conference.html" target="_blank">
 											<img src="images/intro/niche/new/conference.jpg" alt="Live Preview">
 										</a>
@@ -2188,7 +2273,7 @@
 							<!-- non-profit -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-nonprofit.html" target="_blank">
 											<img src="images/intro/niche/new/nonprofit.jpg" alt="Live Preview">
 										</a>
@@ -2202,7 +2287,7 @@
 							<!-- Seo -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-seo.html" target="_blank">
 											<img src="images/intro/niche/new/seo.jpg" alt="Live Preview">
 										</a>
@@ -2216,7 +2301,7 @@
 							<!-- article -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-articles.html" target="_blank">
 											<img src="images/intro/niche/new/article.jpg" alt="Live Preview">
 										</a>
@@ -2230,7 +2315,7 @@
 							<!-- course -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-course.html" target="_blank">
 											<img src="images/intro/niche/new/course.jpg" alt="Live Preview">
 										</a>
@@ -2244,7 +2329,7 @@
 							<!-- shop -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-shop.html" target="_blank">
 											<img src="images/intro/niche/new/shop.jpg" alt="Live Preview">
 										</a>
@@ -2258,7 +2343,7 @@
 							<!-- News -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-news.html" target="_blank">
 											<img src="images/intro/niche/new/news.jpg" alt="Live Preview">
 										</a>
@@ -2272,7 +2357,7 @@
 							<!-- Hosting -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-hosting.html" target="_blank">
 											<img src="images/intro/niche/new/hosting.jpg" alt="Live Preview">
 										</a>
@@ -2286,7 +2371,7 @@
 							<!-- Bike -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-bike.html" target="_blank">
 											<img src="images/intro/niche/new/bike.jpg" alt="Live Preview">
 										</a>
@@ -2300,7 +2385,7 @@
 							<!-- Photographer -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-photographer.html" target="_blank">
 											<img src="images/intro/niche/new/photographer.jpg" alt="Live Preview">
 										</a>
@@ -2314,7 +2399,7 @@
 							<!-- Headphones -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-headphones.html" target="_blank">
 											<img src="images/intro/niche/new/headphones.jpg" alt="Live Preview">
 										</a>
@@ -2328,7 +2413,7 @@
 							<!-- Gym -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-gym.html" target="_blank">
 											<img src="images/intro/niche/new/gym.jpg" alt="Live Preview">
 										</a>
@@ -2342,7 +2427,7 @@
 							<!-- Modern Blog -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-modern-blog.html" target="_blank">
 											<img src="images/intro/niche/new/modern-blog.jpg" alt="Live Preview">
 										</a>
@@ -2356,7 +2441,7 @@
 							<!-- Music -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-music.html" target="_blank">
 											<img src="images/intro/niche/new/music.jpg" alt="Live Preview">
 										</a>
@@ -2370,7 +2455,7 @@
 							<!-- Business -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-business.html" target="_blank">
 											<img src="images/intro/niche/new/business.jpg" alt="Live Preview">
 										</a>
@@ -2384,7 +2469,7 @@
 							<!-- Car -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-car.html" target="_blank">
 											<img src="images/intro/niche/new/car.jpg" alt="Live Preview">
 										</a>
@@ -2398,7 +2483,7 @@
 							<!-- Construction -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-construction.html" target="_blank">
 											<img src="images/intro/niche/new/construction.jpg" alt="Live Preview">
 										</a>
@@ -2412,7 +2497,7 @@
 							<!-- Travel -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-travel.html" target="_blank">
 											<img src="images/intro/niche/new/travel.jpg" alt="Live Preview">
 										</a>
@@ -2426,7 +2511,7 @@
 							<!-- Medical -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-medical.html" target="_blank">
 											<img src="images/intro/niche/new/medical.jpg" alt="Live Preview">
 										</a>
@@ -2440,7 +2525,7 @@
 							<!-- App Landing -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-app-landing.html" target="_blank">
 											<img src="images/intro/niche/new/app-landing.jpg" alt="Live Preview">
 										</a>
@@ -2454,7 +2539,7 @@
 							<!-- Restaurant -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-restaurant.html" target="_blank">
 											<img src="images/intro/niche/new/restaurant.jpg" alt="Live Preview">
 										</a>
@@ -2468,7 +2553,7 @@
 							<!-- Barber -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-barber.html" target="_blank">
 											<img src="images/intro/niche/new/barber.jpg" alt="Live Preview">
 										</a>
@@ -2482,7 +2567,7 @@
 							<!-- eCommerce -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-ecommerce.html" target="_blank">
 											<img src="images/intro/niche/new/ecommerce.jpg" alt="Live Preview">
 										</a>
@@ -2510,7 +2595,7 @@
 							<!-- Resume -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-resume.html" target="_blank">
 											<img src="images/intro/niche/new/resume.jpg" alt="Live Preview">
 										</a>
@@ -2524,7 +2609,7 @@
 							<!-- Photography -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-photography.html" target="_blank">
 											<img src="images/intro/niche/new/photography.jpg" alt="Live Preview">
 										</a>
@@ -2538,7 +2623,7 @@
 							<!-- Interior Design -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-interior-design.html" target="_blank">
 											<img src="images/intro/niche/new/interior-design.jpg" alt="Live Preview">
 										</a>
@@ -2552,7 +2637,7 @@
 							<!-- Writer -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-writer.html" target="_blank">
 											<img src="images/intro/niche/new/writer.jpg" alt="Live Preview">
 										</a>
@@ -2566,7 +2651,7 @@
 							<!-- Cafe -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-cafe.html" target="_blank">
 											<img src="images/intro/niche/new/cafe.jpg" alt="Live Preview">
 										</a>
@@ -2580,7 +2665,7 @@
 							<!-- Spa -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-spa.html" target="_blank">
 											<img src="images/intro/niche/new/spa.jpg" alt="Live Preview">
 										</a>
@@ -2594,7 +2679,7 @@
 							<!-- Media Agency -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-media-agency.html" target="_blank">
 											<img src="images/intro/niche/new/media-agency.jpg" alt="Live Preview">
 										</a>
@@ -2608,7 +2693,7 @@
 							<!-- Agency -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<a href="demo-agency.html" target="_blank">
 											<img src="images/intro/niche/new/agency.jpg" alt="Live Preview">
 										</a>
@@ -2622,7 +2707,7 @@
 							<!-- xmas -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg snow">
+									<div class="portfolio-image shadow-lg rounded snow">
 										<a href="demo-xmas.html" target="_blank">
 											<img src="images/intro/niche/new/xmas.jpg" alt="Live Preview">
 										</a>
@@ -2636,7 +2721,7 @@
 							<!-- more -->
 							<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item p-2">
-									<div class="portfolio-image shadow-lg">
+									<div class="portfolio-image shadow-lg rounded">
 										<img src="images/intro/niche/new/more.jpg" alt="Live Preview">
 									</div>
 									<div class="portfolio-desc center pt-4 pb-0">
@@ -2652,7 +2737,7 @@
 
 				<div class="section mt-0 clearfix">
 					<div class="heading-block center border-bottom-0 mb-0">
-						<h2 class="nott" style="font-size: 36px;">Loved by <span>52000+</span> Happy Customers</h2>
+						<h2 class="nott" style="font-size: 36px;">Loved by <span>53000+</span> Happy Customers</h2>
 						<span>Powered by Top-Notch Support <span class="font-secondary">&amp;</span> Stellar <a href="#" data-scrollto="#section-testimonials" data-easing="easeInOutExpo" data-speed="1250">Customer Reviews <i class="icon-angle-right" style="position: relative; top: 2px; margin-left: 2px;"></i></a></span>
 					</div>
 				</div>
@@ -2877,6 +2962,42 @@
 							<div class="grid-intro-item col-lg-1-5 col-md-4 col-sm-6 col-12">
 								<div class="portfolio-item">
 									<div class="portfolio-image shadow-lg rounded-lg">
+										<a href="op-designer.html" target="_blank">
+											<img src="images/intro/onepage/designer.jpg" alt="Designer">
+										</a>
+									</div>
+									<div class="portfolio-desc center pb-0">
+										<h3><a href="op-designer.html" target="_blank">Designer<span class="badge bg-color text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg-1-5 col-md-4 col-sm-6 col-12">
+								<div class="portfolio-item">
+									<div class="portfolio-image shadow-lg rounded-lg">
+										<a href="op-parallax.html" target="_blank">
+											<img src="images/intro/onepage/parallax.jpg" alt="Parallax">
+										</a>
+									</div>
+									<div class="portfolio-desc center pb-0">
+										<h3><a href="op-parallax.html" target="_blank">Parallax<span class="badge bg-color text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg-1-5 col-md-4 col-sm-6 col-12">
+								<div class="portfolio-item">
+									<div class="portfolio-image shadow-lg rounded-lg">
+										<a href="op-tourism.html" target="_blank">
+											<img src="images/intro/onepage/tourism.jpg" alt="Tourism">
+										</a>
+									</div>
+									<div class="portfolio-desc center pb-0">
+										<h3><a href="op-tourism.html" target="_blank">Tourism<span class="badge bg-color text-white">New</span></a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="grid-intro-item col-lg-1-5 col-md-4 col-sm-6 col-12">
+								<div class="portfolio-item">
+									<div class="portfolio-image shadow-lg rounded-lg">
 										<a href="op-developer.html" target="_blank">
 											<img src="images/intro/onepage/developer.jpg" alt="Developer">
 										</a>
@@ -3006,42 +3127,6 @@
 									</div>
 								</div>
 							</div>
-							<div class="grid-intro-item col-lg-1-5 col-md-4 col-sm-6 col-12">
-								<div class="portfolio-item">
-									<div class="portfolio-image shadow-lg rounded-lg">
-										<a href="op-frame.html" target="_blank">
-											<img src="images/intro/onepage/frame.jpg" alt="Frame">
-										</a>
-									</div>
-									<div class="portfolio-desc center pb-0">
-										<h3><a href="op-frame.html" target="_blank">Frame</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="grid-intro-item col-lg-1-5 col-md-4 col-sm-6 col-12">
-								<div class="portfolio-item">
-									<div class="portfolio-image shadow-lg rounded-lg">
-										<a href="op-holiday.html" target="_blank">
-											<img src="images/intro/onepage/homepage42.jpg" alt="Holiday">
-										</a>
-									</div>
-									<div class="portfolio-desc center pb-0">
-										<h3><a href="op-holiday.html" target="_blank">Holiday</a></h3>
-									</div>
-								</div>
-							</div>
-							<div class="grid-intro-item col-lg-1-5 col-md-4 col-sm-6 col-12">
-								<div class="portfolio-item">
-									<div class="portfolio-image shadow-lg rounded-lg">
-										<a href="op-personal.html" target="_blank">
-											<img src="images/intro/onepage/homepage44.jpg" alt="Personal">
-										</a>
-									</div>
-									<div class="portfolio-desc center pb-0">
-										<h3><a href="op-personal.html" target="_blank">Personal</a></h3>
-									</div>
-								</div>
-							</div>
 
 						</div>
 
@@ -3111,6 +3196,29 @@
 							<a href="forms.html" target="_blank" class="button button-rounded button-dark button-xlarge">Explore Forms</a>
 						</div>
 
+					</div>
+				</div>
+
+				<div id="section-p-generator" class="section page-section my-0 py-6" style="background-color: rgba(74,117,214,0.06);">
+					<div class="container center">
+
+						<p class="titular-sub-title ls2 text-primary font-weight-normal mb-2">We know the value of Your Time</p>
+						<h2 class="nott font-weight-bold" style="font-size: 42px; line-height: 1.2; letter-spacing: -1px;">Package <span>Generator</span></h2>
+						<div class="row justify-content-center">
+							<div class="col-lg-6">
+								<p class="">Create a Custom Package by only selecting the Files you need for your Project. This will help you get started super-quickly without needing to Browse through the Huge Package we provide by default and then sort the Files you need manually.</p>
+								<a href="http://docs.semicolonweb.com/docs/getting-started/installation/" class="button button-large button-light bg-white color rounded nott font-weight-semibold ls0 shadow-sm">View In Documentation</a>
+							</div>
+
+							<div class="w-100"></div>
+
+							<div class="col-lg-7 p-generator-video">
+
+								<video class="topmargin bottommargin-sm shadow rounded-lg position-relative" poster="images/intro/new/p-generator.png" preload="auto" loop autoplay muted style="display: block; max-width: 100%;">
+									<source src='images/intro/new/p-generator.mp4' type='video/mp4' />
+								</video>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -4142,7 +4250,7 @@
 					</div>
 					<div class="col-md-4 p-0 center">
 						<div class="clearfix">
-							<a href="http://support.semicolonweb.com/canvas-html-documentation/" class="col-padding" target="_blank">
+							<a href="http://docs.semicolonweb.com/" class="col-padding" target="_blank">
 								<i class="icon-et-book-open i-plain i-large m-0 inline-block"></i>
 								<span class="font-weight-medium">Extensive Documentation</span>
 							</a>

@@ -282,7 +282,7 @@ $tab-prefix: tab;
 	}
 }
 
-.tab-content:not(:first-child) {
+.tabs .tab-content:not(:first-child) {
 	display: none;
 }
 
@@ -336,11 +336,11 @@ $tab-prefix: tab;
 				}
 				a {
 					height: auto;
-					line-height: $tab-height + round($tabs-border-width * 2);;
+					line-height: $tab-height + round($tabs-border-width * 2);
 				}
 				&.ui-#{$tab-prefix}s-active a {
 					top: 0;
-					right: -$tabs-border-width;;
+					right: -$tabs-border-width;
 				}
 			}
 			&.tab-nav-lg li i {

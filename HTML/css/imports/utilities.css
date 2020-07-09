@@ -2070,3 +2070,136 @@ img.lazy {
 img.lazy:not([src]) {
   visibility: hidden;
 }
+
+
+/* ----------------------------------------------------------------
+  Borders
+-----------------------------------------------------------------*/
+.border-width-0,
+.h-border-width-0:hover {
+  border-width: 0px !important;
+}
+
+.border-width-1,
+.h-border-width-1:hover {
+  border-width: 1px !important;
+}
+
+.border-width-2,
+.h-border-width-2:hover {
+  border-width: 2px !important;
+}
+
+.border-width-3,
+.h-border-width-3:hover {
+  border-width: 3px !important;
+}
+
+.border-width-4,
+.h-border-width-4:hover {
+  border-width: 4px !important;
+}
+
+.border-width-5,
+.h-border-width-5:hover {
+  border-width: 5px !important;
+}
+
+.border-width-6,
+.h-border-width-6:hover {
+  border-width: 6px !important;
+}
+
+.border-dotted {
+  border-style: dotted !important;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+.border-solid {
+  border-style: solid !important;
+}
+
+.border-double {
+  border-style: double !important;
+}
+
+.h-border-primary:hover {
+  border-color: #007bff !important;
+}
+
+.h-border-secondary:hover {
+  border-color: #6c757d !important;
+}
+
+.h-border-success:hover {
+  border-color: #28a745 !important;
+}
+
+.h-border-info:hover {
+  border-color: #17a2b8 !important;
+}
+
+.h-border-warning:hover {
+  border-color: #ffc107 !important;
+}
+
+.h-border-danger:hover {
+  border-color: #dc3545 !important;
+}
+
+.h-border-light:hover {
+  border-color: #f8f9fa !important;
+}
+
+.h-border-dark:hover {
+  border-color: #343a40 !important;
+}
+
+.border-transparent,
+.h-border-transparent:hover {
+  border-color: transparent !important;
+}
+
+.border-default,
+.h-border-default:hover {
+  border-color: #EEE !important;
+}
+
+.dark.border-default,
+.dark .border-default,
+.dark.h-border-default:hover
+.dark .h-border-default:hover {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.border-ts {
+  -webkit-transition: border 0.5s ease;
+  transition: border 0.5s ease;
+}
+
+/* ----------------------------------------------------------------
+  Shadow
+-----------------------------------------------------------------*/
+.h-shadow-sm:hover {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.h-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.h-shadow-lg:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.h-shadow-none:hover {
+  box-shadow: none !important;
+}
+
+.shadow-ts {
+  -webkit-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+}

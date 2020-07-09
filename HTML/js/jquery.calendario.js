@@ -47,8 +47,8 @@
 	fillEmpty: true,
 	feedParser: './feed/',
 	zone: '00:00', // Ex: IST zone time is '+05:30' by default it is GMT, Sign is important.
-	 format: 'MM-DD-YYYY',
-	checkUpdate: true //Check if any new version of Calendario is released (Details will be in the browser console)
+	format: 'MM-DD-YYYY',
+	checkUpdate: false //Check if any new version of Calendario is released (Details will be in the browser console)
   };
 
   $.Calendario.prototype = {

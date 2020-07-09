@@ -29,7 +29,6 @@
 	============================================= -->
 	<title>Landing Demo | Canvas</title>
 
-
 </head>
 
 <body class="stretched">
@@ -258,7 +257,7 @@
 
 						<div class="heading-block mx-auto center" style="max-width: 500px">
 							<h5 class="text-uppercase ls1 text-muted mb-2">Gallery</h5>
-							<h2 class="nott mb-3">App Screenhots</h2>
+							<h2 class="nott mb-3">App Screenshots</h2>
 							<p class="h6 font-weight-normal text-black-50">Recusandae ducimus, sequi, sapiente possimus optio impedit efficient services. Completely promote.</p>
 						</div>
 
@@ -306,7 +305,7 @@
 
 				</div>
 
-				<div class="section m-0 parallax" style="padding: 100px 0;" data-0-top="background-color:rgb(61,128,228);" data-center-bottom="background-color:rgb(0,0,0);">
+				<div class="section m-0 parallax" style="padding: 100px 0; background-color:rgb(61,128,228);" data-0-top="background-color:rgb(61,128,228);" data-center-bottom="background-color:rgb(0,0,0);">
 					<div class="container">
 						<div class="row justify-content-between">
 							<div class="col-xl-4 col-lg-5 col-md-6 dark dotted-bg">
@@ -479,7 +478,7 @@
 							<div class="col-lg-5 d-flex align-items-end">
 								<div class="device-video-wrap">
 									<img src="demos/landing/images/iphone-hand.png" alt="Image">
-									<video poster="images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
+									<video poster="images/videos/deskwork.jpg" preload="auto" loop autoplay muted>
 										<source src='demos/landing/images/form-video.mp4' type='video/mp4' />
 									</video>
 								</div>
@@ -760,13 +759,16 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
 
-
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
 
 	<script>
-
+		jQuery(window).on( 'pluginCarouselReady', function(){
+			setTimeout( function(){
+				$('.owl-stage').after('<div class="owl-stage-outer-bg"></div>');
+			}, 1000 );
+		});
 	</script>
 
 </body>

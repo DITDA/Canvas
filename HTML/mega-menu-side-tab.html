@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400i&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Mega Menu Side Tab | Canvas</title>
+
+	<style>
+		.mega-menu #side-tabs .rounded-circle {
+		    width: 32px;
+		    height: 32px;
+		    margin-right: 8px;
+		}
+
+		.mega-menu #side-tabs .list-group-item {
+			color: #444;
+			min-width: 250px;
+		}
+
+		.mega-menu #side-tabs .list-group-item.active {
+			color: #FFF;
+		    background-color: #1ABC9C;
+		    border-color: #1ABC9C;
+		}
+
+		@media (min-width: 992px) {
+			.sub-menu-container.menu-item-2 .menu-item > .menu-link {
+			    padding: 7px 15px;
+			    font-size: 1.25rem;
+			    text-transform: none;
+			    font-weight: 500;
+			    color: #444;
+			    background-color: transparent !important;
+			    text-decoration: underline !important;
+			}
+		}
+
+	</style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+							</div><!-- #top-search end -->
+
+							<!-- Top Cart
+							============================================= -->
+							<div id="top-cart" class="header-misc-icon d-none d-sm-block">
+								<a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span class="top-cart-number">5</span></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4>Shopping Cart</h4>
+									</div>
+									<div class="top-cart-items">
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Blue Round-Neck Tshirt with a Button</a>
+													<span class="top-cart-item-price d-block">$19.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 2</div>
+											</div>
+										</div>
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Light Blue Denim Dress</a>
+													<span class="top-cart-item-price d-block">$24.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 3</div>
+											</div>
+										</div>
+									</div>
+									<div class="top-cart-action">
+										<span class="top-checkout-price">$114.95</span>
+										<a href="#" class="button button-3d button-small m-0">View Cart</a>
+									</div>
+								</div>
+							</div><!-- #top-cart end -->
+
+						</div>
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows on-click">
+
+							<ul class="menu-container clearfix">
+								<li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+
+								<!-- Mega Menu
+								============================================= -->
+								<li class="mega-menu menu-item"><a class="menu-link" href="#"><div>Side Tab <small>(on Click)</small></div></a>
+									<!-- Mega Menu Content
+									============================================= -->
+									<div class="mega-menu-content mega-menu-style-2 pl-lg-0">
+										<div class="container">
+											<div class="row">
+												<!-- Mega Menu Nav Link
+												============================================= -->
+												<ul class="sub-menu-container mega-menu-column col-lg-auto p-lg-0">
+													<li class="menu-item">
+														<div class="widget">
+															<div class="list-group list-group-flush" id="side-tabs" role="tablist" aria-orientation="vertical">
+																<a class="list-group-item border-default active" data-toggle="tab" href="#mega-menu-tab-health" role="tab" aria-controls="mega-menu-tab-health" aria-selected="true"><img src="https://source.unsplash.com/d3bYmnZ0ank/36x36" alt="Image" class="rounded-circle">Health / Fitness</a>
+																<a class="list-group-item border-default" data-toggle="tab" href="#mega-menu-tab-entertainment" role="tab" aria-controls="mega-menu-tab-entertainment" aria-selected="false"><img src="https://source.unsplash.com/0woyPEJQ7jc/36x36" alt="Image" class="rounded-circle">Entertainment</a>
+																<a class="list-group-item border-default" data-toggle="tab" href="#mega-menu-tab-artist" role="tab" aria-controls="mega-menu-tab-artist" aria-selected="false"><img src="https://source.unsplash.com/dGfPZULuMfw/36x36" alt="Image" class="rounded-circle">Artist</a>
+																<a class="list-group-item border-default" data-toggle="tab" href="#mega-menu-tab-recipes" role="tab" aria-controls="mega-menu-tab-recipes" aria-selected="false"><img src="https://source.unsplash.com/s_ZX72IuHRQ/36x36" alt="Image" class="rounded-circle">Recipes</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+												<!-- Mega Menu Nav Content
+												============================================= -->
+												<ul class="sub-menu-container mega-menu-column col-lg">
+													<li class="menu-item">
+														<div class="widget">
+															<div class="tab-content">
+																<div class="tab-pane pt-4 pt-md-0 show active" id="mega-menu-tab-health" role="tabpanel" aria-labelledby="mega-menu-tab-health">
+																	<div class="row col-mb-30">
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/1.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">A Surprising Tool to Help you Lifestyle</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/meditation.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">Toyotas next minivan will let you.</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/3.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">Lifestyle Your Way to Success</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="tab-pane pt-4 pt-md-0" id="mega-menu-tab-entertainment" role="tabpanel" aria-labelledby="mega-menu-tab-entertainment">
+																	<div class="row col-mb-30">
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/2.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">A Surprising Tool to Help You Lifestyle</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/party.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">Toyotas next minivan will let you.</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/movies.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">Lifestyle Your Way to Success</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="tab-pane pt-4 pt-md-0" id="mega-menu-tab-artist" role="tabpanel" aria-labelledby="mega-menu-tab-artist">
+																	<div class="row col-mb-30">
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/author.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">A Surprising Tool to Help You Lifestyle</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/painter.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">Toyotas next minivan will let you.</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/book.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">Lifestyle Your Way to Success</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="tab-pane" id="mega-menu-tab-recipes" role="tabpanel" aria-labelledby="mega-menu-tab-recipes">
+																	<div class="row col-mb-30">
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/recipes-1.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">A Surprising Tool to Help You Lifestyle</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/recipes-2.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">Toyotas next minivan will let you.</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-md-4 entry mb-0">
+																			<div class="entry-image mb-3">
+																				<a href="#"><img src="demos/news/images/posts/lifestyle/chef.jpg" alt="Image 3"></a>
+																			</div>
+																			<div class="entry-title title-xs nott">
+																				<h3><a href="#">Lifestyle Your Way to Success</a></h3>
+																			</div>
+																			<div class="entry-meta">
+																				<ul>
+																					<li>John Doe</li>
+																					<li><i class="icon-time"></i>11 Mar 2021</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								<li class="mega-menu menu-item"><a class="menu-link" href="#"><div>Help <small>(on Click)</small></div></a>
+									<!-- Mega Menu Content
+									============================================= -->
+									<div class="mega-menu-content mega-menu-style-2">
+										<div class="container">
+											<div class="row justify-content-center">
+												<!-- Mega Menu Nav Link
+												============================================= -->
+												<ul class="sub-menu-container mega-menu-column col-lg-4 text-lg-center menu-item-2">
+													<li class="menu-item-title">
+														<a class="menu-link text-black-50" href="#">Helps &amp; Supports</a>
+														<ul class="sub-menu-container">
+															<li class="menu-item">
+																<a class="menu-link" href="#">Supports</a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="#">Documentation</a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="#">Contact Us</a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="#">Email Us</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Page Sub Menu
+		============================================= -->
+		<div id="page-menu" class="no-sticky">
+			<div id="page-menu-wrap">
+				<div class="container">
+					<div class="page-menu-row">
+
+						<div class="page-menu-title">Mega Menu <span>Variations</span></div>
+
+						<nav class="page-menu-nav">
+							<ul class="page-menu-container">
+								<li class="page-menu-item"><a href="mega-menu.html"><div>Default</div></a></li>
+								<li class="page-menu-item"><a href="mega-menu-full.html"><div>Full Width</div></a></li>
+								<li class="page-menu-item"><a href="mega-menu-tab.html"><div>With Tab</div></a></li>
+								<li class="page-menu-item current"><a href="mega-menu-side-tab.html"><div>Side Tab + Click</div></a></li>
+							</ul>
+						</nav>
+
+						<div id="page-menu-trigger"><i class="icon-reorder"></i></div>
+
+					</div>
+				</div>
+			</div>
+		</div><!-- #page-menu end -->
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title">
+
+			<div class="container clearfix">
+				<h1>Mega Menu Side Tab</h1>
+				<span>Unleashing the Power of Mega Menus</span>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item"><a href="#">Templates</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Mega Menu</li>
+				</ol>
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+
+					<blockquote class="bottommargin">
+						<p>Every Link in the Main Menu Above contains a Different Mega Menu.</p>
+					</blockquote>
+
+					<p><span class="dropcap">F</span>oster best practices effectiveness inspire breakthroughs solve immunize turmoil. Policy dialogue peaceful The Elders rural global support. Process inclusive innovate readiness, public sector complexity. Lifting people up cornerstone partner, technology working families civic engagement activist recognize potential global network. Countries tackling solution respond change-makers tackle. Assistance, giving; fight against malnutrition experience in the field lasting change scalable. Empowerment long-term, fairness policy community progress social responsibility; Cesar Chavez recognition. Expanding community ownership visionary indicator pursue these aspirations accessibility. Achieve; worldwide, life-saving initiative facilitate. New approaches, John Lennon humanitarian relief fundraise vaccine Jane Jacobs community health workers Oxfam. Our ambitions informal economies.</p>
+
+					<div class="col_half nobottommargin">
+
+						<p>Provide, Aga Khan, interconnectivity governance fairness replicable, new approaches visionary implementation. End hunger evolution, future promising development youth. Public sector, small-scale farmers; harness facilitate gender. Contribution dedicated global change movements, prosperity accelerate progress citizens of change. Elevate; accelerate reduce child mortality; billionaire philanthropy fluctuation, plumpy'nut care opportunity catalyze. Partner deep.</p>
+
+					</div>
+
+					<div class="col_half nobottommargin col_last">
+
+						<p>Frontline harness criteria governance freedom contribution. Campaign Angelina Jolie natural resources, Rockefeller peaceful philanthropy human potential. Justice; outcomes reduce carbon emissions nonviolent resistance human being. Solve innovate aid communities; benefit truth rural development UNICEF meaningful work. Generosity Action Against Hunger relief; many voices impact crisis situation poverty pride. Vaccine carbon.</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap clearfix">
+
+					<div class="col_two_third">
+
+						<div class="col_one_third">
+
+							<div class="widget clearfix">
+
+								<img src="images/footer-widget-logo.png" alt="" class="footer-logo">
+
+								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+
+								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+									<address>
+										<strong>Headquarters:</strong><br>
+										795 Folsom Ave, Suite 600<br>
+										San Francisco, CA 94107<br>
+									</address>
+									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
+									<abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>
+									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="col_one_third">
+
+							<div class="widget widget_links clearfix">
+
+								<h4>Blogroll</h4>
+
+								<ul>
+									<li><a href="http://codex.wordpress.org/">Documentation</a></li>
+									<li><a href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+									<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+									<li><a href="http://wordpress.org/support/">Support Forums</a></li>
+									<li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+									<li><a href="http://wordpress.org/news/">WordPress Blog</a></li>
+									<li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col_one_third col_last">
+
+							<div class="widget clearfix">
+								<h4>Recent Posts</h4>
+
+								<div id="post-list-footer">
+									<div class="spost clearfix">
+										<div class="entry-c">
+											<div class="entry-title">
+												<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+											</div>
+											<ul class="entry-meta">
+												<li>10th July 2014</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="spost clearfix">
+										<div class="entry-c">
+											<div class="entry-title">
+												<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+											</div>
+											<ul class="entry-meta">
+												<li>10th July 2014</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="spost clearfix">
+										<div class="entry-c">
+											<div class="entry-title">
+												<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+											</div>
+											<ul class="entry-meta">
+												<li>10th July 2014</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col_one_third col_last">
+
+						<div class="widget clearfix" style="margin-bottom: -20px;">
+
+							<div class="row">
+
+								<div class="col-lg-6 bottommargin-sm">
+									<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+									<h5 class="nobottommargin">Total Downloads</h5>
+								</div>
+
+								<div class="col-lg-6 bottommargin-sm">
+									<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<h5 class="nobottommargin">Clients</h5>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="widget subscribe-widget clearfix">
+							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+							<div class="widget-subscribe-form-result"></div>
+							<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="nobottommargin">
+								<div class="input-group divcenter">
+									<div class="input-group-prepend">
+										<div class="input-group-text"><i class="icon-email2"></i></div>
+									</div>
+									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+									<div class="input-group-append">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="widget clearfix" style="margin-bottom: -20px;">
+
+							<div class="row">
+
+								<div class="col-lg-6 clearfix bottommargin-sm">
+									<a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+								</div>
+								<div class="col-lg-6 clearfix">
+									<a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+										<i class="icon-rss"></i>
+										<i class="icon-rss"></i>
+									</a>
+									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix">
+
+					<div class="col_half">
+						Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.<br>
+						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+					</div>
+
+					<div class="col_half col_last tright">
+						<div class="fright clearfix">
+							<a href="#" class="social-icon si-small si-borderless si-facebook">
+								<i class="icon-facebook"></i>
+								<i class="icon-facebook"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-twitter">
+								<i class="icon-twitter"></i>
+								<i class="icon-twitter"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-gplus">
+								<i class="icon-gplus"></i>
+								<i class="icon-gplus"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-pinterest">
+								<i class="icon-pinterest"></i>
+								<i class="icon-pinterest"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-vimeo">
+								<i class="icon-vimeo"></i>
+								<i class="icon-vimeo"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-github">
+								<i class="icon-github"></i>
+								<i class="icon-github"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-yahoo">
+								<i class="icon-yahoo"></i>
+								<i class="icon-yahoo"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-linkedin">
+								<i class="icon-linkedin"></i>
+								<i class="icon-linkedin"></i>
+							</a>
+						</div>
+
+						<div class="clear"></div>
+
+						<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+</body>
+</html>

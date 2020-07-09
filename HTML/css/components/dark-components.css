@@ -220,7 +220,7 @@
 .dark .daterangepicker.openscenter:before {
 	border-bottom-color: #444;
 	border-left-color: transparent;
-	border-bottom-color- rgba(0, 0, 0, 0.2);
+	border-bottom-color: rgba(0, 0, 0, 0.2);
 }
 
 .dark .daterangepicker.openscenter:after {
@@ -231,7 +231,7 @@
 .dark .daterangepicker.opensright:before {
 	border-bottom-color: #444;
 	border-left-color: transparent;
-	border-bottom-color- rgba(0, 0, 0, 0.2);
+	border-bottom-color: rgba(0, 0, 0, 0.2);
 }
 
 .dark .daterangepicker.opensright:after {

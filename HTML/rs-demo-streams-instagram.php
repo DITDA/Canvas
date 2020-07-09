@@ -175,6 +175,9 @@ $photos = $instagram->get_public_photos($search_user_id);
 											<a class="menu-link" href="intro.html#section-niche"><div>Niche Demos</div></a>
 										</li>
 										<li class="menu-item">
+											<a class="menu-link" href="intro.html#section-onepage"><div>One-Page Demos</div></a>
+										</li>
+										<li class="menu-item">
 											<a class="menu-link" href="index-corporate.html"><div>Home - Corporate</div></a>
 											<ul class="sub-menu-container">
 												<li class="menu-item">
@@ -545,6 +548,20 @@ $photos = $instagram->get_public_photos($search_user_id);
 										</li>
 										<li class="menu-item">
 											<a class="menu-link" href="mega-menu.html"><div><i class="icon-line-columns"></i>Mega Menu</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item">
+													<a class="menu-link" href="mega-menu.html"><div>Widgetized</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="mega-menu-full.html"><div>Full-Width</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="mega-menu-tab.html"><div>Tabbed</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="mega-menu-side-tab.html"><div>Side-Tabs (onClick)</div></a>
+												</li>
+											</ul>
 										</li>
 										<li class="menu-item">
 											<a class="menu-link" href="forms.html"><div><i class="icon-wpforms"></i>Forms</div></a>
@@ -1358,6 +1375,15 @@ $photos = $instagram->get_public_photos($search_user_id);
 												<li class="menu-item">
 													<a class="menu-link" href="shop-single-both-sidebar.html"><div>Both Sidebar</div></a>
 												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="shop-single-color.html"><div>Color Options</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="shop-single-sticky.html"><div>Sticky Aside</div></a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="shop-single-list.html"><div>Feature List</div></a>
+												</li>
 											</ul>
 										</li>
 										<li class="menu-item">
@@ -1901,7 +1927,7 @@ $photos = $instagram->get_public_photos($search_user_id);
 
 	<script>
 		var revapi22;
-		let $ = jQuery.noConflict();
+		var $ = jQuery.noConflict();
 
 		jQuery(document).ready(function() {
 			if(jQuery("#rev_slider").revolution == undefined){

@@ -33,6 +33,11 @@ $client-prefix: clients-grid;
 			img {
 				width: 100%;
 			}
+			body:not(.device-touch) & {
+				-webkit-transition: all .5s ease;
+				-o-transition: all .5s ease;
+				transition: all .5s ease;
+			}
 		}
 		img {
 			display: block;

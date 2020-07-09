@@ -491,7 +491,10 @@
 	font-weight: 600;
 }
 
-#item-color-dots .owl-dot { display: inline-block; }
+#item-color-dots .owl-dot {
+	display: inline-block;
+	background-color: transparent;
+}
 
 #item-color-dots .owl-dot span {
 	display: block;

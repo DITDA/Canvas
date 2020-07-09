@@ -69,7 +69,14 @@ body,
 		transition: all 250ms ease-in 0s;
 	}
 
-	.dark #header-wrap:not(.not-dark) .primary-menu .menu-item:hover > .menu-link { color: #FFF; }
+	.dark #header-wrap:not(.not-dark) .primary-menu .menu-item:hover > .menu-link,
+	.dark #header-wrap:not(.not-dark) .primary-menu .menu-item.current > .menu-link {
+		color: #FFF !important;
+	}
+
+	.dark #header-wrap:not(.not-dark) .primary-menu .menu-item.current > .menu-link {
+		opacity: 0.5 !important;
+	}
 
 	.side-header .header-title {
 		opacity: 0;

@@ -140,10 +140,14 @@ body.top-search-open #top-search-trigger > i { opacity: 0; }
 
 .row.grid-6 [class^=col-] { margin-bottom: 20px; }
 
+ul.iconlist li {
+	margin: 8px 0;
+}
+
 ul.iconlist i {
-	width: 8px !important;
-	font-size: 8px;
-	top: 6px !important;
+	top: 0 !important;
+	width: 10px !important;
+	font-size: 10px;
 }
 
 .clients-grid.grid-8 li { width: 12.5% }

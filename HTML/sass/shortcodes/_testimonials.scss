@@ -6,7 +6,6 @@
 	Testimonials
 -----------------------------------------------------------------*/
 $testimonial-prefix: testimonial;
-$client-prefix: clients-grid;
 
 /* Testimonials - Grid
 -----------------------------------------------------------------*/
@@ -51,19 +50,7 @@ $client-prefix: clients-grid;
 	}
 }
 
-body {
-	&:not(.device-touch) {
-		.#{$client-prefix}s-grid {
-			li {
-				a {
-					-webkit-transition: all .5s ease;
-					-o-transition: all .5s ease;
-					transition: all .5s ease;
-				}
-			}
-		}
-	}
-}
+
 .#{$testimonial-prefix} {
 	position: relative;
 	padding: $testimonials-padding;

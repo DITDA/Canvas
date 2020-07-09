@@ -137,7 +137,6 @@ input.switch-toggle-flat:checked + label:after,
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-themecolor,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-themecolor,
-.irs-from, .irs-to, .irs-single,
 .checkbox-style:checked + .checkbox-style-1-label:before,
 .checkbox-style:checked + .checkbox-style-2-label:before,
 .checkbox-style:checked + .checkbox-style-3-label:before,
@@ -172,18 +171,18 @@ input.switch-toggle-flat:checked + label:after,
 .top-links-sub-menu,
 .top-links-section,
 .tabs-tb .tab-nav li.ui-tabs-active a,
-.irs-from:after,
-.irs-single:after,
-.irs-to:after,
-.irs-from:before,
-.irs-to:before,
-.irs-single:before,
 .dark .top-links-sub-menu,
 .dark .top-links-section,
 .dark .tabs-tb .tab-nav li.ui-tabs-active a { border-top-color: #1ABC9C; }
 
 .title-border-color::before,
-.title-border-color::after { border-top-color: #1ABC9C !important; }
+.title-border-color::after,
+.irs-from:after,
+.irs-single:after,
+.irs-to:after,
+.irs-from:before,
+.irs-to:before,
+.irs-single:before { border-top-color: #1ABC9C !important; }
 
 .title-block { border-left-color: #1ABC9C; }
 
@@ -219,7 +218,6 @@ input.switch-toggle-flat:checked + label:after,
 	.page-menu-sub-menu,
 	.dots-menu .page-menu-item.current > a,
 	.dots-menu .page-menu-item div,
-	.dark .sub-menu-container .menu-item:hover > .menu-link,
 	.dark .style-3 .menu-container > .menu-item.current > .menu-link { background-color: #1ABC9C; }
 
 	.style-4 .menu-container > .menu-item:hover > .menu-link,

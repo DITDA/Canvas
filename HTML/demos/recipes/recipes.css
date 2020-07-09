@@ -6,20 +6,30 @@
 	--themecolor: #267DF4;
 }
 
-.slider-features ul li:not(:last-child) {
-	border-right: 1px solid  rgba(0, 0, 0, 0.1);
-	margin-right: 40px;
-	padding-right: 40px;
+.slider-features .grid-inner {
+	overflow: visible;
 }
 
-.slider-features ul li img {
-	display: block;
-	width: 30px !important;
-	height: 30px !important;
-	margin-bottom: 16px;
+.slider-features .grid-inner::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: auto;
+	right: -1px;
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.dark .slider-features ul li:not(:last-child) { border-right-color: rgba(255, 255, 255, 0.2); }
+.slider-features img {
+	width: 30px;
+	height: 30px;
+	margin-bottom: 1rem;
+}
+
+.dark .slider-features .grid-inner::after {
+	border-right-color: rgba(255, 255, 255, 0.2);
+}
 
 .recipe-itmes .card img,
 .rotating {

@@ -374,7 +374,7 @@ $fbox-prefix: fbox; //child
 			padding: 0 2rem 2rem;
 			border: 1px solid $featured-box-bg-light;
 			border-radius: 5px;
-			&.#{$fbox-prefix} {
+			.#{$fbox-prefix} {
 				&-icon {
 					margin-top: -2rem;
 					background-color: #FFF;

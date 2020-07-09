@@ -149,14 +149,13 @@ input.switch-toggle-flat:checked + label::after,
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus,
-input.switch-toggle-round:checked + label:before,
+input.switch-toggle-round:checked + label::before,
 input.switch-toggle-flat:checked + label,
-input.switch-toggle-flat:checked + label:after,
-.irs-bar,
+input.switch-toggle-flat:checked + label::after,
 .dark .entry-link:hover,
 .dark .fbox-effect.fbox-dark .fbox-icon i:hover,
 .dark .fbox-effect.fbox-dark:hover .fbox-icon i,
-.dark .fbox-border.fbox-effect.fbox-dark .fbox-icon i:after,
+.dark .fbox-border.fbox-effect.fbox-dark .fbox-icon i::after,
 .dark .i-rounded:hover,
 .dark .i-circled:hover,
 .dark .tab-nav.tab-nav2 li.ui-state-active a,
@@ -180,11 +179,10 @@ input.switch-toggle-flat:checked + label:after,
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-themecolor,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-themecolor,
-.irs-from, .irs-to, .irs-single,
-.checkbox-style:checked + .checkbox-style-1-label:before,
-.checkbox-style:checked + .checkbox-style-2-label:before,
-.checkbox-style:checked + .checkbox-style-3-label:before,
-.radio-style:checked + .radio-style-3-label:before { background: <?php echo $color; ?>; }
+.checkbox-style:checked + .checkbox-style-1-label::before,
+.checkbox-style:checked + .checkbox-style-2-label::before,
+.checkbox-style:checked + .checkbox-style-3-label::before,
+.radio-style:checked + .radio-style-3-label::before { background: <?php echo $color; ?>; }
 
 .irs-bar,
 .irs-from,
@@ -215,18 +213,18 @@ input.switch-toggle-flat:checked + label:after,
 .top-links-sub-menu,
 .top-links-section,
 .tabs-tb .tab-nav li.ui-tabs-active a,
-.irs-from:after,
-.irs-single:after,
-.irs-to:after,
-.irs-from:before,
-.irs-to:before,
-.irs-single:before,
 .dark .top-links-sub-menu,
 .dark .top-links-section,
 .dark .tabs-tb .tab-nav li.ui-tabs-active a { border-top-color: <?php echo $color; ?>; }
 
 .title-border-color::before,
-.title-border-color::after { border-top-color: <?php echo $color; ?> !important; }
+.title-border-color::after,
+.irs-from::after,
+.irs-single::after,
+.irs-to::after,
+.irs-from::before,
+.irs-to::before,
+.irs-single::before { border-top-color: <?php echo $color; ?> !important; }
 
 .title-block { border-left-color: <?php echo $color; ?>; }
 
@@ -242,7 +240,7 @@ input.switch-toggle-flat:checked + label:after,
 .title-bottom-border h6 { border-bottom-color: <?php echo $color; ?>; }
 
 .fbox-effect.fbox-dark .fbox-icon i::after,
-.dark .fbox-effect.fbox-dark .fbox-icon i:after { box-shadow: 0 0 0 2px <?php echo $color; ?>; }
+.dark .fbox-effect.fbox-dark .fbox-icon i::after { box-shadow: 0 0 0 2px <?php echo $color; ?>; }
 
 .fbox-border.fbox-effect.fbox-dark .fbox-icon i:hover,
 .fbox-border.fbox-effect.fbox-dark:hover .fbox-icon i,
@@ -262,7 +260,6 @@ input.switch-toggle-flat:checked + label:after,
 	.page-menu-sub-menu,
 	.dots-menu .page-menu-item.current > a,
 	.dots-menu .page-menu-item div,
-	.dark .sub-menu-container .menu-item:hover > .menu-link,
 	.dark .style-3 .menu-container > .menu-item.current > .menu-link { background-color: <?php echo $color; ?>; }
 
 	.style-4 .menu-container > .menu-item:hover > .menu-link,

@@ -215,7 +215,7 @@ var SEMICOLON = SEMICOLON || {};
 				default: 'body',
 				file: 'plugins.easing.js',
 				error: 'plugins.easing.js: Plugin could not be loaded',
-				pluginfn: 'typeof jQuery.easing !== "undefined"',
+				pluginfn: 'typeof jQuery.easing["easeOutQuad"] !== "undefined"',
 				trigger: 'pluginEasingReady',
 				class: 'has-plugin-easing'
 			};
@@ -684,6 +684,10 @@ var SEMICOLON = SEMICOLON || {};
 		stickyMenu: function( headerOffset ){
 
 			windowScrT	= $window.scrollTop();
+
+			if( windowScrT === 0 && headerOffset !== 0 ) {
+				return true;
+			}
 
 			if( $body.hasClass('device-xl') || $body.hasClass('device-lg') ) {
 				if( windowScrT > headerOffset ) {
@@ -1805,6 +1809,21 @@ var SEMICOLON = SEMICOLON || {};
 			SEMICOLON.initialize.functions( settings );
 		},
 
+		ticker: function( element ){
+			let settings = {
+				element: element,
+				default: '.scw-ticker',
+				file: 'plugins.ticker.js',
+				error: 'plugins.ticker.js: Plugin could not be loaded',
+				execfn: 'SEMICOLON_tickerInit',
+				pluginfn: 'typeof scwTickerPlugin !== "undefined"',
+				trigger: 'pluginTickerReady',
+				class: 'has-plugin-ticker'
+			};
+
+			SEMICOLON.initialize.functions( settings );
+		},
+
 		stickySidebar: function( element ){
 			let settings = {
 				element: element,
@@ -2123,6 +2142,7 @@ var SEMICOLON = SEMICOLON || {};
 			SEMICOLON.widget.parallax();
 			SEMICOLON.widget.loadFlexSlider();
 			SEMICOLON.widget.html5Video();
+			SEMICOLON.widget.ticker();
 			SEMICOLON.header.responsiveMenuClass();
 			SEMICOLON.initialize.modal();
 			SEMICOLON.customization.onLoad();

@@ -86,6 +86,11 @@
 	text-align: right;
 }
 
+.fc-calendar .fc-starttime,
+.fc-calendar .fc-endtime {
+	display: none;
+}
+
 .fc-calendar .fc-row > div > span.fc-weekday {
 	padding-left: 5px;
 	display: none;
